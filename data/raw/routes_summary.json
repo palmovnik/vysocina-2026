@@ -2,10 +2,10 @@
  {
   "id": "b-darko",
   "profile": "trekking",
-  "length_m": 22574,
-  "ascend_m": 158,
+  "length_m": 16324,
+  "ascend_m": 214,
   "plain_ascend_m": 0,
-  "time_s": 4441
+  "time_s": 3801
  },
  {
   "id": "b-prameny",
@@ -26,10 +26,10 @@
  {
   "id": "b-devet-skal",
   "profile": "trekking",
-  "length_m": 44718,
-  "ascend_m": 642,
+  "length_m": 42741,
+  "ascend_m": 584,
   "plain_ascend_m": 0,
-  "time_s": 10620
+  "time_s": 10135
  },
  {
   "id": "b-zdar",
