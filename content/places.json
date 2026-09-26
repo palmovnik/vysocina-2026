@@ -230,8 +230,8 @@
   "rain": true,
   "teaser": "V sobotu 10. 10. „Škola malých jeskyňářů“ pro děti od 5 let, s diplomem!",
   "text": "Jedna z nejbohatěji zdobených jeskyní Moravského krasu s barevnými krápníky. Prohlídková trasa měří 720 m a trvá asi hodinu. V sobotu 10. 10. 2026 tu od 9 do 16 hodin běží interaktivní dětské prohlídky „Škola malých jeskyňářů“: děti projdou výcvikem a dostanou osvědčení mladého jeskyňáře.",
-  "kidsNote": "Na Školu malých jeskyňářů je nutná telefonická rezervace předem: 516 444 330. Dětské vstupné 180 Kč.",
-  "info": "V říjnu vstupy v celou hodinu, v pondělí zavřeno. Uvnitř je kolem 8 °C, vezměte bundu.",
+  "kidsNote": "Na Školu malých jeskyňářů je nutná telefonická rezervace předem: 516 444 330. Vstupné 220 Kč, děti 3–15 let 110 Kč, rodinné 620 Kč (2+2) nebo 720 Kč (2+3).",
+  "info": "V říjnu út–pá vstupy v 9–14 h, o víkendu v 9–15 h, v pondělí zavřeno. Prohlídka trvá asi hodinu, uvnitř je kolem 8 °C, vezměte bundu.",
   "phone": "+420 516 444 330",
   "web": "https://balcarka.caves.cz/aktuality/balcarka-nabidne-detem-26-9-a-10-10-skolu-malych-jeskynaru"
  },
@@ -251,7 +251,7 @@
   "teaser": "Krápníky, dno propasti Macocha a plavba na lodičkách po podzemní říčce Punkvě.",
   "text": "Nejslavnější jeskyně Česka: pěšky se projde krápníkovými dómy až na dno 138 m hluboké propasti Macocha, pak se pokračuje lodičkou po podzemní Punkvě. Od jeskyně jezdí lanovka na horní můstek Macochy.",
   "kidsNote": "Plavba lodičkou je pro děti zážitek. Vstupenky se vyprodávají, rezervujte co nejdřív!",
-  "info": "Říjen: út–pá 8:40–14:00, so–ne do 16:00, po zavřeno. Vstupné 2026: dospělí 450 Kč, děti 200 Kč, rodinné 1 260 Kč. Rezervace: ÚIS Skalní Mlýn +420 516 413 575, info@caves.cz. Z parkoviště Skalní Mlýn (placené) 1,6 km pěšky nebo ekovláčkem.",
+  "info": "Říjen: út–pá 8:40–14:00, so–ne 8:20–16:00, po zavřeno; v sobotu 10. 10. výjimečně 8:20–16:50 a vláček s lanovkou jezdí do 18 h. Vstupné: dospělí 450 Kč, děti 200 Kč, rodinné 1 260 Kč (2+2) nebo 1 450 Kč (2+3). Rezervace: ÚIS Skalní Mlýn +420 516 413 575, info@caves.cz. Z parkoviště Skalní Mlýn (placené) 1,6 km pěšky nebo ekovláčkem.",
   "phone": "+420 516 413 575",
   "web": "https://punkevni.caves.cz/oteviraci-doba"
  },
@@ -281,7 +281,7 @@
   "rain": true,
   "teaser": "Obří podzemní dóm a „bambusový lesík“ hůlkových krápníků. Krátká prohlídka.",
   "text": "Kateřinská jeskyně má jeden z největších zpřístupněných podzemních dómů v Česku a unikátní hůlkové stalagmity. Prohlídka trvá asi 30 minut, takže je vhodná i pro menší děti. Vchod je 300 m od Skalního Mlýna.",
-  "info": "V říjnu vstupy zhruba 8:20–14:00, v pondělí se vyplatí ověřit. Ceník 2026 na caves.cz.",
+  "info": "V říjnu út–pá vstupy v 9–14 h, o víkendu 9–16 h (v sobotu 10. 10. výjimečně až do 17:40), v pondělí zavřeno. Vstupné 220 Kč, děti 110 Kč, rodinné 620 Kč (2+2) nebo 720 Kč (2+3).",
   "web": "https://katerinska.caves.cz/oteviraci-doba"
  },
  {
@@ -294,7 +294,7 @@
   "rain": true,
   "teaser": "Největší zpřístupněné jeskyně v ČR: obří dómy a propasti, krátký i dlouhý okruh.",
   "text": "Rozlehlý systém chodeb, dómů a propastí na severu Moravského krasu, s krátkou i dlouhou trasou. Z Cikháje je to nejbližší z krasových jeskyní a u vchodu se parkuje zdarma.",
-  "info": "V říjnu prohlídky po 30 minutách. Dětské vstupné (3–15 let) 140 Kč na dlouhém okruhu; krátký okruh 200/160/100 Kč. Rodinné vstupné platí pro 2 dospělé + 2–3 děti.",
+  "info": "V říjnu kromě pondělí vstupy v 9–13 h (dlouhá i krátká trasa), ve 14 h jen krátká. Dlouhá trasa 350 Kč, děti 180 Kč, rodinné 1 020 Kč (2+2); krátká trasa 250 Kč, děti 120 Kč, rodinné 700 Kč.",
   "web": "https://sloupskososuvske.caves.cz/oteviraci-doba"
  },
  {
@@ -356,7 +356,7 @@
   "bike": true,
   "teaser": "Interaktivní muzeum o 800 letech kláštera a Zelené hory. Děti dostanou tvořivé překvapení.",
   "text": "Multimediální expozice v bývalém pivovaru zámku Žďár vypráví příběh cisterciáckého kláštera, jeho stavitele Santiniho i Zelené hory. Každý dostane audioprůvodce, děti navíc malé tvořivé překvapení. Dá se spojit s prohlídkou zámku a procházkou na Zelenou horu.",
-  "info": "Duben–říjen denně 9–18. Rodinné vstupné pro děti do 15 let. Parkoviště zdarma (max. 10 h). Tel. +420 602 565 309, tic@zamekzdar.cz.",
+  "info": "Duben–říjen denně 9–18, poslední vstup 75 minut před zavřením. Vstupné 265 Kč, děti 6–17 let 210 Kč, rodinné 795 Kč (2 dospělí a až 3 děti). V obchůdku u zámecké kavárny je dětský koutek. Tel. +420 602 565 309, tic@zamekzdar.cz.",
   "phone": "+420 602 565 309",
   "web": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/"
  },
@@ -418,7 +418,7 @@
   "rain": true,
   "teaser": "Modelové kolejiště na 55 m² s asi 600 metry kolejí.",
   "text": "Velké modelové kolejiště ve Žďáru nad Sázavou, kde vláčky projíždějí krajinou, městy i nádražími. Zabaví malé i velké milovníky mašinek.",
-  "info": "Dolní 30, Žďár n. S. Podle OpenStreetMap otevřeno st, čt a ne 10–17 (tedy ve čtvrtek 8. 10. a v neděli 11. 10.), vstupné kolem 90 Kč, raději ověřte. Tel. +420 603 742 409.",
+  "info": "Dolní 30, Žďár n. S. Otevřeno jen o víkendu, so a ne 10–17 (tedy v neděli 11. 10.). Tel. +420 603 742 409.",
   "web": "https://www.mkzdar.cz/"
  },
  {
@@ -450,10 +450,11 @@
   "kids": 3,
   "rain": true,
   "teaser": "Interaktivní prohlídka pekla s čerty: chodby a „jeskyně“ až 12 m pod zemí.",
-  "text": "Pětipatrová budova, z toho tři patra pod zemí. Čerti provedou chodbami, mučírnou i pekelným šenkem a na konci je divadelní představení. Pro nejmenší je tu dětská herna.",
+  "text": "Pětipatrová budova, z toho tři patra pod zemí. Čerti provedou na 90minutové prohlídce chodbami, mučírnou, pekelným šenkem i čertokavárnou a na konci je divadelní představení. Pro nejmenší je tu vnitřní dětská herna Čertoland.",
   "kidsNote": "Citlivější malé děti se můžou bát. Program je nutné rezervovat.",
-  "info": "Otevřeno celoročně; mimo sezónu ve všední dny prohlídky od 11:00 a 12:00, o víkendu déle.",
-  "web": "https://www.peklocertovina.cz/"
+  "info": "Otevřeno celoročně; mimo sezónu ve všední dny prohlídky od 11:00 a 12:00, o víkendu déle. Rezervace prohlídek +420 468 005 005.",
+  "web": "https://www.peklocertovina.cz/",
+  "phone": "+420 468 005 005"
  },
  {
   "id": "pilak",
@@ -511,7 +512,7 @@
   "bike": true,
   "teaser": "Bývalý cisterciácký klášter se Santiniho architekturou, barokními konírnami a galerií.",
   "text": "Areál kláštera, který v 18. století přestavěl Jan Blažej Santini-Aichel, dnes patří rodině Kinských. Nabízí prohlídky zámku a kláštera, Barokní konírny s Galerií Kinských a Muzeum nové generace.",
-  "info": "Program, prohlídky a časy na zamekzdar.cz.",
+  "info": "Areál je volně přístupný, prohlídky a časy na zamekzdar.cz. V neděli 11. 10. v 16 h je v bazilice varhanní koncert (dobrovolné vstupné).",
   "web": "https://zamekzdar.cz/"
  },
  {
@@ -525,7 +526,7 @@
   "top": true,
   "teaser": "Vesnice jako za dědečka: roubenky, stodoly a řemesla v krajině pod Železnými horami.",
   "text": "Muzeum v přírodě na pomezí Žďárských vrchů a Železných hor se 45 památkovými objekty z Hlinecka, Poličska, Litomyšlska a Chrudimska. Stojí v původní krajině osady Veselý Kopec. Pro děti je tu spousta k objevování: stará řemesla, kolárna, čtrnáctiboká stodola.",
-  "info": "Září–říjen út–ne 9–17. Vstupné 2026: dospělí 190 Kč, děti 6–15 let 120 Kč, rodinné 390 Kč. Hlídané parkoviště před vstupem.",
+  "info": "V září út–ne 9:30–16 (říjnový provoz si ověřte na webu, bývá podobný). Vstupné kolem 190 Kč, děti 120 Kč, rodinné 390 Kč. Hlídané parkoviště před vstupem.",
   "web": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne"
  },
  {

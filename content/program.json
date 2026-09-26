@@ -9,12 +9,12 @@
    "items": [
     {
      "time": "cestou",
-     "text": "Velký nákup ve Žďáru nad Sázavou: Kaufland (denně 7–22), Lidl nebo Albert. Kdo přijede na oběd: Poppet na náměstí (Maurerův výběr) nebo vysočinská kuchyně v Táferně u zámku. Cestou se dá zastavit v Modelovém království (čt 10–17).",
+     "text": "Velký nákup ve Žďáru nad Sázavou: Kaufland (denně 7–22), Lidl nebo Albert. Kdo přijede na oběd: Poppet na náměstí (Maurerův výběr) nebo vysočinská kuchyně v Táferně u zámku. Maso na gril prodává podniková prodejna ve Světnově, 3 km před mlýnem (čt 7:30–12 a 13–15:30).",
      "places": [
       "shop-kaufland",
       "poppet",
       "taferna",
-      "modelove"
+      "maso-svetnov"
      ]
     },
     {
@@ -40,7 +40,11 @@
      "text": "Hvězdy: Měsíc skoro nesvítí (nov je v sobotu 10. 10.) a kolem 8.–9. 10. vrcholí meteorický roj Drakonidy. Je slabší, ale večer po setmění se vyplatí vyjít na louku nad mlýnem a chvíli se dívat."
     }
    ],
-   "planB": "Když prší: Modelové království ve Žďáru (čt 10–17) nebo Relaxační centrum Žďár s tobogánem (od 12 h)."
+   "planB": "Když prší: Muzeum nové generace na zámku ve Žďáru (denně 9–18) nebo Relaxační centrum Žďár s tobogánem (od 12 h).",
+   "planBPlaces": [
+    "mng",
+    "relax"
+   ]
   },
   {
    "id": "pa",
@@ -103,7 +107,11 @@
      ]
     }
    ],
-   "planB": "Když prší: Muzeum nové generace na zámku Žďár (denně 9–18) a odpoledne Relaxační centrum (tobogán, brouzdaliště)."
+   "planB": "Když prší: Muzeum nové generace na zámku Žďár (denně 9–18) a odpoledne Relaxační centrum (tobogán, brouzdaliště).",
+   "planBPlaces": [
+    "mng",
+    "relax"
+   ]
   },
   {
    "id": "so",
@@ -154,6 +162,11 @@
    "planBRoutes": [
     "h-doubrava",
     "h-mastale"
+   ],
+   "planBPlaces": [
+    "udoli-doubravy",
+    "mastale",
+    "pernstejn"
    ]
   },
   {
@@ -204,7 +217,13 @@
      ]
     }
    ],
-   "planB": "Když prší: Muzeum nové generace a Zelená hora, Modelové království (ne 10–17) nebo Šlakhamr v Hamrech nad Sázavou (so–ne, prohlídky v celou hodinu)."
+   "planB": "Když prší: Muzeum nové generace a Zelená hora, Modelové království ve Žďáru (ne 10–17) nebo Šlakhamr v Hamrech nad Sázavou (so–ne, prohlídky v celou hodinu).",
+   "planBPlaces": [
+    "mng",
+    "zelena-hora",
+    "modelove",
+    "slakhamr"
+   ]
   }
  ],
  "reservations": [
