@@ -403,5 +403,20 @@
   "url": "https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika?page=3",
   "file": "black-cup-vys.html",
   "bytes": 151216
+ },
+ "pgcr-blatiny": {
+  "url": "https://www.pgcr.cz/cs/svratka/podniky/restaurace/statek-blatiny-1",
+  "file": "pgcr-blatiny.html",
+  "bytes": 890433
+ },
+ "vys-blatiny": {
+  "url": "https://www.vysocina.eu/sluzby/ubytovani/3502-statek-blatiny",
+  "file": "vys-blatiny.html",
+  "bytes": 147798
+ },
+ "foodology-blatiny": {
+  "url": "https://www.foodology.cz/restaurace/statek-blatiny/",
+  "file": "foodology-blatiny.html",
+  "bytes": 30262
  }
 }
