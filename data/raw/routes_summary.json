@@ -2,10 +2,10 @@
  {
   "id": "b-darko",
   "profile": "trekking",
-  "length_m": 20280,
-  "ascend_m": 137,
+  "length_m": 22574,
+  "ascend_m": 158,
   "plain_ascend_m": 0,
-  "time_s": 3988
+  "time_s": 4441
  },
  {
   "id": "b-prameny",
@@ -18,26 +18,26 @@
  {
   "id": "b-medlov",
   "profile": "trekking",
-  "length_m": 22976,
-  "ascend_m": 321,
+  "length_m": 20850,
+  "ascend_m": 324,
   "plain_ascend_m": 0,
-  "time_s": 5627
+  "time_s": 5032
  },
  {
   "id": "b-devet-skal",
   "profile": "trekking",
-  "length_m": 40777,
-  "ascend_m": 511,
+  "length_m": 39274,
+  "ascend_m": 517,
   "plain_ascend_m": 0,
-  "time_s": 9449
+  "time_s": 9265
  },
  {
   "id": "b-zdar",
   "profile": "trekking",
-  "length_m": 24540,
-  "ascend_m": 230,
+  "length_m": 29851,
+  "ascend_m": 187,
   "plain_ascend_m": 0,
-  "time_s": 4983
+  "time_s": 5635
  },
  {
   "id": "b-stezka-sazava",
