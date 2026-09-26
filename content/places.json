@@ -976,18 +976,24 @@
   "icon": "👩‍🍳",
   "town": "Blatiny",
   "name": "Restaurace U Paňmámy (Statek Blatiny)",
-  "lat": 49.65486,
-  "lon": 16.09925,
+  "lat": 49.65473,
+  "lon": 16.09907,
   "tags": [
    "gaultmillau",
+   "gastromapa",
    "regional",
    "rezervace"
   ],
   "teaser": "Jediná restaurace na Žďársku s „čepicí“ průvodce Gault&Millau: poctivá česká kuchyně z místních surovin.",
-  "text": "Restaurace na obnoveném Statku Blatiny pod Drátníkem, kterou vede šéfkuchařka Marcela Teplá. Vaří poctivou českou kuchyni z rodinných receptů a lokálních surovin z Vysočiny, od farmářské zeleniny po bylinky z vlastní zahrady. Průvodce Gault&Millau jí za to dal jako jediné restauraci v regionu kuchařskou čepici. Hodí se jako slavnostní večeře celé party.",
+  "text": "Restaurace na obnoveném Statku Blatiny pod Drátníkem, kterou vede šéfkuchařka Marcela Teplá. Vaří poctivou českou kuchyni z rodinných receptů a lokálních surovin z Vysočiny, od farmářské zeleniny po bylinky z vlastní zahrady, na přání i pětichodové degustační menu. Je v Gastromapě Lukáše Hejlíka a průvodce Gault&Millau jí jako jediné restauraci v regionu dal kuchařskou čepici. Hodí se jako slavnostní večeře celé party.",
   "kidsNote": "Restaurace má kolem 50 míst, pro 17 lidí je rezervace nutná. Kousek odtud je Drátník, Malinská skála a hospoda U Kolouška.",
-  "info": "Jen na rezervaci. U skupin od 4 osob může restaurace chtít zálohu 150 Kč na osobu, která při zrušení 2 a méně dní předem propadá. Otevírací dobu ověřte na webu statku.",
-  "web": "https://www.statek-blatiny.cz/jidlo-piti"
+  "info": "Blatiny 16, Sněžné. Jen na rezervaci: tel. +420 601 365 744 (čt–ne 9–15) nebo info@statek-blatiny.cz. U skupin od 4 osob může restaurace chtít zálohu 150 Kč na osobu, která při zrušení 2 a méně dní předem propadá.",
+  "web": "https://www.statek-blatiny.cz/jidlo-piti",
+  "car": [
+   49.65473,
+   16.09907
+  ],
+  "phone": "+420 601 365 744"
  },
  {
   "id": "selsky-dvur",
@@ -997,8 +1003,8 @@
   "icon": "🐌",
   "town": "Daňkovice",
   "name": "Penzion a restaurace Selský dvůr",
-  "lat": 49.65398,
-  "lon": 16.14861,
+  "lat": 49.65379,
+  "lon": 16.14674,
   "tags": [
    "gastromapa",
    "gaultmillau",
@@ -1007,8 +1013,8 @@
   "teaser": "Hlemýždi po burgundsku z vlastního chovu a pstruzi. V Gastromapě i v průvodci Gault&Millau.",
   "text": "Útulná restaurace a penzion v Daňkovicích u Sněžného vaří z čerstvých regionálních surovin. Specialitou jsou hlemýždi po burgundsku z vlastního chovu, které od začátku do konce připravuje sám majitel a šéfkuchař, a pstruzi. Průvodce Gault&Millau ho zařadil těsně pod hranici čepice.",
   "kidsNote": "Šneci z vlastní farmy jsou pro děti zážitek i jen na podívanou; pro ně se najde i klasická česká kuchyně.",
-  "info": "Po–čt 11–20 (jídla do 19 h), pá–so 11–22 (jídla do 21 h); neděli ověřte. Daňkovice 24, tel. +420 604 360 045.",
-  "phone": "+420 604 360 045",
+  "info": "Po–čt 11–20, pá–so 11–22, ne 11–19. Kuchyně po–čt do 19, pá–so do 21, ne do 18 h; ve všední dny 15–17 kuchyňská pauza a 11–12 jen polední menu. Daňkovice 24, tel. +420 566 664 389.",
+  "phone": "+420 566 664 389",
   "web": "https://www.selskydvur.net/"
  },
  {

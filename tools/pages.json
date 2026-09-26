@@ -1,18 +1,5 @@
 [
-  {"id": "v-balcarka", "url": "https://balcarka.caves.cz/aktuality/balcarka-nabidne-detem-26-9-a-10-10-skolu-malych-jeskynaru"},
-  {"id": "v-balcarka-doba", "url": "https://balcarka.caves.cz/oteviraci-doba"},
-  {"id": "v-punkevni", "url": "https://punkevni.caves.cz/oteviraci-doba"},
-  {"id": "v-katerinska", "url": "https://katerinska.caves.cz/oteviraci-doba"},
-  {"id": "v-mng", "url": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/"},
-  {"id": "v-zelena-hora", "url": "https://www.zelena-hora.cz/cs/"},
-  {"id": "v-vesely-kopec", "url": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne"},
-  {"id": "v-modelove", "url": "https://www.mkzdar.cz/"},
-  {"id": "v-dum-prirody", "url": "https://www.dumprirody.cz/zdarskevrchy/"},
-  {"id": "v-relax", "url": "https://www.sportiszdar.cz/relaxacni-centrum"},
-  {"id": "v-slakhamr", "url": "https://www.technicalmuseum.cz/pamatky/slakhamr-v-hamrech-nad-sazavou/"},
-  {"id": "v-pernstejn", "url": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba"},
-  {"id": "v-peklo", "url": "https://www.peklocertovina.cz/"},
-  {"id": "v-svoboda", "url": "https://ags-svoboda.cz/"},
-  {"id": "v-jihlava-podzemi", "url": "https://www.jihlava.cz/podzemi/ms-108141"},
-  {"id": "v-sloupsko", "url": "https://sloupskososuvske.caves.cz/oteviraci-doba"}
+  {"id": "pgcr-blatiny", "url": "https://www.pgcr.cz/cs/svratka/podniky/restaurace/statek-blatiny-1"},
+  {"id": "vys-blatiny", "url": "https://www.vysocina.eu/sluzby/ubytovani/3502-statek-blatiny"},
+  {"id": "foodology-blatiny", "url": "https://www.foodology.cz/restaurace/statek-blatiny/"}
 ]
