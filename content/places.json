@@ -8,7 +8,7 @@
   "kids": 3,
   "top": true,
   "teaser": "Naše základna: historický vodní mlýn pod hrází Mlynářova rybníka.",
-  "text": "Vodní mlýn na Stržském potoce v jihovýchodní části Cikháje (675 m n. m.) pochází nejspíš z první poloviny 14. století, na fasádě je letopočet 1848 a je chráněný jako kulturní památka. Po kompletní rekonstrukci nabízí 4 pokoje po 4 lůžkách, společenskou místnost s krbem, kachlová kamna, saunu a oplocený pozemek u potoka.",
+  "text": "Vodní mlýn na Stržském potoce v jihovýchodní části Cikháje (675 m n. m.) pochází nejspíš z první poloviny 14. století, na fasádě je letopočet 1848 a je chráněný jako kulturní památka. Po kompletní rekonstrukci má v patře 4 pokoje se 4 lůžky a vlastní koupelnou se sedací vanou, v přízemí kuchyň, obývák s kachlovými kamny a společenskou místnost s krbem a saunou pro 12 lidí. Na oplocené zahradě je rybníček s posezením, ohniště, gril k zapůjčení a skluzavka s domečkem. Mlýn stojí samostatně hned u lesa a na podzim jsou okolní lesy plné hub.",
   "info": "Cikháj 57, 591 02 Žďár nad Sázavou · info@mlyn-vikinek.cz · +420 602 768 375",
   "web": "https://mlyn-vikinek.cz/"
  },
@@ -181,6 +181,7 @@
  {
   "id": "rosicka",
   "cat": "skaly",
+  "icon": "🗼",
   "name": "Rozhledna Rosička",
   "lat": 49.53854,
   "lon": 15.8426,
@@ -299,6 +300,7 @@
  {
   "id": "jihlava-podzemi",
   "cat": "jeskyne",
+  "icon": "🕯️",
   "name": "Jihlavské podzemí",
   "lat": 49.39693,
   "lon": 15.59136,
@@ -312,6 +314,7 @@
  {
   "id": "medlov",
   "cat": "deti",
+  "icon": "🧗",
   "name": "Medlov: lanový park a pohádkové stezky",
   "lat": 49.61604,
   "lon": 16.05449,
@@ -327,6 +330,7 @@
  {
   "id": "arena",
   "cat": "deti",
+  "icon": "🚵",
   "name": "Vysočina Arena: pumptrack a dětské traily",
   "lat": 49.57884,
   "lon": 16.05075,
@@ -342,6 +346,7 @@
  {
   "id": "mng",
   "cat": "deti",
+  "icon": "🏛️",
   "name": "Muzeum nové generace (zámek Žďár)",
   "lat": 49.5816,
   "lon": 15.93665,
@@ -358,6 +363,7 @@
  {
   "id": "relax",
   "cat": "deti",
+  "icon": "🏊",
   "name": "Relaxační centrum Žďár (aquapark)",
   "lat": 49.56302,
   "lon": 15.94282,
@@ -371,6 +377,7 @@
  {
   "id": "sklarna-hroch",
   "cat": "deti",
+  "icon": "🔥",
   "name": "Sklárna U Hrocha (Škrdlovice)",
   "lat": 49.63424,
   "lon": 15.9299,
@@ -381,13 +388,14 @@
   "teaser": "Malá sklářská huť, kde vám před očima vznikne půllitr nebo džbán.",
   "text": "Ateliérová huť navazuje na téměř 70letou tradici škrdlovických Skláren Beránek. U rozpálené pece se dá sledovat, jak sklářský mistr během pár minut vyfoukne a vytvaruje sklenici. Je to jen 3 km od mlýna, takže se dá dojet i na kole.",
   "kidsNote": "Jsme skupina 17 lidí a skupiny nad 10 osob se musí předem ohlásit: +420 603 742 629 nebo +420 602 754 806.",
-  "info": "Ukázky foukání skla ve všední dny zhruba 9:30–12:30, galerie v sobotu 10–15. Vedle je Hotel a restaurace U Hrocha.",
+  "info": "Huť měla v září provoz út–ne 11–18 a v říjnu otevírá podle aktuálního rozpisu na webu (1.–4. 10. denně 11–18). Před návštěvou zavolejte, skupiny nad 10 osob vždy ohlaste.",
   "phone": "+420 603 742 629",
   "web": "https://www.uhrocha.com/index.php?pg=sklarska-hut"
  },
  {
   "id": "sklarna-svoboda",
   "cat": "deti",
+  "icon": "🔥",
   "name": "Sklárna a galerie Svoboda (Karlov)",
   "lat": 49.64561,
   "lon": 15.91599,
@@ -402,6 +410,7 @@
  {
   "id": "modelove",
   "cat": "deti",
+  "icon": "🚂",
   "name": "Modelové království (Žďár)",
   "lat": 49.566,
   "lon": 15.9382,
@@ -415,6 +424,7 @@
  {
   "id": "dum-prirody",
   "cat": "deti",
+  "icon": "🦉",
   "name": "Dům přírody Žďárských vrchů (Krátká)",
   "lat": 49.64198,
   "lon": 16.0963,
@@ -433,6 +443,7 @@
  {
   "id": "peklo",
   "cat": "deti",
+  "icon": "😈",
   "name": "Peklo Čertovina (u Hlinska)",
   "lat": 49.77632,
   "lon": 15.94594,
@@ -447,6 +458,7 @@
  {
   "id": "pilak",
   "cat": "deti",
+  "icon": "🛝",
   "name": "Pilák: lanová pyramida a hřiště (Žďár)",
   "lat": 49.58983,
   "lon": 15.93107,
@@ -459,6 +471,7 @@
  {
   "id": "cikhaj-hriste",
   "cat": "deti",
+  "icon": "🛝",
   "name": "Dětské hřiště Cikháj",
   "lat": 49.64727,
   "lon": 15.96347,
@@ -472,6 +485,7 @@
  {
   "id": "zelena-hora",
   "cat": "pamatky",
+  "icon": "⛪",
   "name": "Zelená hora (UNESCO)",
   "lat": 49.58012,
   "lon": 15.94118,
@@ -488,6 +502,7 @@
  {
   "id": "zamek-zdar",
   "cat": "pamatky",
+  "icon": "🏰",
   "name": "Zámek Žďár nad Sázavou",
   "lat": 49.58317,
   "lon": 15.93754,
@@ -502,6 +517,7 @@
  {
   "id": "vesely-kopec",
   "cat": "pamatky",
+  "icon": "🏡",
   "name": "Skanzen Veselý Kopec",
   "lat": 49.76096,
   "lon": 15.838,
@@ -515,6 +531,7 @@
  {
   "id": "pernstejn",
   "cat": "pamatky",
+  "icon": "🏰",
   "name": "Hrad Pernštejn",
   "lat": 49.45086,
   "lon": 16.31837,
@@ -527,6 +544,7 @@
  {
   "id": "slakhamr",
   "cat": "pamatky",
+  "icon": "⚒️",
   "name": "Šlakhamr v Hamrech nad Sázavou",
   "lat": 49.56629,
   "lon": 15.87859,
@@ -543,6 +561,7 @@
  {
   "id": "pramen-svratky",
   "cat": "priroda",
+  "icon": "💧",
   "name": "Pramen Svratky",
   "lat": 49.64388,
   "lon": 15.99942,
@@ -559,6 +578,7 @@
  {
   "id": "pramen-sazavy",
   "cat": "priroda",
+  "icon": "💧",
   "name": "Pramen Sázavy",
   "lat": 49.67156,
   "lon": 15.93786,
@@ -573,6 +593,7 @@
  {
   "id": "stribrna-studanka",
   "cat": "priroda",
+  "icon": "💧",
   "name": "Stříbrná studánka",
   "lat": 49.65439,
   "lon": 15.9989,
@@ -600,6 +621,7 @@
  {
   "id": "fryskop",
   "cat": "priroda",
+  "icon": "🎖️",
   "name": "Fryšavský kopec: partyzánský památník",
   "lat": 49.6377,
   "lon": 16.00217,
@@ -614,6 +636,7 @@
  {
   "id": "velke-darko",
   "cat": "priroda",
+  "icon": "🌊",
   "name": "Velké Dářko",
   "lat": 49.63177,
   "lon": 15.90962,
@@ -645,6 +668,7 @@
  {
   "id": "sykovec",
   "cat": "priroda",
+  "icon": "🏖️",
   "name": "Rybník Sykovec",
   "lat": 49.60861,
   "lon": 16.03817,
@@ -658,6 +682,7 @@
   "id": "rest-tisuvka",
   "cat": "jidlo",
   "sub": "rodina",
+  "order": 1,
   "icon": "🍲",
   "town": "Cikháj",
   "name": "Restaurace a penzion Tisůvka",
@@ -673,16 +698,16 @@
   "text": "Nekuřácká restaurace se 45 místy na kraji Cikháje, kousek od mlýna. Vaří poctivou českou kuchyni (na lístku bývá třeba srnčí svíčková), pro nejmenší má dětský koutek a hned vedle je hřiště. Na večeři pro 17 lidí určitě rezervujte.",
   "info": "Čt 16–21, pá–so 11–22, ne 11–20 (kuchyně do 20 h, v neděli do 19 h; o víkendu 15:30–17 jen dezerty). Po–st zavřeno. Cikháj 51.",
   "phone": "+420 566 659 007",
-  "web": "https://www.restauracetisuvka.cz/",
-  "order": 1
+  "web": "https://www.restauracetisuvka.cz/"
  },
  {
   "id": "rest-hroch",
   "cat": "jidlo",
   "sub": "rodina",
+  "order": 2,
   "icon": "🔥",
   "town": "Škrdlovice",
-  "name": "Hotel a restaurace U Hrocha (Škrdlovice)",
+  "name": "Hotel a restaurace U Hrocha",
   "lat": 49.63385,
   "lon": 15.93007,
   "bike": true,
@@ -692,8 +717,8 @@
   ],
   "teaser": "Restaurace hned vedle sklářské huti. Oběd se dá spojit s ukázkou foukání skla.",
   "text": "Hotel a restaurace ve Škrdlovicích, 3 km od mlýna, kousek od Velkého Dářka. V areálu je sklářská huť, která navazuje na tradici škrdlovického hutního skla, venkovní dětský koutek a minigolf. Dá se sem dojet na kole po cyklotrase k Dářku.",
-  "web": "https://www.uhrocha.com/",
-  "order": 2
+  "info": "Mimo sezónu (září–květen) má restaurace upravenou otevírací dobu, aktuální najdete v aktualitách na webu a na Facebooku.",
+  "web": "https://www.uhrocha.com/"
  },
  {
   "id": "rest-darko",
@@ -701,7 +726,7 @@
   "sub": "cesta",
   "icon": "🍺",
   "town": "Velké Dářko",
-  "name": "Penzion Velké Dářko (restaurace)",
+  "name": "Restaurace penzionu Velké Dářko",
   "lat": 49.63709,
   "lon": 15.92582,
   "bike": true,
@@ -715,7 +740,7 @@
   "sub": "cesta",
   "icon": "🍺",
   "town": "Samotín",
-  "name": "U Kolouška (pod Drátníkem)",
+  "name": "Hospoda U Kolouška",
   "lat": 49.65039,
   "lon": 16.0799,
   "bike": true,
@@ -729,6 +754,7 @@
   "id": "rest-frysava",
   "cat": "jidlo",
   "sub": "top",
+  "order": 4,
   "icon": "⛷️",
   "town": "Fryšava pod Žákovou horou",
   "name": "Stanice lyžařů Fryšava",
@@ -744,8 +770,7 @@
   "text": "Rodinný penzion s restaurací uprostřed Fryšavy (708 m n. m.). Šéfkuchař Roman Pavlík vaří českou kuchyni z místních surovin, brambory i maso berou od sousedů. Hned vedle je park s dětským hřištěm a uvnitř dětský koutek. Hodí se po výletě na Medlov, k pramenu Svratky nebo na Žákovu horu.",
   "info": "Restaurace tel. +420 734 536 304. Podle OpenStreetMap po–čt a so 11–21, pá 11–23, ne 11–21 (ověřte).",
   "phone": "+420 734 536 304",
-  "web": "https://www.stanicelyzaru.cz/",
-  "order": 2
+  "web": "https://www.stanicelyzaru.cz/"
  },
  {
   "id": "rest-tri-studne",
@@ -753,7 +778,7 @@
   "sub": "cesta",
   "icon": "🍺",
   "town": "Tři Studně",
-  "name": "Krčma na náměstí (Tři Studně)",
+  "name": "Krčma na náměstí",
   "lat": 49.61248,
   "lon": 16.03632,
   "bike": true,
@@ -785,7 +810,7 @@
   "sub": "cesta",
   "icon": "🍺",
   "town": "České Křižánky",
-  "name": "Hostinec Za Řekou (Křižánky)",
+  "name": "Hostinec Za Řekou",
   "lat": 49.68939,
   "lon": 16.06534,
   "bike": true,
@@ -812,6 +837,7 @@
   "id": "kiosek-kadov",
   "cat": "jidlo",
   "sub": "top",
+  "order": 2,
   "icon": "🌮",
   "town": "Kadov",
   "name": "Kiosek Kadov „U Staré školy“",
@@ -826,15 +852,15 @@
   "teaser": "Gastro klenot Žďárských vrchů: moderní street food v restaurační kvalitě. Je v Gastromapě i v průvodci Gault&Millau 2026.",
   "text": "Nenápadný kiosek u staré školy v Kadově vaří z vlastních výrobků a jídelní lístek se pořád mění: burgery, tortilly, grilované speciality, česká i asijská jídla, dezerty a domácí limonády. Alkohol tu nenalévají a rodiny s dětmi jsou vítané. Lukáš Hejlík o něm natočil díl pořadu Příběhy z Gastra.",
   "kidsNote": "Sedí se na zahrádce, v říjnu se teple oblečte. Kousek odtud je Medlov s lanovým parkem a pohádkovou stezkou.",
-  "info": "V říjnu jen so–ne 11–16, ve všední dny zavřeno. Kadov 51, tel. +420 564 103 502, platba kartou. Aktuální provoz hlásí na Facebooku.",
+  "info": "V říjnu jen o víkendu, zhruba 11–16 (ve všední dny zavřeno). Kadov 51, tel. +420 564 103 502, platba kartou. Aktuální provoz hlásí na Facebooku.",
   "phone": "+420 564 103 502",
-  "web": "https://kiosekkadov.cz/",
-  "order": 1
+  "web": "https://kiosekkadov.cz/"
  },
  {
   "id": "poppet",
   "cat": "jidlo",
   "sub": "top",
+  "order": 5,
   "icon": "🍷",
   "town": "Žďár nad Sázavou",
   "name": "Grand restaurant Poppet",
@@ -848,13 +874,13 @@
   "text": "Restaurace v přízemí Hotelu U Labutě na náměstí Republiky patří do Maurerova výběru Grand Restaurant. Vaří tradiční českou a středomořskou kuchyni, ve všední dny i polední menu. Hodí se na slavnostnější večeři nebo na oběd při nákupu ve Žďáru.",
   "info": "Nám. Republiky 70/6, Žďár nad Sázavou. Po–čt 10:30–22, pá 10:30–23, so 11–23, ne 11–15. Tel. +420 602 704 070.",
   "phone": "+420 602 704 070",
-  "web": "https://www.poppet-restaurant.cz/",
-  "order": 3
+  "web": "https://www.poppet-restaurant.cz/"
  },
  {
   "id": "bistro4",
   "cat": "jidlo",
   "sub": "top",
+  "order": 6,
   "icon": "🥪",
   "town": "Nové Město na Moravě",
   "name": "Bistro Čtyřka (Horní Dvůr)",
@@ -863,16 +889,17 @@
   "tags": [
    "farma"
   ],
-  "teaser": "Bistro vyhlášeného hotelu Horní Dvůr na náměstí v Novém Městě: snídaně, obědy i večeře.",
-  "text": "Restaurace Hotelu Horní Dvůr (Gastromapa, Maurerův výběr) je pro běžné hosty zavřená a otevírá jen na mimořádné gastro akce. Běžně se od nich najíte v Bistru Čtyřka v opraveném historickém domě na Vratislavově náměstí: bufetová jídla na místě i s sebou.",
-  "info": "Vratislavovo nám. 4, Nové Město na Moravě. Otevírací dobu ověřte na webu.",
-  "web": "https://bistro4.cz/",
-  "order": 4
+  "teaser": "Bistro v krásně opraveném domě na náměstí v Novém Městě: jídla z kamen na dřevo a suroviny z místních farem.",
+  "text": "Bufetové bistro v historickém domě rodiny Skuteckých na Vratislavově náměstí, kousek od parku a zámku. V otevřené kuchyni s kamny na dřevo vaří každý den čtyři jídla ze surovin z místních farem, grilují a udí kuřata, kachny, jehněčí nebo sekanou a u pultu vám na historickém kráječi Berkel nakrájí paštiky, sýry, salámy a šunky. Vzniklo jako druhá provozovna vyhlášeného hotelu Horní Dvůr, jehož restaurace je pro běžné hosty zavřená.",
+  "info": "Vratislavovo nám. 4, Nové Město na Moravě. Po–čt 10–22, pá–so 10–23, ne 10–21. Tel. 734 210 074.",
+  "phone": "+420 734 210 074",
+  "web": "https://bistro4.cz/"
  },
  {
   "id": "taferna",
   "cat": "jidlo",
   "sub": "rodina",
+  "order": 3,
   "icon": "🥔",
   "town": "Žďár nad Sázavou, u zámku",
   "name": "Klášterní hospoda Táferna",
@@ -885,28 +912,31 @@
   "text": "Restaurace a penzion ve staré klášterní hospodě v Santiniho ulici. Vaří domácí jídla z Vysočiny, třeba cmundu (bramborák) se zelím a uzeným, lívance s tvarohem nebo šulánky s mákem. Ideální oběd v den, kdy jdete do Muzea nové generace nebo na Zelenou horu.",
   "info": "Santiniho 38/4, Žďár nad Sázavou. St–čt 11–21, pá–so 11–22, ne 11–16, po–út zavřeno (kuchyně do hodiny před zavřením). Tel. 566 623 121.",
   "phone": "+420 566 623 121",
-  "web": "https://www.taferna.cz/",
-  "order": 3
+  "web": "https://www.taferna.cz/"
  },
  {
   "id": "talsky-mlyn",
   "cat": "jidlo",
   "sub": "rodina",
+  "order": 4,
   "icon": "🌾",
   "town": "Žďár nad Sázavou, u zámku",
   "name": "Hostinec Tálský mlýn",
   "lat": 49.58756,
   "lon": 15.92928,
+  "car": [
+   49.58756,
+   15.92928
+  ],
   "tags": [
    "lokalni"
   ],
   "teaser": "Stylový hostinec ve starém mlýně pod hrází Pilské nádrže: hovězí, jehněčí a zvěřina z okolí.",
   "text": "Hotel a hostinec v historickém mlýně na kraji zámeckého areálu, kousek od zámku a Pilské nádrže. Hostinec s 55 místy vaří z místních surovin (hovězí, jehněčí, zvěřina z blízkých lesů, sezónní zelenina) a má dobrý výběr vín.",
   "kidsNote": "Po jídle je to asi 300 m na Pilák s lanovou pyramidou a hřištěm.",
-  "info": "Zámek 18, Žďár nad Sázavou. V sezóně do 31. 10. zhruba po–čt 11:30–21, pá–so 11:30–21:30, ne 11:30–20 (ověřte). Rezervace v hostinci +420 605 554 950.",
+  "info": "Zámek 18, Žďár nad Sázavou. V říjnu čt 11:30–21, pá–so 11:30–22, ne 11:30–20, po–st jen večer 17–21. Rezervace v hostinci +420 605 554 950.",
   "phone": "+420 605 554 950",
-  "web": "https://www.talskymlyn.cz/cs/hostinec/",
-  "order": 4
+  "web": "https://www.talskymlyn.cz/cs/hostinec/"
  },
  {
   "id": "zamecka-kavarna",
@@ -918,7 +948,7 @@
   "lat": 49.58172,
   "lon": 15.9369,
   "teaser": "Kavárna v bývalém klášterním pivovaru: dobrá káva a domácí zákusky po návštěvě muzea.",
-  "text": "Stylová kavárna s obchůdkem v budově Muzea nové generace na zámku Žďár. Káva, domácí dezerty a atmosféra bývalého klášterního pivovaru, ideální tečka za prohlídkou muzea nebo Zelené hory.",
+  "text": "Stylová kavárna v bývalém klášterním pivovaru, v budově Muzea nové generace. Výběrová káva, domácí dezerty a koláče, řemeslná zmrzlina, domácí limonády ze sirupů z rodinné farmy, cider ze zámeckých jablek, ale i quiche, chlebíčky a polévka. V obchůdku hned vedle je dětský koutek.",
   "info": "Duben–říjen denně 9–18. Tel. +420 602 565 309.",
   "phone": "+420 602 565 309",
   "web": "https://zamekzdar.cz/kavarna-a-obchod/"
@@ -939,6 +969,81 @@
   "web": "https://www.cukrarnasnezne.cz/"
  },
  {
+  "id": "panmama",
+  "cat": "jidlo",
+  "sub": "top",
+  "order": 1,
+  "icon": "👩‍🍳",
+  "town": "Blatiny",
+  "name": "Restaurace U Paňmámy (Statek Blatiny)",
+  "lat": 49.65486,
+  "lon": 16.09925,
+  "tags": [
+   "gaultmillau",
+   "regional",
+   "rezervace"
+  ],
+  "teaser": "Jediná restaurace na Žďársku s „čepicí“ průvodce Gault&Millau: poctivá česká kuchyně z místních surovin.",
+  "text": "Restaurace na obnoveném Statku Blatiny pod Drátníkem, kterou vede šéfkuchařka Marcela Teplá. Vaří poctivou českou kuchyni z rodinných receptů a lokálních surovin z Vysočiny, od farmářské zeleniny po bylinky z vlastní zahrady. Průvodce Gault&Millau jí za to dal jako jediné restauraci v regionu kuchařskou čepici. Hodí se jako slavnostní večeře celé party.",
+  "kidsNote": "Restaurace má kolem 50 míst, pro 17 lidí je rezervace nutná. Kousek odtud je Drátník, Malinská skála a hospoda U Kolouška.",
+  "info": "Jen na rezervaci. U skupin od 4 osob může restaurace chtít zálohu 150 Kč na osobu, která při zrušení 2 a méně dní předem propadá. Otevírací dobu ověřte na webu statku.",
+  "web": "https://www.statek-blatiny.cz/jidlo-piti"
+ },
+ {
+  "id": "selsky-dvur",
+  "cat": "jidlo",
+  "sub": "top",
+  "order": 3,
+  "icon": "🐌",
+  "town": "Daňkovice",
+  "name": "Penzion a restaurace Selský dvůr",
+  "lat": 49.65398,
+  "lon": 16.14861,
+  "tags": [
+   "gastromapa",
+   "gaultmillau",
+   "farma"
+  ],
+  "teaser": "Hlemýždi po burgundsku z vlastního chovu a pstruzi. V Gastromapě i v průvodci Gault&Millau.",
+  "text": "Útulná restaurace a penzion v Daňkovicích u Sněžného vaří z čerstvých regionálních surovin. Specialitou jsou hlemýždi po burgundsku z vlastního chovu, které od začátku do konce připravuje sám majitel a šéfkuchař, a pstruzi. Průvodce Gault&Millau ho zařadil těsně pod hranici čepice.",
+  "kidsNote": "Šneci z vlastní farmy jsou pro děti zážitek i jen na podívanou; pro ně se najde i klasická česká kuchyně.",
+  "info": "Po–čt 11–20 (jídla do 19 h), pá–so 11–22 (jídla do 21 h); neděli ověřte. Daňkovice 24, tel. +420 604 360 045.",
+  "phone": "+420 604 360 045",
+  "web": "https://www.selskydvur.net/"
+ },
+ {
+  "id": "black-cup",
+  "cat": "jidlo",
+  "sub": "kava",
+  "icon": "☕",
+  "town": "Nové Město na Moravě",
+  "name": "The Black Cup – espresso bar",
+  "lat": 49.55948,
+  "lon": 16.07268,
+  "tags": [
+   "gastromapa"
+  ],
+  "teaser": "Espresso bar s výběrovou kávou v Novém Městě, v Gastromapě Lukáše Hejlíka.",
+  "text": "Malý espresso bar pro milovníky dobré kávy. Hodí se na kafe s sebou cestou do Vysočina Areny, k zookoutku nebo na náměstí.",
+  "info": "Podle OpenStreetMap denně 9–18 (ověřte)."
+ },
+ {
+  "id": "kafe-133",
+  "cat": "jidlo",
+  "sub": "kava",
+  "icon": "🍰",
+  "town": "Nové Město na Moravě",
+  "name": "Kafé 133",
+  "lat": 49.56317,
+  "lon": 16.07623,
+  "tags": [
+   "gastromapa"
+  ],
+  "teaser": "Kavárna v Novém Městě na Moravě z výběru Gastromapy Lukáše Hejlíka.",
+  "text": "Kavárna kousek od Vratislavova náměstí, dobrá zastávka na kávu a zákusek při výletě do Nového Města.",
+  "info": "Podle OpenStreetMap po–pá 8–19 (čt do 20), so 9–19, ne od 13 h (ověřte)."
+ },
+ {
   "id": "zookoutek",
   "cat": "farmy",
   "sub": "zvirata",
@@ -947,6 +1052,10 @@
   "name": "Zookoutek Nové Město na Moravě",
   "lat": 49.55745,
   "lon": 16.06192,
+  "car": [
+   49.55745,
+   16.06192
+  ],
   "kids": 3,
   "tags": [
    "zdarma"
@@ -965,6 +1074,10 @@
   "name": "Minifarma Falbgery",
   "lat": 49.75113,
   "lon": 16.15231,
+  "car": [
+   49.75113,
+   16.15231
+  ],
   "kids": 3,
   "tags": [
    "zvirata",
@@ -987,8 +1100,8 @@
   "lat": 49.62,
   "lon": 15.95452,
   "teaser": "Maso a uzeniny z Vysočiny přímo z výrobny, 3 km od mlýna. Na grilování jako stvořené.",
-  "text": "Regionální masna ve Světnově vyrábí klobásy, párky, salámy, uzená i marinovaná masa. Podniková prodejna u výrobny prodává jen dopoledne, takže nejlépe v pátek cestou na výlet.",
-  "info": "Po–pá 4–12 (ověřte). Světnov 68, tel. +420 566 666 205. Další prodejny jsou ve Žďáru a v Novém Městě u nemocnice.",
+  "text": "Regionální masna ve Světnově vyrábí klobásy, párky, salámy, uzená i marinovaná masa. Podniková prodejna u výrobny je otevřená hlavně dopoledne, ve čtvrtek a v pátek i odpoledne, takže se dá stihnout hned při příjezdu.",
+  "info": "Út–st 7:30–12, čt–pá 7:30–12 a 13–15:30, so 7–10, po a ne zavřeno. Světnov 68, tel. +420 566 666 205. Další prodejny jsou ve Žďáru a v Novém Městě u nemocnice.",
   "phone": "+420 566 666 205",
   "web": "https://www.maso-zdarsko.cz/"
  },
@@ -1020,7 +1133,7 @@
   ],
   "teaser": "Bio sýry, jogurty a tvaroh z mléka krav, které se pasou na okolních loukách.",
   "text": "Rodinná farma zemědělského družstva Březiny chová asi 200 kusů skotu převážně na pastvinách a od roku 2011 hospodaří v ekologickém režimu. Ve vlastní minimlékárně vyrábí čerstvé i zrající sýry, jogurty a tvaroh a prodává je v prodejně přímo na farmě.",
-  "info": "Po–pá 8–11 a 12–16, so 14–16 (podle OpenStreetMap, ověřte).",
+  "info": "Všední dny 8–11 a 12–16, so a ne 14–16. Březiny 121 (u Křižánek).",
   "web": "https://www.syryzbrezin.cz/"
  },
  {
@@ -1039,6 +1152,7 @@
  {
   "id": "shop-skrdlovice",
   "cat": "sluzby",
+  "icon": "🛒",
   "name": "Potraviny Flop (Škrdlovice)",
   "lat": 49.63536,
   "lon": 15.92596,
@@ -1050,6 +1164,7 @@
  {
   "id": "shop-heralec",
   "cat": "sluzby",
+  "icon": "🛒",
   "name": "Potraviny Lotos (Herálec)",
   "lat": 49.69105,
   "lon": 15.99141,
@@ -1060,6 +1175,7 @@
  {
   "id": "shop-kaufland",
   "cat": "sluzby",
+  "icon": "🛒",
   "name": "Kaufland Žďár nad Sázavou",
   "lat": 49.55518,
   "lon": 15.93689,
@@ -1070,6 +1186,7 @@
  {
   "id": "lekarna",
   "cat": "sluzby",
+  "icon": "💊",
   "name": "Lékárna Benu (Žďár, u Kauflandu)",
   "lat": 49.55494,
   "lon": 15.93723,
@@ -1081,6 +1198,7 @@
  {
   "id": "nemocnice",
   "cat": "sluzby",
+  "icon": "🏥",
   "name": "Nemocnice Nové Město na Moravě",
   "lat": 49.56052,
   "lon": 16.06413,
@@ -1092,6 +1210,7 @@
  {
   "id": "benzinka",
   "cat": "sluzby",
+  "icon": "⛽",
   "name": "Čerpací stanice Škrdlovice",
   "lat": 49.6282,
   "lon": 15.92695,
@@ -1102,6 +1221,7 @@
  {
   "id": "tic-zdar",
   "cat": "sluzby",
+  "icon": "ℹ️",
   "name": "Turistické informační centrum Žďár",
   "lat": 49.56428,
   "lon": 15.93918,
@@ -1112,6 +1232,7 @@
  {
   "id": "cyklo-servis",
   "cat": "sluzby",
+  "icon": "🔧",
   "name": "Cyklo Chlubna (servis kol, Žďár)",
   "lat": 49.56923,
   "lon": 15.9442,
