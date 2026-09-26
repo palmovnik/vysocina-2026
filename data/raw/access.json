@@ -461,6 +461,18 @@
    "time_s": 2486
   }
  },
+ "kiosek-kadov": {
+  "at": [
+   49.63466,
+   16.07779
+  ],
+  "bike": {
+   "length_m": 10187,
+   "ascend_m": 160,
+   "plain_ascend_m": 12,
+   "time_s": 2475
+  }
+ },
  "shop-skrdlovice": {
   "at": [
    49.63536,

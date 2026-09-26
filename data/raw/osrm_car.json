@@ -279,16 +279,6 @@
   "via": "parkoviště w611949228  (108 m)",
   "snap_m": 6
  },
- "obora": {
-  "km": 22.7,
-  "min": 30,
-  "target": [
-   49.74617,
-   15.87699
-  ],
-  "via": "bod",
-  "snap_m": 75
- },
  "pilak": {
   "km": 8.5,
   "min": 10,
@@ -528,6 +518,136 @@
   ],
   "via": "bod",
   "snap_m": 22
+ },
+ "kiosek-kadov": {
+  "km": 15.6,
+  "min": 21,
+  "target": [
+   49.63341,
+   16.078655
+  ],
+  "via": "parkoviště n2735000663  (152 m)",
+  "snap_m": 10
+ },
+ "poppet": {
+  "km": 11.1,
+  "min": 14,
+  "target": [
+   49.561803,
+   15.940591
+  ],
+  "via": "parkoviště w1327434598  (22 m)",
+  "snap_m": 3
+ },
+ "bistro4": {
+  "km": 21.5,
+  "min": 24,
+  "target": [
+   49.561217,
+   16.074572
+  ],
+  "via": "parkoviště w1484083914  (36 m)",
+  "snap_m": 4
+ },
+ "taferna": {
+  "km": 8.8,
+  "min": 10,
+  "target": [
+   49.580873,
+   15.935665
+  ],
+  "via": "parkoviště w509144948  (16 m)",
+  "snap_m": 7
+ },
+ "talsky-mlyn": {
+  "km": 8.5,
+  "min": 10,
+  "target": [
+   49.588823,
+   15.93222
+  ],
+  "via": "parkoviště w294664457  (254 m)",
+  "snap_m": 7
+ },
+ "zamecka-kavarna": {
+  "km": 8.6,
+  "min": 10,
+  "target": [
+   49.58179,
+   15.935602
+  ],
+  "via": "parkoviště w42382124  (94 m)",
+  "snap_m": 3
+ },
+ "cukrarna-snezne": {
+  "km": 21.8,
+  "min": 25,
+  "target": [
+   49.64569,
+   16.121627
+  ],
+  "via": "parkoviště w1324339983  (75 m)",
+  "snap_m": 7
+ },
+ "zookoutek": {
+  "km": 20.4,
+  "min": 24,
+  "target": [
+   49.560305,
+   16.062641
+  ],
+  "via": "parkoviště w1392535650 Parkoviště ředitelství (322 m)",
+  "snap_m": 14
+ },
+ "falbgery": {
+  "km": 29.1,
+  "min": 30,
+  "target": [
+   49.743109,
+   16.160684
+  ],
+  "via": "parkoviště w1199722920  (1076 m)",
+  "snap_m": 11
+ },
+ "maso-svetnov": {
+  "km": 3.1,
+  "min": 4,
+  "target": [
+   49.62,
+   15.95452
+  ],
+  "via": "bod",
+  "snap_m": 15
+ },
+ "cesky-dvur": {
+  "km": 6.3,
+  "min": 7,
+  "target": [
+   49.690781,
+   15.994523
+  ],
+  "via": "parkoviště n257452896  (219 m)",
+  "snap_m": 2
+ },
+ "syry-brezin": {
+  "km": 20.8,
+  "min": 25,
+  "target": [
+   49.69537,
+   16.1174
+  ],
+  "via": "bod",
+  "snap_m": 8
+ },
+ "obora": {
+  "km": 22.7,
+  "min": 30,
+  "target": [
+   49.74617,
+   15.87699
+  ],
+  "via": "bod",
+  "snap_m": 75
  },
  "shop-skrdlovice": {
   "km": 7.5,

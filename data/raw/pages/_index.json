@@ -150,7 +150,7 @@
   "bytes": 11946
  },
  "cukrarna-snezne": {
-  "url": "https://www.cukrarnasnezne.cz/",
+  "url": "http://www.cukrarnasnezne.cz/",
   "error": true
  },
  "hejkal": {
@@ -225,5 +225,140 @@
   "url": "https://mlyn-vikinek.cz/",
   "file": "mlyn-vikinek.html",
   "bytes": 66669
+ },
+ "gm-vys-2": {
+  "url": "https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika?page=2",
+  "file": "gm-vys-2.html",
+  "bytes": 151900
+ },
+ "gm-vys-3": {
+  "url": "https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika?page=3",
+  "file": "gm-vys-3.html",
+  "bytes": 151216
+ },
+ "denik-gaultmillau": {
+  "url": "https://zdarsky.denik.cz/zpravy-region/oceneni-prestizni-gastro-pruvodce-gault-millau-zdarsko-prehled-bistro-kiosek/",
+  "file": "denik-gaultmillau.html",
+  "bytes": 127963
+ },
+ "jihlavsky-gaultmillau": {
+  "url": "https://jihlavsky.denik.cz/zpravy_region/gastronomie-vysocina-restaurace-gault-millau-oceneni.html",
+  "file": "jihlavsky-gaultmillau.html",
+  "bytes": 134468
+ },
+ "denik-stanice": {
+  "url": "https://zdarsky.denik.cz/volny-cas/stanice-lyzaru-frysava-restaurace-penzion-hospoda-ceska-kuchyne-obed-jidlo/",
+  "file": "denik-stanice.html",
+  "bytes": 136276
+ },
+ "bistro4": {
+  "url": "https://bistro4.cz/",
+  "file": "bistro4.html",
+  "bytes": 58948
+ },
+ "bistro4-kontakt": {
+  "url": "https://bistro4.cz/kontakt/",
+  "file": "bistro4-kontakt.html",
+  "bytes": 53499
+ },
+ "stanice-restaurace": {
+  "url": "https://www.stanicelyzaru.cz/restaurace/",
+  "file": "stanice-restaurace.html",
+  "bytes": 74316
+ },
+ "stanice-restaurace2": {
+  "url": "https://www.stanicelyzaru.cz/restaurace2/",
+  "file": "stanice-restaurace2.html",
+  "bytes": 74480
+ },
+ "talsky-hostinec": {
+  "url": "https://www.talskymlyn.cz/cs/hostinec/",
+  "file": "talsky-hostinec.html",
+  "bytes": 9201
+ },
+ "uhrocha-rest-hours": {
+  "url": "https://www.uhrocha.com/index.php?pg=aktuality&aid=11",
+  "file": "uhrocha-rest-hours.html",
+  "bytes": 8435
+ },
+ "uhrocha-hut-2026": {
+  "url": "https://www.uhrocha.com/index.php?pg=aktuality&aid=27",
+  "file": "uhrocha-hut-2026.html",
+  "bytes": 8439
+ },
+ "uhrocha-hut": {
+  "url": "https://www.uhrocha.com/index.php?pg=sklarska-hut",
+  "file": "uhrocha-hut.html",
+  "bytes": 16373
+ },
+ "uloubu-provoz": {
+  "url": "https://www.hoteluloubu.cz/post/provozn%C3%AD-doba-z%C3%A1%C5%99%C3%AD-2026",
+  "file": "uloubu-provoz.html",
+  "bytes": 686607
+ },
+ "maso-svetnov": {
+  "url": "https://www.maso-zdarsko.cz/firemni-prodejna-svetnov",
+  "file": "maso-svetnov.html",
+  "bytes": 11045
+ },
+ "cesky-dvur-prodejny": {
+  "url": "https://masoceskydvur.cz/prodejny",
+  "file": "cesky-dvur-prodejny.html",
+  "bytes": 176
+ },
+ "zamek-kavarna": {
+  "url": "https://zamekzdar.cz/kavarna-a-obchod/",
+  "file": "zamek-kavarna.html",
+  "bytes": 92346
+ },
+ "sikland-hours": {
+  "url": "https://www.sikland.cz/kontakty/oteviraci-doba/",
+  "file": "sikland-hours.html",
+  "bytes": 284544
+ },
+ "sikland-program": {
+  "url": "https://www.sikland.cz/program/",
+  "file": "sikland-program.html",
+  "bytes": 287560
+ },
+ "mlyn-stravovani": {
+  "url": "https://mlyn-vikinek.cz/stravovani/",
+  "file": "mlyn-stravovani.html",
+  "bytes": 46211
+ },
+ "mlyn-tipy": {
+  "url": "https://mlyn-vikinek.cz/tipy-na-vylet/",
+  "file": "mlyn-tipy.html",
+  "bytes": 47447
+ },
+ "mlyn-pokoje": {
+  "url": "https://mlyn-vikinek.cz/apartmany/",
+  "file": "mlyn-pokoje.html",
+  "bytes": 54366
+ },
+ "mlyn-cenik": {
+  "url": "https://mlyn-vikinek.cz/cenik/",
+  "file": "mlyn-cenik.html",
+  "bytes": 43222
+ },
+ "kiosek-kadov-vys": {
+  "url": "https://www.vysocina.eu/sluzby/stravovani/3501-kiosek-kadov-u-stare-skoly",
+  "file": "kiosek-kadov-vys.html",
+  "bytes": 152001
+ },
+ "vesna": {
+  "url": "https://zdarsky.denik.cz/zpravy-region/vesna-lahudky-zdar-nad-sazavou-jidlo-levne-zdarko-vysocina-oved/",
+  "file": "vesna.html",
+  "bytes": 137920
+ },
+ "syry-brezin": {
+  "url": "https://www.syryzbrezin.cz/",
+  "file": "syry-brezin.html",
+  "bytes": 190789
+ },
+ "syry-brezin-kontakt": {
+  "url": "https://www.syryzbrezin.cz/kontakt/",
+  "file": "syry-brezin-kontakt.html",
+  "bytes": 178312
  }
 }
