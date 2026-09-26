@@ -8,7 +8,9 @@ Vstupy (vše v tools/):
   routes.json          – trasy k výpočtu v BRouteru (id, profil, body)
   poi_candidates.json  – body, ke kterým se počítá vzdálenost autem od chaty
   images.json          – soubory z Wikimedia Commons ke stažení (náhledy)
+  pages.json           – webové stránky k ověření údajů (otevírací doby, Gastromapa)
 """
+import hashlib
 import json
 import os
 import sys
@@ -185,38 +187,66 @@ def route_stats(gj):
             'time_s': int(props.get('total-time', 0))}
 
 
+def load_raw(name, default=None):
+    path = os.path.join(RAW, name)
+    if not os.path.exists(path):
+        return default
+    with open(path, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def route_key(profile, points):
+    """Otisk vstupu trasy – když se nezmění, trasa se znovu nepočítá."""
+    return hashlib.sha1(json.dumps([profile, points]).encode()).hexdigest()[:12]
+
+
 def run_brouter():
     routes = load_input('routes.json', [])
+    old = {s['id']: s for s in load_raw('routes_summary.json', []) if 'error' not in s}
     summary = []
     for r in routes:
         profile = r.get('profile', 'trekking')
+        key = route_key(profile, r['points'])
+        prev = old.get(r['id'])
+        if prev and prev.get('key') == key and os.path.exists(os.path.join(RAW, 'routes', r['id'] + '.geojson')):
+            summary.append(prev)
+            continue
         log(f'BRouter: {r["id"]} ({profile}, {len(r["points"])} bodů)')
         gj, err = brouter(r['points'], profile)
         if err:
             log(f'  ! chyba: {err}')
             summary.append({'id': r['id'], 'error': err})
             continue
-        s = {'id': r['id'], 'profile': profile, **route_stats(gj)}
+        s = {'id': r['id'], 'profile': profile, 'key': key, **route_stats(gj)}
         log(f'  {s["length_m"] / 1000:.1f} km, ↑{s["ascend_m"]} m')
         summary.append(s)
         save(f'routes/{r["id"]}.geojson', gj)
     if routes:
         save('routes_summary.json', summary)
 
-    # Jak daleko je to od chaty pěšky / na kole (jen souhrn, bez geometrie)
+    # Jak daleko je to od chaty pěšky / na kole (jen souhrn, bez geometrie).
+    # Už spočítané body se stejnou polohou se přeskočí.
     pois = load_input('poi_candidates.json', [])
+    old_access = load_raw('access.json', {})
     access = {}
     for p in pois:
+        at = [p['lat'], p['lon']]
+        prev = old_access.get(p['id'], {})
+        entry = {'at': at}
         for mode, profile in (('walk', 'hiking-mountain'), ('bike', 'trekking')):
             if not p.get(mode):
+                continue
+            if prev.get('at') == at and mode in prev:
+                entry[mode] = prev[mode]
                 continue
             gj, err = brouter([MILL, (p['lat'], p['lon'])], profile)
             if err:
                 log(f'  ! {p["id"]} {mode}: {err[:120]}')
                 continue
-            access.setdefault(p['id'], {})[mode] = route_stats(gj)
-            st = access[p['id']][mode]
-            log(f'  {mode:4} {p["id"]}: {st["length_m"] / 1000:.1f} km ↑{st["ascend_m"]} m')
+            entry[mode] = route_stats(gj)
+            log(f'  {mode:4} {p["id"]}: {entry[mode]["length_m"] / 1000:.1f} km ↑{entry[mode]["ascend_m"]} m')
+        if len(entry) > 1:
+            access[p['id']] = entry
     if access:
         save('access.json', access)
 
@@ -377,6 +407,33 @@ def run_commons():
             log(f'  obrázek {f["id"]} ({len(raw) // 1024} kB)')
         time.sleep(1)
     save('commons.json', meta)
+
+
+# ---------------------------------------------------------------- Webové stránky
+def run_pages():
+    """Stáhne stránky z tools/pages.json do data/raw/pages/ (ověření údajů, Gastromapa)."""
+    pages = load_input('pages.json', [])
+    if not pages:
+        return
+    outdir = os.path.join(RAW, 'pages')
+    os.makedirs(outdir, exist_ok=True)
+    index = load_raw('pages/_index.json', {})
+    for p in pages:
+        log(f'Stránka: {p["id"]} {p["url"][:90]}')
+        raw = http(p['url'], timeout=45, retries=2, headers={
+            'Accept': 'text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'cs,en;q=0.7'})
+        if raw is None:
+            index[p['id']] = {'url': p['url'], 'error': True}
+            continue
+        ext = p.get('ext') or ('json' if raw.lstrip()[:1] in (b'{', b'[') else 'html')
+        name = f'{p["id"]}.{ext}'
+        with open(os.path.join(outdir, name), 'wb') as f:
+            f.write(raw)
+        index[p['id']] = {'url': p['url'], 'file': name, 'bytes': len(raw)}
+        log(f'  {len(raw) // 1024} kB')
+        time.sleep(1)
+    save('pages/_index.json', index)
 
 
 def run_missing():

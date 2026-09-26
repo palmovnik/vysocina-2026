@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       steps:
-        description: 'Kroky (missing overpass brouter osrm wikidata commons), prázdné = výchozí'
+        description: 'Kroky (missing overpass brouter osrm wikidata commons pages), prázdné = výchozí'
         required: false
         default: ''
   push:
@@ -15,6 +15,7 @@ on:
       - 'tools/routes.json'
       - 'tools/poi_candidates.json'
       - 'tools/images.json'
+      - 'tools/pages.json'
 
 permissions:
   contents: write
@@ -29,11 +30,30 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Výběr kroků podle změněných vstupů
+        id: plan
+        env:
+          INPUT_STEPS: ${{ github.event.inputs.steps }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          STEPS="$INPUT_STEPS"
+          if [ -z "$STEPS" ] && [ "$GITHUB_EVENT_NAME" = push ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            CHANGED=$(git diff --name-only "$BEFORE" "$GITHUB_SHA")
+            has() { echo "$CHANGED" | grep -qx "tools/$1"; }
+            STEPS="missing"
+            if has routes.json || has poi_candidates.json; then STEPS="$STEPS brouter osrm"; fi
+            if has images.json; then STEPS="$STEPS commons"; fi
+            if has pages.json; then STEPS="$STEPS pages"; fi
+          fi
+          echo "Kroky: ${STEPS:-výchozí}"
+          echo "steps=$STEPS" >> "$GITHUB_OUTPUT"
       - name: Stažení podkladů
-        run: python tools/fetch_data.py ${{ github.event.inputs.steps }}
+        run: python tools/fetch_data.py ${{ steps.plan.outputs.steps }}
       - name: Uložení do repozitáře
         run: |
           git config user.name 'github-actions[bot]'
@@ -43,7 +63,7 @@ jobs:
             echo "Žádné změny v podkladech."
             exit 0
           fi
-          git commit -m "Aktualizace podkladů (OSM, trasy, časy jízdy)"
+          git commit -m "Aktualizace podkladů (OSM, trasy, časy jízdy, stránky)"
           for i in 1 2 3; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
             sleep 5

@@ -2,6 +2,7 @@
  {
   "id": "b-darko",
   "profile": "trekking",
+  "key": "18a976b55da0",
   "length_m": 16324,
   "ascend_m": 214,
   "plain_ascend_m": 0,
@@ -10,6 +11,7 @@
  {
   "id": "b-prameny",
   "profile": "trekking",
+  "key": "3d505d40954b",
   "length_m": 18899,
   "ascend_m": 301,
   "plain_ascend_m": 0,
@@ -18,6 +20,7 @@
  {
   "id": "b-medlov",
   "profile": "trekking",
+  "key": "56787d26612e",
   "length_m": 20850,
   "ascend_m": 324,
   "plain_ascend_m": 0,
@@ -26,6 +29,7 @@
  {
   "id": "b-devet-skal",
   "profile": "trekking",
+  "key": "fb3c667c12ce",
   "length_m": 42741,
   "ascend_m": 584,
   "plain_ascend_m": 0,
@@ -34,6 +38,7 @@
  {
   "id": "b-zdar",
   "profile": "trekking",
+  "key": "29d340ef2d8b",
   "length_m": 29851,
   "ascend_m": 187,
   "plain_ascend_m": 0,
@@ -42,6 +47,7 @@
  {
   "id": "b-stezka-sazava",
   "profile": "trekking",
+  "key": "7fcd0a931f09",
   "length_m": 8944,
   "ascend_m": 21,
   "plain_ascend_m": -55,
@@ -50,6 +56,7 @@
  {
   "id": "h-tisuvka",
   "profile": "hiking-mountain",
+  "key": "c87011097e16",
   "length_m": 6052,
   "ascend_m": 132,
   "plain_ascend_m": 0,
@@ -58,6 +65,7 @@
  {
   "id": "h-zakova-hora",
   "profile": "hiking-mountain",
+  "key": "3288b03abedd",
   "length_m": 11197,
   "ascend_m": 203,
   "plain_ascend_m": 0,
@@ -66,6 +74,7 @@
  {
   "id": "h-hreben",
   "profile": "hiking-mountain",
+  "key": "834a9c19cd71",
   "length_m": 15490,
   "ascend_m": 307,
   "plain_ascend_m": 3,
@@ -74,6 +83,7 @@
  {
   "id": "h-hreben-kratky",
   "profile": "hiking-mountain",
+  "key": "9164554ebfbb",
   "length_m": 6202,
   "ascend_m": 186,
   "plain_ascend_m": 3,
@@ -82,6 +92,7 @@
  {
   "id": "h-palice",
   "profile": "hiking-mountain",
+  "key": "399195352726",
   "length_m": 7938,
   "ascend_m": 136,
   "plain_ascend_m": 0,
@@ -90,6 +101,7 @@
  {
   "id": "h-darko",
   "profile": "hiking-mountain",
+  "key": "273be7ccdefb",
   "length_m": 6680,
   "ascend_m": 8,
   "plain_ascend_m": 8,
@@ -98,6 +110,7 @@
  {
   "id": "h-doubrava",
   "profile": "hiking-mountain",
+  "key": "1c1a2ef5b34b",
   "length_m": 8120,
   "ascend_m": 138,
   "plain_ascend_m": 0,
@@ -106,6 +119,7 @@
  {
   "id": "h-mastale",
   "profile": "hiking-mountain",
+  "key": "f2fbf147d586",
   "length_m": 8543,
   "ascend_m": 206,
   "plain_ascend_m": 0,
@@ -114,6 +128,7 @@
  {
   "id": "h-macocha",
   "profile": "hiking-mountain",
+  "key": "fea8cbc13f32",
   "length_m": 5911,
   "ascend_m": 186,
   "plain_ascend_m": 0,
