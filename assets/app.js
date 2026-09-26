@@ -276,7 +276,7 @@
     line.bindTooltip((r.type === 'bike' ? '🚲 ' : '🥾 ') + esc(r.name) + ' · ' + fmtKm(r.km), { sticky: true, direction: 'top', opacity: .95 });
     line.on('click', function (e) {
       selectRoute(r.id);
-      L.popup({ maxWidth: 280 }).setLatLng(e.latlng).setContent(routePopupHtml(r)).openOn(map);
+      openRoutePopup(r, e.latlng);
     });
     routeLayers[r.id] = L.layerGroup([casing, line]);
     routeLayers[r.id].line = line;
@@ -291,12 +291,14 @@
   legend.addTo(map);
 
   // ------------------------------------------------------------ map filters
-  var ALL_CATS = T.cats.map(function (c) { return c.id; });
-  var state = store('filters3') || {};
+  // trasy jsou na mapě samostatná kategorie vedle míst
+  var ROUTE_CAT = { id: 'trasy', name: 'Trasy', emoji: '🗺️' };
+  var ALL_CATS = T.cats.map(function (c) { return c.id; }).concat(ROUTE_CAT.id);
+  var state = store('filters4') || {};
   state.cats = state.cats || ALL_CATS.slice();
   state.flags = state.flags || {};
-  state.routeTypes = state.routeTypes || { bike: true, hike: true };
   var selectedRoute = null;
+  function routeVisible(r) { return state.cats.indexOf(ROUTE_CAT.id) >= 0 && passFlags(r, state.flags); }
 
   function placeVisible(p) {
     if (p.cat === 'chata') return true;
@@ -338,6 +340,21 @@
       });
       box.appendChild(b);
     });
+    var rOn = state.cats.indexOf(ROUTE_CAT.id) >= 0;
+    var rb = el('button', { 'class': 'chip', type: 'button', 'aria-pressed': String(rOn), style: '--c:var(--c-trasy)', title: 'Klik: zapnout/vypnout · dvojklik: jen trasy' },
+      '<span class="dot">' + ROUTE_CAT.emoji + '</span>' + ROUTE_CAT.name + ' <span class="count">' + T.routes.length + '</span>');
+    rb.addEventListener('click', function () {
+      var i = state.cats.indexOf(ROUTE_CAT.id);
+      if (i >= 0) state.cats.splice(i, 1); else state.cats.push(ROUTE_CAT.id);
+      buildChips();
+      applyFilters();
+    });
+    rb.addEventListener('dblclick', function () {
+      state.cats = ['chata', ROUTE_CAT.id];
+      buildChips();
+      applyFilters();
+    });
+    box.appendChild(rb);
     var flags = $('#flagChips');
     flags.innerHTML = '';
     FLAGS.forEach(function (f) {
@@ -349,28 +366,17 @@
       });
       flags.appendChild(b);
     });
-    var rc = $('#routeChips');
-    rc.innerHTML = '';
-    [['bike', '🚲 Na kolo'], ['hike', '🥾 Pěšky']].forEach(function (f) {
-      var b = el('button', { 'class': 'chip toggle', type: 'button', 'aria-pressed': String(!!state.routeTypes[f[0]]) }, f[1]);
-      b.addEventListener('click', function () {
-        state.routeTypes[f[0]] = !state.routeTypes[f[0]];
-        b.setAttribute('aria-pressed', String(state.routeTypes[f[0]]));
-        applyFilters();
-      });
-      rc.appendChild(b);
-    });
   }
 
   function applyFilters() {
-    store('filters3', state);
+    store('filters4', state);
     T.places.forEach(function (p) {
       var vis = placeVisible(p);
       if (vis && !map.hasLayer(markers[p.id])) markers[p.id].addTo(map);
       if (!vis && map.hasLayer(markers[p.id])) map.removeLayer(markers[p.id]);
     });
     T.routes.forEach(function (r) {
-      var vis = !!state.routeTypes[r.type] || selectedRoute === r.id;
+      var vis = routeVisible(r) || selectedRoute === r.id;
       var lg = routeLayers[r.id];
       if (vis && !map.hasLayer(lg)) lg.addTo(map);
       if (!vis && map.hasLayer(lg)) map.removeLayer(lg);
@@ -383,8 +389,12 @@
     var box = $('#mapList');
     box.innerHTML = '';
     var items = T.places.filter(placeVisible).sort(function (a, b) { return a.dist - b.dist; });
+    var rts = T.routes.filter(routeVisible);
     var n = items.length - 1;   // bez chaty
-    box.appendChild(el('div', { 'class': 'list-head' }, n > 0 ? 'Na mapě ' + n + (n === 1 ? ' místo' : n < 5 ? ' místa' : ' míst') + ', od nejbližšího' :
+    var parts = [];
+    if (n > 0) parts.push(n + (n === 1 ? ' místo' : n < 5 ? ' místa' : ' míst'));
+    if (rts.length) parts.push(rts.length + (rts.length === 1 ? ' trasa' : rts.length < 5 ? ' trasy' : ' tras'));
+    box.appendChild(el('div', { 'class': 'list-head' }, parts.length ? 'Na mapě ' + parts.join(' a ') + (n > 0 ? ', místa od nejbližšího' : '') :
       'Nic není vybráno. Klikněte nahoře na <b>Vše</b> nebo na kategorii.'));
     items.forEach(function (p) {
       var b = el('button', { type: 'button', 'data-id': p.id, style: '--c:' + catVar(p.cat) },
@@ -394,6 +404,15 @@
       b.addEventListener('mouseleave', function () { hl(p.id, false); });
       box.appendChild(b);
     });
+    if (rts.length) {
+      box.appendChild(el('div', { 'class': 'list-head sub' }, ROUTE_CAT.emoji + ' Trasy'));
+      rts.forEach(function (r) {
+        var b = el('button', { type: 'button', 'data-route': r.id, style: '--c:' + r.color },
+          '<span class="ico">' + (r.type === 'bike' ? '🚲' : '🥾') + '</span><span class="nm">' + esc(r.name) + (r.top ? ' ⭐' : '') + '</span><span class="dist">' + fmtKm(r.km) + '</span>');
+        b.addEventListener('click', function () { focusRoute(r.id); });
+        box.appendChild(b);
+      });
+    }
   }
   function hl(id, on) {
     var m = markers[id];
@@ -417,6 +436,20 @@
     map.flyTo([p.lat, p.lon], Math.max(map.getZoom(), p.dist > 30 ? 13 : 14), { duration: .8 });
     map.once('moveend', function () { markers[id].openPopup(); });
     $$('#mapList button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-id') === id); });
+  }
+  function openRoutePopup(r, latlng) {
+    var pop = L.popup({ maxWidth: 280, autoPan: false }).setLatLng(latlng).setContent(routePopupHtml(r));
+    pop._routeId = r.id;
+    pop.openOn(map);
+  }
+  function focusRoute(id) {
+    var r = ROUTES[id];
+    if (!r) return;
+    selectRoute(id);
+    map.fitBounds(routeLayers[id].line.getBounds(), { padding: [30, 30], animate: false });
+    var mid = r.geo[Math.floor(r.geo.length / 2)];
+    openRoutePopup(r, [mid[0], mid[1]]);
+    $$('#mapList button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-route') === id); });
   }
 
   // ------------------------------------------------------------ view buttons
@@ -452,11 +485,11 @@
   }
   function showRouteOnMap(id) {
     document.getElementById('mapa').scrollIntoView({ behavior: 'smooth' });
-    selectRoute(id);
-    map.fitBounds(routeLayers[id].line.getBounds(), { padding: [30, 30] });
+    focusRoute(id);
   }
-  map.on('popupclose', function () {
-    if (!selectedRoute) return;
+  // zavření bubliny vybrané trasy zruší její zvýraznění
+  map.on('popupclose', function (e) {
+    if (!selectedRoute || !e.popup || e.popup._routeId !== selectedRoute) return;
     selectedRoute = null;
     T.routes.forEach(function (r) {
       routeLayers[r.id].line.setStyle({ weight: 4, opacity: .9 });
@@ -785,7 +818,12 @@
       var target = b.getAttribute('href');
       closeModal(target);
       var d = document.querySelector(target);
-      if (d) { d.scrollIntoView({ behavior: 'smooth', block: 'start' }); d.classList.add('flash'); setTimeout(function () { d.classList.remove('flash'); }, 1800); }
+      if (d) {
+        if (d.tagName === 'DETAILS') d.open = true;
+        d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        d.classList.add('flash');
+        setTimeout(function () { d.classList.remove('flash'); }, 1800);
+      }
     }
   });
   modal.addEventListener('cancel', function (e) { e.preventDefault(); closeModal(); });
@@ -838,6 +876,36 @@
     });
   })();
 
+  // ------------------------------------------------------------ rozbalovací skupiny (vše pod mapou)
+  function makeAcc(o) {
+    var d = el('details', { 'class': 'acc', style: '--c:' + (o.color || 'var(--forest)') });
+    if (o.id) d.id = o.id;
+    d.innerHTML = '<summary><span class="acc-dot">' + o.emoji + '</span><span class="acc-main"><span class="acc-title"></span>' +
+      '<span class="acc-prev"></span></span><span class="acc-chev" aria-hidden="true"></span></summary><div class="acc-body"></div>';
+    var body = d.querySelector('.acc-body');
+    d.setHead = function (title, count, preview) {
+      d.querySelector('.acc-title').innerHTML = esc(title) + (count != null ? ' <span class="acc-n">' + count + '</span>' : '');
+      d.querySelector('.acc-prev').innerHTML = preview || (count === 0 ? 'S vybranými štítky tu nic není.' : '');
+      d.classList.toggle('is-empty', count === 0);
+    };
+    d.setHead(o.title, o.count, o.preview);
+    d.dirty = true;
+    if (o.html != null) { body.innerHTML = o.html; d.dirty = false; }
+    // obsah (a fotky) se vykreslí až při prvním rozbalení
+    d.addEventListener('toggle', function () {
+      if (d.open && d.dirty && o.render) { o.render(body); d.dirty = false; }
+    });
+    d.refresh = function () {
+      if (d.open && o.render) { o.render(body); d.dirty = false; } else if (o.render) d.dirty = true;
+    };
+    return d;
+  }
+  function previewNames(items, max) {
+    max = max || 6;
+    var names = items.slice(0, max).map(function (x) { return (x.top ? '★ ' : '') + x.name; });
+    return esc(names.join(' · ')) + (items.length > max ? ' …' : '');
+  }
+
   // ------------------------------------------------------------ nápady po dnech
   (function days() {
     var box = $('#days');
@@ -853,89 +921,80 @@
       return '<li><a href="' + placeHref(p.id) + '"><span class="d" style="--c:' + catVar(p.cat) + '">' + placeIcon(p) + '</span>' +
         '<span>' + esc(p.name) + (p.top ? ' <span class="star-s" title="top tip">★</span>' : '') + '</span></a></li>';
     }
+    function name(x) {
+      var o = x.indexOf('route:') === 0 ? ROUTES[x.slice(6)] : PLACES[x];
+      return o ? o.name : '';
+    }
     T.program.days.forEach(function (d) {
-      var h = '<header><div class="date">' + esc(d.label) + '</div><h3>' + esc(d.title) + '</h3></header>' +
-        '<ul class="daylist">' + (d.tips || []).map(item).join('') + '</ul>';
+      var h = '<ul class="daylist" data-list="day-' + d.id + '">' + (d.tips || []).map(item).join('') + '</ul>';
       if (d.rain && d.rain.length) h += '<div class="dayalt"><b>☔ Když prší</b><ul class="daylist">' + d.rain.map(item).join('') + '</ul></div>';
       if (d.alt && d.alt.length) h += '<div class="dayalt"><b>↪ ' + esc(d.altLabel || 'Jiná možnost') + '</b><ul class="daylist">' + d.alt.map(item).join('') + '</ul></div>';
-      box.appendChild(el('article', { 'class': 'day', id: 'day-' + d.id, 'data-list': 'day-' + d.id }, h));
+      box.appendChild(makeAcc({ id: 'day-' + d.id, emoji: '📅', color: 'var(--accent)', title: d.label + ' · ' + d.title,
+        preview: esc((d.tips || []).map(name).join(' · ')), html: h }));
     });
   })();
 
   // ------------------------------------------------------------ výlety a místa
   (function placesSection() {
-    var tabs = $('#placeTabs'), flagBox = $('#placeFlags'), box = $('#places');
-    var st = store('placeTab3') || {};
-    st.cat = st.cat || 'all';
+    var flagBox = $('#placeFlags'), box = $('#places');
+    var st = store('placeTab4') || {};
     st.flags = st.flags || {};
     var pool = T.places.filter(function (p) { return TOUR_CATS.indexOf(p.cat) >= 0; });
-    function render() {
-      store('placeTab3', st);
-      var list = pool.filter(function (p) {
-        return (st.cat === 'all' || p.cat === st.cat) && passFlags(p, st.flags);
-      }).sort(function (a, b) { return (b.top ? 1 : 0) - (a.top ? 1 : 0) || a.dist - b.dist; });
-      // ve „Vše“ po kategoriích s nadpisem, jinak jen dlaždice vybrané kategorie
-      var html = '';
+    function list(id) {
+      return pool.filter(function (p) { return p.cat === id && passFlags(p, st.flags); })
+        .sort(function (a, b) { return (b.top ? 1 : 0) - (a.top ? 1 : 0) || a.dist - b.dist; });
+    }
+    var accs = {};
+    TOUR_CATS.forEach(function (id) {
+      accs[id] = makeAcc({ id: 'cat-' + id, emoji: CATS[id].emoji, color: catVar(id), title: CATS[id].name, render: function (body) {
+        var items = list(id);
+        body.innerHTML = items.length ? '<div class="tiles" data-list="places-' + id + '">' + items.map(function (p) { return tileHtml(p); }).join('') + '</div>' :
+          '<p class="muted">S vybranými štítky tu nic není.</p>';
+      } });
+      box.appendChild(accs[id]);
+    });
+    function update() {
+      store('placeTab4', st);
       TOUR_CATS.forEach(function (id) {
-        if (st.cat !== 'all' && st.cat !== id) return;
-        var part = list.filter(function (p) { return p.cat === id; });
-        if (!part.length) return;
-        if (st.cat === 'all') html += '<h3 class="tiles-head" style="--c:' + catVar(id) + '"><span class="dot">' + CATS[id].emoji + '</span>' + esc(CATS[id].name) + ' <span class="muted small">(' + part.length + ')</span></h3>';
-        html += part.map(function (p) { return tileHtml(p); }).join('');
+        var items = list(id);
+        accs[id].setHead(CATS[id].name, items.length, previewNames(items));
+        accs[id].refresh();
       });
-      box.innerHTML = html || '<p class="muted">Tomu nic neodpovídá. Zkuste vypnout některý filtr.</p>';
-      $$('button', tabs).forEach(function (b) { b.setAttribute('aria-pressed', String(st.cat === b.getAttribute('data-v'))); });
       $$('button', flagBox).forEach(function (b) { b.setAttribute('aria-pressed', String(!!st.flags[b.getAttribute('data-v')])); });
     }
-    [['all', '✨ Vše', pool.length]].concat(TOUR_CATS.map(function (id) {
-      return [id, CATS[id].emoji + ' ' + CATS[id].name, pool.filter(function (p) { return p.cat === id; }).length];
-    })).forEach(function (d) {
-      var b = el('button', { 'class': 'chip toggle', type: 'button', 'data-v': d[0] }, esc(d[1]) + ' <span class="count">' + d[2] + '</span>');
-      b.addEventListener('click', function () { st.cat = d[0]; render(); });
-      tabs.appendChild(b);
-    });
     FLAGS.forEach(function (f) {
       var b = el('button', { 'class': 'chip toggle flag', type: 'button', 'data-v': f[0] }, f[1]);
-      b.addEventListener('click', function () { st.flags[f[0]] = !st.flags[f[0]]; render(); });
+      b.addEventListener('click', function () { st.flags[f[0]] = !st.flags[f[0]]; update(); });
       flagBox.appendChild(b);
     });
-    render();
+    update();
   })();
 
   // ------------------------------------------------------------ jídlo, kavárny a farmy
   (function gastro() {
     var box = $('#gastro');
-    var nav = el('div', { 'class': 'chips tabs gnav' });
-    box.appendChild(nav);
     (T.gastro || []).forEach(function (g) {
-      var list = T.places.filter(function (p) { return p.cat === g.cat && (p.sub || '') === g.id; })
+      var items = T.places.filter(function (p) { return p.cat === g.cat && (p.sub || '') === g.id; })
         .sort(function (a, b) { return (a.order != null ? a.order : 99) - (b.order != null ? b.order : 99) || a.dist - b.dist; });
-      if (!list.length) return;
-      var sec = el('div', { 'class': 'gsec', id: 'g-' + g.id, style: '--c:' + catVar(g.cat) },
-        '<h3><span class="dot">' + g.emoji + '</span>' + esc(g.name) + ' <span class="muted small">(' + list.length + ')</span></h3>' +
-        (g.desc ? '<p class="muted gdesc">' + esc(g.desc) + '</p>' : ''));
-      var grid = el('div', { 'class': 'gtiles', 'data-list': 'g-' + g.id });
-      grid.innerHTML = list.map(gtileHtml).join('');
-      sec.appendChild(grid);
-      box.appendChild(sec);
-      nav.appendChild(el('a', { 'class': 'chip toggle', href: '#g-' + g.id }, g.emoji + ' ' + esc(g.short || g.name)));
+      if (!items.length) return;
+      box.appendChild(makeAcc({ id: 'g-' + g.id, emoji: g.emoji, color: catVar(g.cat), title: g.name, count: items.length,
+        preview: previewNames(items), render: function (body) {
+          body.innerHTML = (g.desc ? '<p class="muted gdesc">' + esc(g.desc) + '</p>' : '') +
+            '<div class="gtiles" data-list="g-' + g.id + '">' + items.map(gtileHtml).join('') + '</div>';
+        } }));
     });
   })();
 
   // ------------------------------------------------------------ trasy
   (function routes() {
     var box = $('#routes');
-    var tabs = $('#routeTabs');
-    var filter = 'all';
-    box.innerHTML = T.routes.map(rtileHtml).join('');
-    [['all', 'Vše'], ['bike', '🚲 Na kolo'], ['hike', '🥾 Pěšky']].forEach(function (t) {
-      var b = el('button', { 'class': 'chip toggle', type: 'button', 'aria-pressed': String(t[0] === 'all') }, t[1]);
-      b.addEventListener('click', function () {
-        filter = t[0];
-        $$('button', tabs).forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-        $$('.rtile', box).forEach(function (c) { c.hidden = filter !== 'all' && c.getAttribute('data-type') !== filter; });
-      });
-      tabs.appendChild(b);
+    [['bike', '🚲', 'Na kolo'], ['hike', '🥾', 'Pěšky']].forEach(function (t) {
+      var items = T.routes.filter(function (r) { return r.type === t[0]; });
+      var prev = esc(items.slice(0, 6).map(function (r) { return (r.top ? '★ ' : '') + r.name + ' (' + fmtKm(r.km) + ')'; }).join(' · ')) + (items.length > 6 ? ' …' : '');
+      box.appendChild(makeAcc({ id: 'r-' + t[0], emoji: t[1], color: t[0] === 'bike' ? '#1f6fd1' : '#e8590c', title: t[2], count: items.length, preview: prev,
+        render: function (body) {
+          body.innerHTML = '<div class="tiles routes" data-list="routes-' + t[0] + '">' + items.map(rtileHtml).join('') + '</div>';
+        } }));
     });
   })();
 
@@ -944,36 +1003,36 @@
     var m = PLACES.mlyn;
     var box = $('#chataBox');
     var c = T.chata;
-    var photo = m.img ? '<figure class="chata-ph"><img src="' + esc(m.img.src) + '" alt="Mlýn Vikinek v Cikháji" loading="lazy">' +
-      '<figcaption>Foto: <a href="' + esc(m.img.page) + '" target="_blank" rel="noopener">' + esc(m.img.author) + '</a>, ' + esc(m.img.license) + '</figcaption></figure>' : '';
-    var left = '<div class="panel"><h3>🏠 ' + esc(m.name) + '</h3>' + photo + '<p>' + esc(m.text) + '</p><dl class="kv">' +
+    var left = '<p>' + esc(m.text) + '</p><dl class="kv">' +
       '<dt>Adresa</dt><dd>' + esc(c.address) + '</dd>' +
       '<dt>GPS</dt><dd><button type="button" class="btn small" id="copyGps">' + MILL.lat.toFixed(5) + ' N, ' + MILL.lon.toFixed(5) + ' E 📋</button></dd>' +
       '<dt>Kontakt</dt><dd><a href="tel:+420602768375">+420 602 768 375</a> · <a href="mailto:info@mlyn-vikinek.cz">info@mlyn-vikinek.cz</a></dd>' +
       '<dt>Kapacita</dt><dd>' + esc(c.capacity) + '</dd>' +
       (c.checkin ? '<dt>Příjezd</dt><dd>' + esc(c.checkin) + '</dd>' : '') +
       '<dt>Vybavení</dt><dd>' + esc(c.amenities) + '</dd>' +
-      '<dt>Web</dt><dd><a href="https://mlyn-vikinek.cz/" target="_blank" rel="noopener">mlyn-vikinek.cz</a></dd></dl>' +
-      (c.note ? '<div class="note">⚠️ ' + esc(c.note) + '</div>' : '') + '</div>';
-    var right = '<div class="panel"><h3>🚗 Jak se k nám dostat</h3><p class="muted small">Orientační čas jízdy autem (OSRM, bez provozu):</p><div class="drive">';
-    Object.keys(T.fromCities).forEach(function (k) {
+      '<dt>Web</dt><dd><a href="https://mlyn-vikinek.cz/" target="_blank" rel="noopener">mlyn-vikinek.cz</a> · <a href="https://mlyn-vikinek.cz/galerie/" target="_blank" rel="noopener">fotky mlýna</a></dd></dl>';
+    var right = '<p class="muted small">Orientační čas jízdy autem (OSRM, bez provozu):</p><div class="drive">';
+    var cities = Object.keys(T.fromCities);
+    cities.forEach(function (k) {
       var f = T.fromCities[k];
       right += '<div class="stat"><b>' + fmtMin(f.min) + '</b><span>z ' + esc(k) + ' · ' + f.km + ' km</span></div>';
     });
     right += '</div><div class="row">' +
       '<a class="btn primary" href="' + googleNav(m) + '" target="_blank" rel="noopener">🧭 Navigovat (Google)</a>' +
       '<a class="btn" href="' + mapyShow(m) + '" target="_blank" rel="noopener">Mlýn v Mapy.com</a>' +
-      '<a class="btn" href="https://mlyn-vikinek.cz/galerie/" target="_blank" rel="noopener">📷 Fotky mlýna</a>' +
       '<a class="btn" href="gpx/vysocina-2026-mista.gpx" download>⬇ Všechna místa (GPX)</a></div>' +
-      '<h3 style="margin-top:18px">🛒 Nejbližší služby</h3><ul class="svc">';
+      '<h4 class="svc-h">🛒 Nejbližší služby</h4><ul class="svc">';
     c.services.forEach(function (id) {
       var p = PLACES[id];
       if (!p) return;
       right += '<li><a href="' + placeHref(id) + '"><span class="ico" style="--c:' + catVar(p.cat) + '">' + placeIcon(p) + '</span><span class="t">' + esc(p.name) +
         '<span class="how">' + esc(p.teaser) + '</span></span><span class="dist">' + howFar(p) + '</span></a></li>';
     });
-    right += '</ul></div>';
-    box.innerHTML = left + right;
+    right += '</ul>';
+    box.appendChild(makeAcc({ emoji: '🏠', color: 'var(--c-chata)', title: m.name,
+      preview: esc([c.address, '16 lůžek + dětská postýlka', 'sauna, krb, zahrada s ohništěm', c.checkin].filter(Boolean).join(' · ')), html: left }));
+    box.appendChild(makeAcc({ emoji: '🚗', color: 'var(--c-sluzby)', title: 'Cesta a nejbližší služby',
+      preview: esc(cities.map(function (k) { return 'z ' + k + ' ' + fmtMin(T.fromCities[k].min); }).join(' · ') + ' · obchod, lékárna, benzinka, nemocnice'), html: right }));
     $('#copyGps').addEventListener('click', function (e) {
       var t = MILL.lat.toFixed(5) + ', ' + MILL.lon.toFixed(5);
       if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { e.target.textContent = 'Zkopírováno ✓'; });
@@ -1003,27 +1062,51 @@
     function linkPhones(t) {
       return esc(t).replace(/(\+?\d[\d ]{7,}\d)/g, function (m) { return '<a href="tel:' + m.replace(/\s/g, '') + '">' + m + '</a>'; });
     }
-    var p1 = el('div', { 'class': 'panel' }, '<h3>📞 Kam zavolat předem</h3><ul class="plain">' + T.program.reservations.map(function (r) {
-      return '<li><span class="t">' + esc(r.text) + '</span><span class="how">' + linkPhones(r.how) + '</span></li>';
-    }).join('') + '</ul>');
+    var res = T.program.reservations;
+    box.appendChild(makeAcc({ emoji: '📞', color: 'var(--forest)', title: 'Kam zavolat předem', count: res.length,
+      preview: esc(res.map(function (r) { return r.text.split(' (')[0].split(' – ')[0]; }).join(' · ')),
+      html: '<ul class="plain">' + res.map(function (r) {
+        return '<li><span class="t">' + esc(r.text) + '</span><span class="how">' + linkPhones(r.how) + '</span></li>';
+      }).join('') + '</ul>' }));
     var sunRows = T.sun.map(function (s) {
       return '<tr><td>' + esc(s.label) + '</td><td>' + s.rise + '</td><td>' + s.set + '</td><td>' + s.dusk + '</td></tr>';
     }).join('');
-    var p2 = el('div', { 'class': 'panel' },
-      '<h3>🌦️ Počasí a světlo</h3><p>' + esc(T.weather.text) + '</p>' +
-      '<table class="sun"><thead><tr><th>Den</th><th>Východ</th><th>Západ</th><th>Tma</th></tr></thead><tbody>' + sunRows + '</tbody></table>' +
-      '<p class="small" style="margin-top:10px">🌑 ' + esc(T.weather.moon) + '</p>' +
-      '<div class="row">' + T.weather.links.map(function (l) {
-        return '<a class="btn small" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.name) + '</a>';
-      }).join('') + '</div>');
-    var p3 = el('div', { 'class': 'panel' }, '<h3>🎒 Co s sebou</h3>');
-    p3.appendChild(checklist('pack', T.program.packing));
-    p3.appendChild(el('div', { 'class': 'note', style: 'margin-top:12px' },
+    box.appendChild(makeAcc({ emoji: '🌦️', color: 'var(--c-pamatky)', title: 'Počasí a světlo',
+      preview: esc('přes den kolem 7–13 °C, v noci 0–5 °C · slunce zapadá kolem ' + T.sun[0].set + ' · 10. 10. novoluní, tma na hvězdy'),
+      html: '<p>' + esc(T.weather.text) + '</p>' +
+        '<table class="sun"><thead><tr><th>Den</th><th>Východ</th><th>Západ</th><th>Tma</th></tr></thead><tbody>' + sunRows + '</tbody></table>' +
+        '<p class="small" style="margin-top:10px">🌑 ' + esc(T.weather.moon) + '</p>' +
+        '<div class="row">' + T.weather.links.map(function (l) {
+          return '<a class="btn small" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.name) + '</a>';
+        }).join('') + '</div>' }));
+    var quests = makeAcc({ emoji: '🧭', color: 'var(--c-deti)', title: 'Úkoly pro malé průzkumníky', count: (T.program.quests || []).length,
+      preview: 'Kdo splní nejvíc? Lodička na pramenu, klokan v zookoutku, perníčky na skále …', html: '' });
+    quests.querySelector('.acc-body').appendChild(checklist('quest', T.program.quests || []));
+    box.appendChild(quests);
+    var pack = makeAcc({ emoji: '🎒', color: 'var(--c-jidlo)', title: 'Co s sebou', count: T.program.packing.length,
+      preview: 'Teplé a nepromokavé věci, nosítko, odrážedla, čelovky … a tísňová čísla', html: '' });
+    pack.querySelector('.acc-body').appendChild(checklist('pack', T.program.packing));
+    pack.querySelector('.acc-body').appendChild(el('div', { 'class': 'note', style: 'margin-top:12px' },
       '<b>Tísňová volání:</b> 112 · záchranka 155 · hasiči 150 · policie 158<br>Nemocnice: Nové Město na Moravě · lékárna o víkendu: Benu Žďár (8–20)'));
-    var p4 = el('div', { 'class': 'panel' }, '<h3>🧭 Úkoly pro malé průzkumníky</h3><p class="small muted">Kdo splní nejvíc úkolů?</p>');
-    p4.appendChild(checklist('quest', T.program.quests || []));
-    box.appendChild(p1); box.appendChild(p2); box.appendChild(p4); box.appendChild(p3);
+    box.appendChild(pack);
   })();
+
+  // tlačítka „Rozbalit vše / Sbalit vše“ u sekcí
+  $$('.acc-all').forEach(function (b) {
+    var box = document.getElementById(b.getAttribute('data-target'));
+    function sync() {
+      var ds = $$('details.acc', box);
+      b.textContent = ds.length && ds.every(function (d) { return d.open; }) ? 'Sbalit vše' : 'Rozbalit vše';
+    }
+    b.addEventListener('click', function () {
+      var ds = $$('details.acc', box);
+      var open = !ds.every(function (d) { return d.open; });
+      ds.forEach(function (d) { d.open = open; });
+      sync();
+    });
+    box.addEventListener('toggle', sync, true);
+    sync();
+  });
 
   // ------------------------------------------------------------ credits
   $('#credits').innerHTML = T.credits;

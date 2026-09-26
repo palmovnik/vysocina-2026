@@ -62,7 +62,7 @@
       <div class="block-head">
         <div>
           <h2>Mapa okolí</h2>
-          <p class="muted">Nahoře vyberte, co chcete vidět (<b>Vše</b> zapne nebo vypne všechno najednou), a klikněte na bod nebo trasu. Seznam je seřazený podle vzdálenosti od mlýna.</p>
+          <p class="muted">Nahoře vyberte, co chcete vidět, včetně tras (<b>Vše</b> zapne nebo vypne všechno najednou), a klikněte na bod nebo trasu. Seznam je seřazený podle vzdálenosti od mlýna.</p>
         </div>
       </div>
       <div class="map-layout">
@@ -73,8 +73,6 @@
             <div class="chips" id="catChips"></div>
             <div class="filter-label">Jen tipy, které se hodí</div>
             <div class="chips" id="flagChips"></div>
-            <div class="filter-label">Trasy na mapě</div>
-            <div class="chips" id="routeChips"></div>
           </div>
           <div class="map-list" id="mapList"></div>
           <div class="map-tools">
@@ -92,12 +90,12 @@
       <div class="block-head">
         <div>
           <h2>Výlety a místa</h2>
-          <p class="muted">Seřazené podle kategorií, ⭐ top tipy jsou první. Časy pěšky a na kole jsou po skutečných cestách, autem na nejbližší parkoviště. Zvířátka a farmy jsou v sekci <a href="#jidlo">Jídlo a farmy</a>.</p>
+          <p class="muted">Po kategoriích, ⭐ top tipy jsou první. Rozbalte skupinu a uvidíte tipy s fotkami. Štítky nahoře vyberou jen tipy, které se hodí.</p>
         </div>
+        <button class="btn small acc-all" type="button" data-target="places">Rozbalit vše</button>
       </div>
-      <div class="chips tabs" id="placeTabs"></div>
       <div class="chips tabs flags" id="placeFlags" aria-label="Pro koho"></div>
-      <div class="tiles" id="places" data-list="places"></div>
+      <div class="acc-list" id="places"></div>
     </div>
   </section>
 
@@ -106,10 +104,11 @@
       <div class="block-head">
         <div>
           <h2>Jídlo, kavárny a farmy</h2>
-          <p class="muted">Výjimečné podniky z Gastromapy Lukáše Hejlíka, průvodce Gault&amp;Millau a Maurerova výběru, rodinné restaurace s dětským koutkem, hospody na výletech a farmy se zvířátky. Pro velkou skupinu je dobré zavolat předem.</p>
+          <p class="muted">Podniky z Gastromapy Lukáše Hejlíka, průvodce Gault&amp;Millau a Maurerova výběru, rodinné restaurace, hospody na výletech a farmy se zvířátky. Pro velkou skupinu je dobré zavolat předem.</p>
         </div>
+        <button class="btn small acc-all" type="button" data-target="gastro">Rozbalit vše</button>
       </div>
-      <div id="gastro"></div>
+      <div class="acc-list" id="gastro"></div>
     </div>
   </section>
 
@@ -118,11 +117,11 @@
       <div class="block-head">
         <div>
           <h2>Trasy na kolo i pěšky</h2>
-          <p class="muted">Spočítané po skutečných cestách (OpenStreetMap + BRouter), s výškovým profilem, povrchem a GPX pro Mapy.com, Garmin nebo Stravu.</p>
+          <p class="muted">Spočítané po skutečných cestách, s výškovým profilem, povrchem a GPX pro Mapy.com, Garmin nebo Stravu. Na mapě je zapnete kategorií Trasy.</p>
         </div>
-        <div class="chips tabs" id="routeTabs"></div>
+        <button class="btn small acc-all" type="button" data-target="routes">Rozbalit vše</button>
       </div>
-      <div class="tiles routes" id="routes" data-list="routes"></div>
+      <div class="acc-list" id="routes"></div>
     </div>
   </section>
 
@@ -131,17 +130,18 @@
       <div class="block-head">
         <div>
           <h2>Nápady po dnech</h2>
-          <p class="muted">Jen pro inspiraci, co se ke kterému dni hodí. Kliknutím se otevře detail.</p>
+          <p class="muted">Jen pro inspiraci, co se ke kterému dni hodí.</p>
         </div>
+        <button class="btn small acc-all" type="button" data-target="days">Rozbalit vše</button>
       </div>
-      <div class="days" id="days"></div>
+      <div class="acc-list" id="days"></div>
     </div>
   </section>
 
   <section class="block" id="chata">
     <div class="wrap">
       <div class="block-head"><div><h2>Chata: Mlýn Vikinek</h2></div></div>
-      <div class="two" id="chataBox"></div>
+      <div class="acc-list" id="chataBox"></div>
     </div>
   </section>
 
@@ -153,7 +153,7 @@
           <p class="muted">Zaškrtnutí úkolů a věcí s sebou se ukládá jen ve vašem prohlížeči.</p>
         </div>
       </div>
-      <div class="grid3" id="practical"></div>
+      <div class="acc-list" id="practical"></div>
     </div>
   </section>
 </main>
