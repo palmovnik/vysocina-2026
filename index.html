@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vysočina 2026 · Mlýn Vikinek</title>
+<meta name="description" content="Průvodce okolím Mlýna Vikinek v Cikháji (Žďárské vrchy) pro 4 rodiny, 8.–11. 10. 2026: mapa, skály, jeskyně, tipy pro děti, cyklotrasy a program.">
+<meta name="theme-color" content="#2d5a44">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 54 L24 18 L34 34 L42 24 L60 54 Z' fill='%232d5a44'/%3E%3Ccircle cx='48' cy='14' r='7' fill='%23e0793d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;550;650&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Žďárské vrchy · podzim 2026</div>
+    <h1>Vysočina 2026</h1>
+    <p class="lead">Průvodce okolím <b>Mlýna Vikinek</b> v Cikháji pro čtyři rodiny: skály, jeskyně, tipy pro děti, cyklotrasy a program na čtyři dny.</p>
+    <div class="hero-meta">
+      <span class="pill">📅 čt 8. – ne 11. října 2026</span>
+      <span class="pill">📍 Cikháj 57, 675 m n. m.</span>
+      <span class="pill countdown" id="countdown"></span>
+    </div>
+    <div class="families" id="families"></div>
+  </div>
+</header>
+
+<nav class="topnav" aria-label="Sekce">
+  <div class="wrap">
+    <span class="brand">Mlýn Vikinek</span>
+    <a href="#mapa">Mapa</a>
+    <a href="#program">Program</a>
+    <a href="#mista">Místa</a>
+    <a href="#trasy">Trasy</a>
+    <a href="#chata">Chata</a>
+    <a href="#prakticke">Praktické</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Přepnout světlý/tmavý režim" title="Světlý / tmavý režim">🌓</button>
+  </div>
+</nav>
+
+<main>
+  <section class="block" id="mapa">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Mapa okolí</h2>
+          <p class="muted">Vyberte kategorie, klikněte na bod nebo trasu. Seznam míst je seřazený podle vzdálenosti od mlýna.</p>
+        </div>
+      </div>
+      <div class="map-layout">
+        <div id="map" role="application" aria-label="Interaktivní mapa okolí"></div>
+        <aside class="map-side">
+          <div class="filters">
+            <div class="chips" id="catChips"></div>
+            <div class="filter-label">Zobrazit</div>
+            <div class="chips" id="flagChips"></div>
+            <div class="filter-label">Trasy na mapě</div>
+            <div class="chips" id="routeChips"></div>
+          </div>
+          <div class="map-list" id="mapList"></div>
+          <div class="map-tools">
+            <button class="btn small" id="btnHome" type="button">🏠 Okolí chaty</button>
+            <button class="btn small" id="btnAll" type="button">🗺️ Celý přehled</button>
+            <button class="btn small" id="btnLocate" type="button">📍 Kde jsem</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="program">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Program na čtyři dny</h2>
+          <p class="muted">Návrh, ne povinnost. U každého dne je plán B pro případ deště. Otevírací doby jsou ověřené pro říjen 2026, přesto se vyplatí je před cestou zkontrolovat.</p>
+        </div>
+      </div>
+      <div class="days" id="days"></div>
+    </div>
+  </section>
+
+  <section class="block" id="mista">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Místa a tipy</h2>
+          <p class="muted">Časy autem jsou z mlýna na nejbližší parkoviště, pěšky a na kole po skutečných cestách. Filtry nahoře u mapy platí i tady.</p>
+        </div>
+      </div>
+      <div id="places"></div>
+    </div>
+  </section>
+
+  <section class="block" id="trasy">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Trasy na kolo i pěšky</h2>
+          <p class="muted">Trasy jsou spočítané po skutečných cestách (OpenStreetMap + BRouter), s výškovým profilem. GPX se dá nahrát do Mapy.com, Garminu nebo Stravy. Najetím na profil se ukáže místo na mapě.</p>
+        </div>
+        <div class="route-tabs" id="routeTabs"></div>
+      </div>
+      <div class="routes" id="routes"></div>
+    </div>
+  </section>
+
+  <section class="block" id="chata">
+    <div class="wrap">
+      <div class="block-head"><div><h2>Chata: Mlýn Vikinek</h2></div></div>
+      <div class="two" id="chataBox"></div>
+    </div>
+  </section>
+
+  <section class="block" id="prakticke">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Praktické</h2>
+          <p class="muted">Zaškrtnutí se ukládá jen ve vašem prohlížeči.</p>
+        </div>
+      </div>
+      <div class="grid3" id="practical"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" id="credits"></div>
+</footer>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="data/trip.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
