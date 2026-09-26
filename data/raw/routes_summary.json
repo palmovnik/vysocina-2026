@@ -72,6 +72,14 @@
   "time_s": 11544
  },
  {
+  "id": "h-hreben-kratky",
+  "profile": "hiking-mountain",
+  "length_m": 6202,
+  "ascend_m": 186,
+  "plain_ascend_m": 3,
+  "time_s": 4830
+ },
+ {
   "id": "h-palice",
   "profile": "hiking-mountain",
   "length_m": 7938,
