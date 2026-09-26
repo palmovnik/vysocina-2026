@@ -2,7 +2,7 @@
 
 Průvodce okolím chaty **Mlýn Vikinek** (Cikháj 57, Žďárské vrchy) pro čtyři rodiny
 na pobyt **čt 8. – ne 11. 10. 2026**: interaktivní mapa, skály, jeskyně, tipy pro děti,
-dobré jídlo a farmy, cyklotrasy a pěší okruhy s výškovým profilem a GPX, program na čtyři dny
+dobré jídlo a farmy, cyklotrasy a pěší okruhy s výškovým profilem a GPX, jednoduché nápady po dnech
 a praktické informace. Každý tip se otevírá v okně s popisem, cestou od mlýna a navigací.
 
 Web: **https://palmovnik.github.io/vysocina-2026/**
@@ -19,7 +19,7 @@ minuty publikuje. V nastavení repozitáře (*Settings → Pages*) je zdroj
 
 | Složka | Obsah |
 |---|---|
-| `content/` | ručně psaný obsah: místa (`places.json`), trasy (`routes.json`), program (`program.json`), rodiny a chata (`meta.json`) |
+| `content/` | ručně psaný obsah: místa (`places.json`, u každého tipu pro koho se hodí), trasy (`routes.json`), nápady po dnech a praktické seznamy (`program.json`), rodiny a chata (`meta.json`) |
 | `tools/fetch_data.py` | stáhne podklady z OpenStreetMap (Overpass), trasy z BRouteru, časy jízdy z OSRM, fotky z Wikimedia Commons a ověřovací stránky podniků; běží v GitHub Actions (workflow *Podklady pro mapu*), který podle změněných vstupů spustí jen potřebné kroky |
 | `tools/routes.json` | body, přes které se počítají trasy |
 | `tools/images.json` | vybrané fotky z Wikimedia Commons (stáhnou se do `docs/img/`) |

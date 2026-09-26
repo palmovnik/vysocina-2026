@@ -361,11 +361,13 @@ def build_sun():
 def check_refs(program, places_by_id, routes_by_id, meta):
     bad = []
     for d in program['days']:
-        for it in d['items']:
-            bad += [('místo', x) for x in it.get('places', []) if x not in places_by_id]
-            bad += [('trasa', x) for x in it.get('routes', []) if x not in routes_by_id]
-        bad += [('trasa', x) for x in d.get('planBRoutes', []) if x not in routes_by_id]
-        bad += [('místo', x) for x in d.get('planBPlaces', []) if x not in places_by_id]
+        for key in ('tips', 'rain', 'alt'):
+            for x in d.get(key, []):
+                if x.startswith('route:'):
+                    if x[6:] not in routes_by_id:
+                        bad.append(('trasa', x))
+                elif x not in places_by_id:
+                    bad.append(('místo', x))
     bad += [('služba', x) for x in meta['chata']['services'] if x not in places_by_id]
     bad += [('tip', x) for x in meta.get('highlights', []) if x not in places_by_id]
     subs = {(g['cat'], g['id']) for g in meta.get('gastro', [])}
@@ -405,6 +407,7 @@ def main():
         'mill': {'lat': MILL[0], 'lon': MILL[1]},
         'cats': CATS, 'families': meta['families'], 'chata': meta['chata'], 'weather': meta['weather'],
         'highlights': meta.get('highlights', []), 'gastro': meta.get('gastro', []),
+        'kidsSummary': meta.get('kidsSummary', ''),
         'places': places, 'routes': routes, 'program': program, 'sun': build_sun(),
         'fromCities': from_cities, 'credits': CREDITS,
     }

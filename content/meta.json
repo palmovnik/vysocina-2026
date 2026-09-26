@@ -25,7 +25,6 @@
   "address": "Cikháj 57, 591 02 Žďár nad Sázavou",
   "capacity": "16 lůžek ve 4 pokojích po 4 (dvojlůžko, lůžko a vysouvací lůžko), v pokoji 2 navíc dětská postýlka 120×60 cm",
   "amenities": "v každém pokoji koupelna se sedací vanou a WC; kuchyň s myčkou, troubou a kávovarem Dolce Gusto, jídelní stůl pro 12; obývák s kachlovými kamny a hračkami; společenská místnost s krbem; sauna pro 12 lidí; oplocená zahrada s rybníčkem, ohništěm, grilem a skluzavkou; parkování pro 5 aut",
-  "note": "Jedeme v 17 lidech (8 dospělých + 9 dětí) a mlýn má 16 plnohodnotných lůžek. Nejmenší se vejde do dětské postýlky v pokoji 2, případně vezměte vlastní cestovní postýlku. Příjezd od 15 h, odjezd do 10 h (jiný čas jde domluvit).",
   "services": [
    "rest-tisuvka",
    "shop-skrdlovice",
@@ -58,16 +57,16 @@
  "highlights": [
   "devet-skal",
   "balcarka",
-  "malinska",
-  "medlov",
   "tisuvka",
+  "medlov",
+  "malinska",
+  "zookoutek",
   "punkevni",
   "ctyri-palice",
-  "panmama",
   "darska-raseliniste",
-  "zookoutek",
-  "udoli-doubravy",
-  "mng"
+  "mng",
+  "panmama",
+  "katerinska"
  ],
  "gastro": [
   {
@@ -118,5 +117,6 @@
    "emoji": "🧀",
    "desc": "Maso na gril, uzeniny a bio sýry přímo od místních výrobců."
   }
- ]
+ ],
+ "kidsSummary": "děti od miminka po čtvrťáka"
 }

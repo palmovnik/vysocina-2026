@@ -4,44 +4,14 @@
    "id": "ct",
    "date": "2026-10-08",
    "label": "Čtvrtek 8. 10.",
-   "title": "Příjezd a první skály",
-   "weather": "Na rozkoukání: krátké výlety kolem mlýna.",
-   "items": [
-    {
-     "time": "cestou",
-     "text": "Velký nákup ve Žďáru nad Sázavou: Kaufland (denně 7–22), Lidl nebo Albert. Kdo přijede na oběd: Poppet na náměstí (Maurerův výběr) nebo vysočinská kuchyně v Táferně u zámku. Maso na gril prodává podniková prodejna ve Světnově, 3 km před mlýnem (čt 7:30–12 a 13–15:30).",
-     "places": [
-      "shop-kaufland",
-      "poppet",
-      "taferna",
-      "maso-svetnov"
-     ]
-    },
-    {
-     "time": "odpoledne",
-     "text": "Ubytování v mlýně (od 15 h) a první procházka: okruh na skalní hradbu Tisůvka (asi 1,5 h), nebo lesem k pramenu Svratky.",
-     "routes": [
-      "h-tisuvka"
-     ],
-     "places": [
-      "tisuvka",
-      "pramen-svratky"
-     ]
-    },
-    {
-     "time": "večer",
-     "text": "Večeře v restauraci Tisůvka, 600 m od mlýna (ve čtvrtek 16–21, kuchyně do 20 h; pro 17 lidí rezervovat), nebo doma. Pak sauna a krb.",
-     "places": [
-      "rest-tisuvka"
-     ]
-    },
-    {
-     "time": "po setmění",
-     "text": "Hvězdy: Měsíc skoro nesvítí (nov je v sobotu 10. 10.) a kolem 8.–9. 10. vrcholí meteorický roj Drakonidy. Je slabší, ale večer po setmění se vyplatí vyjít na louku nad mlýnem a chvíli se dívat."
-    }
+   "title": "Na rozkoukání kolem mlýna",
+   "tips": [
+    "tisuvka",
+    "pramen-svratky",
+    "cikhaj-hriste",
+    "rest-tisuvka"
    ],
-   "planB": "Když prší: Muzeum nové generace na zámku ve Žďáru (denně 9–18) nebo Relaxační centrum Žďár s tobogánem (od 12 h).",
-   "planBPlaces": [
+   "rain": [
     "mng",
     "relax"
    ]
@@ -50,65 +20,16 @@
    "id": "pa",
    "date": "2026-10-09",
    "label": "Pátek 9. 10.",
-   "title": "Sklo, Velké Dářko a kola",
-   "weather": "Všední den: sklárny předvádějí foukání skla jen ve všední dny dopoledne.",
-   "items": [
-    {
-     "time": "ráno",
-     "text": "Kdo chce večer grilovat: maso a klobásy z podnikové prodejny Maso Žďársko ve Světnově, 3 km od mlýna (pá 7:30–12 a 13–15:30). Gril se dá půjčit v mlýně.",
-     "places": [
-      "maso-svetnov"
-     ]
-    },
-    {
-     "time": "9:30",
-     "text": "Sklo: exkurze ve sklárně Svoboda v Karlově (všední dny v 9:30 nebo 10:30, skupinu 17 lidí předem ohlaste). Huť U Hrocha ve Škrdlovicích má v říjnu omezený provoz, zavolejte předem.",
-     "places": [
-      "sklarna-svoboda",
-      "sklarna-hroch"
-     ]
-    },
-    {
-     "time": "dopoledne",
-     "text": "Na kolech k Velkému Dářku: lesem do Škrdlovic (ukázka ve sklárně U Hrocha), po hrázi k rašeliništi (kus naučné stezky po povalových chodnících pěšky) a zpět kolem Tisůvky.",
-     "routes": [
-      "b-darko"
-     ],
-     "places": [
-      "velke-darko",
-      "darska-raseliniste"
-     ]
-    },
-    {
-     "time": "oběd",
-     "text": "U Hrocha ve Škrdlovicích (restaurace vedle sklářské huti, venkovní dětský koutek), nebo penzion Velké Dářko u hráze.",
-     "places": [
-      "rest-hroch",
-      "rest-darko"
-     ]
-    },
-    {
-     "time": "odpoledne",
-     "text": "Medlov: lanový park zdarma, prolézačky a pohádková stezka skřítka Ostružinky (leták na recepci hotelu). Kdo má ještě síly: Dům přírody v Krátké (út–ne 10–15). Jiná možnost: Nové Město s pumptrackem ve Vysočina Areně a zookoutkem s lamami a klokany (zdarma, v říjnu do 16 h).",
-     "places": [
-      "medlov",
-      "dum-prirody",
-      "arena",
-      "zookoutek"
-     ]
-    },
-    {
-     "time": "večer",
-     "text": "Grilování na zahradě mlýna, nebo slavnostní večeře celé party U Paňmámy na Statku Blatiny (čepice Gault&Millau, čt–so od 18 h, jen na rezervaci). Jednodušší varianta: Tisůvka nebo Stanice lyžařů ve Fryšavě.",
-     "places": [
-      "panmama",
-      "rest-tisuvka",
-      "rest-frysava"
-     ]
-    }
+   "title": "Velké Dářko, sklo a Medlov",
+   "tips": [
+    "route:h-darko",
+    "velke-darko",
+    "sklarna-svoboda",
+    "medlov",
+    "zookoutek",
+    "panmama"
    ],
-   "planB": "Když prší: Muzeum nové generace na zámku Žďár (denně 9–18) a odpoledne Relaxační centrum (tobogán, brouzdaliště).",
-   "planBPlaces": [
+   "rain": [
     "mng",
     "relax"
    ]
@@ -117,110 +38,36 @@
    "id": "so",
    "date": "2026-10-10",
    "label": "Sobota 10. 10.",
-   "title": "Den jeskyní v Moravském krasu",
-   "weather": "Ideální i za deště: v jeskyních je stále kolem 8 °C.",
-   "items": [
-    {
-     "time": "8:00",
-     "text": "Odjezd autem do Moravského krasu (asi 1 h 15 min, viz časy u jednotlivých míst)."
-    },
-    {
-     "time": "9:00–16:00",
-     "text": "Jeskyně Balcarka: Škola malých jeskyňářů pro děti od 5 let, s výcvikem a osvědčením. Nutná rezervace na 516 444 330!",
-     "places": [
-      "balcarka"
-     ]
-    },
-    {
-     "time": "poté",
-     "text": "Pár minut autem k horní vyhlídce do propasti Macocha (zdarma). Oběd v restauraci Skalní Mlýn u pokladny jeskyní.",
-     "places": [
-      "macocha",
-      "rest-skalni-mlyn"
-     ]
-    },
-    {
-     "time": "odpoledne",
-     "text": "Pro zdatné: Punkevní jeskyně s plavbou po Punkvě (rezervace nutná, o víkendu do 16 h). Pro menší spíš krátká Kateřinská jeskyně (30 min) u Skalního Mlýna.",
-     "routes": [
-      "h-macocha"
-     ],
-     "places": [
-      "punkevni",
-      "katerinska"
-     ]
-    },
-    {
-     "time": "večer",
-     "text": "Návrat, sauna a večeře doma, nebo ve Stanici lyžařů ve Fryšavě (česká kuchyně, dětský koutek; rezervovat).",
-     "places": [
-      "rest-frysava"
-     ]
-    }
+   "title": "Moravský kras",
+   "tips": [
+    "balcarka",
+    "macocha",
+    "punkevni",
+    "katerinska",
+    "rest-skalni-mlyn"
    ],
-   "planB": "Varianta blíž (35–40 min autem): skály a jeskyňky v Údolí Doubravy nebo pískovcové Toulovcovy maštale. Nebo Hrad Pernštejn (v říjnu jen o víkendu).",
-   "planBRoutes": [
-    "h-doubrava",
-    "h-mastale"
-   ],
-   "planBPlaces": [
+   "alt": [
     "udoli-doubravy",
     "mastale",
     "pernstejn"
-   ]
+   ],
+   "altLabel": "Nebo blíž"
   },
   {
    "id": "ne",
    "date": "2026-10-11",
    "label": "Neděle 11. 10.",
-   "title": "Skály na rozloučenou a cesta domů",
-   "weather": "Dopoledne venku, odpoledne cesta domů.",
-   "items": [
-    {
-     "time": "dopoledne",
-     "text": "Úklid a předání chaty do 10 h (pokud se s majitelem nedomluvíte jinak)."
-    },
-    {
-     "time": "dopoledne",
-     "text": "Skalní okruh na rozloučenou: Čtyři palice a Milovské perničky, nebo krátký okruh z Blatin k Drátníku a na Malinskou skálu.",
-     "routes": [
-      "h-palice",
-      "h-hreben-kratky"
-     ],
-     "places": [
-      "ctyri-palice",
-      "pernicky",
-      "dratenicka",
-      "malinska"
-     ]
-    },
-    {
-     "time": "oběd",
-     "text": "Slavnostní oběd na rozloučenou U Paňmámy v Blatinách (ne 12–15, jen na rezervaci), nebo Kiosek Kadov (Gastromapa, v říjnu so–ne 11–16), U Kolouška pod Drátníkem či Hostinec Za Řekou v Křižánkách (oba ne 11–18). Na zákusek Cukrárna Sněžné.",
-     "places": [
-      "panmama",
-      "kiosek-kadov",
-      "rest-kolousek",
-      "rest-krizanky",
-      "cukrarna-snezne"
-     ]
-    },
-    {
-     "time": "cestou",
-     "text": "Přes Žďár: Zelená hora (v neděli otevřený interiér 9–17), Muzeum nové generace a káva se zákuskem v Zámecké kavárně. Oběd u zámku v Táferně (ne 11–16) nebo v Tálském mlýně.",
-     "places": [
-      "zelena-hora",
-      "mng",
-      "zamecka-kavarna",
-      "taferna",
-      "talsky-mlyn"
-     ]
-    }
+   "title": "Skály na rozloučenou",
+   "tips": [
+    "route:h-palice",
+    "route:h-hreben-kratky",
+    "panmama",
+    "kiosek-kadov",
+    "cukrarna-snezne",
+    "zelena-hora"
    ],
-   "planB": "Když prší: Muzeum nové generace a Zelená hora, Modelové království ve Žďáru (ne 10–17) nebo Šlakhamr v Hamrech nad Sázavou (so–ne, prohlídky v celou hodinu).",
-   "planBPlaces": [
+   "rain": [
     "mng",
-    "zelena-hora",
     "modelove",
     "slakhamr"
    ]
@@ -229,50 +76,47 @@
  "reservations": [
   {
    "id": "res-balcarka",
-   "text": "Balcarka – Škola malých jeskyňářů (so 10. 10.)",
-   "how": "tel. 516 444 330"
+   "text": "Balcarka – Škola malých jeskyňářů (so 10. 10., od 5 let)",
+   "how": "516 444 330"
   },
   {
    "id": "res-punkevni",
    "text": "Punkevní jeskyně (vstupenky se vyprodávají)",
-   "how": "ÚIS Skalní Mlýn +420 516 413 575, info@caves.cz"
+   "how": "+420 516 413 575, info@caves.cz"
+  },
+  {
+   "id": "res-panmama",
+   "text": "Restaurace U Paňmámy, Statek Blatiny",
+   "how": "+420 601 365 744 (čt–ne 9–15)"
   },
   {
    "id": "res-tisuvka",
-   "text": "Restaurace Tisůvka pro 17 osob (čt večer, pá–ne)",
-   "how": "tel. 566 659 007"
+   "text": "Restaurace Tisůvka v Cikháji",
+   "how": "566 659 007"
   },
   {
    "id": "res-frysava",
-   "text": "Slavnostní večeře nebo nedělní oběd U Paňmámy (Statek Blatiny) pro 17 osob",
-   "how": "+420 601 365 744 (čt–ne 9–15), info@statek-blatiny.cz"
-  },
-  {
-   "id": "res-stanice",
-   "text": "Stanice lyžařů Fryšava, pokud tam půjdete na večeři",
-   "how": "restaurace +420 734 536 304"
+   "text": "Stanice lyžařů Fryšava",
+   "how": "+420 734 536 304"
   },
   {
    "id": "res-falbgery",
-   "text": "Minifarma Falbgery, pokud pojedete (návštěvu předem zavolat)",
-   "how": "tel. 721 006 486"
+   "text": "Minifarma Falbgery (návštěvu vždy předem zavolat)",
+   "how": "721 006 486"
   },
   {
    "id": "res-sklarna",
-   "text": "Sklárna – skupina nad 10 osob (pá dopoledne)",
-   "how": "U Hrocha +420 603 742 629 / Svoboda Karlov ags-svoboda.cz"
-  },
-  {
-   "id": "res-chata",
-   "text": "Čas příjezdu a odjezdu, spaní pro 17. osobu (mlýn má 16 lůžek)",
-   "how": "+420 602 768 375, info@mlyn-vikinek.cz"
+   "text": "Sklárny pro skupinu nad 10 osob",
+   "how": "U Hrocha +420 603 742 629, Svoboda ags-svoboda.cz"
   }
  ],
  "packing": [
   "Nepromokavé bundy a boty, gumáky na louky kolem potoka",
   "Teplé vrstvy: noci kolem 0–5 °C, v jeskyních 8 °C",
+  "Nosítko nebo krosnu pro nejmenší (na skály a do jeskyní se kočárek nehodí)",
+  "Odrážedla a helmy (dětský pumptrack ve Vysočina Areně)",
+  "Vozík nebo sedačku na kolo pro malé, světla a zámky na kola",
   "Čelovky (jeskyňky, bunkr, maštale, večerní hvězdy)",
-  "Helmy, světla a zámky na kola (stmívá se kolem 18:20)",
   "Plavky a ručníky (sauna, aquapark ve Žďáru)",
   "Repelent a kontrola klíšťat, v říjnu jsou ještě aktivní",
   "Svačiny a termosky, obchody jsou daleko",
@@ -281,10 +125,11 @@
   "Hotovost: malé restaurace a dobrovolná vstupné",
   "Kapsle Dolce Gusto do kávovaru a tablety do myčky (v mlýně jich je jen pár)",
   "Dřevo na táborák (ohniště na zahradě) a něco na opékání",
-  "Cestovní postýlku, pokud nejmenší nespí v postýlce mlýna (16 lůžek + 1 postýlka)"
+  "Cestovní postýlku navíc (mlýn má jednu dětskou postýlku 120×60 cm)"
  ],
  "quests": [
   "Pustit lodičku na pramenu Svratky (pluje do Černého moře!) a na pramenu Sázavy (do Severního moře)",
+  "Najít v zookoutku klokana, lamu a nandu",
   "Vylézt na vyhlídku na Devíti skalách, nejvyšší místo Žďárských vrchů (836 m)",
   "Najít na Milovských perničkách všech 8 skalních „perníčků“",
   "Nakouknout do jeskyňky na Malinské skále",
@@ -294,6 +139,7 @@
   "Projít pohádkovou stezku skřítka Ostružinky a vyzvednout si odměnu",
   "Najít u hřiště v Cikháji dva dřevěné čerty",
   "Přejít po povalovém chodníku přes rašeliniště u Velkého Dářka",
+  "Nasbírat v lese 5 různých šišek nebo listů",
   "Najít partyzánský bunkr pod Fryšavským kopcem",
   "Uvidět padající hvězdu (Drakonidy, 8.–9. 10.)"
  ]

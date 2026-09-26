@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vysočina 2026 · Mlýn Vikinek</title>
-<meta name="description" content="Průvodce okolím Mlýna Vikinek v Cikháji (Žďárské vrchy) pro 4 rodiny, 8.–11. 10. 2026: mapa, skály, jeskyně, tipy pro děti, jídlo a farmy, cyklotrasy a program.">
+<meta name="description" content="Tipy na výlety kolem Mlýna Vikinek v Cikháji (Žďárské vrchy): mapa, skály, jeskyně, zábava pro malé i školáky, dobré jídlo, farmy a trasy na kolo i pěšky.">
 <meta name="theme-color" content="#2d5a44">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 54 L24 18 L34 34 L42 24 L60 54 Z' fill='%232d5a44'/%3E%3Ccircle cx='48' cy='14' r='7' fill='%23e0793d'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
   <div class="wrap">
     <div class="kicker">Žďárské vrchy · podzim 2026</div>
     <h1>Vysočina 2026</h1>
-    <p class="lead">Průvodce okolím <b>Mlýna Vikinek</b> v Cikháji pro čtyři rodiny: skály, jeskyně, tipy pro děti, dobré jídlo, farmy, cyklotrasy a program na čtyři dny.</p>
+    <p class="lead">Tipy na výlety kolem <b>Mlýna Vikinek</b> v Cikháji: skály, jeskyně, zábava pro malé i školáky, dobré jídlo, farmy a trasy na kolo i pěšky.</p>
     <div class="hero-meta">
       <span class="pill">📅 čt 8. – ne 11. října 2026</span>
       <span class="pill">📍 Cikháj 57, 675 m n. m.</span>
@@ -34,10 +34,10 @@
     <span class="brand">Mlýn Vikinek</span>
     <a href="#tipy">Tipy</a>
     <a href="#mapa">Mapa</a>
-    <a href="#program">Program</a>
     <a href="#mista">Výlety</a>
     <a href="#jidlo">Jídlo a farmy</a>
     <a href="#trasy">Trasy</a>
+    <a href="#dny">Po dnech</a>
     <a href="#chata">Chata</a>
     <a href="#prakticke">Praktické</a>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Přepnout světlý/tmavý režim" title="Světlý / tmavý režim">🌓</button>
@@ -50,7 +50,7 @@
       <div class="block-head">
         <div>
           <h2>To nejlepší v okolí</h2>
-          <p class="muted">Kliknutím na tip se otevře okno s popisem, cestou od mlýna a navigací.</p>
+          <p class="muted">Kliknutím na tip se otevře okno s popisem, cestou od mlýna a navigací. Štítky ukazují, pro koho se tip hodí: 🧸 malé děti · 🎒 školáci · 🚼 s kočárkem · ☔ i za deště.</p>
         </div>
       </div>
       <div class="strip" id="highlights" data-list="highlights"></div>
@@ -62,15 +62,16 @@
       <div class="block-head">
         <div>
           <h2>Mapa okolí</h2>
-          <p class="muted">Vyberte, co chcete vidět, a klikněte na bod nebo trasu. Seznam vpravo je seřazený podle vzdálenosti od mlýna.</p>
+          <p class="muted">Nahoře vyberte, co chcete vidět (<b>Vše</b> zapne nebo vypne všechno najednou), a klikněte na bod nebo trasu. Seznam je seřazený podle vzdálenosti od mlýna.</p>
         </div>
       </div>
       <div class="map-layout">
         <div id="map" role="application" aria-label="Interaktivní mapa okolí"></div>
         <aside class="map-side">
           <div class="filters">
+            <div class="filter-label first">Co zobrazit</div>
             <div class="chips" id="catChips"></div>
-            <div class="filter-label">Zobrazit</div>
+            <div class="filter-label">Jen tipy, které se hodí</div>
             <div class="chips" id="flagChips"></div>
             <div class="filter-label">Trasy na mapě</div>
             <div class="chips" id="routeChips"></div>
@@ -86,27 +87,16 @@
     </div>
   </section>
 
-  <section class="block" id="program">
-    <div class="wrap">
-      <div class="block-head">
-        <div>
-          <h2>Program na čtyři dny</h2>
-          <p class="muted">Návrh, ne povinnost. U každého dne je plán B pro případ deště. Otevírací doby jsou ověřené pro říjen 2026, přesto se vyplatí je před cestou zkontrolovat.</p>
-        </div>
-      </div>
-      <div class="days" id="days"></div>
-    </div>
-  </section>
-
   <section class="block" id="mista">
     <div class="wrap">
       <div class="block-head">
         <div>
           <h2>Výlety a místa</h2>
-          <p class="muted">Skály, jeskyně, zábava pro děti, památky i příroda. Časy pěšky a na kole jsou po skutečných cestách, autem na nejbližší parkoviště. Zvířátka a farmy najdete v sekci <a href="#jidlo">Jídlo a farmy</a>.</p>
+          <p class="muted">Seřazené podle kategorií, ⭐ top tipy jsou první. Časy pěšky a na kole jsou po skutečných cestách, autem na nejbližší parkoviště. Zvířátka a farmy jsou v sekci <a href="#jidlo">Jídlo a farmy</a>.</p>
         </div>
       </div>
       <div class="chips tabs" id="placeTabs"></div>
+      <div class="chips tabs flags" id="placeFlags" aria-label="Pro koho"></div>
       <div class="tiles" id="places" data-list="places"></div>
     </div>
   </section>
@@ -116,7 +106,7 @@
       <div class="block-head">
         <div>
           <h2>Jídlo, kavárny a farmy</h2>
-          <p class="muted">Vybrané podniky z Gastromapy Lukáše Hejlíka a Maurerova výběru, rodinné restaurace, hospody na výletech a farmy se zvířátky. Pro 17 lidí vždy volejte a rezervujte předem.</p>
+          <p class="muted">Výjimečné podniky z Gastromapy Lukáše Hejlíka, průvodce Gault&amp;Millau a Maurerova výběru, rodinné restaurace s dětským koutkem, hospody na výletech a farmy se zvířátky. Pro velkou skupinu je dobré zavolat předem.</p>
         </div>
       </div>
       <div id="gastro"></div>
@@ -136,6 +126,18 @@
     </div>
   </section>
 
+  <section class="block" id="dny">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Nápady po dnech</h2>
+          <p class="muted">Jen pro inspiraci, co se ke kterému dni hodí. Kliknutím se otevře detail.</p>
+        </div>
+      </div>
+      <div class="days" id="days"></div>
+    </div>
+  </section>
+
   <section class="block" id="chata">
     <div class="wrap">
       <div class="block-head"><div><h2>Chata: Mlýn Vikinek</h2></div></div>
@@ -148,7 +150,7 @@
       <div class="block-head">
         <div>
           <h2>Praktické</h2>
-          <p class="muted">Zaškrtnutí se ukládá jen ve vašem prohlížeči.</p>
+          <p class="muted">Zaškrtnutí úkolů a věcí s sebou se ukládá jen ve vašem prohlížeči.</p>
         </div>
       </div>
       <div class="grid3" id="practical"></div>

@@ -5,8 +5,6 @@
   "name": "Mlýn Vikinek",
   "lat": 49.64427,
   "lon": 15.96844,
-  "kids": 3,
-  "top": true,
   "teaser": "Naše základna: historický vodní mlýn pod hrází Mlynářova rybníka.",
   "text": "Vodní mlýn na Stržském potoce v jihovýchodní části Cikháje (675 m n. m.) pochází nejspíš z první poloviny 14. století, na fasádě je letopočet 1848 a je chráněný jako kulturní památka. Po kompletní rekonstrukci má v patře 4 pokoje se 4 lůžky a vlastní koupelnou se sedací vanou, v přízemí kuchyň, obývák s kachlovými kamny a společenskou místnost s krbem a saunou pro 12 lidí. Na oplocené zahradě je rybníček s posezením, ohniště, gril k zapůjčení a skluzavka s domečkem. Mlýn stojí samostatně hned u lesa a na podzim jsou okolní lesy plné hub.",
   "info": "Cikháj 57, 591 02 Žďár nad Sázavou · info@mlyn-vikinek.cz · +420 602 768 375",
@@ -19,14 +17,17 @@
   "lat": 49.65178,
   "lon": 15.94945,
   "noCar": true,
-  "kids": 3,
   "top": true,
   "walk": true,
   "bike": true,
   "teaser": "Nejbližší skály: 58 m dlouhá rulová hradba, až 15 m vysoká, skoro za humny.",
   "text": "Přírodní památka na zalesněném vrcholu západně od Cikháje. Skalní hradba vznikla mrazovým zvětráváním ruly v době ledové. Ideální první procházka hned po příjezdu, dá se spojit s rozcestím Zubačka a návratem lesem.",
   "kidsNote": "Děti si skály užijí zespodu i z bočních plošin. Lézt nahoru se smí jen s horolezeckým vybavením, proto držte nejmenší u sebe.",
-  "info": "Volně přístupné, po značené cestě z Cikháje."
+  "info": "Volně přístupné, po značené cestě z Cikháje.",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "devet-skal",
@@ -38,14 +39,16 @@
    49.6601093,
    16.0334452
   ],
-  "kids": 3,
   "top": true,
   "bike": true,
   "teaser": "Nejvyšší vrchol Žďárských vrchů: skalní labyrint a vyhlídka se zábradlím.",
   "text": "Tři skalní hřebeny s devíti věžemi a třemi věžičkami, místy 12–20 m vysoké, jsou největším komplexem vrcholových skal na Českomoravské vrchovině. Po kamenných schůdcích se vystoupá na vyhlídku se zábradlím s pohledem na sever do údolí Svratky, tedy na hranici Čech a Moravy.",
-  "kidsNote": "Výstup na vyhlídku je trochu náročnější, ale s dopomocí ho zvládnou i menší děti. Mezi skalami se dá hrát na schovávanou.",
+  "kidsNote": "Pro školáky super dobrodružství. Na vyhlídku vedou schody a žebřík, s malými dětmi jen za ruku a nejmenší v nosítku.",
   "info": "Volně přístupné. Nejkratší přístup vede od rozcestí „Devět skal, rozc.“ (asi 500 m), značené cesty vedou z Křižánek, Svratky i Herálce.",
-  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/4-devet-skal"
+  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/4-devet-skal",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "lisovska",
@@ -57,11 +60,13 @@
    49.6601093,
    16.0334452
   ],
-  "kids": 2,
   "bike": true,
   "teaser": "Zalesněný skalní vrchol na hřebenovce kousek od Devíti skal.",
   "text": "Přírodní památka s rulovými skalami, které vznikly mrazovým zvětráváním ve starších čtvrtohorách. Leží na červené hřebenovce mezi Devíti skalami a Malinskou skálou, takže se hodí jako zastávka po cestě. Výhled zakrývá les.",
-  "info": "Volně přístupné, červená značka."
+  "info": "Volně přístupné, červená značka.",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "malinska",
@@ -73,14 +78,17 @@
    49.65102,
    16.08249
   ],
-  "kids": 3,
   "top": true,
   "bike": true,
   "teaser": "Kruh až 20 m vysokých skal, jeden z nejhezčích výhledů a malá puklinová jeskyňka.",
   "text": "Skupina rulových skal (Výspa, Srnčí věž, Škuner, Buldok) obklopuje vrchol. Z vyhlídky je vidět do Milovské kotliny, na Devět skal, Buchtův kopec, Dráteničky i Čtyři palice. Mrazem vzniklá puklinová jeskyňka je hluboká asi 3 m.",
   "kidsNote": "Jeskyňku zvládnou najít i malí průzkumníci, jen s baterkou a dospělým.",
   "info": "Volně přístupné, po červené asi 2 km od Milov nebo z Blatin.",
-  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/12-malinska-skala"
+  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/12-malinska-skala",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "dratenicka",
@@ -92,12 +100,14 @@
    49.65102,
    16.08249
   ],
-  "kids": 3,
   "bike": true,
   "teaser": "200 m dlouhá skalní hradba s věží Sokol (35 m), kde trénují horolezci.",
   "text": "Mohutná, ale úzká skalní hradba v přírodní památce Dráteničky nad Blatinami, rozdělená do několika věží. Nejvyšší je Sokol s 35 metry. Je tu spousta lezeckých cest, takže se tu skoro vždycky dá pozorovat, jak lezci trénují.",
   "kidsNote": "Pod skálou je restaurace U Kolouška, dobré místo na oběd po výletě.",
-  "info": "Volně přístupné, asi 200 m od Blatin (parkování v obci)."
+  "info": "Volně přístupné, asi 200 m od Blatin (parkování v obci).",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "ctyri-palice",
@@ -109,13 +119,16 @@
    49.66865,
    16.09073
   ],
-  "kids": 3,
   "top": true,
   "bike": true,
   "teaser": "Rozeklané skalní věže nad Milovy s vyhlídkou a naučnou stezkou.",
   "text": "Přírodní rezervace u Českých Milov na pomezí Čech a Moravy. Rulové věže (Tvrz, Paličatá, Děvín a další) lákají horolezce, ale vyhlídka je přístupná každému. Kolem vede naučná stezka „Příběh krajiny pod Čtyřmi palicemi“ (4,7 km).",
   "info": "Volně přístupné; start z Milov (Hotel Devět skal / Milovský rybník).",
-  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/25-ctyri-palice"
+  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/25-ctyri-palice",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "pernicky",
@@ -127,12 +140,15 @@
    49.66865,
    16.09073
   ],
-  "kids": 3,
   "bike": true,
   "teaser": "Skály s „perníkovými formičkami“, skalními mísami vymletými vodou a mrazem.",
   "text": "Přírodní památka s bloky až 25 m vysokými. Na temeni je osm skalních mís, největší má průměr 87 cm a hloubku 30 cm. Lidem kdysi připomínaly formy na perníky, odtud název.",
   "kidsNote": "Úkol pro děti: najděte všech osm perníčků!",
-  "info": "Volně přístupné, kousek od Čtyř palic (dají se spojit do jednoho okruhu)."
+  "info": "Volně přístupné, kousek od Čtyř palic (dají se spojit do jednoho okruhu).",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "zkameneny-zamek",
@@ -144,11 +160,13 @@
    49.71477,
    16.06443
   ],
-  "kids": 2,
   "bike": true,
   "teaser": "Obří rulová skaliska u Svratky, kde bývalo pravěké hradiště.",
   "text": "Přírodní památka (od roku 1977). Archeologové tu našli stopy neolitického a slovanského osídlení, dodnes jsou patrné zbytky dvojitého valu a ve 13. století tu možná stál dřevěný hrádek. Nedaleko je lezecká skála Pivovar.",
-  "info": "Volně přístupné po modré značce ze Svratky / Karlštejna."
+  "info": "Volně přístupné po modré značce ze Svratky / Karlštejna.",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "pasecka",
@@ -156,13 +174,16 @@
   "name": "Pasecká skála (823 m)",
   "lat": 49.61556,
   "lon": 16.08148,
-  "kids": 3,
   "top": true,
   "bike": true,
   "teaser": "Vyhlídka se zábradlím: za dobré viditelnosti až Sněžka a Praděd. Skalní tunýlky.",
   "text": "Tři skalní bloky (Omšelý hřeben, Vyhlídka a Pernštejn) vysoké až 18 m, asi 2 km SZ od Studnic. Na bloku Vyhlídka je upravená plošina s výhledem na sever, za jasna až na Krkonoše, Orlické hory, Králický Sněžník a Jeseníky. Mrazem se tu vytvořily i malé skalní tunely.",
   "info": "Volně přístupné; parkování ve Studnicích nebo u Medlova.",
-  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/8-pasecka-skala"
+  "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/8-pasecka-skala",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "brozova",
@@ -171,12 +192,14 @@
   "lat": 49.62478,
   "lon": 16.01033,
   "noCar": true,
-  "kids": 2,
   "walk": true,
   "bike": true,
   "teaser": "Tři skály až 20 m vysoké v lese nad Třemi Studněmi, bez davů.",
   "text": "Brožova skalka (787 m) je přírodní památka se třemi mohutnými skalami, o 900 m dál stojí Hudecká skalka (779 m). Klidné místo, které se dobře spojí s pramenem Svratky a Fryšavským kopcem.",
-  "info": "Volně přístupné, rozcestí „Brožova skalka“ na značené cestě."
+  "info": "Volně přístupné, rozcestí „Brožova skalka“ na značené cestě.",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "rosicka",
@@ -185,11 +208,14 @@
   "name": "Rozhledna Rosička",
   "lat": 49.53854,
   "lon": 15.8426,
-  "kids": 2,
   "teaser": "42 m vysoká rozhledna: 140 schodů na plošinu ve 24 m, mimo léto zdarma.",
   "text": "Rozhledna na vrchu Rosička (645 m) u obce Sázava nedaleko Žďáru vznikla jako součást telekomunikační věže. Z plošiny je výhled na Žďársko a Žďárské vrchy.",
   "info": "Přístupná celoročně, mimo červenec a srpen bez vstupného. Parkoviště u lesa pod rozhlednou (odbočka ze silnice Nížkov – Rosička).",
-  "web": "https://www.vysocina.eu/turisticke-cile/rozhledna-rosicka-sazava"
+  "web": "https://www.vysocina.eu/turisticke-cile/rozhledna-rosicka-sazava",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "udoli-doubravy",
@@ -197,13 +223,14 @@
   "name": "Údolí Doubravy – Čertův stolek",
   "lat": 49.71403,
   "lon": 15.71238,
-  "kids": 3,
-  "top": true,
   "teaser": "Divoký kaňon s peřejemi a obřími hrnci, skalní vyhlídka Čertův stolek a jeskyně pod ní.",
   "text": "Přírodní rezervace u Chotěboře. Řeka Doubrava tu vyhloubila kaňonovité údolí se skalními věžemi, obřími hrnci, vodopádem a kamenným mořem. Čertův stolek je 30 m vysoká skála se zabezpečenou vyhlídkou naproti zřícenině Sokolohrady. Pod ní jsou jeskyně Čertova a Poustevna, kde podle pověsti čert pokoušel poustevníka.",
   "kidsNote": "Naučná stezka měří 4,5 km. Některé úseky podél řeky jsou kamenité, s malými dětmi opatrně.",
   "info": "Start z Bílku (parkování v obci) nebo od chaty Doubravka v Horním Sokolovci. Mezi Bílkem a Chotěboří jezdí vlak.",
-  "web": "https://www.kudyznudy.cz/aktivity/vyhlidka-certuv-stolek-nad-rekou-doubravkou"
+  "web": "https://www.kudyznudy.cz/aktivity/vyhlidka-certuv-stolek-nad-rekou-doubravkou",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "mastale",
@@ -211,13 +238,15 @@
   "name": "Toulovcovy maštale",
   "lat": 49.81864,
   "lon": 16.14089,
-  "kids": 3,
-  "top": true,
   "teaser": "Pískovcové skalní městečko s úzkými roklemi, chodbami a jeskyňkami.",
   "text": "V přírodní rezervaci jsou dvě skalní městečka: Toulovcovy a Městské maštale. Úzké rokle skrývají chodby, jeskyně a díry se jmény jako Kuchyně, Sklep, Myší díra nebo Zvon. Podle pověsti tu rytíř Toulovec schovával koně, odtud „maštale“ (stáje).",
   "kidsNote": "Městské maštale jsou pro rodiny ideální: krátká trasa a spousta zákoutí k objevování.",
   "info": "Parkování v Boru u Skutče (po zelené necelé 2 km) nebo na parkovišti Vranice u Nové Vsi (po červené asi 2 km). Kousek je Toulovcova rozhledna.",
-  "web": "http://www.toulovcovymastale.cz/"
+  "web": "http://www.toulovcovymastale.cz/",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "balcarka",
@@ -225,15 +254,18 @@
   "name": "Jeskyně Balcarka",
   "lat": 49.3768,
   "lon": 16.75815,
-  "kids": 3,
   "top": true,
   "rain": true,
   "teaser": "V sobotu 10. 10. „Škola malých jeskyňářů“ pro děti od 5 let, s diplomem!",
   "text": "Jedna z nejbohatěji zdobených jeskyní Moravského krasu s barevnými krápníky. Prohlídková trasa měří 720 m a trvá asi hodinu. V sobotu 10. 10. 2026 tu od 9 do 16 hodin běží interaktivní dětské prohlídky „Škola malých jeskyňářů“: děti projdou výcvikem a dostanou osvědčení mladého jeskyňáře.",
-  "kidsNote": "Na Školu malých jeskyňářů je nutná telefonická rezervace předem: 516 444 330. Vstupné 220 Kč, děti 3–15 let 110 Kč, rodinné 620 Kč (2+2) nebo 720 Kč (2+3).",
+  "kidsNote": "Škola malých jeskyňářů je pro děti od 5 let a je nutná telefonická rezervace předem: 516 444 330. Běžná prohlídka trvá asi hodinu, s kočárkem se do jeskyně nesmí, nejmenší v nosítku. Vstupné 220 Kč, děti 3–15 let 110 Kč, rodinné 620 Kč (2+2) nebo 720 Kč (2+3).",
   "info": "V říjnu út–pá vstupy v 9–14 h, o víkendu v 9–15 h, v pondělí zavřeno. Prohlídka trvá asi hodinu, uvnitř je kolem 8 °C, vezměte bundu.",
   "phone": "+420 516 444 330",
-  "web": "https://balcarka.caves.cz/aktuality/balcarka-nabidne-detem-26-9-a-10-10-skolu-malych-jeskynaru"
+  "web": "https://balcarka.caves.cz/aktuality/balcarka-nabidne-detem-26-9-a-10-10-skolu-malych-jeskynaru",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "punkevni",
@@ -245,15 +277,18 @@
    49.36339,
    16.70874
   ],
-  "kids": 3,
   "top": true,
   "rain": true,
   "teaser": "Krápníky, dno propasti Macocha a plavba na lodičkách po podzemní říčce Punkvě.",
   "text": "Nejslavnější jeskyně Česka: pěšky se projde krápníkovými dómy až na dno 138 m hluboké propasti Macocha, pak se pokračuje lodičkou po podzemní Punkvě. Od jeskyně jezdí lanovka na horní můstek Macochy.",
-  "kidsNote": "Plavba lodičkou je pro děti zážitek. Vstupenky se vyprodávají, rezervujte co nejdřív!",
+  "kidsNote": "Plavba lodičkou je zážitek pro všechny věky. Kočárek do jeskyně nepatří, nejmenší v nosítku. Vstupenky se vyprodávají, rezervujte co nejdřív.",
   "info": "Říjen: út–pá 8:40–14:00, so–ne 8:20–16:00, po zavřeno; v sobotu 10. 10. výjimečně 8:20–16:50 a vláček s lanovkou jezdí do 18 h. Vstupné: dospělí 450 Kč, děti 200 Kč, rodinné 1 260 Kč (2+2) nebo 1 450 Kč (2+3). Rezervace: ÚIS Skalní Mlýn +420 516 413 575, info@caves.cz. Z parkoviště Skalní Mlýn (placené) 1,6 km pěšky nebo ekovláčkem.",
   "phone": "+420 516 413 575",
-  "web": "https://punkevni.caves.cz/oteviraci-doba"
+  "web": "https://punkevni.caves.cz/oteviraci-doba",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "macocha",
@@ -262,10 +297,15 @@
   "lat": 49.37314,
   "lon": 16.72932,
   "park_max_m": 900,
-  "kids": 3,
   "teaser": "Pohled 138 m do hloubky z vyhlídkového můstku, zdarma i bez prohlídky jeskyní.",
   "text": "Horní a dolní můstek nad propastí Macocha nabízí závratný pohled na dno, kde teče Punkva. Nahoru vede lanovka od Punkevních jeskyní, nebo 1,7 km dlouhá stezka se 130 m převýšení. Z Balcarky je to autem pár minut.",
-  "info": "Volně přístupné. Lanovka jezdí i v říjnu (jízdenky v ÚIS Skalní Mlýn a u lanovky)."
+  "info": "Volně přístupné. Lanovka jezdí i v říjnu (jízdenky v ÚIS Skalní Mlýn a u lanovky).",
+  "fit": [
+   "male",
+   "skolaci",
+   "kocarek"
+  ],
+  "kidsNote": "Na horní můstek se dá dojít i s kočárkem, u zábradlí držte malé děti za ruku."
  },
  {
   "id": "katerinska",
@@ -277,12 +317,17 @@
    49.36169,
    16.70965
   ],
-  "kids": 3,
   "rain": true,
   "teaser": "Obří podzemní dóm a „bambusový lesík“ hůlkových krápníků. Krátká prohlídka.",
   "text": "Kateřinská jeskyně má jeden z největších zpřístupněných podzemních dómů v Česku a unikátní hůlkové stalagmity. Prohlídka trvá asi 30 minut, takže je vhodná i pro menší děti. Vchod je 300 m od Skalního Mlýna.",
   "info": "V říjnu út–pá vstupy v 9–14 h, o víkendu 9–16 h (v sobotu 10. 10. výjimečně až do 17:40), v pondělí zavřeno. Vstupné 220 Kč, děti 110 Kč, rodinné 620 Kč (2+2) nebo 720 Kč (2+3).",
-  "web": "https://katerinska.caves.cz/oteviraci-doba"
+  "web": "https://katerinska.caves.cz/oteviraci-doba",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "top": true,
+  "kidsNote": "Prohlídka trvá jen asi 30 minut, takže je ideální i pro malé děti. Nejmenší v nosítku."
  },
  {
   "id": "sloupsko",
@@ -290,12 +335,15 @@
   "name": "Sloupsko-šošůvské jeskyně",
   "lat": 49.41045,
   "lon": 16.73902,
-  "kids": 3,
   "rain": true,
   "teaser": "Největší zpřístupněné jeskyně v ČR: obří dómy a propasti, krátký i dlouhý okruh.",
   "text": "Rozlehlý systém chodeb, dómů a propastí na severu Moravského krasu, s krátkou i dlouhou trasou. Z Cikháje je to nejbližší z krasových jeskyní a u vchodu se parkuje zdarma.",
   "info": "V říjnu kromě pondělí vstupy v 9–13 h (dlouhá i krátká trasa), ve 14 h jen krátká. Dlouhá trasa 350 Kč, děti 180 Kč, rodinné 1 020 Kč (2+2); krátká trasa 250 Kč, děti 120 Kč, rodinné 700 Kč.",
-  "web": "https://sloupskososuvske.caves.cz/oteviraci-doba"
+  "web": "https://sloupskososuvske.caves.cz/oteviraci-doba",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "jihlava-podzemi",
@@ -304,12 +352,14 @@
   "name": "Jihlavské podzemí",
   "lat": 49.39693,
   "lon": 15.59136,
-  "kids": 2,
   "rain": true,
   "teaser": "Středověké chodby pod Jihlavou se záhadnou „světélkující chodbou“.",
   "text": "Druhé největší historické podzemí v Česku, pod centrem Jihlavy. Nejznámější je chodba, jejíž stěny ve tmě záhadně světélkují.",
   "info": "Rodinné vstupné 275 Kč. Časy prohlídek a online vstupenky na jihlava.cz/podzemi (mimo hlavní sezónu hlavně o sobotách). Tel. 565 597 579. Okruh Jihlavské kolektory je až od 10 let.",
-  "web": "https://www.jihlava.cz/podzemi/ms-108141"
+  "web": "https://www.jihlava.cz/podzemi/ms-108141",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "medlov",
@@ -318,14 +368,17 @@
   "name": "Medlov: lanový park a pohádkové stezky",
   "lat": 49.61604,
   "lon": 16.05449,
-  "kids": 3,
   "top": true,
   "bike": true,
   "teaser": "Volně přístupný lanový park, prolézačky a pohádková stezka skřítka Ostružinky.",
   "text": "V areálu Hotelu Medlov u rybníka je lanový park zdarma s osmi překážkami, dřevěné prolézačky a dvě pohádkové trasy: stezka skřítka Ostružinky (asi 700 m, 10 stanovišť) a Stezka za stříbrnými zvony. Poblíž je rybník Sykovec a Olšiakovy dřevěné sochy.",
-  "kidsNote": "Leták k pohádkové stezce je zdarma na recepci hotelu a za splněné úkoly čeká malá odměna. Lanový park je pro děti od 140 cm, do 15 let s dospělým.",
+  "kidsNote": "Lanový park je pro děti od 140 cm (do 15 let s dospělým), malí se vyřádí na prolézačkách a pohádkové stezce. Leták k pohádkové stezce je zdarma na recepci hotelu a za splněné úkoly čeká malá odměna.",
   "info": "Volně přístupné, restaurace v hotelu.",
-  "web": "https://www.kudyznudy.cz/aktivity/lanovy-park-medlov"
+  "web": "https://www.kudyznudy.cz/aktivity/lanovy-park-medlov",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "arena",
@@ -334,14 +387,17 @@
   "name": "Vysočina Arena: pumptrack a dětské traily",
   "lat": 49.57884,
   "lon": 16.05075,
-  "kids": 3,
   "top": true,
   "bike": true,
   "teaser": "Jeden z největších pumptracků v Česku, dětský pumptrack a skoro 30 km singltreků.",
   "text": "Biatlonový areál v Novém Městě na Moravě má asfaltový pumptrack (od 2019, patří k největším v ČR), dětský pumptrack (od 2022) a síť singltreků v pěti stupních obtížnosti, včetně krátkých a bezpečných tras pro děti. V areálu je parkoviště, půjčovna a servis kol a občerstvení.",
-  "kidsNote": "Ideální „kolová“ zastávka: kola vezte autem a děti se vyřádí na pumptracku.",
+  "kidsNote": "Dětský pumptrack zvládnou i malí na odrážedle, školáci na kole. Kola a odrážedla vezte autem.",
   "info": "Pumptrack je volně přístupný. Provoz půjčovny v říjnu si ověřte.",
-  "web": "http://www.vysocina.bike/"
+  "web": "http://www.vysocina.bike/",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "mng",
@@ -350,7 +406,6 @@
   "name": "Muzeum nové generace (zámek Žďár)",
   "lat": 49.5816,
   "lon": 15.93665,
-  "kids": 3,
   "top": true,
   "rain": true,
   "bike": true,
@@ -358,7 +413,11 @@
   "text": "Multimediální expozice v bývalém pivovaru zámku Žďár vypráví příběh cisterciáckého kláštera, jeho stavitele Santiniho i Zelené hory. Každý dostane audioprůvodce, děti navíc malé tvořivé překvapení. Dá se spojit s prohlídkou zámku a procházkou na Zelenou horu.",
   "info": "Duben–říjen denně 9–18, poslední vstup 75 minut před zavřením. Vstupné 265 Kč, děti 6–17 let 210 Kč, rodinné 795 Kč (2 dospělí a až 3 děti). V obchůdku u zámecké kavárny je dětský koutek. Tel. +420 602 565 309, tic@zamekzdar.cz.",
   "phone": "+420 602 565 309",
-  "web": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/"
+  "web": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "relax",
@@ -367,12 +426,15 @@
   "name": "Relaxační centrum Žďár (aquapark)",
   "lat": 49.56302,
   "lon": 15.94282,
-  "kids": 3,
   "rain": true,
   "teaser": "100m tobogán, brouzdaliště s hříbkem, divoká řeka a lezecká stěna nad vodou.",
   "text": "Krytý bazén ve Žďáru: 25m plavecký bazén, cvičný bazén, tři dětská brouzdaliště s hříbkem a skluzavkou, rekreační bazén s proudovým kanálem, lezecká stěna, masážní lůžka a 100metrový tobogán. Ideální plán B na deštivé odpoledne.",
   "info": "Švermova 1132/4, Žďár n. S. Atrakce mimo prázdniny obvykle denně 12:00–20:30, aktuální rozpis na webu.",
-  "web": "https://www.sportiszdar.cz/relaxacni-centrum"
+  "web": "https://www.sportiszdar.cz/relaxacni-centrum",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "sklarna-hroch",
@@ -381,7 +443,6 @@
   "name": "Sklárna U Hrocha (Škrdlovice)",
   "lat": 49.63424,
   "lon": 15.9299,
-  "kids": 3,
   "rain": true,
   "walk": true,
   "bike": true,
@@ -390,7 +451,11 @@
   "kidsNote": "Jsme skupina 17 lidí a skupiny nad 10 osob se musí předem ohlásit: +420 603 742 629 nebo +420 602 754 806.",
   "info": "Huť měla v září provoz út–ne 11–18 a v říjnu otevírá podle aktuálního rozpisu na webu (1.–4. 10. denně 11–18). Před návštěvou zavolejte, skupiny nad 10 osob vždy ohlaste.",
   "phone": "+420 603 742 629",
-  "web": "https://www.uhrocha.com/index.php?pg=sklarska-hut"
+  "web": "https://www.uhrocha.com/index.php?pg=sklarska-hut",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "sklarna-svoboda",
@@ -399,13 +464,16 @@
   "name": "Sklárna a galerie Svoboda (Karlov)",
   "lat": 49.64561,
   "lon": 15.91599,
-  "kids": 3,
   "rain": true,
   "bike": true,
   "teaser": "Sklárna prof. Jaroslava Svobody: prohlídka huti v plném provozu a galerie skla.",
   "text": "Rodinná sklárna u Velkého Dářka. Na exkurzi vás průvodce provede celým vznikem skleněného předmětu, od roztavené skloviny až po leštění. Ve velké galerii je autorské sklo i aktuální produkce.",
   "info": "Exkurze ve všední dny 9:30–12:30 (nejlépe v 9:30 nebo 10:30), trvají asi 30 min. Galerie po–so 8–14, ne 10–15.",
-  "web": "https://ags-svoboda.cz/"
+  "web": "https://ags-svoboda.cz/",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "modelove",
@@ -414,12 +482,15 @@
   "name": "Modelové království (Žďár)",
   "lat": 49.566,
   "lon": 15.9382,
-  "kids": 3,
   "rain": true,
   "teaser": "Modelové kolejiště na 55 m² s asi 600 metry kolejí.",
   "text": "Velké modelové kolejiště ve Žďáru nad Sázavou, kde vláčky projíždějí krajinou, městy i nádražími. Zabaví malé i velké milovníky mašinek.",
   "info": "Dolní 30, Žďár n. S. Otevřeno jen o víkendu, so a ne 10–17 (tedy v neděli 11. 10.). Tel. +420 603 742 409.",
-  "web": "https://www.mkzdar.cz/"
+  "web": "https://www.mkzdar.cz/",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "dum-prirody",
@@ -432,13 +503,16 @@
    49.64198,
    16.0963
   ],
-  "kids": 3,
   "rain": true,
   "bike": true,
   "teaser": "Expozice o zdejší přírodě v historickém statku, s hledačkou pro děti.",
   "text": "Návštěvnické centrum CHKO ve statku v obci Krátká: modely, obrázkové mapy, sochy zvířat a spousta zajímavostí o skalách, rašeliništích a lesích Žďárských vrchů. Pro děti je připravená hledačka.",
   "info": "Od 1. 9. do 15. 10. út–ne 10–15.",
-  "web": "https://www.dumprirody.cz/zdarskevrchy/"
+  "web": "https://www.dumprirody.cz/zdarskevrchy/",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "peklo",
@@ -447,14 +521,16 @@
   "name": "Peklo Čertovina (u Hlinska)",
   "lat": 49.77632,
   "lon": 15.94594,
-  "kids": 3,
   "rain": true,
   "teaser": "Interaktivní prohlídka pekla s čerty: chodby a „jeskyně“ až 12 m pod zemí.",
   "text": "Pětipatrová budova, z toho tři patra pod zemí. Čerti provedou na 90minutové prohlídce chodbami, mučírnou, pekelným šenkem i čertokavárnou a na konci je divadelní představení. Pro nejmenší je tu vnitřní dětská herna Čertoland.",
-  "kidsNote": "Citlivější malé děti se můžou bát. Program je nutné rezervovat.",
+  "kidsNote": "Pro školáky zábava, citlivější malé děti se můžou bát. Pro ně je tu dětská herna Čertoland. Prohlídky je nutné rezervovat.",
   "info": "Otevřeno celoročně; mimo sezónu ve všední dny prohlídky od 11:00 a 12:00, o víkendu déle. Rezervace prohlídek +420 468 005 005.",
   "web": "https://www.peklocertovina.cz/",
-  "phone": "+420 468 005 005"
+  "phone": "+420 468 005 005",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "pilak",
@@ -463,11 +539,15 @@
   "name": "Pilák: lanová pyramida a hřiště (Žďár)",
   "lat": 49.58983,
   "lon": 15.93107,
-  "kids": 3,
   "bike": true,
   "teaser": "Rekreační areál u Pilské nádrže s lanovou pyramidou a hřišti pro malé děti.",
   "text": "Areál u vodní nádrže Pilská na severním okraji Žďáru s lanovou pyramidou, hřištěm pro předškoláky i starší děti a občerstvením. Kousek od hráze stojí pískovcové sochy lva a orla od Michala Olšiaka, které označují historickou zemskou hranici: děti tu můžou stát jednou nohou v Čechách a druhou na Moravě. Leží přímo na cyklotrase do Žďáru.",
-  "info": "Volně přístupné."
+  "info": "Volně přístupné.",
+  "fit": [
+   "male",
+   "skolaci",
+   "kocarek"
+  ]
  },
  {
   "id": "cikhaj-hriste",
@@ -477,11 +557,15 @@
   "lat": 49.64727,
   "lon": 15.96347,
   "noCar": true,
-  "kids": 2,
   "walk": true,
   "teaser": "Hřiště se dvěma dřevěnými čerty, asi 500 m od mlýna.",
   "text": "Obecní dětské hřiště v Cikháji, kousek od restaurace Tisůvka. U hřiště sedí na lavičce dva dřevění čerti.",
-  "info": "Volně přístupné."
+  "info": "Volně přístupné.",
+  "fit": [
+   "male",
+   "kocarek"
+  ],
+  "kidsNote": "Hřiště je kousek od mlýna, dojde se tam i s kočárkem."
  },
  {
   "id": "zelena-hora",
@@ -490,7 +574,6 @@
   "name": "Zelená hora (UNESCO)",
   "lat": 49.58012,
   "lon": 15.94118,
-  "kids": 2,
   "top": true,
   "bike": true,
   "teaser": "Santiniho hvězdicový kostel, památka UNESCO, kde se vše točí kolem čísla 5.",
@@ -498,7 +581,10 @@
   "kidsNote": "Hra pro děti: kolikrát najdete číslo 5?",
   "info": "V říjnu je interiér otevřen jen so a ne 9–17, areál kolem je přístupný celoročně. Tel. +420 724 758 993.",
   "phone": "+420 724 758 993",
-  "web": "https://www.zelena-hora.cz/cs/"
+  "web": "https://www.zelena-hora.cz/cs/",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "zamek-zdar",
@@ -507,13 +593,17 @@
   "name": "Zámek Žďár nad Sázavou",
   "lat": 49.58317,
   "lon": 15.93754,
-  "kids": 2,
   "rain": true,
   "bike": true,
   "teaser": "Bývalý cisterciácký klášter se Santiniho architekturou, barokními konírnami a galerií.",
   "text": "Areál kláštera, který v 18. století přestavěl Jan Blažej Santini-Aichel, dnes patří rodině Kinských. Nabízí prohlídky zámku a kláštera, Barokní konírny s Galerií Kinských a Muzeum nové generace.",
   "info": "Areál je volně přístupný, prohlídky a časy na zamekzdar.cz. V neděli 11. 10. v 16 h je v bazilice varhanní koncert (dobrovolné vstupné).",
-  "web": "https://zamekzdar.cz/"
+  "web": "https://zamekzdar.cz/",
+  "fit": [
+   "male",
+   "skolaci",
+   "kocarek"
+  ]
  },
  {
   "id": "vesely-kopec",
@@ -522,12 +612,15 @@
   "name": "Skanzen Veselý Kopec",
   "lat": 49.76096,
   "lon": 15.838,
-  "kids": 3,
-  "top": true,
   "teaser": "Vesnice jako za dědečka: roubenky, stodoly a řemesla v krajině pod Železnými horami.",
   "text": "Muzeum v přírodě na pomezí Žďárských vrchů a Železných hor se 45 památkovými objekty z Hlinecka, Poličska, Litomyšlska a Chrudimska. Stojí v původní krajině osady Veselý Kopec. Pro děti je tu spousta k objevování: stará řemesla, kolárna, čtrnáctiboká stodola.",
   "info": "V září út–ne 9:30–16 (říjnový provoz si ověřte na webu, bývá podobný). Vstupné kolem 190 Kč, děti 120 Kč, rodinné 390 Kč. Hlídané parkoviště před vstupem.",
-  "web": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne"
+  "web": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne",
+  "fit": [
+   "male",
+   "skolaci",
+   "kocarek"
+  ]
  },
  {
   "id": "pernstejn",
@@ -536,11 +629,13 @@
   "name": "Hrad Pernštejn",
   "lat": 49.45086,
   "lon": 16.31837,
-  "kids": 3,
   "teaser": "Jeden z nejkrásnějších moravských hradů, v říjnu otevřený jen o víkendu.",
   "text": "Gotický hrad na skalním ostrohu nad Nedvědicí s věžemi, parkány a padacím mostem. Vypadá jako z pohádky.",
   "info": "V říjnu jen so–ne, prohlídky s průvodcem zhruba 9/10–15 h (poslední vstup odpoledne). Rezervace není povinná, ale ušetří čekání.",
-  "web": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba"
+  "web": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "slakhamr",
@@ -553,11 +648,13 @@
    49.56629,
    15.87859
   ],
-  "kids": 3,
   "teaser": "Funkční vodní hamr: obří kovářská kladiva poháněná vodním kolem.",
   "text": "Technická památka Technického muzea v Brně (Brdíčkův mlýn). Průvodce předvede, jak voda roztáčí kolo a buší do železa hamerská kladiva. Takové rány si děti zapamatují.",
   "info": "V říjnu so, ne a svátky 9–12 a 13–17, prohlídky vždy v celou hodinu (poslední v 16:00). Pro skupinu nad 10 osob lze po domluvě i jiný den.",
-  "web": "https://www.technicalmuseum.cz/pamatky/slakhamr-v-hamrech-nad-sazavou/"
+  "web": "https://www.technicalmuseum.cz/pamatky/slakhamr-v-hamrech-nad-sazavou/",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "pramen-svratky",
@@ -567,14 +664,17 @@
   "lat": 49.64388,
   "lon": 15.99942,
   "noCar": true,
-  "kids": 3,
   "top": true,
   "walk": true,
   "bike": true,
   "teaser": "Tady se rodí Svratka. Její voda doteče přes Brno a Dunaj až do Černého moře.",
   "text": "Upravený pramen na jihovýchodním svahu Žákovy hory, pod Fryšavským kopcem. Svratka odtud teče přes Brno do Dyje, Moravy a Dunaje, tedy až do Černého moře. Voda z potoka u mlýna přitom teče Sázavou, Vltavou a Labem do Severního moře. Mezi mlýnem a pramenem Svratky vede hlavní evropské rozvodí!",
   "kidsNote": "Pokus pro děti: pusťte po vodě lodičku z kůry a představte si, kam až dopluje.",
-  "info": "Volně přístupné, lesní cestou od mlýna."
+  "info": "Volně přístupné, lesní cestou od mlýna.",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "pramen-sazavy",
@@ -584,12 +684,15 @@
   "lat": 49.67156,
   "lon": 15.93786,
   "noCar": true,
-  "kids": 3,
   "walk": true,
   "bike": true,
   "teaser": "Pramen řeky, která teče do Vltavy, Labe a Severního moře.",
   "text": "Pramen Sázavy pod Šindelným vrchem (806 m) severozápadně od Cikháje. Spolu s pramenem Svratky tvoří hezký výlet „dva prameny, dvě moře“.",
-  "info": "Volně přístupné."
+  "info": "Volně přístupné.",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "stribrna-studanka",
@@ -599,11 +702,13 @@
   "lat": 49.65439,
   "lon": 15.9989,
   "noCar": true,
-  "kids": 2,
   "walk": true,
   "teaser": "Studánka na jižním svahu Žákovy hory, dlouho považovaná za pramen Svratky.",
   "text": "Stříbrná studánka je jednou ze zdrojnic Svratky a zastávkou naučné stezky Žákova hora. Skutečný pramen Svratky leží asi 1,2 km jižněji pod Fryšavským kopcem.",
-  "info": "Volně přístupné, rozcestí „Stříbrná studánka“."
+  "info": "Volně přístupné, rozcestí „Stříbrná studánka“.",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "zakova-hora",
@@ -612,12 +717,14 @@
   "lat": 49.65699,
   "lon": 15.99183,
   "noCar": true,
-  "kids": 2,
   "walk": true,
   "bike": true,
   "teaser": "Národní přírodní rezervace se starým jedlo-bukovým lesem a naučnou stezkou.",
   "text": "Jeden z nejcennějších lesů Vysočiny, s pralesovitým porostem bez zásahů člověka. Podle pověsti se tu kdysi ztratili žáci ze žďárského kláštera a už se nevrátili, odtud název. Kolem rezervace vede naučná stezka.",
-  "info": "Chodí se jen po značených cestách, rezervace je přísně chráněná."
+  "info": "Chodí se jen po značených cestách, rezervace je přísně chráněná.",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "fryskop",
@@ -627,12 +734,14 @@
   "lat": 49.6377,
   "lon": 16.00217,
   "noCar": true,
-  "kids": 2,
   "walk": true,
   "bike": true,
   "teaser": "Pomník partyzánské brigády Mistr Jan Hus s replikou partyzánského bunkru.",
   "text": "Na vrcholu Fryšavského kopce (803 m) stojí památník partyzánů, kteří se v okolních lesích skrývali za 2. světové války. Nedaleko je replika jejich lesního bunkru. Kousek pod kopcem pramení Svratka.",
-  "info": "Volně přístupné, dobře se spojí s pramenem Svratky."
+  "info": "Volně přístupné, dobře se spojí s pramenem Svratky.",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "velke-darko",
@@ -641,12 +750,16 @@
   "name": "Velké Dářko",
   "lat": 49.63177,
   "lon": 15.90962,
-  "kids": 2,
   "top": true,
   "bike": true,
   "teaser": "Moře Vysočiny: největší rybník Českomoravské vrchoviny (206 ha).",
   "text": "Rybník založený kolem roku 1480 na Sázavě. Hráz je dlouhá 457 m a vysoká až 12 m. Na hrázi a kolem ní jsou restaurace a penziony, parkoviště je zdarma. Na západní straně leží národní přírodní rezervace Dářko s největším rašeliništěm Vysočiny.",
-  "info": "Parkoviště u rekreačního areálu u hráze (východní konec), odtud začíná i naučná stezka."
+  "info": "Parkoviště u rekreačního areálu u hráze (východní konec), odtud začíná i naučná stezka.",
+  "fit": [
+   "male",
+   "skolaci",
+   "kocarek"
+  ]
  },
  {
   "id": "darska-raseliniste",
@@ -658,13 +771,16 @@
    49.63193,
    15.90859
   ],
-  "kids": 3,
   "top": true,
   "teaser": "3 km dlouhá stezka po povalových chodnících přes rašeliniště, se dvěma vyhlídkami.",
   "text": "Naučná stezka z roku 2013 má 12 zastavení a vede přes Národní přírodní rezervaci Dářko, nejhlubší rašeliniště Českomoravské vrchoviny. Dřevěné povalové chodníky a dvě vyhlídky na rašeliniště děti baví.",
   "kidsNote": "Po povalech se nesmí na kole. Kola nechte u hráze nebo v Radostíně.",
   "info": "Začátek na hrázi Velkého Dářka (u parkoviště) nebo v Radostíně.",
-  "web": "https://www.kudyznudy.cz/aktivity/naucna-stezka-darska-raseliniste"
+  "web": "https://www.kudyznudy.cz/aktivity/naucna-stezka-darska-raseliniste",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "sykovec",
@@ -673,11 +789,14 @@
   "name": "Rybník Sykovec",
   "lat": 49.60861,
   "lon": 16.03817,
-  "kids": 2,
   "bike": true,
   "teaser": "Nejvýše položený rybník Vysočiny s písčitou pláží, u Tří Studní.",
   "text": "Rybník Sykovec (14 ha) vznikl v letech 1587–1646. Má travnatou pláž s pozvolným písčitým vstupem a kolem vede okruh s dřevěnými sochami Michala Olšiaka. V říjnu už jen na procházku a hledání soch.",
-  "info": "Volně přístupné; parkování u kempu Sykovec."
+  "info": "Volně přístupné; parkování u kempu Sykovec.",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "rest-tisuvka",
@@ -699,7 +818,10 @@
   "text": "Nekuřácká restaurace se 45 místy na kraji Cikháje, kousek od mlýna. Vaří poctivou českou kuchyni (na lístku bývá třeba srnčí svíčková), pro nejmenší má dětský koutek a hned vedle je hřiště. Na večeři pro 17 lidí určitě rezervujte.",
   "info": "Čt 16–21, pá–so 11–22, ne 11–20 (kuchyně do 20 h, v neděli do 19 h; o víkendu 15:30–17 jen dezerty). Po–st zavřeno. Cikháj 51.",
   "phone": "+420 566 659 007",
-  "web": "https://www.restauracetisuvka.cz/"
+  "web": "https://www.restauracetisuvka.cz/",
+  "fit": [
+   "male"
+  ]
  },
  {
   "id": "rest-hroch",
@@ -719,7 +841,10 @@
   "teaser": "Restaurace hned vedle sklářské huti. Oběd se dá spojit s ukázkou foukání skla.",
   "text": "Hotel a restaurace ve Škrdlovicích, 3 km od mlýna, kousek od Velkého Dářka. V areálu je sklářská huť, která navazuje na tradici škrdlovického hutního skla, venkovní dětský koutek a minigolf. Dá se sem dojet na kole po cyklotrase k Dářku.",
   "info": "Běžně denně 11–21, pá–so do 23 (kuchyně do 19:30). Od října do května mají upravenou otevírací dobu, aktuální je v aktualitách na webu a na Facebooku.",
-  "web": "https://www.uhrocha.com/"
+  "web": "https://www.uhrocha.com/",
+  "fit": [
+   "male"
+  ]
  },
  {
   "id": "rest-darko",
@@ -771,7 +896,10 @@
   "text": "Rodinný penzion s restaurací uprostřed Fryšavy (708 m n. m.). Šéfkuchař Roman Pavlík vaří českou kuchyni z místních surovin, brambory i maso berou od sousedů. Hned vedle je park s dětským hřištěm a uvnitř dětský koutek. Hodí se po výletě na Medlov, k pramenu Svratky nebo na Žákovu horu.",
   "info": "Restaurace tel. +420 734 536 304. Podle OpenStreetMap po–čt a so 11–21, pá 11–23, ne 11–21 (ověřte).",
   "phone": "+420 734 536 304",
-  "web": "https://www.stanicelyzaru.cz/"
+  "web": "https://www.stanicelyzaru.cz/",
+  "fit": [
+   "male"
+  ]
  },
  {
   "id": "rest-tri-studne",
@@ -855,7 +983,11 @@
   "kidsNote": "Sedí se na zahrádce, v říjnu se teple oblečte. Kousek odtud je Medlov s lanovým parkem a pohádkovou stezkou.",
   "info": "V říjnu jen o víkendu, zhruba 11–16 (ve všední dny zavřeno). Kadov 51, tel. +420 564 103 502, platba kartou. Aktuální provoz hlásí na Facebooku.",
   "phone": "+420 564 103 502",
-  "web": "https://kiosekkadov.cz/"
+  "web": "https://kiosekkadov.cz/",
+  "fit": [
+   "male"
+  ],
+  "top": true
  },
  {
   "id": "poppet",
@@ -937,7 +1069,10 @@
   "kidsNote": "Po jídle je to asi 300 m na Pilák s lanovou pyramidou a hřištěm.",
   "info": "Zámek 18, Žďár nad Sázavou. V říjnu čt 11:30–21, pá–so 11:30–22, ne 11:30–20, po–st jen večer 17–21. Rezervace v hostinci +420 605 554 950.",
   "phone": "+420 605 554 950",
-  "web": "https://www.talskymlyn.cz/cs/hostinec/"
+  "web": "https://www.talskymlyn.cz/cs/hostinec/",
+  "fit": [
+   "male"
+  ]
  },
  {
   "id": "zamecka-kavarna",
@@ -952,7 +1087,10 @@
   "text": "Stylová kavárna v bývalém klášterním pivovaru, v budově Muzea nové generace. Výběrová káva, domácí dezerty a koláče, řemeslná zmrzlina, domácí limonády ze sirupů z rodinné farmy, cider ze zámeckých jablek, ale i quiche, chlebíčky a polévka. V obchůdku hned vedle je dětský koutek.",
   "info": "Duben–říjen denně 9–18. Tel. +420 602 565 309.",
   "phone": "+420 602 565 309",
-  "web": "https://zamekzdar.cz/kavarna-a-obchod/"
+  "web": "https://zamekzdar.cz/kavarna-a-obchod/",
+  "fit": [
+   "male"
+  ]
  },
  {
   "id": "cukrarna-snezne",
@@ -994,7 +1132,8 @@
    49.65473,
    16.09907
   ],
-  "phone": "+420 601 365 744"
+  "phone": "+420 601 365 744",
+  "top": true
  },
  {
   "id": "selsky-dvur",
@@ -1063,14 +1202,19 @@
    49.55745,
    16.06192
   ],
-  "kids": 3,
   "tags": [
    "zdarma"
   ],
   "teaser": "Lamy, klokani, nandu, poníci a oslíci u rybníčků. Soukromý zookoutek nadšence, vstup zdarma.",
   "text": "Malá oáza s rybníčky a ohradami v ulici Podlouckého nad Novým Městem, u silnice do Žďáru. Žijí tu lamy, ovce, oslíci, shetlandští poníci, klokani, kamerunské ovce, bažanti i nandu, v jezírkách okrasné ryby a vodní ptáci. Zastávka na půl hodiny, třeba cestou z Vysočina Areny.",
-  "kidsNote": "Je to soukromý projekt místního nadšence: zvířata bez dovolení nekrmte a buďte ohleduplní.",
-  "info": "Od 1. října denně 7:30–16. Autem od silnice I/19 odbočkou u benzinky Shell, pěšky průchodem z městské části Betlém."
+  "kidsNote": "Ideální pro nejmenší, dá se tam i s kočárkem. Je to soukromý projekt místního nadšence: zvířata bez dovolení nekrmte a buďte ohleduplní.",
+  "info": "Od 1. října denně 7:30–16. Autem od silnice I/19 odbočkou u benzinky Shell, pěšky průchodem z městské části Betlém.",
+  "fit": [
+   "male",
+   "skolaci",
+   "kocarek"
+  ],
+  "top": true
  },
  {
   "id": "falbgery",
@@ -1085,7 +1229,6 @@
    49.75113,
    16.15231
   ],
-  "kids": 3,
   "tags": [
    "zvirata",
    "rezervace"
@@ -1095,7 +1238,11 @@
   "kidsNote": "Mlsky pro zvířata (mrkev, jablka, tvrdé pečivo) můžete přivézt, krmí se jen pod dozorem.",
   "info": "Otevřeno 10–17, návštěvu předem zavolejte na 721 006 486. Vstupné dospělí 120 Kč, děti 100 Kč.",
   "phone": "+420 721 006 486",
-  "web": "http://www.minifarmafalbgery.cz/"
+  "web": "http://www.minifarmafalbgery.cz/",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "maso-svetnov",
@@ -1151,10 +1298,13 @@
   "name": "Obora Široká mez (u Hlinska)",
   "lat": 49.74617,
   "lon": 15.87699,
-  "kids": 3,
   "teaser": "Jeleni, daňci, mufloni a divočáci. Některá zvířata si nechají podrbat na hlavě.",
   "text": "Obora u Hlinska s loveckým zámečkem Dvojhradí uprostřed. Zvířata jsou zvyklá na lidi a z blízka se dají pozorovat jeleni, daňci, mufloni i divoká prasata.",
-  "info": "Podle dostupných informací denně 9–20, dobrovolné vstupné (ověřte). Dá se spojit s Veselým Kopcem nebo Peklem Čertovinou."
+  "info": "Podle dostupných informací denně 9–20, dobrovolné vstupné (ověřte). Dá se spojit s Veselým Kopcem nebo Peklem Čertovinou.",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "shop-skrdlovice",
