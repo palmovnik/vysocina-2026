@@ -9,6 +9,7 @@ Vstupy (vše v tools/):
   poi_candidates.json  – body, ke kterým se počítá vzdálenost autem od chaty
   images.json          – soubory z Wikimedia Commons ke stažení (náhledy)
   pages.json           – webové stránky k ověření údajů (otevírací doby, Gastromapa)
+  photo_candidates.json – místa bez fotky: hledají se snímky z Commons v okolí bodu
 """
 import hashlib
 import json
@@ -434,6 +435,63 @@ def run_pages():
         log(f'  {len(raw) // 1024} kB')
         time.sleep(1)
     save('pages/_index.json', index)
+
+
+# ---------------------------------------------------------------- Kandidáti na fotky
+def run_photos():
+    """Najde na Wikimedia Commons fotky v okolí míst bez obrázku a stáhne malé náhledy.
+
+    Výsledek (data/raw/photos/) slouží jen k ručnímu výběru; vybrané soubory se pak
+    zapíšou do tools/images.json a stáhnou krokem commons.
+    """
+    items = load_input('photo_candidates.json', [])
+    if not items:
+        return
+    outdir = os.path.join(RAW, 'photos')
+    os.makedirs(outdir, exist_ok=True)
+    index = load_raw('photos/index.json', {})
+    api = 'https://commons.wikimedia.org/w/api.php?'
+    for it in items:
+        if it['id'] in index and index[it['id']].get('at') == [it['lat'], it['lon']]:
+            continue
+        log(f'Commons u bodu: {it["id"]}')
+        raw = http(api + urllib.parse.urlencode({
+            'action': 'query', 'format': 'json', 'list': 'geosearch', 'gsnamespace': 6,
+            'gscoord': f'{it["lat"]}|{it["lon"]}', 'gsradius': it.get('r', 400), 'gslimit': it.get('n', 8)}), timeout=60)
+        hits = json.loads(raw).get('query', {}).get('geosearch', []) if raw else []
+        info = {}
+        if hits:
+            raw = http(api + urllib.parse.urlencode({
+                'action': 'query', 'format': 'json', 'prop': 'imageinfo',
+                'iiprop': 'url|extmetadata|size|mime', 'iiurlwidth': 320,
+                'titles': '|'.join(h['title'] for h in hits)}), timeout=60)
+            for pg in (json.loads(raw).get('query', {}).get('pages', {}).values() if raw else []):
+                if pg.get('imageinfo'):
+                    info[pg['title']] = pg['imageinfo'][0]
+        found = []
+        for h in hits:
+            ii = info.get(h['title'], {})
+            if ii.get('mime') not in ('image/jpeg', 'image/png') or not ii.get('thumburl'):
+                continue
+            thumb = http(ii['thumburl'], timeout=60)
+            if not thumb:
+                continue
+            k = len(found)
+            os.makedirs(os.path.join(outdir, it['id']), exist_ok=True)
+            with open(os.path.join(outdir, it['id'], f'{k}.jpg'), 'wb') as fh:
+                fh.write(thumb)
+            em = ii.get('extmetadata', {})
+            found.append({'k': k, 'file': h['title'][5:], 'dist': round(h.get('dist', 0)),
+                          'w': ii.get('width'), 'h': ii.get('height'),
+                          'desc': em.get('ImageDescription', {}).get('value', '')[:300],
+                          'date': em.get('DateTimeOriginal', {}).get('value', '')[:40],
+                          'artist': em.get('Artist', {}).get('value', '')[:120],
+                          'license': em.get('LicenseShortName', {}).get('value', '')})
+            time.sleep(.5)
+        index[it['id']] = {'at': [it['lat'], it['lon']], 'files': found}
+        log(f'  {len(found)} fotek')
+        time.sleep(1)
+    save('photos/index.json', index)
 
 
 def run_missing():
