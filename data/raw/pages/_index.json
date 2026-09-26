@@ -418,5 +418,85 @@
   "url": "https://www.foodology.cz/restaurace/statek-blatiny/",
   "file": "foodology-blatiny.html",
   "bytes": 30262
+ },
+ "v-balcarka": {
+  "url": "https://balcarka.caves.cz/aktuality/balcarka-nabidne-detem-26-9-a-10-10-skolu-malych-jeskynaru",
+  "file": "v-balcarka.html",
+  "bytes": 45313
+ },
+ "v-balcarka-doba": {
+  "url": "https://balcarka.caves.cz/oteviraci-doba",
+  "file": "v-balcarka-doba.html",
+  "bytes": 44596
+ },
+ "v-punkevni": {
+  "url": "https://punkevni.caves.cz/oteviraci-doba",
+  "file": "v-punkevni.html",
+  "bytes": 45918
+ },
+ "v-katerinska": {
+  "url": "https://katerinska.caves.cz/oteviraci-doba",
+  "file": "v-katerinska.html",
+  "bytes": 44697
+ },
+ "v-mng": {
+  "url": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/",
+  "file": "v-mng.html",
+  "bytes": 94315
+ },
+ "v-zelena-hora": {
+  "url": "https://www.zelena-hora.cz/cs/",
+  "file": "v-zelena-hora.html",
+  "bytes": 40934
+ },
+ "v-vesely-kopec": {
+  "url": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne",
+  "file": "v-vesely-kopec.html",
+  "bytes": 77349
+ },
+ "v-modelove": {
+  "url": "https://www.mkzdar.cz/",
+  "file": "v-modelove.html",
+  "bytes": 14026
+ },
+ "v-dum-prirody": {
+  "url": "https://www.dumprirody.cz/zdarskevrchy/",
+  "file": "v-dum-prirody.html",
+  "bytes": 27716
+ },
+ "v-relax": {
+  "url": "https://www.sportiszdar.cz/relaxacni-centrum",
+  "file": "v-relax.html",
+  "bytes": 86695
+ },
+ "v-slakhamr": {
+  "url": "https://www.technicalmuseum.cz/pamatky/slakhamr-v-hamrech-nad-sazavou/",
+  "file": "v-slakhamr.html",
+  "bytes": 109156
+ },
+ "v-pernstejn": {
+  "url": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba",
+  "file": "v-pernstejn.html",
+  "bytes": 54760
+ },
+ "v-peklo": {
+  "url": "https://www.peklocertovina.cz/",
+  "file": "v-peklo.html",
+  "bytes": 142550
+ },
+ "v-svoboda": {
+  "url": "https://ags-svoboda.cz/",
+  "file": "v-svoboda.html",
+  "bytes": 65759
+ },
+ "v-jihlava-podzemi": {
+  "url": "https://www.jihlava.cz/podzemi/ms-108141",
+  "file": "v-jihlava-podzemi.html",
+  "bytes": 37715
+ },
+ "v-sloupsko": {
+  "url": "https://sloupskososuvske.caves.cz/oteviraci-doba",
+  "file": "v-sloupsko.html",
+  "bytes": 47053
  }
 }
