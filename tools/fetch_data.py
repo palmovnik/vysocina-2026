@@ -365,9 +365,12 @@ def run_commons():
         if not m or not m.get('thumb'):
             log(f'  ! bez metadat: {f["file"]}')
             continue
+        path = os.path.join(imgdir, f['id'] + '.jpg')
+        if os.path.exists(path):  # už stažené (a zmenšené) – nepřepisovat
+            m['local'] = f'img/{f["id"]}.jpg'
+            continue
         raw = http(m['thumb'], timeout=60)
         if raw:
-            path = os.path.join(imgdir, f['id'] + '.jpg')
             with open(path, 'wb') as fh:
                 fh.write(raw)
             m['local'] = f'img/{f["id"]}.jpg'

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "b-darko", "type": "bike", "level": "easy", "kids": "6+",
+    "name": "Kolem Velkého Dářka za sklem",
+    "teaser": "Rodinný okruh: sklárna ve Škrdlovicích, hráz Velkého Dářka, Radostín a Karlov.",
+    "text": "Z mlýna po silničce do Škrdlovic (sklárna U Hrocha), dál k hrázi Velkého Dářka, kolem rybníka do Radostína a zpět přes Karlov (sklárna Svoboda). Na hrázi je parkoviště, restaurace a začátek naučné stezky Dářská rašeliniště: kola zamkněte a projděte kus povalového chodníku pěšky.",
+    "stops": ["sklarna-hroch", "velke-darko", "darska-raseliniste", "sklarna-svoboda"],
+    "tip": "Ve všední den dopoledne se dá stihnout ukázka foukání skla (skupinu ohlaste předem)."
+  },
+  {
+    "id": "b-prameny", "type": "bike", "level": "easy", "kids": "7+",
+    "name": "Dva prameny, dvě moře",
+    "teaser": "K pramenu Svratky (Černé moře) i Sázavy (Severní moře), lesními cestami kolem Žákovy hory.",
+    "text": "Lesní cestou k pramenu Svratky a Stříbrné studánce, kolem Žákovy hory, přes rozcestí U Snítku k pramenu Sázavy pod Šindelným vrchem a zpět přes Tisůvku. Po cestě dvakrát překročíte hlavní evropské rozvodí.",
+    "stops": ["pramen-svratky", "stribrna-studanka", "zakova-hora", "pramen-sazavy", "tisuvka"],
+    "tip": "Lesní cesty bývají po dešti blátivé. Hodí se kola s širšími pláštěti."
+  },
+  {
+    "id": "b-medlov", "type": "bike", "level": "medium", "kids": "8+",
+    "name": "Na Medlov za lanovým parkem",
+    "teaser": "Přes pramen Svratky a Fryšavu k lanovému parku a pohádkové stezce na Medlově, zpět přes Tři Studně.",
+    "text": "Od mlýna k pramenu Svratky, pod Fryšavským kopcem na Fryšavu a k Hotelu Medlov (lanový park, prolézačky, pohádková stezka). Zpět kolem rybníka Sykovec, přes Tři Studně, Sklené a Světnov.",
+    "stops": ["pramen-svratky", "fryskop", "medlov", "sykovec", "rest-tri-studne"],
+    "tip": "Oběd ve Fryšavě (Stanice lyžařů) nebo v Třech Studních."
+  },
+  {
+    "id": "b-zdar", "type": "bike", "level": "medium", "kids": "8+",
+    "name": "Do Žďáru na zámek a Zelenou horu",
+    "teaser": "Z kopce do Žďáru: Pilák, zámek s Muzeem nové generace, Zelená hora. Zpět přes Polničku.",
+    "text": "Přes Světnov a Stržanov k Pilské nádrži (hřiště, lanová pyramida), k zámku a na Zelenou horu. Zpátky přes Polničku a Škrdlovice. Cesta tam je převážně z kopce, zpátky se stoupá, takže unavené děti a kola může vyzvednout auto.",
+    "stops": ["pilak", "zamek-zdar", "mng", "zelena-hora", "rest-polnicka"],
+    "tip": "Muzeum nové generace otevírá denně 9–18; do interiéru Zelené hory se v říjnu dostanete jen o víkendu."
+  },
+  {
+    "id": "b-devet-skal", "type": "bike", "level": "hard", "kids": "11+",
+    "name": "Velký okruh po skalách Žďárských vrchů",
+    "teaser": "Pro zdatné: Žákova hora, Devět skal, Lisovská skála, Drátník, Milovy a Křižánky.",
+    "text": "Náročnější okruh hlavním hřebenem Žďárských vrchů. Pod Devíti skalami kola zamkněte a vyběhněte na vyhlídku, pak po hřebeni do Blatin k Drátníku, do Milov k rybníku a přes Křižánky a Brušovec zpět. Lesní a polní cesty se střídají se silničkami.",
+    "stops": ["zakova-hora", "devet-skal", "lisovska", "dratenicka", "rest-kolousek", "rest-krizanky"],
+    "tip": "Počítejte s celým dnem a obědem v Blatinách nebo Křižánkách."
+  },
+  {
+    "id": "b-stezka-sazava", "type": "bike", "level": "easy", "kids": "4+",
+    "name": "Cyklostezka Sázava – Přibyslav (pro nejmenší)",
+    "teaser": "Asfaltová stezka bez aut podél Sázavy. Kola se vezou autem.",
+    "text": "Rovinatá asfaltová cyklostezka podél Sázavy mezi obcí Sázava (u Žďáru) a Přibyslaví. Ideální pro nejmenší na odrážedlech a malých kolech. Tam a zpět, nebo jen kus. Kousek od startu je rozhledna Rosička.",
+    "stops": ["rosicka"],
+    "tip": "Start: parkoviště v obci Sázava (15 min autem)."
+  },
+  {
+    "id": "h-tisuvka", "type": "hike", "level": "easy", "kids": "3+",
+    "name": "Tisůvka: skály za humny",
+    "teaser": "Krátký okruh z mlýna ke skalní hradbě Tisůvka a přes Zubačku zpět.",
+    "text": "Nejkratší výlet hned od chaty: lesem na Tisůvku (804 m) se skalní hradbou, dál k rozcestí Zubačka a zpět do Cikháje. Ideální na odpoledne po příjezdu.",
+    "stops": ["tisuvka", "rest-tisuvka"],
+    "tip": "Na zpáteční cestě se dá zastavit v restauraci Tisůvka (čt–ne)."
+  },
+  {
+    "id": "h-zakova-hora", "type": "hike", "level": "easy", "kids": "4+",
+    "name": "Pramen Svratky a Žákova hora",
+    "teaser": "Z mlýna k pramenu Svratky, na Fryšavský kopec k partyzánskému památníku a přes Žákovu horu zpět.",
+    "text": "Lesní okruh přímo od chaty: pramen Svratky, Fryšavský kopec (památník a replika partyzánského bunkru), Stříbrná studánka a prales na Žákově hoře, zpět přes rozcestí U Snítku.",
+    "stops": ["pramen-svratky", "fryskop", "stribrna-studanka", "zakova-hora"],
+    "tip": "Vezměte lodičky z kůry na pouštění po pramenech."
+  },
+  {
+    "id": "h-hreben", "type": "hike", "level": "medium", "kids": "7+",
+    "name": "Hřebenovka po skalách: Drátník – Malinská – Devět skal",
+    "teaser": "Nejhezčí skalní okruh Žďárských vrchů, start i cíl v Blatinách.",
+    "text": "Z Blatin k Drátníku (pozorování lezců), po hřebeni na Malinskou skálu (vyhlídka a jeskyňka), dál k Lisovské skále a na Devět skal. Zpět lesem přes Blatky a Samotín. Kratší varianta: jen Drátník a Malinská skála a zpět (asi 4 km).",
+    "stops": ["dratenicka", "malinska", "lisovska", "devet-skal", "rest-kolousek"],
+    "tip": "Auto nechte v Blatinách, po návratu je tu restaurace U Kolouška."
+  },
+  {
+    "id": "h-palice", "type": "hike", "level": "easy", "kids": "4+",
+    "name": "Čtyři palice a Milovské perničky",
+    "teaser": "Krátký okruh z Milov ke skalním věžím a „perníkovým“ mísám.",
+    "text": "Od Milovského rybníka lesem ke skalám Čtyři palice s vyhlídkou, dál k Milovským perničkám (najděte všech 8 skalních mís) a zpět přes rozcestí Plaňkovka.",
+    "stops": ["ctyri-palice", "pernicky"],
+    "tip": "Dobře se spojí s Malinskou skálou nebo Domem přírody v Krátké."
+  },
+  {
+    "id": "h-darko", "type": "hike", "level": "easy", "kids": "3+",
+    "name": "Naučná stezka Dářská rašeliniště",
+    "teaser": "Po povalových chodnících přes rašeliniště, z hráze Velkého Dářka do Radostína.",
+    "text": "Z parkoviště na hrázi Velkého Dářka po okraji rybníka na naučnou stezku přes NPR Dářko, s vyhlídkami na rašeliniště a rybník, až do Radostína. Zpátky stejnou cestou, nebo si pro vás někdo dojede autem.",
+    "stops": ["velke-darko", "darska-raseliniste"],
+    "tip": "Po dešti a ráno kloužou povaly, vezměte pevné boty."
+  },
+  {
+    "id": "h-doubrava", "type": "hike", "level": "medium", "kids": "6+",
+    "name": "Údolím Doubravy k Čertovu stolku",
+    "teaser": "Divoký kaňon, obří hrnce, jeskyně a vyhlídka Čertův stolek. Start v Bílku.",
+    "text": "Z Bílku do kaňonu Doubravy k vyhlídce Čertův stolek s jeskyněmi Čertova a Poustevna, kolem zříceniny Sokolohrady a peřejí a okruhem zpět. Místy kamenitá pěšina podél řeky.",
+    "stops": ["udoli-doubravy"],
+    "tip": "Autem asi 35 minut. Na vyhlídce a u řeky držte malé děti za ruku."
+  },
+  {
+    "id": "h-mastale", "type": "hike", "level": "easy", "kids": "4+",
+    "name": "Toulovcovy maštale: skalní městečko",
+    "teaser": "Pískovcové rokle, chodby a jeskyňky; z parkoviště Vranice a zpět přes rozhlednu.",
+    "text": "Z parkoviště Vranice k Toulovcovým maštalím, dál do Městských maštalí (nejlepší pro děti) a přes Toulovcovu rozhlednu zpět. Rokle a chodby jsou jako stvořené na hraní na loupežníky.",
+    "stops": ["mastale"],
+    "tip": "Autem asi 40 minut. Vezměte čelovky do chodeb."
+  },
+  {
+    "id": "h-macocha", "type": "hike", "level": "medium", "kids": "5+",
+    "name": "Moravský kras: Skalní Mlýn – Punkevní jeskyně – Macocha",
+    "teaser": "Pěšky nebo ekovláčkem k Punkevním jeskyním, lodičkou podzemím, lanovkou na Macochu a zpět.",
+    "text": "Ze Skalního Mlýna podél Punkvy k Punkevním jeskyním (1,6 km), prohlídka s plavbou, lanovkou nebo pěšky (130 m převýšení) na horní můstek Macochy a lesem zpět na Skalní Mlýn. Kateřinská jeskyně je 300 m od parkoviště, Balcarka pár minut autem.",
+    "stops": ["punkevni", "macocha", "katerinska", "balcarka", "rest-skalni-mlyn"],
+    "tip": "Vstupenky do Punkevních jeskyní rezervujte předem. V sobotu 10. 10. je v Balcarce Škola malých jeskyňářů."
+  }
+]

@@ -9,7 +9,7 @@
   },
 
   {
-    "id": "tisuvka", "cat": "skaly", "name": "Tisůvka (804 m)", "lat": 49.65178, "lon": 15.94945,
+    "id": "tisuvka", "cat": "skaly", "name": "Tisůvka (804 m)", "lat": 49.65178, "lon": 15.94945, "noCar": true,
     "kids": 3, "top": true, "walk": true, "bike": true,
     "teaser": "Nejbližší skály: 58 m dlouhá rulová hradba, až 15 m vysoká, skoro za humny.",
     "text": "Přírodní památka na zalesněném vrcholu západně od Cikháje. Skalní hradba vznikla mrazovým zvětráváním ruly v době ledové. Ideální první procházka hned po příjezdu, dá se spojit s rozcestím Zubačka a návratem lesem.",
@@ -17,7 +17,7 @@
     "info": "Volně přístupné, po značené cestě z Cikháje."
   },
   {
-    "id": "devet-skal", "cat": "skaly", "name": "Devět skal (836 m)", "lat": 49.67073, "lon": 16.03224,
+    "id": "devet-skal", "cat": "skaly", "name": "Devět skal (836 m)", "lat": 49.67073, "lon": 16.03224, "car": [49.6601093, 16.0334452],
     "kids": 3, "top": true, "bike": true,
     "teaser": "Nejvyšší vrchol Žďárských vrchů: skalní labyrint a vyhlídka se zábradlím.",
     "text": "Tři skalní hřebeny s devíti věžemi a třemi věžičkami, místy 12–20 m vysoké, jsou největším komplexem vrcholových skal na Českomoravské vrchovině. Po kamenných schůdcích se vystoupá na vyhlídku se zábradlím s pohledem na sever do údolí Svratky, tedy na hranici Čech a Moravy.",
@@ -26,14 +26,14 @@
     "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/4-devet-skal"
   },
   {
-    "id": "lisovska", "cat": "skaly", "name": "Lisovská skála (802 m)", "lat": 49.66180, "lon": 16.03817,
+    "id": "lisovska", "cat": "skaly", "name": "Lisovská skála (802 m)", "lat": 49.66180, "lon": 16.03817, "car": [49.6601093, 16.0334452],
     "kids": 2, "bike": true,
     "teaser": "Zalesněný skalní vrchol na hřebenovce kousek od Devíti skal.",
     "text": "Přírodní památka s rulovými skalami, které vznikly mrazovým zvětráváním ve starších čtvrtohorách. Leží na červené hřebenovce mezi Devíti skalami a Malinskou skálou, takže se hodí jako zastávka po cestě. Výhled zakrývá les.",
     "info": "Volně přístupné, červená značka."
   },
   {
-    "id": "malinska", "cat": "skaly", "name": "Malinská skála (813 m)", "lat": 49.66103, "lon": 16.07139,
+    "id": "malinska", "cat": "skaly", "name": "Malinská skála (813 m)", "lat": 49.66103, "lon": 16.07139, "car": [49.65102, 16.08249],
     "kids": 3, "top": true, "bike": true,
     "teaser": "Kruh až 20 m vysokých skal, jeden z nejhezčích výhledů a malá puklinová jeskyňka.",
     "text": "Skupina rulových skal (Výspa, Srnčí věž, Škuner, Buldok) obklopuje vrchol. Z vyhlídky je vidět do Milovské kotliny, na Devět skal, Buchtův kopec, Dráteničky i Čtyři palice. Mrazem vzniklá puklinová jeskyňka je hluboká asi 3 m.",
@@ -42,7 +42,7 @@
     "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/12-malinska-skala"
   },
   {
-    "id": "dratenicka", "cat": "skaly", "name": "Drátník (Drátenická skála, 776 m)", "lat": 49.65475, "lon": 16.08404,
+    "id": "dratenicka", "cat": "skaly", "name": "Drátník (Drátenická skála, 776 m)", "lat": 49.65475, "lon": 16.08404, "car": [49.65102, 16.08249],
     "kids": 3, "bike": true,
     "teaser": "200 m dlouhá skalní hradba s věží Sokol (35 m), kde trénují horolezci.",
     "text": "Mohutná, ale úzká skalní hradba v přírodní památce Dráteničky nad Blatinami, rozdělená do několika věží. Nejvyšší je Sokol s 35 metry. Je tu spousta lezeckých cest, takže se tu skoro vždycky dá pozorovat, jak lezci trénují.",
@@ -50,7 +50,7 @@
     "info": "Volně přístupné, asi 200 m od Blatin (parkování v obci)."
   },
   {
-    "id": "ctyri-palice", "cat": "skaly", "name": "Čtyři palice", "lat": 49.68605, "lon": 16.09336,
+    "id": "ctyri-palice", "cat": "skaly", "name": "Čtyři palice", "lat": 49.68605, "lon": 16.09336, "car": [49.66865, 16.09073],
     "kids": 3, "top": true, "bike": true,
     "teaser": "Rozeklané skalní věže nad Milovy s vyhlídkou a naučnou stezkou.",
     "text": "Přírodní rezervace u Českých Milov na pomezí Čech a Moravy. Rulové věže (Tvrz, Paličatá, Děvín a další) lákají horolezce, ale vyhlídka je přístupná každému. Kolem vede naučná stezka „Příběh krajiny pod Čtyřmi palicemi“ (4,7 km).",
@@ -58,7 +58,7 @@
     "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/25-ctyri-palice"
   },
   {
-    "id": "pernicky", "cat": "skaly", "name": "Milovské perničky", "lat": 49.69360, "lon": 16.08794,
+    "id": "pernicky", "cat": "skaly", "name": "Milovské perničky", "lat": 49.69360, "lon": 16.08794, "car": [49.66865, 16.09073],
     "kids": 3, "bike": true,
     "teaser": "Skály s „perníkovými formičkami“, skalními mísami vymletými vodou a mrazem.",
     "text": "Přírodní památka s bloky až 25 m vysokými. Na temeni je osm skalních mís, největší má průměr 87 cm a hloubku 30 cm. Lidem kdysi připomínaly formy na perníky, odtud název.",
@@ -66,7 +66,7 @@
     "info": "Volně přístupné, kousek od Čtyř palic (dají se spojit do jednoho okruhu)."
   },
   {
-    "id": "zkameneny-zamek", "cat": "skaly", "name": "Zkamenělý zámek", "lat": 49.70894, "lon": 16.07367,
+    "id": "zkameneny-zamek", "cat": "skaly", "name": "Zkamenělý zámek", "lat": 49.70894, "lon": 16.07367, "car": [49.71477, 16.06443],
     "kids": 2, "bike": true,
     "teaser": "Obří rulová skaliska u Svratky, kde bývalo pravěké hradiště.",
     "text": "Přírodní památka (od roku 1977). Archeologové tu našli stopy neolitického a slovanského osídlení, dodnes jsou patrné zbytky dvojitého valu a ve 13. století tu možná stál dřevěný hrádek. Nedaleko je lezecká skála Pivovar.",
@@ -81,7 +81,7 @@
     "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/8-pasecka-skala"
   },
   {
-    "id": "brozova", "cat": "skaly", "name": "Brožova a Hudecká skalka", "lat": 49.62478, "lon": 16.01033,
+    "id": "brozova", "cat": "skaly", "name": "Brožova a Hudecká skalka", "lat": 49.62478, "lon": 16.01033, "noCar": true,
     "kids": 2, "walk": true, "bike": true,
     "teaser": "Tři skály až 20 m vysoké v lese nad Třemi Studněmi, bez davů.",
     "text": "Brožova skalka (787 m) je přírodní památka se třemi mohutnými skalami, o 900 m dál stojí Hudecká skalka (779 m). Klidné místo, které se dobře spojí s pramenem Svratky a Fryšavským kopcem.",
@@ -228,7 +228,7 @@
     "web": "https://www.mkzdar.cz/"
   },
   {
-    "id": "dum-prirody", "cat": "deti", "name": "Dům přírody Žďárských vrchů (Krátká)", "lat": 49.64198, "lon": 16.09630,
+    "id": "dum-prirody", "cat": "deti", "name": "Dům přírody Žďárských vrchů (Krátká)", "lat": 49.64198, "lon": 16.09630, "car": [49.64198, 16.0963],
     "kids": 3, "rain": true, "bike": true,
     "teaser": "Expozice o zdejší přírodě v historickém statku, s hledačkou pro děti.",
     "text": "Návštěvnické centrum CHKO ve statku v obci Krátká: modely, obrázkové mapy, sochy zvířat a spousta zajímavostí o skalách, rašeliništích a lesích Žďárských vrchů. Pro děti je připravená hledačka.",
@@ -259,7 +259,7 @@
     "info": "Volně přístupné."
   },
   {
-    "id": "cikhaj-hriste", "cat": "deti", "name": "Dětské hřiště Cikháj", "lat": 49.64727, "lon": 15.96347,
+    "id": "cikhaj-hriste", "cat": "deti", "name": "Dětské hřiště Cikháj", "lat": 49.64727, "lon": 15.96347, "noCar": true,
     "kids": 2, "walk": true,
     "teaser": "Hřiště v obci, asi 500 m od mlýna, na chvilku mezi výlety.",
     "text": "Obecní dětské hřiště v Cikháji, kousek od restaurace Tisůvka.",
@@ -301,7 +301,7 @@
     "web": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba"
   },
   {
-    "id": "slakhamr", "cat": "pamatky", "name": "Šlakhamr v Hamrech nad Sázavou", "lat": 49.56629, "lon": 15.87859,
+    "id": "slakhamr", "cat": "pamatky", "name": "Šlakhamr v Hamrech nad Sázavou", "lat": 49.56629, "lon": 15.87859, "car": [49.56629, 15.87859],
     "kids": 3,
     "teaser": "Funkční vodní hamr: obří kovářská kladiva poháněná vodním kolem.",
     "text": "Technická památka Technického muzea v Brně (Brdíčkův mlýn). Průvodce předvede, jak voda roztáčí kolo a buší do železa hamerská kladiva. Takové rány si děti zapamatují.",
@@ -310,7 +310,7 @@
   },
 
   {
-    "id": "pramen-svratky", "cat": "priroda", "name": "Pramen Svratky", "lat": 49.64388, "lon": 15.99942,
+    "id": "pramen-svratky", "cat": "priroda", "name": "Pramen Svratky", "lat": 49.64388, "lon": 15.99942, "noCar": true,
     "kids": 3, "top": true, "walk": true, "bike": true,
     "teaser": "Tady se rodí Svratka. Její voda doteče přes Brno a Dunaj až do Černého moře.",
     "text": "Upravený pramen na jihovýchodním svahu Žákovy hory, pod Fryšavským kopcem. Svratka odtud teče přes Brno do Dyje, Moravy a Dunaje, tedy až do Černého moře. Voda z potoka u mlýna přitom míří Sázavou, Vltavou a Labem do Severního moře: jsme přímo na hlavním evropském rozvodí!",
@@ -318,28 +318,28 @@
     "info": "Volně přístupné, lesní cestou od mlýna."
   },
   {
-    "id": "pramen-sazavy", "cat": "priroda", "name": "Pramen Sázavy", "lat": 49.67156, "lon": 15.93786,
+    "id": "pramen-sazavy", "cat": "priroda", "name": "Pramen Sázavy", "lat": 49.67156, "lon": 15.93786, "noCar": true,
     "kids": 3, "walk": true, "bike": true,
     "teaser": "Pramen řeky, která teče do Vltavy, Labe a Severního moře.",
     "text": "Pramen Sázavy pod Šindelným vrchem (806 m) severozápadně od Cikháje. Spolu s pramenem Svratky tvoří hezký výlet „dva prameny, dvě moře“.",
     "info": "Volně přístupné."
   },
   {
-    "id": "stribrna-studanka", "cat": "priroda", "name": "Stříbrná studánka", "lat": 49.65439, "lon": 15.99890,
+    "id": "stribrna-studanka", "cat": "priroda", "name": "Stříbrná studánka", "lat": 49.65439, "lon": 15.99890, "noCar": true,
     "kids": 2, "walk": true,
     "teaser": "Studánka na jižním svahu Žákovy hory, dlouho považovaná za pramen Svratky.",
     "text": "Stříbrná studánka je jednou ze zdrojnic Svratky a zastávkou naučné stezky Žákova hora. Skutečný pramen Svratky leží asi 1,2 km jižněji pod Fryšavským kopcem.",
     "info": "Volně přístupné, rozcestí „Stříbrná studánka“."
   },
   {
-    "id": "zakova-hora", "cat": "priroda", "name": "Žákova hora (810 m): prales", "lat": 49.65699, "lon": 15.99183,
+    "id": "zakova-hora", "cat": "priroda", "name": "Žákova hora (810 m): prales", "lat": 49.65699, "lon": 15.99183, "noCar": true,
     "kids": 2, "walk": true, "bike": true,
     "teaser": "Národní přírodní rezervace se starým jedlo-bukovým lesem a naučnou stezkou.",
     "text": "Jeden z nejcennějších lesů Vysočiny, s pralesovitým porostem bez zásahů člověka. Podle pověsti se tu kdysi ztratili žáci ze žďárského kláštera a už se nevrátili, odtud název. Kolem rezervace vede naučná stezka.",
     "info": "Chodí se jen po značených cestách, rezervace je přísně chráněná."
   },
   {
-    "id": "fryskop", "cat": "priroda", "name": "Fryšavský kopec: partyzánský památník", "lat": 49.63770, "lon": 16.00217,
+    "id": "fryskop", "cat": "priroda", "name": "Fryšavský kopec: partyzánský památník", "lat": 49.63770, "lon": 16.00217, "noCar": true,
     "kids": 2, "walk": true, "bike": true,
     "teaser": "Pomník partyzánské brigády Mistr Jan Hus s replikou partyzánského bunkru.",
     "text": "Na vrcholu Fryšavského kopce (803 m) stojí památník partyzánů, kteří se v okolních lesích skrývali za 2. světové války. Nedaleko je replika jejich lesního bunkru. Kousek pod kopcem pramení Svratka.",
@@ -353,7 +353,7 @@
     "info": "Parkoviště u rekreačního areálu u hráze (východní konec), odtud začíná i naučná stezka."
   },
   {
-    "id": "darska-raseliniste", "cat": "priroda", "name": "NS Dářská rašeliniště", "lat": 49.63788, "lon": 15.88283,
+    "id": "darska-raseliniste", "cat": "priroda", "name": "NS Dářská rašeliniště", "lat": 49.63788, "lon": 15.88283, "car": [49.63193, 15.90859],
     "kids": 3, "top": true,
     "teaser": "3 km dlouhá stezka po povalových chodnících přes rašeliniště, se dvěma vyhlídkami.",
     "text": "Naučná stezka z roku 2013 má 12 zastavení a vede přes Národní přírodní rezervaci Dářko, nejhlubší rašeliniště Českomoravské vrchoviny. Dřevěné povalové chodníky a rozhledny nad rašeliništěm děti baví.",
@@ -370,7 +370,7 @@
   },
 
   {
-    "id": "rest-tisuvka", "cat": "jidlo", "name": "Restaurace a penzion Tisůvka", "lat": 49.64788, "lon": 15.96257,
+    "id": "rest-tisuvka", "cat": "jidlo", "name": "Restaurace a penzion Tisůvka", "lat": 49.64788, "lon": 15.96257, "noCar": true,
     "walk": true,
     "teaser": "Nejbližší restaurace, 600 m od mlýna. Od září do června jen čt–ne.",
     "text": "Nekuřácká restaurace se 45 místy na okraji Cikháje. Pro 17 lidí rozhodně rezervujte předem.",
