@@ -1,7 +1,7 @@
-name: GitHub Pages
+name: Nasazení webu (gh-pages)
 
-# Nasadí složku docs/ jako web. Jednorázově je potřeba v nastavení repozitáře
-# (Settings → Pages → Build and deployment → Source) zvolit „GitHub Actions“.
+# Zkopíruje hotový web ze složky docs/ do větve gh-pages, ze které ho
+# GitHub Pages zveřejňuje na https://palmovnik.github.io/vysocina-2026/
 on:
   push:
     branches:
@@ -13,25 +13,37 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: gh-pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          fetch-depth: 1
+      - name: Publikace docs/ do větve gh-pages
+        run: |
+          set -e
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git fetch --depth 1 origin gh-pages; then
+            git worktree add /tmp/site FETCH_HEAD
+            git -C /tmp/site checkout -B gh-pages
+          else
+            git worktree add --orphan -b gh-pages /tmp/site
+          fi
+          rsync -a --delete --exclude '.git' docs/ /tmp/site/
+          touch /tmp/site/.nojekyll
+          cd /tmp/site
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Web se nezměnil."
+            exit 0
+          fi
+          git commit -m "Web z ${GITHUB_SHA::7}"
+          git push origin gh-pages
