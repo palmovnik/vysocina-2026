@@ -30,7 +30,6 @@
 <wpt lat="49.566000" lon="15.938200"><name>Modelové království (Žďár)</name><desc>Modelové kolejiště na 55 m² s asi 600 metry kolejí.</desc></wpt>
 <wpt lat="49.641980" lon="16.096300"><name>Dům přírody Žďárských vrchů (Krátká)</name><desc>Expozice o zdejší přírodě v historickém statku, s hledačkou pro děti.</desc></wpt>
 <wpt lat="49.776320" lon="15.945940"><name>Peklo Čertovina (u Hlinska)</name><desc>Interaktivní prohlídka pekla s čerty: chodby a „jeskyně“ až 12 m pod zemí.</desc></wpt>
-<wpt lat="49.746170" lon="15.876990"><name>Obora Široká mez (u Hlinska)</name><desc>Jeleni, daňci, mufloni a divočáci. Některá zvířata si nechají podrbat na hlavě.</desc></wpt>
 <wpt lat="49.589830" lon="15.931070"><name>Pilák: lanová pyramida a hřiště (Žďár)</name><desc>Rekreační areál u Pilské nádrže s lanovou pyramidou a hřišti pro malé děti.</desc></wpt>
 <wpt lat="49.647270" lon="15.963470"><name>Dětské hřiště Cikháj</name><desc>Hřiště se dvěma dřevěnými čerty, asi 500 m od mlýna.</desc></wpt>
 <wpt lat="49.580120" lon="15.941180"><name>Zelená hora (UNESCO)</name><desc>Santiniho hvězdicový kostel, památka UNESCO, kde se vše točí kolem čísla 5.</desc></wpt>
@@ -46,15 +45,32 @@
 <wpt lat="49.631770" lon="15.909620"><name>Velké Dářko</name><desc>Moře Vysočiny: největší rybník Českomoravské vrchoviny (206 ha).</desc></wpt>
 <wpt lat="49.637880" lon="15.882830"><name>NS Dářská rašeliniště</name><desc>3 km dlouhá stezka po povalových chodnících přes rašeliniště, se dvěma vyhlídkami.</desc></wpt>
 <wpt lat="49.608610" lon="16.038170"><name>Rybník Sykovec</name><desc>Nejvýše položený rybník Vysočiny s písčitou pláží, u Tří Studní.</desc></wpt>
-<wpt lat="49.647880" lon="15.962570"><name>Restaurace a penzion Tisůvka</name><desc>Nejbližší restaurace, 600 m od mlýna. Od září do června jen čt–ne.</desc></wpt>
-<wpt lat="49.633850" lon="15.930070"><name>Hotel a restaurace U Hrocha (Škrdlovice)</name><desc>Restaurace u sklářské huti; hodí se k ukázce foukání skla.</desc></wpt>
-<wpt lat="49.637090" lon="15.925820"><name>Penzion Velké Dářko (restaurace)</name><desc>Restaurace kousek od Velkého Dářka.</desc></wpt>
-<wpt lat="49.650390" lon="16.079900"><name>U Kolouška (Blatiny)</name><desc>Restaurace pod Drátníkem, na konci hřebenovky po skalách.</desc></wpt>
-<wpt lat="49.629660" lon="16.040590"><name>Stanice lyžařů Fryšava</name><desc>Restaurace na cestě k Medlovu a Třem Studním.</desc></wpt>
-<wpt lat="49.612480" lon="16.036320"><name>Krčma na náměstí (Tři Studně)</name><desc>Hospoda v Třech Studních, u Sykovce a Medlova.</desc></wpt>
+<wpt lat="49.647880" lon="15.962570"><name>Restaurace a penzion Tisůvka</name><desc>Nejbližší restaurace, 600 m od mlýna, s dětským koutkem. Ideální na první večer.</desc></wpt>
+<wpt lat="49.633850" lon="15.930070"><name>Hotel a restaurace U Hrocha</name><desc>Restaurace hned vedle sklářské huti. Oběd se dá spojit s ukázkou foukání skla.</desc></wpt>
+<wpt lat="49.637090" lon="15.925820"><name>Restaurace penzionu Velké Dářko</name><desc>Restaurace kousek od Velkého Dářka.</desc></wpt>
+<wpt lat="49.650390" lon="16.079900"><name>Hospoda U Kolouška</name><desc>Hospůdka uprostřed luk pod skálou Dráteničky, na konci skalní hřebenovky.</desc></wpt>
+<wpt lat="49.629660" lon="16.040590"><name>Stanice lyžařů Fryšava</name><desc>Nejoblíbenější podnik Žďárska podle čtenářů Deníku: poctivá česká kuchyně pod Žákovou horou.</desc></wpt>
+<wpt lat="49.612480" lon="16.036320"><name>Krčma na náměstí</name><desc>Hospoda v Třech Studních, u Sykovce a Medlova.</desc></wpt>
 <wpt lat="49.606410" lon="15.920060"><name>Restaurace Polnička</name><desc>Regionální kuchyně na cyklotrase do Žďáru.</desc></wpt>
-<wpt lat="49.689390" lon="16.065340"><name>Hostinec Za Řekou (Křižánky)</name><desc>Hostinec v Českých Křižánkách, pod Devíti skalami.</desc></wpt>
+<wpt lat="49.689390" lon="16.065340"><name>Hostinec Za Řekou</name><desc>Hostinec v Českých Křižánkách, pod Devíti skalami.</desc></wpt>
 <wpt lat="49.363730" lon="16.708220"><name>Hotel a restaurace Skalní Mlýn</name><desc>Restaurace a informační centrum u Punkevních a Kateřinské jeskyně.</desc></wpt>
+<wpt lat="49.634660" lon="16.077790"><name>Kiosek Kadov „U Staré školy“</name><desc>Gastro klenot Žďárských vrchů: moderní street food v restaurační kvalitě. Je v Gastromapě i v průvodci Gault&amp;Millau 2026.</desc></wpt>
+<wpt lat="49.561620" lon="15.940480"><name>Grand restaurant Poppet</name><desc>Restaurace z Maurerova výběru v centru Žďáru: česká a středomořská kuchyně s vysokými nároky.</desc></wpt>
+<wpt lat="49.561320" lon="16.075040"><name>Bistro Čtyřka (Horní Dvůr)</name><desc>Bistro v krásně opraveném domě na náměstí v Novém Městě: jídla z kamen na dřevo a suroviny z místních farem.</desc></wpt>
+<wpt lat="49.580750" lon="15.935770"><name>Klášterní hospoda Táferna</name><desc>Vysočinská kuchyně v klášterní hospodě z 18. století, kousek od zámku a Zelené hory.</desc></wpt>
+<wpt lat="49.587560" lon="15.929280"><name>Hostinec Tálský mlýn</name><desc>Stylový hostinec ve starém mlýně pod hrází Pilské nádrže: hovězí, jehněčí a zvěřina z okolí.</desc></wpt>
+<wpt lat="49.581720" lon="15.936900"><name>Zámecká kavárna</name><desc>Kavárna v bývalém klášterním pivovaru: dobrá káva a domácí zákusky po návštěvě muzea.</desc></wpt>
+<wpt lat="49.646300" lon="16.121180"><name>Cukrárna Sněžné</name><desc>Vyhlášená cukrárna s vlastní výrobou od roku 1993. Zákusky, kvůli kterým se sem jezdí zdaleka.</desc></wpt>
+<wpt lat="49.654730" lon="16.099070"><name>Restaurace U Paňmámy (Statek Blatiny)</name><desc>Jediná restaurace na Žďársku s „čepicí“ průvodce Gault&amp;Millau: poctivá česká kuchyně z místních surovin.</desc></wpt>
+<wpt lat="49.653790" lon="16.146740"><name>Penzion a restaurace Selský dvůr</name><desc>Hlemýždi po burgundsku z vlastního chovu a pstruzi. V Gastromapě i v průvodci Gault&amp;Millau.</desc></wpt>
+<wpt lat="49.559480" lon="16.072680"><name>The Black Cup – espresso bar</name><desc>Espresso bar s výběrovou kávou v Novém Městě, v Gastromapě Lukáše Hejlíka.</desc></wpt>
+<wpt lat="49.563170" lon="16.076230"><name>Kafé 133</name><desc>Kavárna v Novém Městě na Moravě z výběru Gastromapy Lukáše Hejlíka.</desc></wpt>
+<wpt lat="49.557450" lon="16.061920"><name>Zookoutek Nové Město na Moravě</name><desc>Lamy, klokani, nandu, poníci a oslíci u rybníčků. Soukromý zookoutek nadšence, vstup zdarma.</desc></wpt>
+<wpt lat="49.751130" lon="16.152310"><name>Minifarma Falbgery</name><desc>Rodinná minifarma s asi 30 druhy zvířat: hlazení, krmení pod dozorem a svezení na poníkovi.</desc></wpt>
+<wpt lat="49.620000" lon="15.954520"><name>Maso Žďársko: prodejna ve Světnově</name><desc>Maso a uzeniny z Vysočiny přímo z výrobny, 3 km od mlýna. Na grilování jako stvořené.</desc></wpt>
+<wpt lat="49.690090" lon="15.991670"><name>Maso a uzeniny Z Českého Dvora</name><desc>Hovězí z Vysočiny, vepřové z vlastních chovů a uzeniny podle tradičních receptur.</desc></wpt>
+<wpt lat="49.695370" lon="16.117400"><name>Sýry z Březin</name><desc>Bio sýry, jogurty a tvaroh z mléka krav, které se pasou na okolních loukách.</desc></wpt>
+<wpt lat="49.746170" lon="15.876990"><name>Obora Široká mez (u Hlinska)</name><desc>Jeleni, daňci, mufloni a divočáci. Některá zvířata si nechají podrbat na hlavě.</desc></wpt>
 <wpt lat="49.635360" lon="15.925960"><name>Potraviny Flop (Škrdlovice)</name><desc>Nejbližší obchod, asi 3 km od mlýna.</desc></wpt>
 <wpt lat="49.691050" lon="15.991410"><name>Potraviny Lotos (Herálec)</name><desc>Smíšené zboží otevřené denně 7–22.</desc></wpt>
 <wpt lat="49.555180" lon="15.936890"><name>Kaufland Žďár nad Sázavou</name><desc>Velký nákup pro 17 lidí: denně 7–22.</desc></wpt>
