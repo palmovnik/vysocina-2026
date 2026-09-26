@@ -1,0 +1,624 @@
+{
+ "tisuvka": {
+  "km": 0.7,
+  "min": 2,
+  "target": [
+   49.647869,
+   15.962792
+  ],
+  "via": "parkoviště n1890554342  (1054 m)",
+  "snap_m": 6
+ },
+ "devet-skal": {
+  "km": 10.8,
+  "min": 14,
+  "target": [
+   49.660109,
+   16.033445
+  ],
+  "via": "parkoviště w406762895  (1184 m)",
+  "snap_m": 3
+ },
+ "lisovska": {
+  "km": 10.8,
+  "min": 14,
+  "target": [
+   49.660109,
+   16.033445
+  ],
+  "via": "parkoviště w406762895  (389 m)",
+  "snap_m": 3
+ },
+ "malinska": {
+  "km": 20.2,
+  "min": 28,
+  "target": [
+   49.66103,
+   16.07139
+  ],
+  "via": "bod",
+  "snap_m": 839
+ },
+ "dratenicka": {
+  "km": 19.3,
+  "min": 22,
+  "target": [
+   49.657326,
+   16.093245
+  ],
+  "via": "parkoviště w1220965678  (722 m)",
+  "snap_m": 11
+ },
+ "ctyri-palice": {
+  "km": 18.5,
+  "min": 25,
+  "target": [
+   49.68605,
+   16.09336
+  ],
+  "via": "bod",
+  "snap_m": 375
+ },
+ "pernicky": {
+  "km": 15.6,
+  "min": 18,
+  "target": [
+   49.6936,
+   16.08794
+  ],
+  "via": "bod",
+  "snap_m": 765
+ },
+ "zkameneny-zamek": {
+  "km": 14.1,
+  "min": 31,
+  "target": [
+   49.70894,
+   16.07367
+  ],
+  "via": "bod",
+  "snap_m": 52
+ },
+ "pasecka": {
+  "km": 18.6,
+  "min": 24,
+  "target": [
+   49.612583,
+   16.082169
+  ],
+  "via": "parkoviště n1824583478  (335 m)",
+  "snap_m": 9
+ },
+ "brozova": {
+  "km": 20.7,
+  "min": 28,
+  "target": [
+   49.62478,
+   16.01033
+  ],
+  "via": "bod",
+  "snap_m": 1073
+ },
+ "rosicka": {
+  "km": 19.3,
+  "min": 29,
+  "target": [
+   49.53854,
+   15.8426
+  ],
+  "via": "bod",
+  "snap_m": 11
+ },
+ "udoli-doubravy": {
+  "km": 29.5,
+  "min": 37,
+  "target": [
+   49.721997,
+   15.707141
+  ],
+  "via": "parkoviště w503438859 PR Údolí Doubravy - Soutězska Divoké řeky (963 m)",
+  "snap_m": 5
+ },
+ "mastale": {
+  "km": 31.0,
+  "min": 37,
+  "target": [
+   49.822755,
+   16.12734
+  ],
+  "via": "parkoviště w1223446648  (1074 m)",
+  "snap_m": 6
+ },
+ "balcarka": {
+  "km": 88.4,
+  "min": 94,
+  "target": [
+   49.3768,
+   16.75815
+  ],
+  "via": "bod",
+  "snap_m": 44
+ },
+ "punkevni": {
+  "km": 84.5,
+  "min": 92,
+  "target": [
+   49.36339,
+   16.70874
+  ],
+  "via": "ručně",
+  "snap_m": 5
+ },
+ "macocha": {
+  "km": 91.4,
+  "min": 97,
+  "target": [
+   49.37314,
+   16.72932
+  ],
+  "via": "bod",
+  "snap_m": 144
+ },
+ "katerinska": {
+  "km": 84.9,
+  "min": 93,
+  "target": [
+   49.36169,
+   16.70965
+  ],
+  "via": "ručně",
+  "snap_m": 13
+ },
+ "sloupsko": {
+  "km": 82.8,
+  "min": 87,
+  "target": [
+   49.41045,
+   16.73902
+  ],
+  "via": "bod",
+  "snap_m": 109
+ },
+ "jihlava-podzemi": {
+  "km": 49.7,
+  "min": 58,
+  "target": [
+   49.39693,
+   15.59136
+  ],
+  "via": "bod",
+  "snap_m": 27
+ },
+ "medlov": {
+  "km": 21.1,
+  "min": 29,
+  "target": [
+   49.616146,
+   16.055924
+  ],
+  "via": "parkoviště w436606493  (104 m)",
+  "snap_m": 13
+ },
+ "arena": {
+  "km": 22.0,
+  "min": 26,
+  "target": [
+   49.578508,
+   16.051024
+  ],
+  "via": "parkoviště w180381099  (42 m)",
+  "snap_m": 3
+ },
+ "mng": {
+  "km": 8.6,
+  "min": 10,
+  "target": [
+   49.58179,
+   15.935602
+  ],
+  "via": "parkoviště w42382124  (78 m)",
+  "snap_m": 3
+ },
+ "relax": {
+  "km": 11.6,
+  "min": 14,
+  "target": [
+   49.562499,
+   15.941615
+  ],
+  "via": "parkoviště w509949056  (104 m)",
+  "snap_m": 11
+ },
+ "sklarna-hroch": {
+  "km": 7.5,
+  "min": 9,
+  "target": [
+   49.634788,
+   15.92659
+  ],
+  "via": "parkoviště w1358181913  (246 m)",
+  "snap_m": 6
+ },
+ "sklarna-svoboda": {
+  "km": 8.9,
+  "min": 10,
+  "target": [
+   49.645897,
+   15.915773
+  ],
+  "via": "parkoviště w1357054827  (35 m)",
+  "snap_m": 7
+ },
+ "modelove": {
+  "km": 10.8,
+  "min": 13,
+  "target": [
+   49.565269,
+   15.937395
+  ],
+  "via": "parkoviště w34867195  (100 m)",
+  "snap_m": 0
+ },
+ "dum-prirody": {
+  "km": 20.2,
+  "min": 25,
+  "target": [
+   49.652341,
+   16.098469
+  ],
+  "via": "parkoviště n2535001002  (1163 m)",
+  "snap_m": 28
+ },
+ "peklo": {
+  "km": 22.1,
+  "min": 27,
+  "target": [
+   49.777188,
+   15.945268
+  ],
+  "via": "parkoviště w611949228  (108 m)",
+  "snap_m": 6
+ },
+ "obora": {
+  "km": 22.7,
+  "min": 30,
+  "target": [
+   49.74617,
+   15.87699
+  ],
+  "via": "bod",
+  "snap_m": 75
+ },
+ "pilak": {
+  "km": 8.5,
+  "min": 10,
+  "target": [
+   49.588823,
+   15.93222
+  ],
+  "via": "parkoviště w294664457  (139 m)",
+  "snap_m": 7
+ },
+ "cikhaj-hriste": {
+  "km": 0.6,
+  "min": 2,
+  "target": [
+   49.647433,
+   15.963643
+  ],
+  "via": "parkoviště w270441950  (22 m)",
+  "snap_m": 9
+ },
+ "zelena-hora": {
+  "km": 9.4,
+  "min": 11,
+  "target": [
+   49.57949,
+   15.94338
+  ],
+  "via": "parkoviště w508250403  (173 m)",
+  "snap_m": 5
+ },
+ "zamek-zdar": {
+  "km": 8.5,
+  "min": 9,
+  "target": [
+   49.58309,
+   15.935289
+  ],
+  "via": "parkoviště w1330422885  (163 m)",
+  "snap_m": 4
+ },
+ "vesely-kopec": {
+  "km": 28.2,
+  "min": 31,
+  "target": [
+   49.763016,
+   15.833868
+  ],
+  "via": "parkoviště w230759223  (375 m)",
+  "snap_m": 11
+ },
+ "pernstejn": {
+  "km": 47.4,
+  "min": 51,
+  "target": [
+   49.45086,
+   16.31837
+  ],
+  "via": "bod",
+  "snap_m": 155
+ },
+ "slakhamr": {
+  "km": 15.8,
+  "min": 20,
+  "target": [
+   49.558311,
+   15.876238
+  ],
+  "via": "parkoviště w1339901804  (903 m)",
+  "snap_m": 0
+ },
+ "pramen-svratky": {
+  "km": 0.9,
+  "min": 2,
+  "target": [
+   49.64388,
+   15.99942
+  ],
+  "via": "bod",
+  "snap_m": 1821
+ },
+ "pramen-sazavy": {
+  "km": 13.1,
+  "min": 24,
+  "target": [
+   49.67156,
+   15.93786
+  ],
+  "via": "bod",
+  "snap_m": 1412
+ },
+ "stribrna-studanka": {
+  "km": 9.4,
+  "min": 13,
+  "target": [
+   49.65439,
+   15.9989
+  ],
+  "via": "bod",
+  "snap_m": 1224
+ },
+ "zakova-hora": {
+  "km": 2.1,
+  "min": 3,
+  "target": [
+   49.65699,
+   15.99183
+  ],
+  "via": "bod",
+  "snap_m": 1336
+ },
+ "fryskop": {
+  "km": 22.1,
+  "min": 28,
+  "target": [
+   49.6377,
+   16.00217
+  ],
+  "via": "bod",
+  "snap_m": 2219
+ },
+ "velke-darko": {
+  "km": 8.3,
+  "min": 14,
+  "target": [
+   49.631905,
+   15.909294
+  ],
+  "via": "parkoviště n1137974445  (28 m)",
+  "snap_m": 21
+ },
+ "darska-raseliniste": {
+  "km": 15.6,
+  "min": 21,
+  "target": [
+   49.63788,
+   15.88283
+  ],
+  "via": "bod",
+  "snap_m": 1304
+ },
+ "sykovec": {
+  "km": 20.5,
+  "min": 24,
+  "target": [
+   49.611278,
+   16.038822
+  ],
+  "via": "parkoviště w1309551000  (300 m)",
+  "snap_m": 5
+ },
+ "rest-tisuvka": {
+  "km": 0.7,
+  "min": 2,
+  "target": [
+   49.647869,
+   15.962792
+  ],
+  "via": "parkoviště n1890554342  (16 m)",
+  "snap_m": 6
+ },
+ "rest-hroch": {
+  "km": 7.5,
+  "min": 9,
+  "target": [
+   49.634788,
+   15.92659
+  ],
+  "via": "parkoviště w1358181913  (272 m)",
+  "snap_m": 6
+ },
+ "rest-darko": {
+  "km": 7.5,
+  "min": 9,
+  "target": [
+   49.634788,
+   15.92659
+  ],
+  "via": "parkoviště w1358181913  (262 m)",
+  "snap_m": 6
+ },
+ "rest-kolousek": {
+  "km": 19.2,
+  "min": 26,
+  "target": [
+   49.646175,
+   16.077275
+  ],
+  "via": "parkoviště w438533213  (505 m)",
+  "snap_m": 7
+ },
+ "rest-frysava": {
+  "km": 21.2,
+  "min": 24,
+  "target": [
+   49.628071,
+   16.039052
+  ],
+  "via": "parkoviště w345544437  (209 m)",
+  "snap_m": 14
+ },
+ "rest-tri-studne": {
+  "km": 20.3,
+  "min": 24,
+  "target": [
+   49.612297,
+   16.035919
+  ],
+  "via": "parkoviště w1426368131  (35 m)",
+  "snap_m": 4
+ },
+ "rest-polnicka": {
+  "km": 7.3,
+  "min": 10,
+  "target": [
+   49.603226,
+   15.921916
+  ],
+  "via": "parkoviště w1257222672  (379 m)",
+  "snap_m": 6
+ },
+ "rest-krizanky": {
+  "km": 14.9,
+  "min": 17,
+  "target": [
+   49.685384,
+   16.064964
+  ],
+  "via": "parkoviště w719025979  (446 m)",
+  "snap_m": 5
+ },
+ "rest-skalni-mlyn": {
+  "km": 84.5,
+  "min": 92,
+  "target": [
+   49.36373,
+   16.70822
+  ],
+  "via": "bod",
+  "snap_m": 22
+ },
+ "shop-skrdlovice": {
+  "km": 7.5,
+  "min": 9,
+  "target": [
+   49.634788,
+   15.92659
+  ],
+  "via": "parkoviště w1358181913  (78 m)",
+  "snap_m": 6
+ },
+ "shop-heralec": {
+  "km": 6.3,
+  "min": 7,
+  "target": [
+   49.690781,
+   15.994523
+  ],
+  "via": "parkoviště n257452896  (226 m)",
+  "snap_m": 2
+ },
+ "shop-kaufland": {
+  "km": 12.5,
+  "min": 16,
+  "target": [
+   49.555183,
+   15.937565
+  ],
+  "via": "parkoviště w23113742  (49 m)",
+  "snap_m": 11
+ },
+ "lekarna": {
+  "km": 12.5,
+  "min": 16,
+  "target": [
+   49.555183,
+   15.937565
+  ],
+  "via": "parkoviště w23113742  (36 m)",
+  "snap_m": 11
+ },
+ "nemocnice": {
+  "km": 20.4,
+  "min": 24,
+  "target": [
+   49.560305,
+   16.062641
+  ],
+  "via": "parkoviště w1392535650 Parkoviště ředitelství (110 m)",
+  "snap_m": 14
+ },
+ "benzinka": {
+  "km": 6.7,
+  "min": 7,
+  "target": [
+   49.628345,
+   15.926898
+  ],
+  "via": "parkoviště w1357054820  (17 m)",
+  "snap_m": 16
+ },
+ "tic-zdar": {
+  "km": 11.4,
+  "min": 15,
+  "target": [
+   49.564023,
+   15.939223
+  ],
+  "via": "parkoviště w1394088245  (29 m)",
+  "snap_m": 5
+ },
+ "cyklo-servis": {
+  "km": 10.2,
+  "min": 12,
+  "target": [
+   49.56993,
+   15.941762
+  ],
+  "via": "parkoviště w869014984  (192 m)",
+  "snap_m": 5
+ },
+ "_from_Praha": {
+  "km": 168,
+  "min": 126
+ },
+ "_from_Brno": {
+  "km": 95,
+  "min": 78
+ },
+ "_from_Jihlava": {
+  "km": 49,
+  "min": 56
+ }
+}

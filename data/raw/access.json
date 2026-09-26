@@ -1,0 +1,332 @@
+{
+ "tisuvka": {
+  "walk": {
+   "length_m": 2490,
+   "ascend_m": 131,
+   "plain_ascend_m": 131,
+   "time_s": 2128
+  },
+  "bike": {
+   "length_m": 2629,
+   "ascend_m": 131,
+   "plain_ascend_m": 131,
+   "time_s": 1353
+  }
+ },
+ "devet-skal": {
+  "bike": {
+   "length_m": 9652,
+   "ascend_m": 281,
+   "plain_ascend_m": 161,
+   "time_s": 3354
+  }
+ },
+ "lisovska": {
+  "bike": {
+   "length_m": 8559,
+   "ascend_m": 248,
+   "plain_ascend_m": 129,
+   "time_s": 2943
+  }
+ },
+ "malinska": {
+  "bike": {
+   "length_m": 11924,
+   "ascend_m": 289,
+   "plain_ascend_m": 141,
+   "time_s": 3657
+  }
+ },
+ "dratenicka": {
+  "bike": {
+   "length_m": 14039,
+   "ascend_m": 272,
+   "plain_ascend_m": 94,
+   "time_s": 3740
+  }
+ },
+ "ctyri-palice": {
+  "bike": {
+   "length_m": 15107,
+   "ascend_m": 206,
+   "plain_ascend_m": 46,
+   "time_s": 3515
+  }
+ },
+ "pernicky": {
+  "bike": {
+   "length_m": 15686,
+   "ascend_m": 179,
+   "plain_ascend_m": 79,
+   "time_s": 3553
+  }
+ },
+ "zkameneny-zamek": {
+  "bike": {
+   "length_m": 14133,
+   "ascend_m": 165,
+   "plain_ascend_m": 74,
+   "time_s": 3250
+  }
+ },
+ "pasecka": {
+  "bike": {
+   "length_m": 13141,
+   "ascend_m": 246,
+   "plain_ascend_m": 152,
+   "time_s": 3610
+  }
+ },
+ "brozova": {
+  "walk": {
+   "length_m": 5409,
+   "ascend_m": 160,
+   "plain_ascend_m": 125,
+   "time_s": 4219
+  },
+  "bike": {
+   "length_m": 5780,
+   "ascend_m": 178,
+   "plain_ascend_m": 125,
+   "time_s": 2099
+  }
+ },
+ "medlov": {
+  "bike": {
+   "length_m": 10169,
+   "ascend_m": 154,
+   "plain_ascend_m": 63,
+   "time_s": 2486
+  }
+ },
+ "arena": {
+  "bike": {
+   "length_m": 12709,
+   "ascend_m": 178,
+   "plain_ascend_m": -26,
+   "time_s": 2956
+  }
+ },
+ "mng": {
+  "bike": {
+   "length_m": 8513,
+   "ascend_m": 66,
+   "plain_ascend_m": -88,
+   "time_s": 1506
+  }
+ },
+ "sklarna-hroch": {
+  "walk": {
+   "length_m": 3507,
+   "ascend_m": 29,
+   "plain_ascend_m": -7,
+   "time_s": 2489
+  },
+  "bike": {
+   "length_m": 4317,
+   "ascend_m": 36,
+   "plain_ascend_m": -5,
+   "time_s": 848
+  }
+ },
+ "sklarna-svoboda": {
+  "bike": {
+   "length_m": 5836,
+   "ascend_m": 41,
+   "plain_ascend_m": -19,
+   "time_s": 1099
+  }
+ },
+ "dum-prirody": {
+  "bike": {
+   "length_m": 11937,
+   "ascend_m": 213,
+   "plain_ascend_m": 46,
+   "time_s": 3093
+  }
+ },
+ "pilak": {
+  "bike": {
+   "length_m": 7741,
+   "ascend_m": 66,
+   "plain_ascend_m": -75,
+   "time_s": 1413
+  }
+ },
+ "cikhaj-hriste": {
+  "walk": {
+   "length_m": 602,
+   "ascend_m": 12,
+   "plain_ascend_m": 13,
+   "time_s": 447
+  }
+ },
+ "zelena-hora": {
+  "bike": {
+   "length_m": 9418,
+   "ascend_m": 101,
+   "plain_ascend_m": -48,
+   "time_s": 1913
+  }
+ },
+ "zamek-zdar": {
+  "bike": {
+   "length_m": 8528,
+   "ascend_m": 68,
+   "plain_ascend_m": -81,
+   "time_s": 1522
+  }
+ },
+ "pramen-svratky": {
+  "walk": {
+   "length_m": 3329,
+   "ascend_m": 124,
+   "plain_ascend_m": 120,
+   "time_s": 2706
+  },
+  "bike": {
+   "length_m": 3215,
+   "ascend_m": 124,
+   "plain_ascend_m": 120,
+   "time_s": 1405
+  }
+ },
+ "pramen-sazavy": {
+  "walk": {
+   "length_m": 4615,
+   "ascend_m": 132,
+   "plain_ascend_m": 110,
+   "time_s": 3614
+  },
+  "bike": {
+   "length_m": 4649,
+   "ascend_m": 132,
+   "plain_ascend_m": 110,
+   "time_s": 1660
+  }
+ },
+ "stribrna-studanka": {
+  "walk": {
+   "length_m": 4160,
+   "ascend_m": 123,
+   "plain_ascend_m": 118,
+   "time_s": 3295
+  }
+ },
+ "zakova-hora": {
+  "walk": {
+   "length_m": 3711,
+   "ascend_m": 168,
+   "plain_ascend_m": 152,
+   "time_s": 3081
+  },
+  "bike": {
+   "length_m": 3575,
+   "ascend_m": 176,
+   "plain_ascend_m": 152,
+   "time_s": 1799
+  }
+ },
+ "fryskop": {
+  "walk": {
+   "length_m": 3679,
+   "ascend_m": 144,
+   "plain_ascend_m": 145,
+   "time_s": 3023
+  },
+  "bike": {
+   "length_m": 4019,
+   "ascend_m": 144,
+   "plain_ascend_m": 145,
+   "time_s": 1682
+  }
+ },
+ "velke-darko": {
+  "bike": {
+   "length_m": 5625,
+   "ascend_m": 38,
+   "plain_ascend_m": -38,
+   "time_s": 1008
+  }
+ },
+ "sykovec": {
+  "bike": {
+   "length_m": 8682,
+   "ascend_m": 143,
+   "plain_ascend_m": 64,
+   "time_s": 2244
+  }
+ },
+ "rest-tisuvka": {
+  "walk": {
+   "length_m": 707,
+   "ascend_m": 17,
+   "plain_ascend_m": 17,
+   "time_s": 532
+  }
+ },
+ "rest-hroch": {
+  "bike": {
+   "length_m": 4357,
+   "ascend_m": 36,
+   "plain_ascend_m": -6,
+   "time_s": 856
+  }
+ },
+ "rest-darko": {
+  "bike": {
+   "length_m": 4182,
+   "ascend_m": 38,
+   "plain_ascend_m": -2,
+   "time_s": 839
+  }
+ },
+ "rest-kolousek": {
+  "bike": {
+   "length_m": 14244,
+   "ascend_m": 260,
+   "plain_ascend_m": 71,
+   "time_s": 3752
+  }
+ },
+ "rest-frysava": {
+  "bike": {
+   "length_m": 6768,
+   "ascend_m": 144,
+   "plain_ascend_m": 50,
+   "time_s": 1941
+  }
+ },
+ "rest-tri-studne": {
+  "bike": {
+   "length_m": 8120,
+   "ascend_m": 145,
+   "plain_ascend_m": 76,
+   "time_s": 2179
+  }
+ },
+ "rest-polnicka": {
+  "bike": {
+   "length_m": 6541,
+   "ascend_m": 47,
+   "plain_ascend_m": -75,
+   "time_s": 1128
+  }
+ },
+ "rest-krizanky": {
+  "bike": {
+   "length_m": 12870,
+   "ascend_m": 110,
+   "plain_ascend_m": -49,
+   "time_s": 2486
+  }
+ },
+ "shop-skrdlovice": {
+  "bike": {
+   "length_m": 4274,
+   "ascend_m": 38,
+   "plain_ascend_m": -6,
+   "time_s": 855
+  }
+ }
+}

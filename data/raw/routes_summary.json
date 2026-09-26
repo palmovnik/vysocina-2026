@@ -1,0 +1,114 @@
+[
+ {
+  "id": "b-darko",
+  "profile": "trekking",
+  "length_m": 20280,
+  "ascend_m": 137,
+  "plain_ascend_m": 0,
+  "time_s": 3988
+ },
+ {
+  "id": "b-prameny",
+  "profile": "trekking",
+  "length_m": 18899,
+  "ascend_m": 301,
+  "plain_ascend_m": 0,
+  "time_s": 4670
+ },
+ {
+  "id": "b-medlov",
+  "profile": "trekking",
+  "length_m": 22976,
+  "ascend_m": 321,
+  "plain_ascend_m": 0,
+  "time_s": 5627
+ },
+ {
+  "id": "b-devet-skal",
+  "profile": "trekking",
+  "length_m": 40777,
+  "ascend_m": 511,
+  "plain_ascend_m": 0,
+  "time_s": 9449
+ },
+ {
+  "id": "b-zdar",
+  "profile": "trekking",
+  "length_m": 24540,
+  "ascend_m": 230,
+  "plain_ascend_m": 0,
+  "time_s": 4983
+ },
+ {
+  "id": "b-stezka-sazava",
+  "profile": "trekking",
+  "length_m": 8944,
+  "ascend_m": 21,
+  "plain_ascend_m": -55,
+  "time_s": 1372
+ },
+ {
+  "id": "h-tisuvka",
+  "profile": "hiking-mountain",
+  "length_m": 6052,
+  "ascend_m": 132,
+  "plain_ascend_m": 0,
+  "time_s": 4578
+ },
+ {
+  "id": "h-zakova-hora",
+  "profile": "hiking-mountain",
+  "length_m": 11197,
+  "ascend_m": 203,
+  "plain_ascend_m": 0,
+  "time_s": 8363
+ },
+ {
+  "id": "h-hreben",
+  "profile": "hiking-mountain",
+  "length_m": 15490,
+  "ascend_m": 307,
+  "plain_ascend_m": 3,
+  "time_s": 11544
+ },
+ {
+  "id": "h-palice",
+  "profile": "hiking-mountain",
+  "length_m": 7938,
+  "ascend_m": 136,
+  "plain_ascend_m": 0,
+  "time_s": 5946
+ },
+ {
+  "id": "h-darko",
+  "profile": "hiking-mountain",
+  "length_m": 6680,
+  "ascend_m": 8,
+  "plain_ascend_m": 8,
+  "time_s": 4795
+ },
+ {
+  "id": "h-doubrava",
+  "profile": "hiking-mountain",
+  "length_m": 8120,
+  "ascend_m": 138,
+  "plain_ascend_m": 0,
+  "time_s": 5929
+ },
+ {
+  "id": "h-mastale",
+  "profile": "hiking-mountain",
+  "length_m": 8543,
+  "ascend_m": 206,
+  "plain_ascend_m": 0,
+  "time_s": 6449
+ },
+ {
+  "id": "h-macocha",
+  "profile": "hiking-mountain",
+  "length_m": 5911,
+  "ascend_m": 186,
+  "plain_ascend_m": 0,
+  "time_s": 4755
+ }
+]
