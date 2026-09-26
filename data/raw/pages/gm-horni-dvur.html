@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" charset="text/html; charset=utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Gastromapa Lukáše Hejlíka</title>
+    <meta property="og:url" content="https://gastromapa.hejlik.cz">
+    <meta property="og:title" content="Gastromapa Lukáše Hejlíka">
+    <meta property="og:site_name" content="Gastromapa Lukáše Hejlíka">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Někdy je lepší si trochu zajet, než se hodně spálit!">
+    <meta property="og:locale" content="cs-cz">
+    <meta property="og:email_address" content="lukas@hejlik.cz">
+    <meta property="og:image" content="https://gastromapa.hejlik.cz/WebModule/img/favicons/og-logo.jpg">
+    <meta property="fb:page_id" content="1409105556063419">
+    <link rel="manifest" href="/WebModule/img/favicons/manifest.json">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180"
+          href="/templates/yoo_gusto/manifest/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/WebModule/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/WebModule/img/favicons/favicon-16x16.png">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9BNVSFKW1"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V9BNVSFKW1');
+        </script>
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    #info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      text-align: center;
+      font-size: 20px;
+      line-height: 30px;
+      font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+      left: calc((100vw - 590px) / 2);
+      right: calc((100vw - 590px) / 2);
+      top: 10%;
+      width: 590px;
+      height: 200px;
+      padding: 20px;
+      color: #212121;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    #apps {
+        position: relative;
+        display: flex;
+        height: 45px;
+    }
+
+    #apps a {
+        display: inline-flex;
+        height: 55px;
+        padding: 0 29px;
+        margin-right: 12px;
+        border-radius: 8px;
+        background: #fff;
+        -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1);
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1);
+        align-items: center;
+    }
+
+    #contact {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 14px;
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+        color: #666;
+    }
+
+    #contact a {
+        color: #666;
+    }
+
+    #apps a:last-of-type {
+        margin-right: 0;
+    }
+    
+    #apps a img {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+      #info {
+        top: 10%;
+        left: 10%;
+        bottom: 10%;
+        width: 80%;
+        padding: 10px;
+        height: auto;
+      }
+
+      #apps {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+      }
+
+      #apps a {
+          margin-right: 0;
+      }
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="info">
+            <p>Provoz webu je, prosím, ukončen, stáhněte si funkční aplikaci Gastromapa Lukáše Hejlíka, která je pro Android i iOS zdarma.</p>
+            <p style="margin-bottom: 30px;">Děkujeme.</p>
+<div id="apps">
+    <a href="https://itunes.apple.com/cz/app/apple-store/id1440735973" rel="nofollow"
+       target="_blank" id="ios-app" class="d-inline-flex justify-content-center align-items-center">
+        <img src="/WebModule/img/app-store.svg" alt="Stáhnout v App Store"
+             title="Stáhnout v App Store">
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.thefuntasty.gmlh" rel="nofollow"
+       target="_blank" id="android-app" class="d-inline-flex justify-content-center align-items-center">
+        <img src="/WebModule/img/google-play.svg" alt="Nyní na Google Play"
+             title="Nyní na Google Play">
+    </a>
+</div>
+        </div>
+    </main>
+    <div id="contact">
+        Pokud potřebujete pomoc nebo chcete nahlásit problém, kontaktujte nás na: <a href="mailto:gastromapa@futured.app">gastromapa@futured.app</a>
+    </div>
+</body>
+</html>

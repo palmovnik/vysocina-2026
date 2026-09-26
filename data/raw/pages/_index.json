@@ -1,0 +1,229 @@
+{
+ "gm-home": {
+  "url": "https://gastromapa.hejlik.cz/",
+  "file": "gm-home.html",
+  "bytes": 5074
+ },
+ "gm-robots": {
+  "url": "https://gastromapa.hejlik.cz/robots.txt",
+  "error": true
+ },
+ "gm-sitemap": {
+  "url": "https://gastromapa.hejlik.cz/sitemap.xml",
+  "error": true
+ },
+ "gm-horni-dvur": {
+  "url": "https://gastromapa.hejlik.cz/hotel-horni-dvur",
+  "file": "gm-horni-dvur.html",
+  "bytes": 5074
+ },
+ "gm-kiosek-kadov": {
+  "url": "https://gastromapa.hejlik.cz/kiosek-kadov-u-stare-skoly",
+  "file": "gm-kiosek-kadov.html",
+  "bytes": 5074
+ },
+ "vys-gastromapa": {
+  "url": "https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika",
+  "file": "vys-gastromapa.html",
+  "bytes": 151368
+ },
+ "vys-bila-kocka": {
+  "url": "https://www.vysocina.eu/stravovaci-zarizeni/u-bile-kocky-a-cerneho-psa",
+  "file": "vys-bila-kocka.html",
+  "bytes": 150664
+ },
+ "maurer-lokality": {
+  "url": "https://maureruv-vyber.cz/seznam-restauraci-podle-lokality",
+  "file": "maurer-lokality.html",
+  "bytes": 139465
+ },
+ "denik-oblibene": {
+  "url": "https://zdarsky.denik.cz/volny-cas/zdarsko-restaurace-podnik-bistro-gastronomie-levne-jidlo-obed-lide-je-miluji/",
+  "file": "denik-oblibene.html",
+  "bytes": 149576
+ },
+ "denik-horni-dvur": {
+  "url": "https://zdarsky.denik.cz/zpravy-region/nove-mesto-vyhlasena-restaurace-horni-dvur-personal-docasne-zavreno-televize/",
+  "file": "denik-horni-dvur.html",
+  "bytes": 138137
+ },
+ "horni-dvur-rest": {
+  "url": "https://www.hotelhornidvur.cz/restaurace",
+  "file": "horni-dvur-rest.html",
+  "bytes": 31082
+ },
+ "horni-dvur-ochutnejte": {
+  "url": "https://www.hotelhornidvur.cz/restaurace/ochutnejte-horni-dvur",
+  "file": "horni-dvur-ochutnejte.html",
+  "bytes": 36043
+ },
+ "horni-dvur-home": {
+  "url": "https://www.hotelhornidvur.cz/",
+  "file": "horni-dvur-home.html",
+  "bytes": 44046
+ },
+ "kiosek-kadov": {
+  "url": "https://kiosekkadov.cz/",
+  "error": true
+ },
+ "kiosek-kadov-firmy": {
+  "url": "https://www.firmy.cz/detail/13221780-kiosek-kadov-u-stare-skoly-kadov.html",
+  "file": "kiosek-kadov-firmy.html",
+  "bytes": 953733
+ },
+ "bila-kocka": {
+  "url": "http://www.ubilekockyacernehopsa.cz/",
+  "error": true
+ },
+ "bila-kocka-kontakt": {
+  "url": "http://www.ubilekockyacernehopsa.cz/kontakt",
+  "error": true
+ },
+ "bila-kocka-firmy": {
+  "url": "https://www.firmy.cz/detail/13121199-kavarna-u-bile-kocky-a-cerneho-psa-zdar-nad-sazavou-1.html",
+  "file": "bila-kocka-firmy.html",
+  "bytes": 564102
+ },
+ "tisuvka": {
+  "url": "https://www.restauracetisuvka.cz/",
+  "file": "tisuvka.html",
+  "bytes": 27289
+ },
+ "stanice-lyzaru": {
+  "url": "https://www.stanicelyzaru.cz/",
+  "file": "stanice-lyzaru.html",
+  "bytes": 147987
+ },
+ "poppet-kudyznudy": {
+  "url": "https://www.kudyznudy.cz/aktivity/grand-poppet-restaurant-ve-zdaru-nad-sazavou",
+  "file": "poppet-kudyznudy.html",
+  "bytes": 119884
+ },
+ "poppet-firmy": {
+  "url": "https://www.firmy.cz/detail/13116614-grand-restaurant-poppet-zdar-nad-sazavou-1.html",
+  "file": "poppet-firmy.html",
+  "bytes": 892156
+ },
+ "taferna": {
+  "url": "https://www.taferna.cz/restaurace",
+  "file": "taferna.html",
+  "bytes": 4868
+ },
+ "talsky-mlyn": {
+  "url": "https://www.talskymlyn.cz/",
+  "file": "talsky-mlyn.html",
+  "bytes": 9234
+ },
+ "talsky-mlyn-kontakty": {
+  "url": "https://www.talskymlyn.cz/cs/kontakty/",
+  "file": "talsky-mlyn-kontakty.html",
+  "bytes": 7960
+ },
+ "u-loubu": {
+  "url": "https://www.hoteluloubu.cz/",
+  "file": "u-loubu.html",
+  "bytes": 709491
+ },
+ "klokoci": {
+  "url": "https://pension-klokoci.cz/",
+  "file": "klokoci.html",
+  "bytes": 44299
+ },
+ "u-hrocha": {
+  "url": "https://www.uhrocha.com/",
+  "file": "u-hrocha.html",
+  "bytes": 13012
+ },
+ "u-kolouska": {
+  "url": "https://ukolouska.cz/",
+  "file": "u-kolouska.html",
+  "bytes": 245420
+ },
+ "marsovska-rychta": {
+  "url": "https://www.marsovskarychta.cz/",
+  "file": "marsovska-rychta.html",
+  "bytes": 10439
+ },
+ "vrist": {
+  "url": "http://www.vrist-hostinec.cz/",
+  "file": "vrist.html",
+  "bytes": 11946
+ },
+ "cukrarna-snezne": {
+  "url": "https://www.cukrarnasnezne.cz/",
+  "error": true
+ },
+ "hejkal": {
+  "url": "https://pivovarhejkal.cz/",
+  "file": "hejkal.html",
+  "bytes": 363054
+ },
+ "zookoutek-koruna": {
+  "url": "https://www.korunavysociny.cz/katalog/1036-zookoutek-nove-mesto-na-morave",
+  "file": "zookoutek-koruna.html",
+  "bytes": 41882
+ },
+ "zookoutek-vysocina": {
+  "url": "https://www.vysocina.eu/turisticke-cile/6064-zookoutek-nove-mesto-na-morave",
+  "file": "zookoutek-vysocina.html",
+  "bytes": 163502
+ },
+ "zookoutek-firmy": {
+  "url": "https://www.firmy.cz/detail/13381189-zookoutek-nove-mesto-na-morave.html",
+  "file": "zookoutek-firmy.html",
+  "bytes": 5857987
+ },
+ "zookoutek-vsd": {
+  "url": "https://www.vysocinasdetmi.cz/misto/mini-zookoutek-nove-mesto-na-morave",
+  "error": true
+ },
+ "vsd-farmy": {
+  "url": "https://www.vysocinasdetmi.cz/mista/farmy",
+  "error": true
+ },
+ "falbgery": {
+  "url": "http://www.minifarmafalbgery.cz/",
+  "file": "falbgery.html",
+  "bytes": 31274
+ },
+ "falbgery-borova": {
+  "url": "https://www.borova.cz/deni-v-obci/volny-cas/minifarma-falbgery/",
+  "file": "falbgery-borova.html",
+  "bytes": 293877
+ },
+ "zelene-udoli": {
+  "url": "https://www.zeleneudoli.hermanov.cz/",
+  "file": "zelene-udoli.html",
+  "bytes": 23789
+ },
+ "zelene-udoli-pravidla": {
+  "url": "https://www.zeleneudoli.hermanov.cz/pravidla-pro-navstevu-nasi-farmy",
+  "file": "zelene-udoli-pravidla.html",
+  "bytes": 17363
+ },
+ "kaderavek": {
+  "url": "https://www.kudyznudy.cz/aktivity/ovci-farma-na-vysocine",
+  "file": "kaderavek.html",
+  "bytes": 72720
+ },
+ "maso-zdarsko": {
+  "url": "https://www.maso-zdarsko.cz/kontakt",
+  "file": "maso-zdarsko.html",
+  "bytes": 9516
+ },
+ "cesky-dvur": {
+  "url": "https://masoceskydvur.cz/",
+  "file": "cesky-dvur.html",
+  "bytes": 285483
+ },
+ "farma-pod-kopcem": {
+  "url": "https://farmapodkopcem.cz/",
+  "file": "farma-pod-kopcem.html",
+  "bytes": 11453
+ },
+ "mlyn-vikinek": {
+  "url": "https://mlyn-vikinek.cz/",
+  "file": "mlyn-vikinek.html",
+  "bytes": 66669
+ }
+}
