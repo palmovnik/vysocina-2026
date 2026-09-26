@@ -12,6 +12,29 @@
   var ROUTES = {};
   T.routes.forEach(function (r) { ROUTES[r.id] = r; });
   var MILL = T.mill;
+  var TOUR_CATS = ['skaly', 'jeskyne', 'deti', 'pamatky', 'priroda'];   // sekce Výlety
+  var FOOD_CATS = ['jidlo', 'farmy'];                                     // sekce Jídlo
+  var SUBS = {};
+  (T.gastro || []).forEach(function (g) { SUBS[g.cat + ':' + g.id] = g; });
+  // štítky u podniků: [ikona, krátce, celý popis]
+  var TAGS = {
+    gastromapa: ['🍴', 'Gastromapa', 'v Gastromapě Lukáše Hejlíka'],
+    gaultmillau: ['🎩', 'Gault&Millau', 'v průvodci Gault&Millau 2026'],
+    maurer: ['🏅', 'Maurer', 'Maurerův výběr Grand Restaurant'],
+    anketa: ['🏆', 'oblíbený', 'vítěz čtenářské ankety Žďárského deníku'],
+    farma: ['🐄', 'vlastní farma', 'maso a suroviny z vlastní farmy'],
+    hriste: ['🛝', 'hřiště', 'dětské hřiště u podniku'],
+    koutek: ['🧸', 'koutek', 'dětský koutek'],
+    zvirata: ['🐐', 'zvířátka', 'zvířátka k pohlazení'],
+    rezervace: ['📞', 'rezervovat', 'rezervace nutná'],
+    zdarma: ['🆓', 'zdarma', 'vstup zdarma'],
+    sklo: ['🔥', 'sklárna', 'hned vedle se fouká sklo'],
+    regional: ['🥔', 'vysočinská kuchyně', 'tradiční vysočinská jídla'],
+    pivovar: ['🍺', 'pivovar', 'vlastní pivovar'],
+    blizko: ['🏠', 'kousek od mlýna', 'kousek od mlýna'],
+    nealko: ['🥤', 'bez alkoholu', 'nealkoholický podnik'],
+    lokalni: ['🌿', 'místní suroviny', 'vaří z místních surovin']
+  };
 
   // ------------------------------------------------------------ helpers
   function esc(s) {
@@ -20,6 +43,7 @@
     });
   }
   function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
   function el(tag, attrs, html) {
     var e = document.createElement(tag);
     if (attrs) Object.keys(attrs).forEach(function (k) {
@@ -50,6 +74,11 @@
       localStorage.setItem('vys26:' + key, JSON.stringify(val));
     } catch (e) { return undefined; }
   }
+  function hav(a, b) {
+    var r = Math.PI / 180, dLa = (b.lat - a.lat) * r, dLo = (b.lon - a.lon) * r;
+    var h = Math.sin(dLa / 2) * Math.sin(dLa / 2) + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLo / 2) * Math.sin(dLo / 2);
+    return 12742 * Math.asin(Math.sqrt(h));
+  }
   function mapyShow(p) {
     return 'https://mapy.com/fnc/v1/showmap?mapset=outdoor&center=' + p.lon + ',' + p.lat + '&zoom=16&marker=true';
   }
@@ -57,15 +86,49 @@
     var t = p.carTarget || [p.lat, p.lon];
     return 'https://www.google.com/maps/dir/?api=1&destination=' + t[0] + ',' + t[1];
   }
-  function accessHtml(p, compact) {
-    var a = [];
-    if (p.walk && p.walk.km <= 6) a.push('<span>🥾 ' + fmtKm(p.walk.km) + ' · ' + fmtMin(p.walk.min) + '</span>');
-    if (p.bike && (!p.walk || p.walk.km > 3)) a.push('<span>🚲 ' + fmtKm(p.bike.km) + (p.bike.up ? ' · ↑' + p.bike.up + ' m' : '') + '</span>');
-    if (p.car && p.car.km > 3) a.push('<span>🚗 ' + fmtMin(p.car.min) + ' · ' + fmtKm(p.car.km) + (p.car.walk ? ' + 🥾 ' + fmtKm(p.car.walk) : '') + '</span>');
-    if (!a.length && p.id !== 'mlyn') a.push('<span>📍 ' + fmtKm(p.dist) + ' vzdušně</span>');
-    return compact ? a.slice(0, 2).join('') : a.join('');
+  function placeHref(id) { return '#misto/' + id; }
+  function routeHref(id) { return '#trasa/' + id; }
+  // krátký údaj „jak daleko“ pro dlaždice a seznam
+  function howFar(p) {
+    if (p.id === 'mlyn') return '🏠 naše chata';
+    if (p.walk && p.walk.km <= 3) return '🥾 ' + fmtMin(p.walk.min);
+    if (p.car) return '🚗 ' + fmtMin(p.car.min);
+    if (p.bike) return '🚲 ' + fmtKm(p.bike.km);
+    return '📍 ' + fmtKm(p.dist);
   }
-  function kidsStars(n) { return n ? '🧒'.repeat(n) : ''; }
+  function accessRows(p) {
+    var rows = [];
+    if (p.walk && p.walk.km <= 8) rows.push(['🥾', 'Pěšky', fmtKm(p.walk.km) + (p.walk.up >= 20 ? ' · ↑ ' + p.walk.up + ' m' : '') + ' · s dětmi asi ' + fmtMin(p.walk.min)]);
+    if (p.bike) rows.push(['🚲', 'Na kole', fmtKm(p.bike.km) + (p.bike.up >= 20 ? ' · ↑ ' + p.bike.up + ' m' : '') + ' · s dětmi asi ' + fmtMin(p.bike.min)]);
+    if (p.car) rows.push(['🚗', 'Autem', fmtMin(p.car.min) + ' · ' + fmtKm(p.car.km) + (p.car.walk ? ' + ' + fmtKm(p.car.walk) + ' pěšky od parkoviště' : '')]);
+    if (!rows.length && p.id !== 'mlyn') rows.push(['📍', 'Od mlýna', fmtKm(p.dist) + ' vzdušnou čarou']);
+    return rows;
+  }
+  function placeLabel(p) {
+    var s = SUBS[p.cat + ':' + (p.sub || '')];
+    return s ? s.name : CATS[p.cat].name;
+  }
+  function placeIcon(p) { return p.icon || CATS[p.cat].emoji; }
+  function linkChip(kind, id) {
+    if (kind === 'route') {
+      var r = ROUTES[id];
+      if (!r) return '';
+      return '<a class="link-chip" href="' + routeHref(id) + '" style="--c:' + r.color + '"><span class="d">' + (r.type === 'bike' ? '🚲' : '🥾') + '</span>' + esc(r.name) + '</a>';
+    }
+    var p = PLACES[id];
+    if (!p) return '';
+    return '<a class="link-chip" href="' + placeHref(id) + '" style="--c:' + catVar(p.cat) + '"><span class="d">' + placeIcon(p) + '</span>' + esc(p.name) + '</a>';
+  }
+  function linkChips(ids, kind) { return (ids || []).map(function (id) { return linkChip(kind, id); }).join(''); }
+  var toastT = null;
+  function toast(msg) {
+    var t = $('#toast') || document.body.appendChild(el('div', { id: 'toast', 'class': 'toast', role: 'status' }));
+    (modal.open ? modal : document.body).appendChild(t);
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastT);
+    toastT = setTimeout(function () { t.classList.remove('show'); }, 2200);
+  }
 
   // ------------------------------------------------------------ hero
   (function hero() {
@@ -75,7 +138,7 @@
       adults += f.adults; kids += f.kids;
       fam.appendChild(el('span', { 'class': 'family' }, '<b>' + esc(f.name) + '</b> ' + f.adults + '+' + f.kids));
     });
-    fam.appendChild(el('span', { 'class': 'family' }, '= <b>' + (adults + kids) + ' lidí</b> (' + adults + ' dospělých, ' + kids + ' dětí)'));
+    fam.appendChild(el('span', { 'class': 'family total' }, '= <b>' + (adults + kids) + ' lidí</b> (' + adults + ' dospělých, ' + kids + ' dětí)'));
     var start = new Date('2026-10-08T15:00:00+02:00'), end = new Date('2026-10-11T18:00:00+02:00'), now = new Date();
     var cd = $('#countdown');
     if (now < start) {
@@ -99,7 +162,7 @@
   })();
 
   // ------------------------------------------------------------ map
-  var map = L.map('map', { zoomControl: true, scrollWheelZoom: false, tap: true, preferCanvas: false });
+  var map = L.map('map', { zoomControl: true, scrollWheelZoom: false, tap: true });
   var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   });
@@ -137,27 +200,24 @@
   });
 
   // ------------------------------------------------------------ markers
-  function iconFor(p) {
-    var c = CATS[p.cat];
+  function iconFor(p, small) {
     var home = p.cat === 'chata';
-    var html = '<div class="pin' + (home ? ' home' : '') + (p.top && !home ? ' top' : '') + '" style="--c:' + catVar(p.cat) + ';position:relative">' +
-      (home ? '<i class="home-pulse"></i>' : '') + '<span>' + c.emoji + '</span></div>';
+    var html = '<div class="pin' + (home ? ' home' : '') + (p.top && !home && !small ? ' top' : '') + (small ? ' small' : '') + '" style="--c:' + catVar(p.cat) + ';position:relative">' +
+      (home && !small ? '<i class="home-pulse"></i>' : '') + '<span>' + placeIcon(p) + '</span></div>';
     var s = home ? 42 : 32;
+    if (small) s = 26;
     return L.divIcon({ html: html, className: '', iconSize: [s, s], iconAnchor: [s / 2, s + 2], popupAnchor: [0, -s] });
   }
   function popupHtml(p) {
-    var c = CATS[p.cat];
     var h = '<div class="pop" style="--c:' + catVar(p.cat) + '">' +
-      '<div class="cat">' + c.emoji + ' ' + esc(c.name) + (p.top ? ' · ⭐ tip' : '') + '</div>' +
+      '<div class="cat">' + CATS[p.cat].emoji + ' ' + esc(placeLabel(p)) + (p.town ? ' · ' + esc(p.town) : '') + (p.top ? ' · ⭐ tip' : '') + '</div>' +
       '<h4>' + esc(p.name) + '</h4>';
-    if (p.img) h += '<img src="' + esc(p.img.src) + '" alt="" loading="lazy">';
+    if (p.img) h += '<img src="' + esc(p.img.thumb || p.img.src) + '" alt="" loading="lazy">';
     h += '<div>' + esc(p.teaser) + '</div>';
-    var acc = accessHtml(p);
-    if (acc) h += '<div class="acc">' + acc.replace(/<\/span><span>/g, ' &nbsp; ') + '</div>';
+    h += '<div class="acc">' + accessRows(p).map(function (a) { return a[0] + ' ' + esc(a[2].split(' · s dětmi')[0]); }).join('<br>') + '</div>';
     h += '<div class="row">';
-    if (p.id !== 'mlyn') h += '<a class="btn small primary" href="#place-' + p.id + '" data-card="' + p.id + '">Detail</a>';
-    h += '<a class="btn small" href="' + googleNav(p) + '" target="_blank" rel="noopener">Navigovat</a>' +
-      '<a class="btn small" href="' + mapyShow(p) + '" target="_blank" rel="noopener">Mapy.com</a></div></div>';
+    if (p.id !== 'mlyn') h += '<a class="btn small primary" href="' + placeHref(p.id) + '">Detail</a>';
+    h += '<a class="btn small" href="' + googleNav(p) + '" target="_blank" rel="noopener">Navigovat</a></div></div>';
     return h;
   }
   var markers = {};
@@ -169,16 +229,18 @@
     m.bindPopup(function () { return popupHtml(p); }, { maxWidth: 290, autoPanPadding: [30, 60] });
     markers[p.id] = m;
   });
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('[data-card]');
-    if (!a) return;
-    e.preventDefault();
-    showCard(a.getAttribute('data-card'));
-  });
 
   // ------------------------------------------------------------ routes on map
   var routeLayers = {};
-  var hoverDot = L.marker([0, 0], { icon: L.divIcon({ html: '<div class="hover-dot"></div>', className: '', iconSize: [14, 14], iconAnchor: [7, 7] }), interactive: false, zIndexOffset: 2000 });
+  function hoverDot() {
+    return L.marker([0, 0], { icon: L.divIcon({ html: '<div class="hover-dot"></div>', className: '', iconSize: [14, 14], iconAnchor: [7, 7] }), interactive: false, zIndexOffset: 2000 });
+  }
+  function routePopupHtml(r) {
+    return '<div class="pop" style="--c:' + r.color + '"><div class="cat">' + (r.type === 'bike' ? '🚲 na kolo' : '🥾 pěšky') + '</div>' +
+      '<h4>' + esc(r.name) + '</h4><div class="acc">' + fmtKm(r.km) + ' · ↑ ' + r.up + ' m · s dětmi ' + fmtDur(r.minKids) + '</div>' +
+      '<div class="row"><a class="btn small primary" href="' + routeHref(r.id) + '">Detail a profil</a>' +
+      '<a class="btn small" href="' + esc(r.gpx) + '" download>⬇ GPX</a></div></div>';
+  }
   T.routes.forEach(function (r) {
     var latlngs = r.geo.map(function (g) { return [g[0], g[1]]; });
     var casing = L.polyline(latlngs, { color: '#fff', weight: 7, opacity: .85, interactive: false });
@@ -186,7 +248,10 @@
       color: r.color, weight: 4, opacity: .9, dashArray: r.type === 'hike' ? '9 7' : null, lineCap: 'round'
     });
     line.bindTooltip((r.type === 'bike' ? '🚲 ' : '🥾 ') + esc(r.name) + ' · ' + fmtKm(r.km), { sticky: true, direction: 'top', opacity: .95 });
-    line.on('click', function () { selectRoute(r.id, true); });
+    line.on('click', function (e) {
+      selectRoute(r.id);
+      L.popup({ maxWidth: 280 }).setLatLng(e.latlng).setContent(routePopupHtml(r)).openOn(map);
+    });
     routeLayers[r.id] = L.layerGroup([casing, line]);
     routeLayers[r.id].line = line;
     routeLayers[r.id].casing = casing;
@@ -199,8 +264,8 @@
   };
   legend.addTo(map);
 
-  // ------------------------------------------------------------ filters
-  var state = store('filters') || {};
+  // ------------------------------------------------------------ map filters
+  var state = store('filters2') || {};
   state.cats = state.cats || T.cats.map(function (c) { return c.id; });
   state.flags = state.flags || {};
   state.routeTypes = state.routeTypes || { bike: true, hike: true };
@@ -221,7 +286,7 @@
     T.cats.forEach(function (c) {
       if (c.id === 'chata') return;
       var n = T.places.filter(function (p) { return p.cat === c.id; }).length;
-      var b = el('button', { 'class': 'chip', type: 'button', 'aria-pressed': String(state.cats.indexOf(c.id) >= 0), style: '--c:' + catVar(c.id) },
+      var b = el('button', { 'class': 'chip', type: 'button', 'aria-pressed': String(state.cats.indexOf(c.id) >= 0), style: '--c:' + catVar(c.id), title: 'Dvojklik: jen tato kategorie' },
         '<span class="dot">' + c.emoji + '</span>' + esc(c.name) + ' <span class="count">' + n + '</span>');
       b.addEventListener('click', function () {
         var i = state.cats.indexOf(c.id);
@@ -247,6 +312,14 @@
       });
       flags.appendChild(b);
     });
+    var all = el('button', { 'class': 'chip toggle', type: 'button', 'aria-pressed': 'false', title: 'Zapnout všechny kategorie a zrušit filtry' }, '↺ Vše');
+    all.addEventListener('click', function () {
+      state.cats = T.cats.map(function (c) { return c.id; });
+      state.flags = {};
+      buildChips();
+      applyFilters();
+    });
+    flags.appendChild(all);
     var rc = $('#routeChips');
     rc.innerHTML = '';
     [['bike', '🚲 Na kolo'], ['hike', '🥾 Pěšky']].forEach(function (f) {
@@ -258,27 +331,14 @@
       });
       rc.appendChild(b);
     });
-    var all = el('button', { 'class': 'chip toggle', type: 'button', 'aria-pressed': 'false', title: 'Zapnout všechny kategorie a zrušit filtry' }, '↺ Vše');
-    all.addEventListener('click', function () {
-      state.cats = T.cats.map(function (c) { return c.id; });
-      state.flags = {};
-      buildChips();
-      applyFilters();
-    });
-    flags.appendChild(all);
   }
 
   function applyFilters() {
-    store('filters', state);
+    store('filters2', state);
     T.places.forEach(function (p) {
       var vis = placeVisible(p);
       if (vis && !map.hasLayer(markers[p.id])) markers[p.id].addTo(map);
       if (!vis && map.hasLayer(markers[p.id])) map.removeLayer(markers[p.id]);
-      var card = document.getElementById('place-' + p.id);
-      if (card) card.hidden = !vis;
-    });
-    document.querySelectorAll('.cat-section').forEach(function (s) {
-      s.hidden = !s.querySelector('.card:not([hidden])');
     });
     T.routes.forEach(function (r) {
       var vis = !!state.routeTypes[r.type] || selectedRoute === r.id;
@@ -295,10 +355,8 @@
     box.innerHTML = '';
     var items = T.places.filter(placeVisible).sort(function (a, b) { return a.dist - b.dist; });
     items.forEach(function (p) {
-      var c = CATS[p.cat];
-      var d = p.id === 'mlyn' ? 'chata' : (p.car && p.car.km > 6 ? '🚗 ' + fmtMin(p.car.min) : fmtKm(p.dist));
       var b = el('button', { type: 'button', 'data-id': p.id, style: '--c:' + catVar(p.cat) },
-        '<span class="ico">' + c.emoji + '</span><span class="nm">' + esc(p.name) + (p.top ? ' ⭐' : '') + '</span><span class="dist">' + d + '</span>');
+        '<span class="ico">' + placeIcon(p) + '</span><span class="nm">' + esc(p.name) + (p.top ? ' ⭐' : '') + '</span><span class="dist">' + howFar(p) + '</span>');
       b.addEventListener('click', function () { focusPlace(p.id, false); });
       b.addEventListener('mouseenter', function () { hl(p.id, true); });
       b.addEventListener('mouseleave', function () { hl(p.id, false); });
@@ -327,24 +385,7 @@
     if (scroll) document.getElementById('mapa').scrollIntoView({ behavior: 'smooth' });
     map.flyTo([p.lat, p.lon], Math.max(map.getZoom(), p.dist > 30 ? 13 : 14), { duration: .8 });
     map.once('moveend', function () { markers[id].openPopup(); });
-    document.querySelectorAll('#mapList button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-id') === id); });
-  }
-
-  function showCard(id) {
-    var card = document.getElementById('place-' + id);
-    if (!card) return;
-    if (card.hidden) {
-      var p = PLACES[id];
-      if (state.cats.indexOf(p.cat) < 0) state.cats.push(p.cat);
-      state.flags = {};
-      buildChips();
-      applyFilters();
-    }
-    var det = card.querySelector('details');
-    if (det) det.open = true;
-    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    card.classList.add('flash');
-    setTimeout(function () { card.classList.remove('flash'); }, 1800);
+    $$('#mapList button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-id') === id); });
   }
 
   // ------------------------------------------------------------ view buttons
@@ -356,19 +397,19 @@
   $('#btnAll').addEventListener('click', function () { map.fitBounds(allBounds, { padding: [24, 24] }); });
   var me = null;
   $('#btnLocate').addEventListener('click', function () {
-    if (!navigator.geolocation) { alert('Prohlížeč neumí zjistit polohu.'); return; }
+    if (!navigator.geolocation) { toast('Prohlížeč neumí zjistit polohu.'); return; }
     navigator.geolocation.getCurrentPosition(function (pos) {
       var ll = [pos.coords.latitude, pos.coords.longitude];
       if (me) map.removeLayer(me);
       me = L.circleMarker(ll, { radius: 8, color: '#fff', weight: 3, fillColor: '#1f6fd1', fillOpacity: 1 }).addTo(map)
         .bindPopup('Tady jste (±' + Math.round(pos.coords.accuracy) + ' m)').openPopup();
       map.setView(ll, 15);
-    }, function () { alert('Polohu se nepodařilo zjistit.'); }, { enableHighAccuracy: true, timeout: 12000 });
+    }, function () { toast('Polohu se nepodařilo zjistit.'); }, { enableHighAccuracy: true, timeout: 12000 });
   });
 
   // ------------------------------------------------------------ route selection
-  function selectRoute(id, fromMap) {
-    selectedRoute = selectedRoute === id && fromMap ? null : id;
+  function selectRoute(id) {
+    selectedRoute = id;
     T.routes.forEach(function (r) {
       var lg = routeLayers[r.id];
       var sel = r.id === selectedRoute;
@@ -377,107 +418,23 @@
       if (sel) { lg.addTo(map); lg.casing.bringToFront(); lg.line.bringToFront(); }
     });
     applyFilters();
-    if (selectedRoute) {
-      var r = ROUTES[selectedRoute];
-      map.fitBounds(routeLayers[r.id].line.getBounds(), { padding: [30, 30] });
-      if (fromMap) {
-        var card = document.getElementById('route-' + r.id);
-        if (card) { card.classList.add('flash'); setTimeout(function () { card.classList.remove('flash'); }, 1800); }
-      }
-    }
   }
-
-  // ------------------------------------------------------------ program
-  function linkChips(ids, kind) {
-    return (ids || []).map(function (id) {
-      if (kind === 'route') {
-        var r = ROUTES[id];
-        if (!r) return '';
-        return '<button type="button" class="link-chip" data-route="' + id + '" style="--c:' + r.color + '"><span class="d" style="background:' + r.color + '">' + (r.type === 'bike' ? '🚲' : '🥾') + '</span>' + esc(r.name) + '</button>';
-      }
-      var p = PLACES[id];
-      if (!p) return '';
-      return '<button type="button" class="link-chip" data-place="' + id + '" style="--c:' + catVar(p.cat) + '"><span class="d">' + CATS[p.cat].emoji + '</span>' + esc(p.name) + '</button>';
-    }).join('');
+  function showRouteOnMap(id) {
+    document.getElementById('mapa').scrollIntoView({ behavior: 'smooth' });
+    selectRoute(id);
+    map.fitBounds(routeLayers[id].line.getBounds(), { padding: [30, 30] });
   }
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest('[data-place]');
-    if (b) { focusPlace(b.getAttribute('data-place'), true); return; }
-    var r = e.target.closest('[data-route]');
-    if (r) {
-      var id = r.getAttribute('data-route');
-      document.getElementById('mapa').scrollIntoView({ behavior: 'smooth' });
-      setTimeout(function () { selectRoute(id, false); }, 350);
-    }
+  map.on('popupclose', function () {
+    if (!selectedRoute) return;
+    selectedRoute = null;
+    T.routes.forEach(function (r) {
+      routeLayers[r.id].line.setStyle({ weight: 4, opacity: .9 });
+      routeLayers[r.id].casing.setStyle({ weight: 7, opacity: .85 });
+    });
+    applyFilters();
   });
 
-  (function program() {
-    var box = $('#days');
-    T.program.days.forEach(function (d) {
-      var sun = T.sun.filter(function (s) { return s.date === d.date; })[0];
-      var h = '<header><div class="date">' + esc(d.label) + '</div><h3>' + esc(d.title) + '</h3>' +
-        (sun ? '<div class="sun">🌅 ' + sun.rise + ' · 🌇 ' + sun.set + ' · tma ' + sun.dusk + '</div>' : '') +
-        '<div class="small muted" style="margin-top:4px">' + esc(d.weather || '') + '</div></header><ol>';
-      d.items.forEach(function (it) {
-        h += '<li><div class="t">' + esc(it.time) + '</div><div>' + esc(it.text) + '</div>';
-        var links = linkChips(it.routes, 'route') + linkChips(it.places, 'place');
-        if (links) h += '<div class="links">' + links + '</div>';
-        h += '</li>';
-      });
-      h += '</ol>';
-      if (d.planB) {
-        h += '<div class="planb"><b>☔ Plán B:</b> ' + esc(d.planB);
-        if (d.planBRoutes) h += '<div class="links" style="margin-top:6px">' + linkChips(d.planBRoutes, 'route') + '</div>';
-        h += '</div>';
-      }
-      box.appendChild(el('article', { 'class': 'day', id: 'day-' + d.id }, h));
-    });
-  })();
-
-  // ------------------------------------------------------------ place cards
-  (function places() {
-    var box = $('#places');
-    T.cats.forEach(function (c) {
-      if (c.id === 'chata') return;
-      var list = T.places.filter(function (p) { return p.cat === c.id; })
-        .sort(function (a, b) { return (b.top ? 1 : 0) - (a.top ? 1 : 0) || a.dist - b.dist; });
-      if (!list.length) return;
-      var sec = el('div', { 'class': 'cat-section', id: 'cat-' + c.id, style: '--c:' + catVar(c.id) },
-        '<h3><span class="dot">' + c.emoji + '</span>' + esc(c.name) + ' <span class="muted small">(' + list.length + ')</span></h3>');
-      var grid = el('div', { 'class': 'cards' });
-      list.forEach(function (p) {
-        var h = '';
-        if (p.img) {
-          h += '<div class="ph"><img src="' + esc(p.img.src) + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async">' +
-            '<span class="credit">Foto: <a href="' + esc(p.img.page) + '" target="_blank" rel="noopener">' + esc(p.img.author) + '</a>, ' + esc(p.img.license) + '</span></div>';
-        }
-        h += '<div class="body"><div class="cat">' + c.emoji + ' ' + esc(c.name) + '</div><h4>' + esc(p.name) + '</h4>';
-        var badges = '';
-        if (p.top) badges += '<span class="badge top">⭐ top tip</span>';
-        if (p.kids >= 3) badges += '<span class="badge kids">🧒 skvělé pro děti</span>';
-        if (p.rain) badges += '<span class="badge rain">☔ i za deště</span>';
-        if (badges) h += '<div class="badges">' + badges + '</div>';
-        h += '<div class="teaser">' + esc(p.teaser) + '</div>';
-        var acc = accessHtml(p);
-        if (acc) h += '<div class="access">' + acc + '</div>';
-        h += '<details class="more"><summary>Více</summary><p>' + esc(p.text) + '</p>';
-        if (p.kidsNote) h += '<div class="kidsnote">🧒 ' + esc(p.kidsNote) + '</div>';
-        if (p.info) h += '<p class="info">ℹ️ ' + esc(p.info) + '</p>';
-        h += '</details><div class="actions">' +
-          '<button type="button" class="btn small primary" data-place="' + p.id + '">Na mapě</button>' +
-          '<a class="btn small" href="' + googleNav(p) + '" target="_blank" rel="noopener">Navigovat</a>' +
-          '<a class="btn small" href="' + mapyShow(p) + '" target="_blank" rel="noopener">Mapy.com</a>';
-        if (p.web) h += '<a class="btn small" href="' + esc(p.web) + '" target="_blank" rel="noopener">Web</a>';
-        if (p.phone) h += '<a class="btn small" href="tel:' + esc(p.phone.replace(/\s/g, '')) + '">📞</a>';
-        h += '</div></div>';
-        grid.appendChild(el('article', { 'class': 'card', id: 'place-' + p.id, style: '--c:' + catVar(p.cat) }, h));
-      });
-      sec.appendChild(grid);
-      box.appendChild(sec);
-    });
-  })();
-
-  // ------------------------------------------------------------ routes
+  // ------------------------------------------------------------ výškový profil
   var SURF = [
     ['asfalt', 'asfalt', '#6c7a89'],
     ['zpevnene', 'zpevněná cesta', '#c9a227'],
@@ -485,20 +442,17 @@
     ['pesina', 'pěšina', '#2d8650']
   ];
   function profileSvg(r) {
-    var W = 600, H = 84, padL = 0, padB = 3, padT = 6;
+    var W = 600, H = 96, padB = 3, padT = 6;
     var ele = r.geo.map(function (g) { return g[2]; });
     var min = Math.min.apply(null, ele), max = Math.max.apply(null, ele);
     var span = Math.max(max - min, 60);
     var lo = min - span * .08, hi = lo + span * 1.16;
     var total = r.cum[r.cum.length - 1] || 1;
-    function x(d) { return padL + (W - padL) * d / total; }
+    function x(d) { return W * d / total; }
     function y(e) { return padT + (H - padT - padB) * (1 - (e - lo) / (hi - lo)); }
-    var line = '', area = '';
-    r.geo.forEach(function (g, i) {
-      var p = x(r.cum[i]).toFixed(1) + ',' + y(g[2]).toFixed(1);
-      line += (i ? 'L' : 'M') + p;
-    });
-    area = line + 'L' + x(total).toFixed(1) + ',' + (H - padB) + 'L' + x(0).toFixed(1) + ',' + (H - padB) + 'Z';
+    var line = '';
+    r.geo.forEach(function (g, i) { line += (i ? 'L' : 'M') + x(r.cum[i]).toFixed(1) + ',' + y(g[2]).toFixed(1); });
+    var area = line + 'L' + x(total).toFixed(1) + ',' + (H - padB) + 'L0,' + (H - padB) + 'Z';
     var s = '<svg class="profile" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="Výškový profil: ' + Math.round(min) + '–' + Math.round(max) + ' m n. m.">';
     s += '<line class="grid" x1="0" x2="' + W + '" y1="' + y(max).toFixed(1) + '" y2="' + y(max).toFixed(1) + '"/>';
     s += '<line class="grid" x1="0" x2="' + W + '" y1="' + y(min).toFixed(1) + '" y2="' + y(min).toFixed(1) + '"/>';
@@ -506,16 +460,26 @@
     s += '<line class="cursor" x1="-10" x2="-10" y1="0" y2="' + H + '" visibility="hidden"/></svg>';
     s += '<span class="ax top">' + Math.round(max) + ' m</span><span class="ax bot">' + Math.round(min) + ' m</span>' +
       '<span class="ax x0">0</span><span class="ax x1">' + fmtKm(total) + '</span>';
-    return { svg: s, x: x, padL: padL, W: W, total: total };
+    return { svg: s, x: x, W: W, total: total };
   }
-  function bindProfile(card, r, geom) {
-    var svg = card.querySelector('svg.profile');
+  function sparkSvg(r) {
+    var W = 300, H = 40, n = r.geo.length, step = Math.max(1, Math.floor(n / 120));
+    var ele = r.geo.map(function (g) { return g[2]; });
+    var min = Math.min.apply(null, ele), max = Math.max.apply(null, ele), span = Math.max(max - min, 80);
+    var total = r.cum[n - 1] || 1, d = '';
+    for (var i = 0; i < n; i += step) d += (d ? 'L' : 'M') + (W * r.cum[i] / total).toFixed(1) + ',' + (3 + (H - 6) * (1 - (ele[i] - min) / span)).toFixed(1);
+    d += 'L' + W + ',' + (3 + (H - 6) * (1 - (ele[n - 1] - min) / span)).toFixed(1);
+    return '<svg class="spark" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true"><path class="area" d="' + d + 'L' + W + ',' + H + 'L0,' + H + 'Z"/><path class="line" d="' + d + '"/></svg>';
+  }
+  function bindProfile(root, r, geom, lmap) {
+    var svg = root.querySelector('svg.profile');
     var cursor = svg.querySelector('.cursor');
-    var tip = card.querySelector('.profile-tip');
+    var tip = root.querySelector('.profile-tip');
+    var dot = hoverDot();
     function move(ev) {
       var rect = svg.getBoundingClientRect();
       var px = (ev.clientX - rect.left) / rect.width * geom.W;
-      var d = Math.max(0, Math.min(geom.total, (px - geom.padL) / (geom.W - geom.padL) * geom.total));
+      var d = Math.max(0, Math.min(geom.total, px / geom.W * geom.total));
       var lo = 0, hi = r.cum.length - 1;
       while (hi - lo > 1) { var mid = (lo + hi) >> 1; if (r.cum[mid] < d) lo = mid; else hi = mid; }
       var i = (d - r.cum[lo] < r.cum[hi] - d) ? lo : hi;
@@ -525,68 +489,421 @@
       tip.hidden = false;
       tip.style.left = 'calc(34px + (100% - 34px) * ' + (cx / geom.W).toFixed(4) + ')';
       tip.textContent = fmtKm(r.cum[i]) + ' · ' + Math.round(g[2]) + ' m';
-      if (!map.hasLayer(routeLayers[r.id])) routeLayers[r.id].addTo(map);
-      hoverDot.setLatLng([g[0], g[1]]);
-      if (!map.hasLayer(hoverDot)) hoverDot.addTo(map);
+      dot.setLatLng([g[0], g[1]]);
+      if (lmap && !lmap.hasLayer(dot)) dot.addTo(lmap);
     }
     function leave() {
       cursor.setAttribute('visibility', 'hidden');
       tip.hidden = true;
-      if (map.hasLayer(hoverDot)) map.removeLayer(hoverDot);
+      if (lmap && lmap.hasLayer(dot)) lmap.removeLayer(dot);
     }
     svg.addEventListener('pointermove', move);
     svg.addEventListener('pointerdown', move);
     svg.addEventListener('pointerleave', leave);
   }
 
+  // ------------------------------------------------------------ okno s detailem (modal)
+  var modal = $('#modal'), sheet = $('#modalSheet');
+  var cur = null, pushed = false, ctxList = null, lastFocus = null, mini = null;
+  var LEVEL = { easy: 'lehká', medium: 'střední', hard: 'náročná' };
+
+  function parseHash(h) {
+    var m = /^#(misto|trasa)\/([\w-]+)$/.exec(h || '');
+    if (m) return { kind: m[1] === 'misto' ? 'place' : 'route', id: m[2] };
+    m = /^#place-([\w-]+)$/.exec(h || '');   // starší odkazy
+    return m ? { kind: 'place', id: m[1] } : null;
+  }
+  function hrefFor(kind, id) { return kind === 'place' ? placeHref(id) : routeHref(id); }
+
+  function barHtml() {
+    var h = '<div class="m-bar">';
+    var pos = ctxList && cur ? ctxList.indexOf(hrefFor(cur.kind, cur.id)) : -1;
+    if (pos >= 0 && ctxList.length > 1) {
+      h += '<button type="button" class="m-btn" data-act="prev" aria-label="Předchozí tip"' + (pos === 0 ? ' disabled' : '') + '>‹</button>' +
+        '<span class="m-pos">' + (pos + 1) + ' / ' + ctxList.length + '</span>' +
+        '<button type="button" class="m-btn" data-act="next" aria-label="Další tip"' + (pos === ctxList.length - 1 ? ' disabled' : '') + '>›</button>';
+    }
+    h += '<span class="m-sp"></span><button type="button" class="m-btn" data-act="share" aria-label="Sdílet odkaz" title="Sdílet odkaz">🔗</button>' +
+      '<button type="button" class="m-btn m-close" data-act="close" aria-label="Zavřít" title="Zavřít (Esc)">✕</button></div>';
+    return h;
+  }
+
+  function nearby(p, cats, maxKm, n) {
+    return T.places.filter(function (q) { return q.id !== p.id && cats.indexOf(q.cat) >= 0; })
+      .map(function (q) { return { q: q, d: hav(p, q) }; })
+      .filter(function (x) { return x.d <= maxKm; })
+      .sort(function (a, b) { return a.d - b.d; })
+      .slice(0, n)
+      .map(function (x) { return x.q.id; });
+  }
+
+  function placeModalHtml(p) {
+    var c = CATS[p.cat];
+    var h = barHtml();
+    if (p.img) {
+      h += '<figure class="m-ph"><img src="' + esc(p.img.src) + '" alt="' + esc(p.name) + '">' +
+        '<figcaption>Foto: <a href="' + esc(p.img.page) + '" target="_blank" rel="noopener">' + esc(p.img.author) + '</a>, ' + esc(p.img.license) + '</figcaption></figure>';
+    } else {
+      h += '<div class="m-ph m-emo" aria-hidden="true"><span>' + placeIcon(p) + '</span></div>';
+    }
+    h += '<div class="m-body"><div class="m-cat">' + c.emoji + ' ' + esc(placeLabel(p)) + '</div>' +
+      '<h3 id="modalTitle">' + esc(p.name) + '</h3>';
+    var badges = '';
+    if (p.top) badges += '<span class="badge top">⭐ top tip</span>';
+    if (p.kids >= 3) badges += '<span class="badge kids">🧒 skvělé pro děti</span>';
+    if (p.rain) badges += '<span class="badge rain">☔ i za deště</span>';
+    (p.tags || []).forEach(function (t) { if (TAGS[t]) badges += '<span class="badge">' + TAGS[t][0] + ' ' + esc(TAGS[t][2]) + '</span>'; });
+    if (badges) h += '<div class="badges">' + badges + '</div>';
+    h += '<p class="m-lead">' + esc(p.teaser) + '</p>';
+    var acc = accessRows(p);
+    if (acc.length) {
+      h += '<dl class="m-access">' + acc.map(function (a) {
+        return '<div><dt>' + a[0] + ' ' + a[1] + '</dt><dd>' + esc(a[2]) + '</dd></div>';
+      }).join('') + '</dl>';
+    }
+    if (p.text) h += '<p>' + esc(p.text) + '</p>';
+    if (p.kidsNote) h += '<div class="m-note kids">🧒 ' + esc(p.kidsNote) + '</div>';
+    if (p.info) h += '<div class="m-note info">ℹ️ ' + esc(p.info) + '</div>';
+    // souvislosti: program, trasy, okolí
+    var inDays = [];
+    T.program.days.forEach(function (d) {
+      d.items.forEach(function (it) {
+        if ((it.places || []).indexOf(p.id) >= 0) inDays.push('<a href="#day-' + d.id + '" data-act="day">' + esc(d.label) + ' · ' + esc(it.time) + '</a>');
+      });
+    });
+    if (inDays.length) h += '<div class="m-rel"><b>📅 V programu:</b> ' + inDays.join(', ') + '</div>';
+    var onRoutes = T.routes.filter(function (r) { return (r.stops || []).indexOf(p.id) >= 0; }).map(function (r) { return r.id; });
+    if (onRoutes.length) h += '<div class="m-rel"><b>Po cestě na trase:</b><div class="chips-row">' + linkChips(onRoutes, 'route') + '</div></div>';
+    if (p.id !== 'mlyn') {
+      var sights = nearby(p, TOUR_CATS, 4, 4);
+      if (sights.length) h += '<div class="m-rel"><b>🧭 Kousek odtud:</b><div class="chips-row">' + linkChips(sights, 'place') + '</div></div>';
+      if (FOOD_CATS.indexOf(p.cat) < 0 && p.cat !== 'sluzby') {
+        var food = nearby(p, ['jidlo'], 6, 3);
+        if (food.length) h += '<div class="m-rel"><b>🍽️ Najíst se poblíž:</b><div class="chips-row">' + linkChips(food, 'place') + '</div></div>';
+      }
+    }
+    h += '</div><div class="m-actions">' +
+      '<button type="button" class="btn primary" data-act="map">🗺️ Na mapě</button>' +
+      '<a class="btn" href="' + googleNav(p) + '" target="_blank" rel="noopener">🧭 Navigovat</a>' +
+      '<a class="btn" href="' + mapyShow(p) + '" target="_blank" rel="noopener">Mapy.com</a>';
+    if (p.web) h += '<a class="btn" href="' + esc(p.web) + '" target="_blank" rel="noopener">🌐 Web</a>';
+    if (p.phone) h += '<a class="btn" href="tel:' + esc(p.phone.replace(/\s/g, '')) + '">📞 ' + esc(p.phone.replace(/^\+420\s?/, '')) + '</a>';
+    h += '</div>';
+    return h;
+  }
+
+  function routeModalHtml(r) {
+    var geom = profileSvg(r);
+    var h = barHtml();
+    h += '<div class="m-rhead"><div class="m-cat">' + (r.type === 'bike' ? '🚲 na kolo' : '🥾 pěšky') + (r.loop ? ' · okruh' : '') +
+      ' · <span class="level ' + r.level + '">' + LEVEL[r.level] + '</span></div>' +
+      '<h3 id="modalTitle">' + esc(r.name) + '</h3><p class="m-lead">' + esc(r.teaser) + '</p></div>';
+    h += '<div class="m-body">';
+    h += '<div class="stats"><div class="stat"><b>' + fmtKm(r.km) + '</b><span>délka</span></div>' +
+      '<div class="stat"><b>↑ ' + r.up + ' m</b><span>stoupání</span></div>' +
+      '<div class="stat"><b>' + fmtDur(r.minKids) + '</b><span>s dětmi bez zastávek</span></div>' +
+      '<div class="stat"><b>' + r.maxEle + ' m</b><span>nejvýš n. m.</span></div></div>';
+    h += '<div class="m-map" aria-label="Mapa trasy"></div>';
+    h += '<div class="profile-wrap">' + geom.svg + '<span class="profile-tip" hidden></span></div>';
+    var sb = '', sl = '';
+    SURF.forEach(function (s) {
+      var km = r.surface[s[0]] || 0;
+      if (km < .05) return;
+      var pct = km / r.km * 100;
+      sb += '<i style="width:' + pct.toFixed(1) + '%;background:' + s[2] + '"></i>';
+      sl += '<span><i style="background:' + s[2] + '"></i>' + s[1] + ' ' + Math.round(pct) + ' %</span>';
+    });
+    var roadsInfo = '';
+    if (r.busy >= .3) roadsInfo += '<span>⚠️ silnice II. tř. ' + fmtKm(r.busy) + '</span>';
+    if (r.roads - r.busy >= .3) roadsInfo += '<span>🚗 silničky III. tř. ' + fmtKm(r.roads - r.busy) + '</span>';
+    h += '<div class="surface-bar" title="Povrch">' + sb + '</div><div class="surface-legend">' + sl + roadsInfo + '</div>';
+    h += '<p>' + esc(r.text) + '</p>';
+    if (r.tip) h += '<div class="m-note kids">💡 ' + esc(r.tip) + '</div>';
+    h += '<div class="m-note info">📍 Start: ' + esc(r.start || (r.loop ? 'od mlýna (okruh)' : 'od mlýna')) + '</div>';
+    if (r.stops && r.stops.length) h += '<div class="m-rel"><b>Po cestě:</b><div class="chips-row">' + linkChips(r.stops, 'place') + '</div></div>';
+    h += '</div><div class="m-actions">' +
+      '<button type="button" class="btn primary" data-act="route-map">🗺️ Na velké mapě</button>' +
+      '<a class="btn" href="' + esc(r.gpx) + '" download>⬇ GPX</a>' +
+      '<a class="btn" href="' + esc(r.mapy) + '" target="_blank" rel="noopener">Mapy.com</a>' +
+      (r.start ? '<a class="btn" href="' + googleNav({ lat: r.geo[0][0], lon: r.geo[0][1] }) + '" target="_blank" rel="noopener">🚗 Na start</a>' : '') + '</div>';
+    return { html: h, geom: geom };
+  }
+
+  function destroyMini() {
+    if (mini) { mini.remove(); mini = null; }
+  }
+  function initRouteMap(r, geom) {
+    var box = sheet.querySelector('.m-map');
+    if (!box) return;
+    mini = L.map(box, { scrollWheelZoom: false, zoomSnap: .25 });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mini);
+    var ll = r.geo.map(function (g) { return [g[0], g[1]]; });
+    L.polyline(ll, { color: '#fff', weight: 7, opacity: .9, interactive: false }).addTo(mini);
+    var line = L.polyline(ll, { color: r.color, weight: 4, dashArray: r.type === 'hike' ? '9 7' : null, interactive: false }).addTo(mini);
+    (r.stops || []).forEach(function (id) {
+      var p = PLACES[id];
+      if (p) L.marker([p.lat, p.lon], { icon: iconFor(p, true), title: p.name, keyboard: false }).addTo(mini)
+        .bindTooltip(esc(p.name), { direction: 'top', offset: [0, -24] });
+    });
+    L.marker([MILL.lat, MILL.lon], { icon: iconFor(PLACES.mlyn, true), title: 'Mlýn Vikinek', keyboard: false }).addTo(mini);
+    L.circleMarker(ll[0], { radius: 7, color: '#fff', weight: 3, fillColor: r.color, fillOpacity: 1 }).addTo(mini).bindTooltip('Start');
+    mini.fitBounds(line.getBounds(), { padding: [18, 18] });
+    bindProfile(sheet, r, geom, mini);
+    setTimeout(function () { if (mini) { mini.invalidateSize(); mini.fitBounds(line.getBounds(), { padding: [18, 18] }); } }, 250);
+  }
+
+  function showModal(kind, id) {
+    var item = kind === 'place' ? PLACES[id] : ROUTES[id];
+    if (!item) return false;
+    destroyMini();
+    cur = { kind: kind, id: id };
+    var route = null;
+    if (kind === 'place') sheet.innerHTML = placeModalHtml(item);
+    else { route = routeModalHtml(item); sheet.innerHTML = route.html; }
+    sheet.className = 'sheet ' + (kind === 'place' ? 'is-place' : 'is-route');
+    sheet.style.setProperty('--c', kind === 'place' ? catVar(item.cat) : item.color);
+    sheet.style.setProperty('--rc', kind === 'route' ? item.color : '');
+    if (!modal.open) {
+      lastFocus = document.activeElement;
+      if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open', '');
+      document.documentElement.classList.add('modal-open');
+    }
+    sheet.scrollTop = 0;
+    if (route) initRouteMap(item, route.geom);
+    var x = sheet.querySelector('.m-close');
+    if (x) x.focus({ preventScroll: true });
+    document.title = item.name + ' · Vysočina 2026';
+    return true;
+  }
+  function hideModal() {
+    destroyMini();
+    if (modal.open) { if (typeof modal.close === 'function') modal.close(); else modal.removeAttribute('open'); }
+    document.documentElement.classList.remove('modal-open');
+    document.title = 'Vysočina 2026 · Mlýn Vikinek';
+    var had = !!cur;
+    cur = null; pushed = false;
+    if (had && lastFocus && lastFocus.focus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+  }
+  function openItem(kind, id) {
+    var h = hrefFor(kind, id);
+    if (location.hash !== h) {
+      if (modal.open) history.replaceState({ m: 1 }, '', h);
+      else { history.pushState({ m: 1 }, '', h); pushed = true; }
+    }
+    showModal(kind, id);
+  }
+  function baseUrl(hash) { return location.pathname + location.search + (hash || ''); }
+  function closeModal(toHash) {
+    if (!modal.open) return;
+    if (toHash) { history.replaceState(null, '', baseUrl(toHash)); hideModal(); return; }
+    if (pushed) { history.back(); return; }   // popstate modal zavře
+    history.replaceState(null, '', baseUrl());
+    hideModal();
+  }
+  function syncFromHash() {
+    var s = parseHash(location.hash);
+    if (s) {
+      if (!cur || cur.kind !== s.kind || cur.id !== s.id) showModal(s.kind, s.id);
+    } else if (modal.open) hideModal();
+  }
+  window.addEventListener('popstate', syncFromHash);
+  window.addEventListener('hashchange', syncFromHash);
+
+  function step(dir) {
+    if (!ctxList || !cur) return;
+    var i = ctxList.indexOf(hrefFor(cur.kind, cur.id)) + dir;
+    if (i < 0 || i >= ctxList.length) return;
+    var s = parseHash(ctxList[i]);
+    if (s) openItem(s.kind, s.id);
+  }
+
+  // odkazy #misto/… a #trasa/… kdekoli na stránce otevírají okno
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#misto/"], a[href^="#trasa/"]');
+    if (!a || e.defaultPrevented || e.button > 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    var s = parseHash(a.getAttribute('href'));
+    if (!s) return;
+    e.preventDefault();
+    var list = a.closest('[data-list]');
+    if (list) ctxList = $$('a[href^="#misto/"], a[href^="#trasa/"]', list).map(function (x) { return x.getAttribute('href'); });
+    else if (!modal.contains(a)) ctxList = null;
+    else if (ctxList && ctxList.indexOf(a.getAttribute('href')) < 0) ctxList = null;
+    openItem(s.kind, s.id);
+  });
+  sheet.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]');
+    if (!b) return;
+    var act = b.getAttribute('data-act');
+    if (act === 'close') closeModal();
+    else if (act === 'prev') step(-1);
+    else if (act === 'next') step(1);
+    else if (act === 'share') {
+      var url = location.href;
+      if (navigator.share) navigator.share({ title: document.title, url: url }).catch(function () {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { toast('Odkaz zkopírován'); });
+    } else if (act === 'map' && cur) {
+      var pid = cur.id;
+      closeModal('#mapa');
+      focusPlace(pid, true);
+    } else if (act === 'route-map' && cur) {
+      var rid = cur.id;
+      closeModal('#mapa');
+      showRouteOnMap(rid);
+    } else if (act === 'day') {
+      e.preventDefault();
+      var target = b.getAttribute('href');
+      closeModal(target);
+      var d = document.querySelector(target);
+      if (d) { d.scrollIntoView({ behavior: 'smooth', block: 'start' }); d.classList.add('flash'); setTimeout(function () { d.classList.remove('flash'); }, 1800); }
+    }
+  });
+  modal.addEventListener('cancel', function (e) { e.preventDefault(); closeModal(); });
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  modal.addEventListener('keydown', function (e) {
+    if (e.target.closest && e.target.closest('.m-map')) return;
+    if (e.key === 'ArrowLeft') step(-1);
+    else if (e.key === 'ArrowRight') step(1);
+  });
+
+  // ------------------------------------------------------------ dlaždice
+  function tileHtml(p, big) {
+    var ph = p.img ? '<img src="' + esc(p.img.thumb || p.img.src) + '" alt="" loading="lazy" decoding="async">' : '<span class="emo">' + placeIcon(p) + '</span>';
+    var flags = '';
+    if (p.kids >= 3) flags += '<span title="skvělé pro děti">🧒</span>';
+    if (p.rain) flags += '<span title="i za deště">☔</span>';
+    return '<a class="tile' + (big ? ' big' : '') + '" href="' + placeHref(p.id) + '" style="--c:' + catVar(p.cat) + '">' +
+      '<span class="tile-ph">' + ph + (p.top && !big ? '<span class="star" title="top tip">★</span>' : '') + '</span>' +
+      '<span class="tile-body"><span class="tile-cat">' + CATS[p.cat].emoji + ' ' + esc(placeLabel(p)) + '</span>' +
+      '<span class="tile-name">' + esc(p.name) + '</span>' +
+      '<span class="tile-teaser">' + esc(p.teaser) + '</span>' +
+      '<span class="tile-meta"><span>' + howFar(p) + '</span>' + flags + '</span></span></a>';
+  }
+  function gtileHtml(p) {
+    var tags = (p.tags || []).filter(function (t) { return TAGS[t]; }).map(function (t) {
+      return '<span class="tag" title="' + esc(TAGS[t][2]) + '">' + TAGS[t][0] + ' ' + esc(TAGS[t][1]) + '</span>';
+    }).join('');
+    return '<a class="gtile" href="' + placeHref(p.id) + '" style="--c:' + catVar(p.cat) + '">' +
+      '<span class="g-ico">' + (p.img ? '<img src="' + esc(p.img.thumb || p.img.src) + '" alt="" loading="lazy" decoding="async">' : placeIcon(p)) + '</span>' +
+      '<span class="g-body"><span class="g-name">' + esc(p.name) + '</span>' +
+      '<span class="g-where">' + (p.town ? esc(p.town) + ' · ' : '') + howFar(p) + '</span>' +
+      '<span class="g-teaser">' + esc(p.teaser) + '</span>' +
+      (tags ? '<span class="g-tags">' + tags + '</span>' : '') + '</span></a>';
+  }
+  function rtileHtml(r) {
+    return '<a class="rtile" href="' + routeHref(r.id) + '" style="--rc:' + r.color + '" data-type="' + r.type + '">' +
+      '<span class="rt-top"><span class="rt-type">' + (r.type === 'bike' ? '🚲 na kolo' : '🥾 pěšky') + (r.loop ? ' · okruh' : '') + '</span>' +
+      '<span class="level ' + r.level + '">' + LEVEL[r.level] + '</span></span>' +
+      '<span class="rt-name">' + esc(r.name) + '</span>' +
+      '<span class="rt-stats"><b>' + fmtKm(r.km) + '</b><span>↑ ' + r.up + ' m</span><span>⏱ ' + fmtDur(r.minKids) + '</span></span>' +
+      sparkSvg(r) +
+      '<span class="tile-teaser">' + esc(r.teaser) + '</span>' +
+      '<span class="rt-kids">🧒 ' + esc(r.kids) + '</span></a>';
+  }
+
+  // ------------------------------------------------------------ to nejlepší
+  (function highlights() {
+    var box = $('#highlights');
+    (T.highlights || []).forEach(function (id) {
+      var p = PLACES[id];
+      if (p) box.insertAdjacentHTML('beforeend', tileHtml(p, true));
+    });
+  })();
+
+  // ------------------------------------------------------------ program
+  (function program() {
+    var box = $('#days');
+    T.program.days.forEach(function (d) {
+      var sun = T.sun.filter(function (s) { return s.date === d.date; })[0];
+      var h = '<header><div class="date">' + esc(d.label) + '</div><h3>' + esc(d.title) + '</h3>' +
+        (sun ? '<div class="sun">🌅 ' + sun.rise + ' · 🌇 ' + sun.set + ' · tma ' + sun.dusk + '</div>' : '') +
+        (d.weather ? '<div class="small muted" style="margin-top:4px">' + esc(d.weather) + '</div>' : '') + '</header><ol>';
+      d.items.forEach(function (it) {
+        h += '<li><div class="t">' + esc(it.time) + '</div><div>' + esc(it.text) + '</div>';
+        var links = linkChips(it.routes, 'route') + linkChips(it.places, 'place');
+        if (links) h += '<div class="links">' + links + '</div>';
+        h += '</li>';
+      });
+      h += '</ol>';
+      if (d.planB) {
+        h += '<div class="planb"><b>☔ Plán B:</b> ' + esc(d.planB);
+        var pb = linkChips(d.planBRoutes, 'route') + linkChips(d.planBPlaces, 'place');
+        if (pb) h += '<div class="links" style="margin-top:6px">' + pb + '</div>';
+        h += '</div>';
+      }
+      box.appendChild(el('article', { 'class': 'day', id: 'day-' + d.id }, h));
+    });
+  })();
+
+  // ------------------------------------------------------------ výlety a místa
+  (function placesSection() {
+    var tabs = $('#placeTabs'), box = $('#places');
+    var st = store('placeTab2') || {};
+    st.cat = st.cat || 'all';
+    var pool = T.places.filter(function (p) { return TOUR_CATS.indexOf(p.cat) >= 0; });
+    function render() {
+      store('placeTab2', st);
+      var list = pool.filter(function (p) {
+        return (st.cat === 'all' || p.cat === st.cat) && (!st.rain || p.rain) && (!st.kids || p.kids >= 3);
+      }).sort(function (a, b) { return (b.top ? 1 : 0) - (a.top ? 1 : 0) || a.dist - b.dist; });
+      box.innerHTML = list.map(function (p) { return tileHtml(p); }).join('') ||
+        '<p class="muted">Tomu nic neodpovídá. Zkuste jiný filtr.</p>';
+      $$('button', tabs).forEach(function (b) {
+        var k = b.getAttribute('data-k'), v = b.getAttribute('data-v');
+        b.setAttribute('aria-pressed', String(k === 'cat' ? st.cat === v : !!st[k]));
+      });
+    }
+    var defs = [['cat', 'all', '✨ Vše', pool.length]].concat(TOUR_CATS.map(function (id) {
+      return ['cat', id, CATS[id].emoji + ' ' + CATS[id].name, pool.filter(function (p) { return p.cat === id; }).length];
+    }));
+    defs.push(['kids', '1', '🧒 Nejvíc pro děti'], ['rain', '1', '☔ Když prší']);
+    defs.forEach(function (d) {
+      var b = el('button', { 'class': 'chip toggle' + (d[0] === 'cat' ? '' : ' flag'), type: 'button', 'data-k': d[0], 'data-v': d[1] },
+        esc(d[2]) + (d[3] != null ? ' <span class="count">' + d[3] + '</span>' : ''));
+      b.addEventListener('click', function () {
+        if (d[0] === 'cat') st.cat = d[1]; else st[d[0]] = !st[d[0]];
+        render();
+      });
+      tabs.appendChild(b);
+    });
+    render();
+  })();
+
+  // ------------------------------------------------------------ jídlo, kavárny a farmy
+  (function gastro() {
+    var box = $('#gastro');
+    var nav = el('div', { 'class': 'chips tabs gnav' });
+    box.appendChild(nav);
+    (T.gastro || []).forEach(function (g) {
+      var list = T.places.filter(function (p) { return p.cat === g.cat && (p.sub || '') === g.id; })
+        .sort(function (a, b) { return (a.order != null ? a.order : 99) - (b.order != null ? b.order : 99) || a.dist - b.dist; });
+      if (!list.length) return;
+      var sec = el('div', { 'class': 'gsec', id: 'g-' + g.id, style: '--c:' + catVar(g.cat) },
+        '<h3><span class="dot">' + g.emoji + '</span>' + esc(g.name) + ' <span class="muted small">(' + list.length + ')</span></h3>' +
+        (g.desc ? '<p class="muted gdesc">' + esc(g.desc) + '</p>' : ''));
+      var grid = el('div', { 'class': 'gtiles', 'data-list': 'g-' + g.id });
+      grid.innerHTML = list.map(gtileHtml).join('');
+      sec.appendChild(grid);
+      box.appendChild(sec);
+      nav.appendChild(el('a', { 'class': 'chip toggle', href: '#g-' + g.id }, g.emoji + ' ' + esc(g.short || g.name)));
+    });
+  })();
+
+  // ------------------------------------------------------------ trasy
   (function routes() {
     var box = $('#routes');
     var tabs = $('#routeTabs');
     var filter = 'all';
+    box.innerHTML = T.routes.map(rtileHtml).join('');
     [['all', 'Vše'], ['bike', '🚲 Na kolo'], ['hike', '🥾 Pěšky']].forEach(function (t) {
       var b = el('button', { 'class': 'chip toggle', type: 'button', 'aria-pressed': String(t[0] === 'all') }, t[1]);
       b.addEventListener('click', function () {
         filter = t[0];
-        tabs.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-        box.querySelectorAll('.route').forEach(function (c) { c.hidden = filter !== 'all' && c.getAttribute('data-type') !== filter; });
+        $$('button', tabs).forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        $$('.rtile', box).forEach(function (c) { c.hidden = filter !== 'all' && c.getAttribute('data-type') !== filter; });
       });
       tabs.appendChild(b);
-    });
-    var LEVEL = { easy: 'lehká', medium: 'střední', hard: 'náročná' };
-    T.routes.forEach(function (r) {
-      var geom = profileSvg(r);
-      var h = '<div class="rhead"><div><div class="type">' + (r.type === 'bike' ? '🚲 na kolo' : '🥾 pěšky') + (r.loop ? ' · okruh' : '') + '</div>' +
-        '<h4>' + esc(r.name) + '</h4></div><span class="level ' + r.level + '">' + LEVEL[r.level] + ' · děti ' + esc(r.kids) + '</span></div>';
-      h += '<div class="teaser">' + esc(r.teaser) + '</div>';
-      h += '<div class="stats"><div class="stat"><b>' + fmtKm(r.km) + '</b><span>délka</span></div>' +
-        '<div class="stat"><b>↑ ' + r.up + ' m</b><span>stoupání</span></div>' +
-        '<div class="stat"><b>' + fmtDur(r.minKids) + '</b><span>s dětmi, bez zastávek</span></div>' +
-        '<div class="stat"><b>' + r.maxEle + ' m</b><span>nejvýš n. m.</span></div></div>';
-      var sb = '', sl = '';
-      SURF.forEach(function (s) {
-        var km = r.surface[s[0]] || 0;
-        if (km < .05) return;
-        var pct = km / r.km * 100;
-        sb += '<i style="width:' + pct.toFixed(1) + '%;background:' + s[2] + '"></i>';
-        sl += '<span><i style="background:' + s[2] + '"></i>' + s[1] + ' ' + Math.round(pct) + ' %</span>';
-      });
-      var roadsInfo = '';
-      if (r.busy >= .3) roadsInfo += '<span>⚠️ silnice II. tř. ' + fmtKm(r.busy) + '</span>';
-      if (r.roads - r.busy >= .3) roadsInfo += '<span>🚗 silničky III. tř. ' + fmtKm(r.roads - r.busy) + '</span>';
-      h += '<div class="surface-bar" title="Povrch">' + sb + '</div><div class="surface-legend">' + sl + roadsInfo + '</div>';
-      h += '<div class="profile-wrap">' + geom.svg + '<span class="profile-tip" hidden></span></div>';
-      if (r.stops && r.stops.length) h += '<div class="stops">' + linkChips(r.stops, 'place') + '</div>';
-      h += '<details class="more"><summary>Popis trasy</summary><p>' + esc(r.text) + '</p>' +
-        (r.tip ? '<div class="kidsnote">💡 ' + esc(r.tip) + '</div>' : '') +
-        '<p class="info">📍 Start: ' + esc(r.start || (r.loop ? 'od mlýna (okruh)' : 'od mlýna')) + '</p></details>';
-      h += '<div class="actions" style="display:flex;flex-wrap:wrap;gap:6px">' +
-        '<button type="button" class="btn small primary" data-route="' + r.id + '">Ukázat na mapě</button>' +
-        '<a class="btn small" href="' + esc(r.gpx) + '" download>⬇ GPX</a>' +
-        '<a class="btn small" href="' + esc(r.mapy) + '" target="_blank" rel="noopener">Mapy.com</a>' +
-        (r.start ? '<a class="btn small" href="' + googleNav({ lat: r.geo[0][0], lon: r.geo[0][1] }) + '" target="_blank" rel="noopener">🚗 Na start</a>' : '') + '</div>';
-      var card = el('article', { 'class': 'route', id: 'route-' + r.id, 'data-type': r.type, style: '--rc:' + r.color }, h);
-      box.appendChild(card);
-      bindProfile(card, r, geom);
     });
   })();
 
@@ -595,8 +912,8 @@
     var m = PLACES.mlyn;
     var box = $('#chataBox');
     var c = T.chata;
-    var photo = m.img ? '<div class="card" style="box-shadow:none;margin:-4px 0 12px"><div class="ph"><img src="' + esc(m.img.src) + '" alt="Mlýn Vikinek v Cikháji" loading="lazy">' +
-      '<span class="credit">Foto: <a href="' + esc(m.img.page) + '" target="_blank" rel="noopener">' + esc(m.img.author) + '</a>, ' + esc(m.img.license) + '</span></div></div>' : '';
+    var photo = m.img ? '<figure class="chata-ph"><img src="' + esc(m.img.src) + '" alt="Mlýn Vikinek v Cikháji" loading="lazy">' +
+      '<figcaption>Foto: <a href="' + esc(m.img.page) + '" target="_blank" rel="noopener">' + esc(m.img.author) + '</a>, ' + esc(m.img.license) + '</figcaption></figure>' : '';
     var left = '<div class="panel"><h3>🏠 ' + esc(m.name) + '</h3>' + photo + '<p>' + esc(m.text) + '</p><dl class="kv">' +
       '<dt>Adresa</dt><dd>' + esc(c.address) + '</dd>' +
       '<dt>GPS</dt><dd><button type="button" class="btn small" id="copyGps">' + MILL.lat.toFixed(5) + ' N, ' + MILL.lon.toFixed(5) + ' E 📋</button></dd>' +
@@ -604,22 +921,23 @@
       '<dt>Kapacita</dt><dd>' + esc(c.capacity) + '</dd>' +
       '<dt>Vybavení</dt><dd>' + esc(c.amenities) + '</dd>' +
       '<dt>Web</dt><dd><a href="https://mlyn-vikinek.cz/" target="_blank" rel="noopener">mlyn-vikinek.cz</a></dd></dl>' +
-      '<div class="note">⚠️ ' + esc(c.note) + '</div></div>';
+      (c.note ? '<div class="note">⚠️ ' + esc(c.note) + '</div>' : '') + '</div>';
     var right = '<div class="panel"><h3>🚗 Jak se k nám dostat</h3><p class="muted small">Orientační čas jízdy autem (OSRM, bez provozu):</p><div class="drive">';
     Object.keys(T.fromCities).forEach(function (k) {
       var f = T.fromCities[k];
       right += '<div class="stat"><b>' + fmtMin(f.min) + '</b><span>z ' + esc(k) + ' · ' + f.km + ' km</span></div>';
     });
-    right += '</div><div class="row" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px">' +
-      '<a class="btn primary" href="' + googleNav(m) + '" target="_blank" rel="noopener">Navigovat (Google)</a>' +
+    right += '</div><div class="row">' +
+      '<a class="btn primary" href="' + googleNav(m) + '" target="_blank" rel="noopener">🧭 Navigovat (Google)</a>' +
       '<a class="btn" href="' + mapyShow(m) + '" target="_blank" rel="noopener">Mlýn v Mapy.com</a>' +
+      '<a class="btn" href="https://mlyn-vikinek.cz/galerie/" target="_blank" rel="noopener">📷 Fotky mlýna</a>' +
       '<a class="btn" href="gpx/vysocina-2026-mista.gpx" download>⬇ Všechna místa (GPX)</a></div>' +
-      '<h3 style="margin-top:18px">🛒 Nejbližší služby</h3><ul class="checklist">';
+      '<h3 style="margin-top:18px">🛒 Nejbližší služby</h3><ul class="svc">';
     c.services.forEach(function (id) {
       var p = PLACES[id];
       if (!p) return;
-      right += '<li><span class="t"><a href="#place-' + id + '" data-card="' + id + '">' + esc(p.name) + '</a><span class="how">' + esc(p.teaser) + ' · ' +
-        (p.car && p.car.km > 1.5 ? '🚗 ' + fmtMin(p.car.min) : fmtKm(p.dist)) + '</span></span></li>';
+      right += '<li><a href="' + placeHref(id) + '"><span class="ico" style="--c:' + catVar(p.cat) + '">' + placeIcon(p) + '</span><span class="t">' + esc(p.name) +
+        '<span class="how">' + esc(p.teaser) + '</span></span><span class="dist">' + howFar(p) + '</span></a></li>';
     });
     right += '</ul></div>';
     box.innerHTML = left + right;
@@ -629,7 +947,7 @@
     });
   })();
 
-  // ------------------------------------------------------------ practical
+  // ------------------------------------------------------------ praktické
   function checklist(key, items) {
     var done = store(key) || {};
     var ul = el('ul', { 'class': 'checklist' });
@@ -658,7 +976,7 @@
       '<h3>🌦️ Počasí a světlo</h3><p>' + esc(T.weather.text) + '</p>' +
       '<table class="sun"><thead><tr><th>Den</th><th>Východ</th><th>Západ</th><th>Tma</th></tr></thead><tbody>' + sunRows + '</tbody></table>' +
       '<p class="small" style="margin-top:10px">🌑 ' + esc(T.weather.moon) + '</p>' +
-      '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">' + T.weather.links.map(function (l) {
+      '<div class="row">' + T.weather.links.map(function (l) {
         return '<a class="btn small" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.name) + '</a>';
       }).join('') + '</div>');
     var p3 = el('div', { 'class': 'panel' }, '<h3>🎒 Co s sebou</h3>');
@@ -677,17 +995,21 @@
   buildChips();
   applyFilters();
   fitLocal();
-  if (location.hash && location.hash.indexOf('#place-') === 0) setTimeout(function () { showCard(location.hash.slice(7)); }, 300);
+  if (parseHash(location.hash)) {
+    var s0 = parseHash(location.hash);
+    if (/^#place-/.test(location.hash)) history.replaceState(null, '', baseUrl(hrefFor(s0.kind, s0.id)));
+    setTimeout(function () { showModal(s0.kind, s0.id); }, 50);
+  }
 
   // aktivní odkaz v navigaci
-  var links = Array.prototype.slice.call(document.querySelectorAll('.topnav a'));
+  var links = $$('.topnav a');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('section.block').forEach(function (s) { io.observe(s); });
+    $$('section.block').forEach(function (s) { io.observe(s); });
   }
 
   if ('serviceWorker' in navigator && location.protocol === 'https:') {

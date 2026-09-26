@@ -1,7 +1,7 @@
 /* Offline záloha průvodce: stránka, data, fotky a GPX se po první návštěvě uloží do mezipaměti.
    Strategie „nejdřív síť“: online se vždy načte aktuální verze, bez signálu poslouží uložená.
    Mapové dlaždice se neukládají (načítají se z mapových serverů). */
-var CACHE = 'vysocina26-v1';
+var CACHE = 'vysocina26-v2';
 var CORE = ['./', 'index.html', 'assets/style.css', 'assets/app.js', 'data/trip.js',
   'vendor/leaflet/leaflet.css', 'vendor/leaflet/leaflet.js'];
 

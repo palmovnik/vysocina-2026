@@ -32,6 +32,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # nejnovější stav větve (i s daty z předchozího běhu), ne jen commit, který běh spustil
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:

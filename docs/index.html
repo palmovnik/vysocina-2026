@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vysočina 2026 · Mlýn Vikinek</title>
-<meta name="description" content="Průvodce okolím Mlýna Vikinek v Cikháji (Žďárské vrchy) pro 4 rodiny, 8.–11. 10. 2026: mapa, skály, jeskyně, tipy pro děti, cyklotrasy a program.">
+<meta name="description" content="Průvodce okolím Mlýna Vikinek v Cikháji (Žďárské vrchy) pro 4 rodiny, 8.–11. 10. 2026: mapa, skály, jeskyně, tipy pro děti, jídlo a farmy, cyklotrasy a program.">
 <meta name="theme-color" content="#2d5a44">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 54 L24 18 L34 34 L42 24 L60 54 Z' fill='%232d5a44'/%3E%3Ccircle cx='48' cy='14' r='7' fill='%23e0793d'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
   <div class="wrap">
     <div class="kicker">Žďárské vrchy · podzim 2026</div>
     <h1>Vysočina 2026</h1>
-    <p class="lead">Průvodce okolím <b>Mlýna Vikinek</b> v Cikháji pro čtyři rodiny: skály, jeskyně, tipy pro děti, cyklotrasy a program na čtyři dny.</p>
+    <p class="lead">Průvodce okolím <b>Mlýna Vikinek</b> v Cikháji pro čtyři rodiny: skály, jeskyně, tipy pro děti, dobré jídlo, farmy, cyklotrasy a program na čtyři dny.</p>
     <div class="hero-meta">
       <span class="pill">📅 čt 8. – ne 11. října 2026</span>
       <span class="pill">📍 Cikháj 57, 675 m n. m.</span>
@@ -32,9 +32,11 @@
 <nav class="topnav" aria-label="Sekce">
   <div class="wrap">
     <span class="brand">Mlýn Vikinek</span>
+    <a href="#tipy">Tipy</a>
     <a href="#mapa">Mapa</a>
     <a href="#program">Program</a>
-    <a href="#mista">Místa</a>
+    <a href="#mista">Výlety</a>
+    <a href="#jidlo">Jídlo a farmy</a>
     <a href="#trasy">Trasy</a>
     <a href="#chata">Chata</a>
     <a href="#prakticke">Praktické</a>
@@ -43,12 +45,24 @@
 </nav>
 
 <main>
+  <section class="block" id="tipy">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>To nejlepší v okolí</h2>
+          <p class="muted">Kliknutím na tip se otevře okno s popisem, cestou od mlýna a navigací.</p>
+        </div>
+      </div>
+      <div class="strip" id="highlights" data-list="highlights"></div>
+    </div>
+  </section>
+
   <section class="block" id="mapa">
     <div class="wrap">
       <div class="block-head">
         <div>
           <h2>Mapa okolí</h2>
-          <p class="muted">Vyberte kategorie, klikněte na bod nebo trasu. Seznam míst je seřazený podle vzdálenosti od mlýna.</p>
+          <p class="muted">Vyberte, co chcete vidět, a klikněte na bod nebo trasu. Seznam vpravo je seřazený podle vzdálenosti od mlýna.</p>
         </div>
       </div>
       <div class="map-layout">
@@ -88,11 +102,24 @@
     <div class="wrap">
       <div class="block-head">
         <div>
-          <h2>Místa a tipy</h2>
-          <p class="muted">Časy autem jsou z mlýna na nejbližší parkoviště, pěšky a na kole po skutečných cestách. Filtry nahoře u mapy platí i tady.</p>
+          <h2>Výlety a místa</h2>
+          <p class="muted">Skály, jeskyně, zábava pro děti, památky i příroda. Časy pěšky a na kole jsou po skutečných cestách, autem na nejbližší parkoviště. Zvířátka a farmy najdete v sekci <a href="#jidlo">Jídlo a farmy</a>.</p>
         </div>
       </div>
-      <div id="places"></div>
+      <div class="chips tabs" id="placeTabs"></div>
+      <div class="tiles" id="places" data-list="places"></div>
+    </div>
+  </section>
+
+  <section class="block" id="jidlo">
+    <div class="wrap">
+      <div class="block-head">
+        <div>
+          <h2>Jídlo, kavárny a farmy</h2>
+          <p class="muted">Vybrané podniky z Gastromapy Lukáše Hejlíka a Maurerova výběru, rodinné restaurace, hospody na výletech a farmy se zvířátky. Pro 17 lidí vždy volejte a rezervujte předem.</p>
+        </div>
+      </div>
+      <div id="gastro"></div>
     </div>
   </section>
 
@@ -101,11 +128,11 @@
       <div class="block-head">
         <div>
           <h2>Trasy na kolo i pěšky</h2>
-          <p class="muted">Trasy jsou spočítané po skutečných cestách (OpenStreetMap + BRouter), s výškovým profilem. GPX se dá nahrát do Mapy.com, Garminu nebo Stravy. Najetím na profil se ukáže místo na mapě.</p>
+          <p class="muted">Spočítané po skutečných cestách (OpenStreetMap + BRouter), s výškovým profilem, povrchem a GPX pro Mapy.com, Garmin nebo Stravu.</p>
         </div>
-        <div class="route-tabs" id="routeTabs"></div>
+        <div class="chips tabs" id="routeTabs"></div>
       </div>
-      <div class="routes" id="routes"></div>
+      <div class="tiles routes" id="routes" data-list="routes"></div>
     </div>
   </section>
 
@@ -132,6 +159,10 @@
 <footer>
   <div class="wrap" id="credits"></div>
 </footer>
+
+<dialog class="modal" id="modal" aria-labelledby="modalTitle">
+  <div class="sheet" id="modalSheet"></div>
+</dialog>
 
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="data/trip.js"></script>

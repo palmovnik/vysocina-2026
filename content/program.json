@@ -95,8 +95,9 @@
     },
     {
      "time": "večer",
-     "text": "Grilování na zahradě mlýna, nebo večeře v Tisůvce či na Stanici lyžařů ve Fryšavě (česká kuchyně, dětský koutek), pak sauna.",
+     "text": "Grilování na zahradě mlýna, nebo slavnostní večeře celé party U Paňmámy na Statku Blatiny (čepice Gault&Millau, čt–so od 18 h, jen na rezervaci). Jednodušší varianta: Tisůvka nebo Stanice lyžařů ve Fryšavě.",
      "places": [
+      "panmama",
       "rest-tisuvka",
       "rest-frysava"
      ]
@@ -143,9 +144,9 @@
     },
     {
      "time": "večer",
-     "text": "Slavnostní večeře celé party v restauraci U Paňmámy na Statku Blatiny (čepice Gault&Millau, nutná rezervace), nebo sauna a večeře doma.",
+     "text": "Návrat, sauna a večeře doma, nebo ve Stanici lyžařů ve Fryšavě (česká kuchyně, dětský koutek; rezervovat).",
      "places": [
-      "panmama"
+      "rest-frysava"
      ]
     }
    ],
@@ -182,8 +183,9 @@
     },
     {
      "time": "oběd",
-     "text": "Kiosek Kadov (Gastromapa i Gault&Millau, v říjnu so–ne 11–16), U Kolouška pod Drátníkem (ne 11–18) nebo Hostinec Za Řekou v Křižánkách (ne 11–18). Na zákusek Cukrárna Sněžné.",
+     "text": "Slavnostní oběd na rozloučenou U Paňmámy v Blatinách (ne 12–15, jen na rezervaci), nebo Kiosek Kadov (Gastromapa, v říjnu so–ne 11–16), U Kolouška pod Drátníkem či Hostinec Za Řekou v Křižánkách (oba ne 11–18). Na zákusek Cukrárna Sněžné.",
      "places": [
+      "panmama",
       "kiosek-kadov",
       "rest-kolousek",
       "rest-krizanky",
@@ -223,8 +225,13 @@
   },
   {
    "id": "res-frysava",
-   "text": "Sobotní večeře U Paňmámy (Statek Blatiny), případně Stanice lyžařů Fryšava",
-   "how": "rezervace přes web statek-blatiny.cz, Fryšava +420 734 536 304"
+   "text": "Slavnostní večeře nebo nedělní oběd U Paňmámy (Statek Blatiny) pro 17 osob",
+   "how": "+420 601 365 744 (čt–ne 9–15), info@statek-blatiny.cz"
+  },
+  {
+   "id": "res-stanice",
+   "text": "Stanice lyžařů Fryšava, pokud tam půjdete na večeři",
+   "how": "restaurace +420 734 536 304"
   },
   {
    "id": "res-falbgery",
