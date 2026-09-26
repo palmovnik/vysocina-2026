@@ -148,50 +148,120 @@ out tags;
 rel["route"~"^(hiking|foot|bicycle|mtb)$"]["name"~"[Nn]aučná|NS |[Ss]tezka|[Pp]ohád|okruh|Okruh"]({n});
 out geom;
 """)
+    overpass('parking', f"""
+[out:json][timeout:180];
+nwr["amenity"="parking"]["access"!~"^(private|no|customers)$"]({w});
+out center tags;
+""")
+
+
+def run_overpass_parking():
+    """Jen parkoviště (pro rychlé doplnění bez ostatních dotazů)."""
+    overpass('parking', f"""
+[out:json][timeout:180];
+nwr["amenity"="parking"]["access"!~"^(private|no|customers)$"]({bb(BBOX_WIDE)});
+out center tags;
+""")
 
 
 # ---------------------------------------------------------------- BRouter
+def brouter(points, profile):
+    """Vrátí GeoJSON trasy přes zadané body [(lat, lon), …] nebo (None, chyba)."""
+    pts = '|'.join(f'{lon:.6f},{lat:.6f}' for lat, lon in points)
+    url = ('https://brouter.de/brouter?' + urllib.parse.urlencode({
+        'lonlats': pts, 'profile': profile, 'alternativeidx': 0, 'format': 'geojson'}))
+    raw = http(url, timeout=120)
+    time.sleep(1.5)
+    if not raw or not raw.lstrip().startswith(b'{'):
+        return None, (raw or b'bez odpovedi').decode('utf-8', 'replace')[:300]
+    return json.loads(raw), None
+
+
+def route_stats(gj):
+    props = gj['features'][0]['properties']
+    return {'length_m': int(props.get('track-length', 0)),
+            'ascend_m': int(props.get('filtered ascend', 0)),
+            'plain_ascend_m': int(props.get('plain-ascend', 0)),
+            'time_s': int(props.get('total-time', 0))}
+
+
 def run_brouter():
     routes = load_input('routes.json', [])
-    if not routes:
-        return
     summary = []
     for r in routes:
-        pts = '|'.join(f'{lon:.6f},{lat:.6f}' for lat, lon in r['points'])
         profile = r.get('profile', 'trekking')
-        url = ('https://brouter.de/brouter?' + urllib.parse.urlencode({
-            'lonlats': pts, 'profile': profile, 'alternativeidx': 0, 'format': 'geojson'}))
         log(f'BRouter: {r["id"]} ({profile}, {len(r["points"])} bodů)')
-        raw = http(url, timeout=120)
-        if not raw or not raw.lstrip().startswith(b'{'):
-            log(f'  ! chyba: {raw[:200] if raw else "bez odpovědi"}')
-            summary.append({'id': r['id'], 'error': (raw or b'').decode('utf-8', 'replace')[:300]})
+        gj, err = brouter(r['points'], profile)
+        if err:
+            log(f'  ! chyba: {err}')
+            summary.append({'id': r['id'], 'error': err})
             continue
-        gj = json.loads(raw)
-        props = gj['features'][0]['properties']
-        s = {'id': r['id'], 'profile': profile,
-             'length_m': int(props.get('track-length', 0)),
-             'ascend_m': int(props.get('filtered ascend', 0)),
-             'plain_ascend_m': int(props.get('plain-ascend', 0)),
-             'time_s': int(props.get('total-time', 0))}
+        s = {'id': r['id'], 'profile': profile, **route_stats(gj)}
         log(f'  {s["length_m"] / 1000:.1f} km, ↑{s["ascend_m"]} m')
         summary.append(s)
         save(f'routes/{r["id"]}.geojson', gj)
-        time.sleep(2)
-    save('routes_summary.json', summary)
+    if routes:
+        save('routes_summary.json', summary)
+
+    # Jak daleko je to od chaty pěšky / na kole (jen souhrn, bez geometrie)
+    pois = load_input('poi_candidates.json', [])
+    access = {}
+    for p in pois:
+        for mode, profile in (('walk', 'hiking-mountain'), ('bike', 'trekking')):
+            if not p.get(mode):
+                continue
+            gj, err = brouter([MILL, (p['lat'], p['lon'])], profile)
+            if err:
+                log(f'  ! {p["id"]} {mode}: {err[:120]}')
+                continue
+            access.setdefault(p['id'], {})[mode] = route_stats(gj)
+            st = access[p['id']][mode]
+            log(f'  {mode:4} {p["id"]}: {st["length_m"] / 1000:.1f} km ↑{st["ascend_m"]} m')
+    if access:
+        save('access.json', access)
 
 
 # ---------------------------------------------------------------- OSRM (auto)
+def haversine(a, b):
+    import math
+    la1, lo1, la2, lo2 = map(math.radians, (a[0], a[1], b[0], b[1]))
+    h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+    return 2 * 6371000 * math.asin(math.sqrt(h))
+
+
+def nearest_parking(lat, lon, max_m=1200):
+    path = os.path.join(RAW, 'osm_parking.json')
+    if not os.path.exists(path):
+        return None
+    best = None
+    for e in json.load(open(path, encoding='utf-8'))['elements']:
+        c = (e['lat'], e['lon']) if 'lat' in e else (e['center']['lat'], e['center']['lon'])
+        d = haversine((lat, lon), c)
+        if d <= max_m and (best is None or d < best[0]):
+            best = (d, c, e['tags'].get('name', ''), f'{e["type"][0]}{e["id"]}')
+    return best
+
+
 def run_osrm():
     pois = load_input('poi_candidates.json', [])
     if not pois:
         return
     log(f'OSRM: čas jízdy autem k {len(pois)} bodům')
+    targets = []
+    for p in pois:
+        if p.get('car'):
+            targets.append((p, tuple(p['car']), 'ručně'))
+            continue
+        np_ = nearest_parking(p['lat'], p['lon'], p.get('park_max_m', 1200))
+        if np_:
+            targets.append((p, np_[1], f'parkoviště {np_[3]} {np_[2]} ({round(np_[0])} m)'))
+        else:
+            targets.append((p, (p['lat'], p['lon']), 'bod'))
     result = {}
     chunk = 80
-    for i in range(0, len(pois), chunk):
-        part = pois[i:i + chunk]
-        coords = ';'.join([f'{MILL[1]},{MILL[0]}'] + [f'{p["lon"]},{p["lat"]}' for p in part])
+    for i in range(0, len(targets), chunk):
+        part = targets[i:i + chunk]
+        coords = ';'.join([f'{MILL[1]},{MILL[0]}'] + [f'{c[1]},{c[0]}' for _, c, _ in part])
         url = (f'https://router.project-osrm.org/table/v1/driving/{coords}'
                '?sources=0&annotations=duration,distance')
         raw = http(url, timeout=120)
@@ -201,14 +271,27 @@ def run_osrm():
         if js.get('code') != 'Ok':
             log(f'  ! {js.get("code")} {js.get("message")}')
             continue
-        for j, p in enumerate(part, start=1):
+        for j, (p, c, how) in enumerate(part, start=1):
             d = js['distances'][0][j]
             t = js['durations'][0][j]
             snap = js['destinations'][j]
             result[p['id']] = {'km': round(d / 1000, 1) if d is not None else None,
                                'min': round(t / 60) if t is not None else None,
+                               'target': [round(c[0], 6), round(c[1], 6)], 'via': how,
                                'snap_m': round(snap.get('distance', 0))}
         time.sleep(2)
+    # Příjezd z domova (orientačně)
+    for name, (lat, lon) in (('Praha', (50.0755, 14.4378)), ('Brno', (49.1951, 16.6068)),
+                             ('Jihlava', (49.3961, 15.5912))):
+        url = (f'https://router.project-osrm.org/route/v1/driving/{lon},{lat};{MILL[1]},{MILL[0]}'
+               '?overview=false')
+        raw = http(url, timeout=60)
+        if raw:
+            js = json.loads(raw)
+            if js.get('code') == 'Ok':
+                rt = js['routes'][0]
+                result['_from_' + name] = {'km': round(rt['distance'] / 1000), 'min': round(rt['duration'] / 60)}
+        time.sleep(1)
     save('osrm_car.json', result)
 
 
@@ -293,8 +376,18 @@ def run_commons():
     save('commons.json', meta)
 
 
+def run_missing():
+    """Stáhne jen to, co v data/raw ještě chybí (výchozí chování při změně v tools/)."""
+    if not os.path.exists(os.path.join(RAW, 'osm_features.json')):
+        run_overpass()
+    elif not os.path.exists(os.path.join(RAW, 'osm_parking.json')):
+        run_overpass_parking()
+    if not os.path.exists(os.path.join(RAW, 'wikidata.json')):
+        run_wikidata()
+
+
 def main():
-    steps = sys.argv[1:] or ['overpass', 'brouter', 'osrm', 'wikidata', 'commons']
+    steps = sys.argv[1:] or ['missing', 'brouter', 'osrm', 'commons']
     for s in steps:
         globals()['run_' + s]()
 

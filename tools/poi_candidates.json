@@ -1,0 +1,359 @@
+[
+{
+"id": "tisuvka",
+"lat": 49.65178,
+"lon": 15.94945,
+"walk": true,
+"bike": true
+},
+{
+"id": "devet-skal",
+"lat": 49.67073,
+"lon": 16.03224,
+"bike": true
+},
+{
+"id": "lisovska",
+"lat": 49.6618,
+"lon": 16.03817,
+"bike": true
+},
+{
+"id": "malinska",
+"lat": 49.66103,
+"lon": 16.07139,
+"bike": true
+},
+{
+"id": "dratenicka",
+"lat": 49.65475,
+"lon": 16.08404,
+"bike": true
+},
+{
+"id": "ctyri-palice",
+"lat": 49.68605,
+"lon": 16.09336,
+"bike": true
+},
+{
+"id": "pernicky",
+"lat": 49.6936,
+"lon": 16.08794,
+"bike": true
+},
+{
+"id": "zkameneny-zamek",
+"lat": 49.70894,
+"lon": 16.07367,
+"bike": true
+},
+{
+"id": "pasecka",
+"lat": 49.61556,
+"lon": 16.08148,
+"bike": true
+},
+{
+"id": "brozova",
+"lat": 49.62478,
+"lon": 16.01033,
+"walk": true,
+"bike": true
+},
+{
+"id": "rosicka",
+"lat": 49.53854,
+"lon": 15.8426
+},
+{
+"id": "udoli-doubravy",
+"lat": 49.71403,
+"lon": 15.71238
+},
+{
+"id": "mastale",
+"lat": 49.81864,
+"lon": 16.14089
+},
+{
+"id": "balcarka",
+"lat": 49.3768,
+"lon": 16.75815
+},
+{
+"id": "punkevni",
+"lat": 49.37114,
+"lon": 16.72619,
+"car": [
+49.36339,
+16.70874
+]
+},
+{
+"id": "macocha",
+"lat": 49.37314,
+"lon": 16.72932,
+"park_max_m": 900
+},
+{
+"id": "katerinska",
+"lat": 49.36054,
+"lon": 16.71005,
+"car": [
+49.36169,
+16.70965
+]
+},
+{
+"id": "sloupsko",
+"lat": 49.41045,
+"lon": 16.73902
+},
+{
+"id": "jihlava-podzemi",
+"lat": 49.39693,
+"lon": 15.59136
+},
+{
+"id": "medlov",
+"lat": 49.61604,
+"lon": 16.05449,
+"bike": true
+},
+{
+"id": "arena",
+"lat": 49.57884,
+"lon": 16.05075,
+"bike": true
+},
+{
+"id": "mng",
+"lat": 49.5816,
+"lon": 15.93665,
+"bike": true
+},
+{
+"id": "relax",
+"lat": 49.56302,
+"lon": 15.94282
+},
+{
+"id": "sklarna-hroch",
+"lat": 49.63424,
+"lon": 15.9299,
+"walk": true,
+"bike": true
+},
+{
+"id": "sklarna-svoboda",
+"lat": 49.64561,
+"lon": 15.91599,
+"bike": true
+},
+{
+"id": "modelove",
+"lat": 49.566,
+"lon": 15.9382
+},
+{
+"id": "dum-prirody",
+"lat": 49.64198,
+"lon": 16.0963,
+"bike": true
+},
+{
+"id": "peklo",
+"lat": 49.77632,
+"lon": 15.94594
+},
+{
+"id": "obora",
+"lat": 49.74617,
+"lon": 15.87699
+},
+{
+"id": "pilak",
+"lat": 49.58983,
+"lon": 15.93107,
+"bike": true
+},
+{
+"id": "cikhaj-hriste",
+"lat": 49.64727,
+"lon": 15.96347,
+"walk": true
+},
+{
+"id": "zelena-hora",
+"lat": 49.58012,
+"lon": 15.94118,
+"bike": true
+},
+{
+"id": "zamek-zdar",
+"lat": 49.58317,
+"lon": 15.93754,
+"bike": true
+},
+{
+"id": "vesely-kopec",
+"lat": 49.76096,
+"lon": 15.838
+},
+{
+"id": "pernstejn",
+"lat": 49.45086,
+"lon": 16.31837
+},
+{
+"id": "slakhamr",
+"lat": 49.56629,
+"lon": 15.87859
+},
+{
+"id": "pramen-svratky",
+"lat": 49.64388,
+"lon": 15.99942,
+"walk": true,
+"bike": true
+},
+{
+"id": "pramen-sazavy",
+"lat": 49.67156,
+"lon": 15.93786,
+"walk": true,
+"bike": true
+},
+{
+"id": "stribrna-studanka",
+"lat": 49.65439,
+"lon": 15.9989,
+"walk": true
+},
+{
+"id": "zakova-hora",
+"lat": 49.65699,
+"lon": 15.99183,
+"walk": true,
+"bike": true
+},
+{
+"id": "fryskop",
+"lat": 49.6377,
+"lon": 16.00217,
+"walk": true,
+"bike": true
+},
+{
+"id": "velke-darko",
+"lat": 49.63177,
+"lon": 15.90962,
+"bike": true
+},
+{
+"id": "darska-raseliniste",
+"lat": 49.63788,
+"lon": 15.88283
+},
+{
+"id": "sykovec",
+"lat": 49.60861,
+"lon": 16.03817,
+"bike": true
+},
+{
+"id": "rest-tisuvka",
+"lat": 49.64788,
+"lon": 15.96257,
+"walk": true
+},
+{
+"id": "rest-hroch",
+"lat": 49.63385,
+"lon": 15.93007,
+"bike": true
+},
+{
+"id": "rest-darko",
+"lat": 49.63709,
+"lon": 15.92582,
+"bike": true
+},
+{
+"id": "rest-kolousek",
+"lat": 49.65039,
+"lon": 16.0799,
+"bike": true
+},
+{
+"id": "rest-frysava",
+"lat": 49.62966,
+"lon": 16.04059,
+"bike": true
+},
+{
+"id": "rest-tri-studne",
+"lat": 49.61248,
+"lon": 16.03632,
+"bike": true
+},
+{
+"id": "rest-polnicka",
+"lat": 49.60641,
+"lon": 15.92006,
+"bike": true
+},
+{
+"id": "rest-krizanky",
+"lat": 49.68939,
+"lon": 16.06534,
+"bike": true
+},
+{
+"id": "rest-skalni-mlyn",
+"lat": 49.36373,
+"lon": 16.70822
+},
+{
+"id": "shop-skrdlovice",
+"lat": 49.63536,
+"lon": 15.92596,
+"bike": true
+},
+{
+"id": "shop-heralec",
+"lat": 49.69105,
+"lon": 15.99141
+},
+{
+"id": "shop-kaufland",
+"lat": 49.55518,
+"lon": 15.93689
+},
+{
+"id": "lekarna",
+"lat": 49.55494,
+"lon": 15.93723
+},
+{
+"id": "nemocnice",
+"lat": 49.56052,
+"lon": 16.06413
+},
+{
+"id": "benzinka",
+"lat": 49.6282,
+"lon": 15.92695
+},
+{
+"id": "tic-zdar",
+"lat": 49.56428,
+"lon": 15.93918
+},
+{
+"id": "cyklo-servis",
+"lat": 49.56923,
+"lon": 15.9442
+}
+]
