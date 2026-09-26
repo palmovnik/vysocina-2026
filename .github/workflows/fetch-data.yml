@@ -1,0 +1,48 @@
+name: Podklady pro mapu
+
+# Stáhne data z OpenStreetMap, BRouteru, OSRM a Wikidat do data/raw/
+# a commitne je zpět do větve. Spouští se ručně nebo změnou v tools/.
+on:
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: 'Kroky (overpass brouter osrm wikidata commons), prázdné = vše'
+        required: false
+        default: ''
+  push:
+    paths:
+      - 'tools/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-data-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Stažení podkladů
+        run: python tools/fetch_data.py ${{ github.event.inputs.steps }}
+      - name: Uložení do repozitáře
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/raw docs/img 2>/dev/null || git add data/raw
+          if git diff --cached --quiet; then
+            echo "Žádné změny v podkladech."
+            exit 0
+          fi
+          git commit -m "Aktualizace podkladů (OSM, trasy, časy jízdy)"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep 5
+          done
+          exit 1
