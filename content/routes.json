@@ -15,7 +15,12 @@
    "tisuvka"
   ],
   "tip": "Po povalových chodnících se na kole nesmí. Ukázku foukání skla ve Škrdlovicích ve všední den dopoledne předem ohlaste (jsme skupina nad 10 lidí).",
-  "who": "školáci na kole, malí ve vozíku nebo sedačce"
+  "who": "školáci na kole, malí ve vozíku nebo sedačce",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "top": true
  },
  {
   "id": "b-prameny",
@@ -32,7 +37,11 @@
    "tisuvka"
   ],
   "tip": "Lesní cesty bývají po dešti blátivé. Hodí se kola s širšími plášti.",
-  "who": "školáci na kole, malí ve vozíku"
+  "who": "školáci na kole, malí ve vozíku",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "b-medlov",
@@ -50,7 +59,10 @@
    "fryskop"
   ],
   "tip": "Oběd ve Fryšavě (Stanice lyžařů) nebo v Třech Studních.",
-  "who": "zdatnější školáci, malí ve vozíku"
+  "who": "zdatnější školáci, malí ve vozíku",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "b-zdar",
@@ -67,7 +79,10 @@
    "rest-polnicka"
   ],
   "tip": "Muzeum nové generace otevírá denně 9–18; do interiéru Zelené hory se v říjnu dostanete jen o víkendu.",
-  "who": "zdatnější školáci, malí ve vozíku"
+  "who": "zdatnější školáci, malí ve vozíku",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "b-devet-skal",
@@ -101,7 +116,12 @@
   ],
   "tip": "Start: parkoviště v obci Sázava (15 min autem).",
   "start": "obec Sázava u Žďáru (začátek cyklostezky u Sázavy)",
-  "who": "i malí na odrážedle nebo kole, asfalt bez aut"
+  "who": "i malí na odrážedle nebo kole, asfalt bez aut",
+  "fit": [
+   "male",
+   "skolaci",
+   "kocarek"
+  ]
  },
  {
   "id": "h-tisuvka",
@@ -115,7 +135,12 @@
    "rest-tisuvka"
   ],
   "tip": "Na zpáteční cestě se dá zastavit v restauraci Tisůvka (čt–ne).",
-  "who": "i malé děti, nejmenší v nosítku"
+  "who": "i malé děti, nejmenší v nosítku",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "top": true
  },
  {
   "id": "h-zakova-hora",
@@ -131,7 +156,10 @@
    "zakova-hora"
   ],
   "tip": "Vezměte lodičky z kůry na pouštění po pramenech.",
-  "who": "školáci, malí v nosítku"
+  "who": "školáci, malí v nosítku",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "h-hreben-kratky",
@@ -147,7 +175,12 @@
   ],
   "tip": "Oběd po návratu v restauraci U Kolouška (st–ne).",
   "start": "Blatiny, rozcestí „Blatiny – pod Drátníkem“",
-  "who": "školáci i malí, nejmenší v nosítku"
+  "who": "školáci i malí, nejmenší v nosítku",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "top": true
  },
  {
   "id": "h-hreben",
@@ -165,7 +198,10 @@
   ],
   "tip": "Auto nechte v Blatinách, po návratu je tu restaurace U Kolouška.",
   "start": "Blatiny, rozcestí „Blatiny – pod Drátníkem“ (parkování u restaurace U Kolouška)",
-  "who": "zdatní školáci a dospělí"
+  "who": "zdatní školáci a dospělí",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "h-palice",
@@ -180,7 +216,12 @@
   ],
   "tip": "Dobře se spojí s Malinskou skálou nebo Domem přírody v Krátké.",
   "start": "Milovy, Hotel Devět skal / Milovský rybník",
-  "who": "školáci i malí, nejmenší v nosítku"
+  "who": "školáci i malí, nejmenší v nosítku",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "top": true
  },
  {
   "id": "h-darko",
@@ -195,7 +236,11 @@
   ],
   "tip": "Po dešti a ráno kloužou povaly, vezměte pevné boty.",
   "start": "parkoviště u hráze Velkého Dářka",
-  "who": "i malé děti, rovinka po povalových chodnících"
+  "who": "i malé děti, rovinka po povalových chodnících",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "h-doubrava",
@@ -209,7 +254,10 @@
   ],
   "tip": "Autem asi 35 minut. Na vyhlídce a u řeky držte malé děti za ruku.",
   "start": "Bílek (parkování v obci)",
-  "who": "školáci, malí v nosítku"
+  "who": "školáci, malí v nosítku",
+  "fit": [
+   "skolaci"
+  ]
  },
  {
   "id": "h-mastale",
@@ -223,7 +271,11 @@
   ],
   "tip": "Autem asi 40 minut. Vezměte čelovky do chodeb.",
   "start": "parkoviště Vranice u Nové Vsi (Jarošov)",
-  "who": "školáci i malí, nejmenší v nosítku"
+  "who": "školáci i malí, nejmenší v nosítku",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
  },
  {
   "id": "h-macocha",
@@ -241,6 +293,9 @@
   ],
   "tip": "Vstupenky do Punkevních jeskyní rezervujte předem. V sobotu 10. 10. je v Balcarce Škola malých jeskyňářů.",
   "start": "placené parkoviště Skalní Mlýn",
-  "who": "školáci; malí ekovláčkem a lanovkou"
+  "who": "školáci; malí ekovláčkem a lanovkou",
+  "fit": [
+   "skolaci"
+  ]
  }
 ]
