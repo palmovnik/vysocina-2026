@@ -1,58 +1,201 @@
 {
   "days": [
     {
-      "id": "ct", "date": "2026-10-08", "label": "Čtvrtek 8. 10.", "title": "Příjezd a první skály",
+      "id": "ct",
+      "date": "2026-10-08",
+      "label": "Čtvrtek 8. 10.",
+      "title": "Příjezd a první skály",
       "weather": "Na rozkoukání: krátké výlety kolem mlýna.",
       "items": [
-        {"time": "cestou", "text": "Velký nákup ve Žďáru nad Sázavou: Kaufland (denně 7–22), Lidl nebo Albert. Cestou se dá zastavit v Modelovém království (čt 10–17).", "places": ["shop-kaufland", "modelove"]},
-        {"time": "odpoledne", "text": "Ubytování v mlýně a první procházka: okruh na skalní hradbu Tisůvka (asi 1,5 h), nebo lesem k pramenu Svratky.", "routes": ["h-tisuvka"], "places": ["tisuvka", "pramen-svratky"]},
-        {"time": "večer", "text": "Večeře v restauraci Tisůvka (čt–ne, pro 17 lidí rezervovat) nebo doma. Pak sauna a krb."},
-        {"time": "po setmění", "text": "Hvězdy: Měsíc skoro nesvítí (nov je v sobotu 10. 10.) a kolem 8.–9. 10. vrcholí meteorický roj Drakonidy. Je slabší, ale večer po setmění se vyplatí vyjít na louku nad mlýnem a chvíli se dívat."}
+        {
+          "time": "cestou",
+          "text": "Velký nákup ve Žďáru nad Sázavou: Kaufland (denně 7–22), Lidl nebo Albert. Cestou se dá zastavit v Modelovém království (čt 10–17).",
+          "places": [
+            "shop-kaufland",
+            "modelove"
+          ]
+        },
+        {
+          "time": "odpoledne",
+          "text": "Ubytování v mlýně a první procházka: okruh na skalní hradbu Tisůvka (asi 1,5 h), nebo lesem k pramenu Svratky.",
+          "routes": [
+            "h-tisuvka"
+          ],
+          "places": [
+            "tisuvka",
+            "pramen-svratky"
+          ]
+        },
+        {
+          "time": "večer",
+          "text": "Večeře v restauraci Tisůvka (čt–ne, pro 17 lidí rezervovat) nebo doma. Pak sauna a krb."
+        },
+        {
+          "time": "po setmění",
+          "text": "Hvězdy: Měsíc skoro nesvítí (nov je v sobotu 10. 10.) a kolem 8.–9. 10. vrcholí meteorický roj Drakonidy. Je slabší, ale večer po setmění se vyplatí vyjít na louku nad mlýnem a chvíli se dívat."
+        }
       ],
       "planB": "Když prší: Modelové království ve Žďáru (čt 10–17) nebo Relaxační centrum Žďár s tobogánem (od 12 h)."
     },
     {
-      "id": "pa", "date": "2026-10-09", "label": "Pátek 9. 10.", "title": "Sklo, Velké Dářko a kola",
+      "id": "pa",
+      "date": "2026-10-09",
+      "label": "Pátek 9. 10.",
+      "title": "Sklo, Velké Dářko a kola",
       "weather": "Všední den: sklárny předvádějí foukání skla jen ve všední dny dopoledne.",
       "items": [
-        {"time": "9:30", "text": "Exkurze ve sklárně Svoboda v Karlově (všední dny 9:30 / 10:30) nebo ukázka v huti U Hrocha ve Škrdlovicích. Skupinu 17 lidí předem ohlaste!", "places": ["sklarna-svoboda", "sklarna-hroch"]},
-        {"time": "dopoledne", "text": "Na kolech kolem Velkého Dářka. Na hrázi kola zamknout a projít kus naučné stezky po povalových chodnících přes rašeliniště.", "routes": ["b-darko"], "places": ["velke-darko", "darska-raseliniste"]},
-        {"time": "odpoledne", "text": "Medlov: lanový park zdarma, prolézačky a pohádková stezka skřítka Ostružinky (leták na recepci hotelu). Kdo má ještě síly: Dům přírody v Krátké (út–ne 10–15).", "places": ["medlov", "dum-prirody"]},
-        {"time": "večer", "text": "Grilování nebo večeře v Tisůvce, sauna."}
+        {
+          "time": "9:30",
+          "text": "Sklo: ukázka foukání v huti U Hrocha ve Škrdlovicích (je na cyklotrase), nebo exkurze ve sklárně Svoboda v Karlově (všední dny 9:30 / 10:30, tam radši autem). Skupinu 17 lidí předem ohlaste!",
+          "places": [
+            "sklarna-svoboda",
+            "sklarna-hroch"
+          ]
+        },
+        {
+          "time": "dopoledne",
+          "text": "Na kolech k Velkému Dářku: lesem do Škrdlovic (ukázka ve sklárně U Hrocha), po hrázi k rašeliništi (kus naučné stezky po povalových chodnících pěšky) a zpět kolem Tisůvky.",
+          "routes": [
+            "b-darko"
+          ],
+          "places": [
+            "velke-darko",
+            "darska-raseliniste"
+          ]
+        },
+        {
+          "time": "odpoledne",
+          "text": "Medlov: lanový park zdarma, prolézačky a pohádková stezka skřítka Ostružinky (leták na recepci hotelu). Kdo má ještě síly: Dům přírody v Krátké (út–ne 10–15).",
+          "places": [
+            "medlov",
+            "dum-prirody"
+          ]
+        },
+        {
+          "time": "večer",
+          "text": "Grilování nebo večeře v Tisůvce, sauna."
+        }
       ],
       "planB": "Když prší: Muzeum nové generace na zámku Žďár (denně 9–18) a odpoledne Relaxační centrum (tobogán, brouzdaliště)."
     },
     {
-      "id": "so", "date": "2026-10-10", "label": "Sobota 10. 10.", "title": "Den jeskyní v Moravském krasu",
+      "id": "so",
+      "date": "2026-10-10",
+      "label": "Sobota 10. 10.",
+      "title": "Den jeskyní v Moravském krasu",
       "weather": "Ideální i za deště: v jeskyních je stále kolem 8 °C.",
       "items": [
-        {"time": "8:00", "text": "Odjezd autem do Moravského krasu (asi 1 h 15 min, viz časy u jednotlivých míst)."},
-        {"time": "9:00–16:00", "text": "Jeskyně Balcarka: Škola malých jeskyňářů pro děti od 5 let, s výcvikem a osvědčením. Nutná rezervace na 516 444 330!", "places": ["balcarka"]},
-        {"time": "poté", "text": "Pár minut autem k horní vyhlídce do propasti Macocha (zdarma)", "places": ["macocha"]},
-        {"time": "odpoledne", "text": "Pro zdatné: Punkevní jeskyně s plavbou po Punkvě (rezervace nutná, o víkendu do 16 h). Pro menší spíš krátká Kateřinská jeskyně (30 min) u Skalního Mlýna.", "routes": ["h-macocha"], "places": ["punkevni", "katerinska"]},
-        {"time": "večer", "text": "Návrat, sauna, společná večeře."}
+        {
+          "time": "8:00",
+          "text": "Odjezd autem do Moravského krasu (asi 1 h 15 min, viz časy u jednotlivých míst)."
+        },
+        {
+          "time": "9:00–16:00",
+          "text": "Jeskyně Balcarka: Škola malých jeskyňářů pro děti od 5 let, s výcvikem a osvědčením. Nutná rezervace na 516 444 330!",
+          "places": [
+            "balcarka"
+          ]
+        },
+        {
+          "time": "poté",
+          "text": "Pár minut autem k horní vyhlídce do propasti Macocha (zdarma)",
+          "places": [
+            "macocha"
+          ]
+        },
+        {
+          "time": "odpoledne",
+          "text": "Pro zdatné: Punkevní jeskyně s plavbou po Punkvě (rezervace nutná, o víkendu do 16 h). Pro menší spíš krátká Kateřinská jeskyně (30 min) u Skalního Mlýna.",
+          "routes": [
+            "h-macocha"
+          ],
+          "places": [
+            "punkevni",
+            "katerinska"
+          ]
+        },
+        {
+          "time": "večer",
+          "text": "Návrat, sauna, společná večeře."
+        }
       ],
       "planB": "Varianta blíž (35–40 min autem): skály a jeskyňky v Údolí Doubravy nebo pískovcové Toulovcovy maštale. Nebo Hrad Pernštejn (v říjnu jen o víkendu).",
-      "planBRoutes": ["h-doubrava", "h-mastale"]
+      "planBRoutes": [
+        "h-doubrava",
+        "h-mastale"
+      ]
     },
     {
-      "id": "ne", "date": "2026-10-11", "label": "Neděle 11. 10.", "title": "Skály na rozloučenou a cesta domů",
+      "id": "ne",
+      "date": "2026-10-11",
+      "label": "Neděle 11. 10.",
+      "title": "Skály na rozloučenou a cesta domů",
       "weather": "Dopoledne venku, odpoledne cesta domů.",
       "items": [
-        {"time": "dopoledne", "text": "Úklid, předání chaty (čas podle domluvy s majitelem)."},
-        {"time": "dopoledne", "text": "Skalní okruh: Čtyři palice a Milovské perničky (krátký), nebo hřebenovka Drátník – Malinská skála – Devět skal z Blatin.", "routes": ["h-palice", "h-hreben"], "places": ["ctyri-palice", "pernicky", "malinska", "devet-skal"]},
-        {"time": "oběd", "text": "U Kolouška v Blatinách (ne 11–18) nebo Hostinec Za Řekou v Křižánkách (ne 11–18).", "places": ["rest-kolousek", "rest-krizanky"]},
-        {"time": "cestou", "text": "Přes Žďár: Zelená hora (v neděli otevřený interiér 9–17) a Muzeum nové generace.", "places": ["zelena-hora", "mng"]}
+        {
+          "time": "dopoledne",
+          "text": "Úklid, předání chaty (čas podle domluvy s majitelem)."
+        },
+        {
+          "time": "dopoledne",
+          "text": "Skalní okruh na rozloučenou: Čtyři palice a Milovské perničky, nebo krátký okruh z Blatin k Drátníku a na Malinskou skálu.",
+          "routes": [
+            "h-palice",
+            "h-hreben-kratky"
+          ],
+          "places": [
+            "ctyri-palice",
+            "pernicky",
+            "dratenicka",
+            "malinska"
+          ]
+        },
+        {
+          "time": "oběd",
+          "text": "U Kolouška v Blatinách (ne 11–18) nebo Hostinec Za Řekou v Křižánkách (ne 11–18).",
+          "places": [
+            "rest-kolousek",
+            "rest-krizanky"
+          ]
+        },
+        {
+          "time": "cestou",
+          "text": "Přes Žďár: Zelená hora (v neděli otevřený interiér 9–17) a Muzeum nové generace.",
+          "places": [
+            "zelena-hora",
+            "mng"
+          ]
+        }
       ],
       "planB": "Když prší: Muzeum nové generace a Zelená hora, Modelové království (ne 10–17) nebo Šlakhamr v Hamrech nad Sázavou (so–ne, prohlídky v celou hodinu)."
     }
   ],
   "reservations": [
-    {"id": "res-balcarka", "text": "Balcarka – Škola malých jeskyňářů (so 10. 10.)", "how": "tel. 516 444 330"},
-    {"id": "res-punkevni", "text": "Punkevní jeskyně (vstupenky se vyprodávají)", "how": "ÚIS Skalní Mlýn +420 516 413 575, info@caves.cz"},
-    {"id": "res-tisuvka", "text": "Restaurace Tisůvka pro 17 osob (čt–ne)", "how": "tel. 566 659 007"},
-    {"id": "res-sklarna", "text": "Sklárna – skupina nad 10 osob (pá dopoledne)", "how": "U Hrocha +420 603 742 629 / Svoboda Karlov ags-svoboda.cz"},
-    {"id": "res-chata", "text": "Čas příjezdu a odjezdu, spaní pro 17. osobu (mlýn má 16 lůžek)", "how": "+420 602 768 375, info@mlyn-vikinek.cz"}
+    {
+      "id": "res-balcarka",
+      "text": "Balcarka – Škola malých jeskyňářů (so 10. 10.)",
+      "how": "tel. 516 444 330"
+    },
+    {
+      "id": "res-punkevni",
+      "text": "Punkevní jeskyně (vstupenky se vyprodávají)",
+      "how": "ÚIS Skalní Mlýn +420 516 413 575, info@caves.cz"
+    },
+    {
+      "id": "res-tisuvka",
+      "text": "Restaurace Tisůvka pro 17 osob (čt–ne)",
+      "how": "tel. 566 659 007"
+    },
+    {
+      "id": "res-sklarna",
+      "text": "Sklárna – skupina nad 10 osob (pá dopoledne)",
+      "how": "U Hrocha +420 603 742 629 / Svoboda Karlov ags-svoboda.cz"
+    },
+    {
+      "id": "res-chata",
+      "text": "Čas příjezdu a odjezdu, spaní pro 17. osobu (mlýn má 16 lůžek)",
+      "how": "+420 602 768 375, info@mlyn-vikinek.cz"
+    }
   ],
   "packing": [
     "Nepromokavé bundy a boty, gumáky na louky kolem potoka",
@@ -65,5 +208,19 @@
     "Dalekohled, lupa, lodičky z kůry na pramen Svratky",
     "Offline mapy (aplikace Mapy.com) a GPX trasy z této stránky",
     "Hotovost: malé restaurace a dobrovolná vstupné"
+  ],
+  "quests": [
+    "Pustit lodičku na pramenu Svratky (pluje do Černého moře!) a na pramenu Sázavy (do Severního moře)",
+    "Vylézt na vyhlídku na Devíti skalách, nejvyšší místo Žďárských vrchů (836 m)",
+    "Najít na Milovských perničkách všech 8 skalních „perníčků“",
+    "Nakouknout do jeskyňky na Malinské skále",
+    "Získat v Balcarce osvědčení mladého jeskyňáře",
+    "Vidět, jak sklář fouká sklenici",
+    "Spočítat, kolikrát najdete na Zelené hoře číslo 5",
+    "Projít pohádkovou stezku skřítka Ostružinky a vyzvednout si odměnu",
+    "Najít u hřiště v Cikháji dva dřevěné čerty",
+    "Přejít po povalovém chodníku přes rašeliniště u Velkého Dářka",
+    "Najít partyzánský bunkr pod Fryšavským kopcem",
+    "Uvidět padající hvězdu (Drakonidy, 8.–9. 10.)"
   ]
 }

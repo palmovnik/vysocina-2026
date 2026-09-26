@@ -224,7 +224,7 @@
     "kids": 3, "rain": true,
     "teaser": "Modelové kolejiště na 55 m² s asi 600 metry kolejí.",
     "text": "Velké modelové kolejiště ve Žďáru nad Sázavou, kde vláčky projíždějí krajinou, městy i nádražími. Zabaví malé i velké milovníky mašinek.",
-    "info": "Dolní 30, Žďár n. S. Otevřeno st, čt a ne 10–17 (tj. ve čtvrtek 8. 10. a v neděli 11. 10.), vstupné kolem 90 Kč. Tel. +420 603 742 409.",
+    "info": "Dolní 30, Žďár n. S. Podle OpenStreetMap otevřeno st, čt a ne 10–17 (tedy ve čtvrtek 8. 10. a v neděli 11. 10.), vstupné kolem 90 Kč, raději ověřte. Tel. +420 603 742 409.",
     "web": "https://www.mkzdar.cz/"
   },
   {
@@ -249,7 +249,7 @@
     "kids": 3,
     "teaser": "Jeleni, daňci, mufloni a divočáci. Některá zvířata si nechají podrbat na hlavě.",
     "text": "Obora u Hlinska s loveckým zámečkem Dvojhradí uprostřed. Zvířata jsou zvyklá na lidi a z blízka se dají pozorovat jeleni, daňci, mufloni i divoká prasata.",
-    "info": "Denně 9–20, dobrovolné vstupné asi 10 Kč. Dá se spojit s Veselým Kopcem nebo Peklem Čertovinou."
+    "info": "Podle dostupných informací denně 9–20, dobrovolné vstupné (ověřte). Dá se spojit s Veselým Kopcem nebo Peklem Čertovinou."
   },
   {
     "id": "pilak", "cat": "deti", "name": "Pilák: lanová pyramida a hřiště (Žďár)", "lat": 49.58983, "lon": 15.93107,
@@ -296,7 +296,7 @@
     "id": "pernstejn", "cat": "pamatky", "name": "Hrad Pernštejn", "lat": 49.45086, "lon": 16.31837,
     "kids": 3,
     "teaser": "Jeden z nejkrásnějších moravských hradů, v říjnu otevřený jen o víkendu.",
-    "text": "Gotický hrad na skalním ostrohu nad Nedvědicí, s parkánem, věžemi a mosty. Vypadá jako z pohádky a mnoho pohádek se tu opravdu natáčelo.",
+    "text": "Gotický hrad na skalním ostrohu nad Nedvědicí s věžemi, parkány a padacím mostem. Vypadá jako z pohádky.",
     "info": "V říjnu jen so–ne, prohlídky s průvodcem zhruba 9/10–15 h (poslední vstup odpoledne). Rezervace není povinná, ale ušetří čekání.",
     "web": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba"
   },
@@ -313,7 +313,7 @@
     "id": "pramen-svratky", "cat": "priroda", "name": "Pramen Svratky", "lat": 49.64388, "lon": 15.99942, "noCar": true,
     "kids": 3, "top": true, "walk": true, "bike": true,
     "teaser": "Tady se rodí Svratka. Její voda doteče přes Brno a Dunaj až do Černého moře.",
-    "text": "Upravený pramen na jihovýchodním svahu Žákovy hory, pod Fryšavským kopcem. Svratka odtud teče přes Brno do Dyje, Moravy a Dunaje, tedy až do Černého moře. Voda z potoka u mlýna přitom míří Sázavou, Vltavou a Labem do Severního moře: jsme přímo na hlavním evropském rozvodí!",
+    "text": "Upravený pramen na jihovýchodním svahu Žákovy hory, pod Fryšavským kopcem. Svratka odtud teče přes Brno do Dyje, Moravy a Dunaje, tedy až do Černého moře. Voda z potoka u mlýna přitom teče Sázavou, Vltavou a Labem do Severního moře. Mezi mlýnem a pramenem Svratky vede hlavní evropské rozvodí!",
     "kidsNote": "Pokus pro děti: pusťte po vodě lodičku z kůry a představte si, kam až dopluje.",
     "info": "Volně přístupné, lesní cestou od mlýna."
   },
@@ -356,7 +356,7 @@
     "id": "darska-raseliniste", "cat": "priroda", "name": "NS Dářská rašeliniště", "lat": 49.63788, "lon": 15.88283, "car": [49.63193, 15.90859],
     "kids": 3, "top": true,
     "teaser": "3 km dlouhá stezka po povalových chodnících přes rašeliniště, se dvěma vyhlídkami.",
-    "text": "Naučná stezka z roku 2013 má 12 zastavení a vede přes Národní přírodní rezervaci Dářko, nejhlubší rašeliniště Českomoravské vrchoviny. Dřevěné povalové chodníky a rozhledny nad rašeliništěm děti baví.",
+    "text": "Naučná stezka z roku 2013 má 12 zastavení a vede přes Národní přírodní rezervaci Dářko, nejhlubší rašeliniště Českomoravské vrchoviny. Dřevěné povalové chodníky a dvě vyhlídky na rašeliniště děti baví.",
     "kidsNote": "Po povalech se nesmí na kole. Kola nechte u hráze nebo v Radostíně.",
     "info": "Začátek na hrázi Velkého Dářka (u parkoviště) nebo v Radostíně.",
     "web": "https://www.kudyznudy.cz/aktivity/naucna-stezka-darska-raseliniste"
@@ -470,7 +470,7 @@
   },
   {
     "id": "nemocnice", "cat": "sluzby", "name": "Nemocnice Nové Město na Moravě", "lat": 49.56052, "lon": 16.06413,
-    "teaser": "Nejbližší nemocnice s urgentním příjmem (včetně dětského).",
+    "teaser": "Nejbližší nemocnice s urgentním příjmem.",
     "text": "Krajská nemocnice v Novém Městě na Moravě. V akutním případě volejte 155 (záchranka) nebo 112.",
     "info": "Tísňové volání 112, záchranná služba 155.",
     "web": "https://www.nnm.cz/"

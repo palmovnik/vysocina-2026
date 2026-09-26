@@ -1,17 +1,20 @@
 name: Podklady pro mapu
 
 # Stáhne data z OpenStreetMap, BRouteru, OSRM a Wikidat do data/raw/
-# a commitne je zpět do větve. Spouští se ručně nebo změnou v tools/.
+# a commitne je zpět do větve. Spouští se ručně nebo změnou vstupů v tools/.
 on:
   workflow_dispatch:
     inputs:
       steps:
-        description: 'Kroky (overpass brouter osrm wikidata commons), prázdné = vše'
+        description: 'Kroky (missing overpass brouter osrm wikidata commons), prázdné = výchozí'
         required: false
         default: ''
   push:
     paths:
-      - 'tools/**'
+      - 'tools/fetch_data.py'
+      - 'tools/routes.json'
+      - 'tools/poi_candidates.json'
+      - 'tools/images.json'
 
 permissions:
   contents: write
