@@ -1,57 +1,121 @@
 {
-  "families": [
-    {
-      "name": "Mrázkovi",
-      "adults": 2,
-      "kids": 3
-    },
-    {
-      "name": "Šefránkovi",
-      "adults": 2,
-      "kids": 2
-    },
-    {
-      "name": "Janalíkovi",
-      "adults": 2,
-      "kids": 2
-    },
-    {
-      "name": "Dvořákovi",
-      "adults": 2,
-      "kids": 2
-    }
-  ],
-  "chata": {
-    "address": "Cikháj 57, 591 02 Žďár nad Sázavou",
-    "capacity": "4 pokoje po 4 lůžkách, celkem 16 lůžek",
-    "amenities": "sauna, společenská místnost s krbem, kachlová kamna, vybavená kuchyně (sklokeramická deska, trouba, myčka, kávovar, lednice s mrazákem, mikrovlnka, topinkovač), oplocený pozemek u potoka",
-    "note": "Jedeme v 17 lidech (8 dospělých + 9 dětí), ale mlýn má 16 lůžek. Domluvte s majitelem přistýlku, nebo vezměte cestovní postýlku či spacák.",
-    "services": [
-      "rest-tisuvka",
-      "shop-skrdlovice",
-      "shop-heralec",
-      "shop-kaufland",
-      "lekarna",
-      "benzinka",
-      "nemocnice"
-    ]
+ "families": [
+  {
+   "name": "Mrázkovi",
+   "adults": 2,
+   "kids": 3
   },
-  "weather": {
-    "text": "Cikháj leží v 675 m n. m., takže je tu o pár stupňů chladněji než v nížině. Začátkem října bývá přes den zhruba 7–13 °C a v noci 0–5 °C, ráno často mlha a první mrazíky, občas prší. Na hřebenech nad 800 m fouká.",
-    "moon": "Nov je v sobotu 10. 10. v 17:50, takže noci jsou úplně tmavé a za jasna je vidět Mléčná dráha. Kolem 8.–9. 10. vrcholí meteorický roj Drakonidy, nejlépe večer po setmění.",
-    "links": [
-      {
-        "name": "Předpověď ČHMÚ – Žďárské vrchy",
-        "url": "https://www.chmi.cz/predpoved-pocasi/lyzarska-strediska-a-hory/zdarske-vrchy"
-      },
-      {
-        "name": "Windy – Cikháj",
-        "url": "https://www.windy.com/?49.644,15.968,11"
-      },
-      {
-        "name": "Meteobox – Žďárské vrchy",
-        "url": "https://meteobox.cz/zdarske-vrchy/"
-      }
-    ]
+  {
+   "name": "Šefránkovi",
+   "adults": 2,
+   "kids": 2
+  },
+  {
+   "name": "Janalíkovi",
+   "adults": 2,
+   "kids": 2
+  },
+  {
+   "name": "Dvořákovi",
+   "adults": 2,
+   "kids": 2
   }
+ ],
+ "chata": {
+  "address": "Cikháj 57, 591 02 Žďár nad Sázavou",
+  "capacity": "4 pokoje po 4 lůžkách, celkem 16 lůžek",
+  "amenities": "sauna, společenská místnost s krbem, kachlová kamna, vybavená kuchyně (sklokeramická deska, trouba, myčka, kávovar, lednice s mrazákem, mikrovlnka, topinkovač), oplocený pozemek u potoka",
+  "note": "Jedeme v 17 lidech (8 dospělých + 9 dětí), ale mlýn má 16 lůžek. Domluvte s majitelem přistýlku, nebo vezměte cestovní postýlku či spacák.",
+  "services": [
+   "rest-tisuvka",
+   "shop-skrdlovice",
+   "shop-heralec",
+   "shop-kaufland",
+   "lekarna",
+   "benzinka",
+   "nemocnice"
+  ]
+ },
+ "weather": {
+  "text": "Cikháj leží v 675 m n. m., takže je tu o pár stupňů chladněji než v nížině. Začátkem října bývá přes den zhruba 7–13 °C a v noci 0–5 °C, ráno často mlha a první mrazíky, občas prší. Na hřebenech nad 800 m fouká.",
+  "moon": "Nov je v sobotu 10. 10. v 17:50, takže noci jsou úplně tmavé a za jasna je vidět Mléčná dráha. Kolem 8.–9. 10. vrcholí meteorický roj Drakonidy, nejlépe večer po setmění.",
+  "links": [
+   {
+    "name": "Předpověď ČHMÚ – Žďárské vrchy",
+    "url": "https://www.chmi.cz/predpoved-pocasi/lyzarska-strediska-a-hory/zdarske-vrchy"
+   },
+   {
+    "name": "Windy – Cikháj",
+    "url": "https://www.windy.com/?49.644,15.968,11"
+   },
+   {
+    "name": "Meteobox – Žďárské vrchy",
+    "url": "https://meteobox.cz/zdarske-vrchy/"
+   }
+  ]
+ },
+ "highlights": [
+  "devet-skal",
+  "balcarka",
+  "malinska",
+  "medlov",
+  "tisuvka",
+  "punkevni",
+  "kiosek-kadov",
+  "ctyri-palice",
+  "darska-raseliniste",
+  "zookoutek",
+  "udoli-doubravy",
+  "vesely-kopec"
+ ],
+ "gastro": [
+  {
+   "cat": "jidlo",
+   "id": "top",
+   "name": "Nejlepší kuchyně v okolí",
+   "short": "Nejlepší kuchyně",
+   "emoji": "✨",
+   "desc": "Podniky z Gastromapy Lukáše Hejlíka, průvodce Gault&Millau a Maurerova výběru a místní favorit z ankety Deníku. Na víkend a pro velkou skupinu vždy rezervujte."
+  },
+  {
+   "cat": "jidlo",
+   "id": "rodina",
+   "name": "Rodinné restaurace pro celou partu",
+   "short": "Rodinné",
+   "emoji": "👨‍👩‍👧‍👦",
+   "desc": "Kam se vejde 17 lidí a děti se nebudou nudit: dětský koutek, sklárna hned vedle, vysočinská kuchyně u zámku."
+  },
+  {
+   "cat": "jidlo",
+   "id": "kava",
+   "name": "Kavárny a cukrárny",
+   "short": "Kavárny",
+   "emoji": "☕",
+   "desc": "Na kafe a zákusek po výletě."
+  },
+  {
+   "cat": "jidlo",
+   "id": "cesta",
+   "name": "Hospody na výletech",
+   "short": "Hospody",
+   "emoji": "🍺",
+   "desc": "Poctivé hospody u tras, kde se dá zastavit na oběd nebo polévku."
+  },
+  {
+   "cat": "farmy",
+   "id": "zvirata",
+   "name": "Farmy a zvířátka",
+   "short": "Zvířátka",
+   "emoji": "🐐",
+   "desc": "Lamy a klokani zdarma, minifarma s poníkem nebo obora s jeleny. Menší děti to milují."
+  },
+  {
+   "cat": "farmy",
+   "id": "nakup",
+   "name": "Farmářské nákupy",
+   "short": "Farmářské nákupy",
+   "emoji": "🧀",
+   "desc": "Maso na gril, uzeniny a bio sýry přímo od místních výrobců."
+  }
+ ]
 }

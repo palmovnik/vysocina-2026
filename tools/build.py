@@ -29,6 +29,7 @@ CATS = [
     {'id': 'pamatky', 'name': 'Památky a muzea', 'emoji': '🏰'},
     {'id': 'priroda', 'name': 'Příroda a voda', 'emoji': '🌲'},
     {'id': 'jidlo', 'name': 'Kde se najíst', 'emoji': '🍽️'},
+    {'id': 'farmy', 'name': 'Farmy a zvířata', 'emoji': '🐐'},
     {'id': 'sluzby', 'name': 'Nákupy a služby', 'emoji': '🛒'},
 ]
 ROUTE_COLORS = {
@@ -74,6 +75,29 @@ def clean_author(s):
     return (s[:40] + '…') if len(s) > 41 else (s or 'neznámý autor')
 
 
+def make_thumb(pid, width=420):
+    """Menší náhled pro dlaždice (docs/img/t/<id>.jpg); bez knihovny Pillow se použije plná fotka."""
+    src = os.path.join(DOCS, 'img', pid + '.jpg')
+    dst = os.path.join(DOCS, 'img', 't', pid + '.jpg')
+    if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(src):
+        return f'img/t/{pid}.jpg'
+    try:
+        from PIL import Image  # noqa: PLC0415 – volitelná závislost
+    except ImportError:
+        return None
+    im = Image.open(src).convert('RGB')
+    if im.width > width:
+        im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+    # dlaždice mají poměr 16:10 až 4:3 – vysoké fotky ořízneme na střed
+    if im.height > im.width * 0.8:
+        h = round(im.width * 0.8)
+        top = (im.height - h) // 2
+        im = im.crop((0, top, im.width, top + h))
+    os.makedirs(os.path.dirname(dst), exist_ok=True)
+    im.save(dst, 'JPEG', quality=78, optimize=True, progressive=True)
+    return f'img/t/{pid}.jpg'
+
+
 def build_places():
     places = load(rel('content', 'places.json'))
     osrm = load(os.path.join(RAW, 'osrm_car.json'), {})
@@ -105,6 +129,9 @@ def build_places():
         if m and os.path.exists(os.path.join(DOCS, 'img', p['id'] + '.jpg')):
             q['img'] = {'src': f'img/{p["id"]}.jpg', 'author': clean_author(m.get('artist')),
                         'license': m.get('license') or 'viz zdroj', 'page': m.get('page')}
+            thumb = make_thumb(p['id'])
+            if thumb:
+                q['img']['thumb'] = thumb
         out.append(q)
     return out
 
@@ -338,7 +365,12 @@ def check_refs(program, places_by_id, routes_by_id, meta):
             bad += [('místo', x) for x in it.get('places', []) if x not in places_by_id]
             bad += [('trasa', x) for x in it.get('routes', []) if x not in routes_by_id]
         bad += [('trasa', x) for x in d.get('planBRoutes', []) if x not in routes_by_id]
+        bad += [('místo', x) for x in d.get('planBPlaces', []) if x not in places_by_id]
     bad += [('služba', x) for x in meta['chata']['services'] if x not in places_by_id]
+    bad += [('tip', x) for x in meta.get('highlights', []) if x not in places_by_id]
+    subs = {(g['cat'], g['id']) for g in meta.get('gastro', [])}
+    bad += [('podsekce', p['id']) for p in places_by_id.values()
+            if p['cat'] in ('jidlo', 'farmy') and (p['cat'], p.get('sub', '')) not in subs]
     if bad:
         sys.exit(f'Neplatné odkazy: {bad}')
 
@@ -348,6 +380,8 @@ CREDITS = (
     'trasy spočítané v <a href="https://brouter.de/">BRouter</a> · časy jízdy autem '
     '<a href="https://project-osrm.org/">OSRM</a> · fotografie z '
     '<a href="https://commons.wikimedia.org/">Wikimedia Commons</a> (autor a licence u každé fotky) · '
+    'gastro tipy mimo jiné z <a href="https://gastromapa.hejlik.cz/">Gastromapy Lukáše Hejlíka</a> a '
+    '<a href="https://maureruv-vyber.cz/">Maurerova výběru</a> · '
     'mapa <a href="https://leafletjs.com/">Leaflet</a>, dlaždice OpenStreetMap, OpenTopoMap, CyclOSM a Waymarked Trails.'
     '<br>Otevírací doby, vstupné a akce jsou převzaté z webů provozovatelů (stav k 26. 9. 2026). '
     'Před výletem je prosím ověřte, v říjnu se často mění. '
@@ -370,6 +404,7 @@ def main():
         'generated': datetime.date.today().isoformat(),
         'mill': {'lat': MILL[0], 'lon': MILL[1]},
         'cats': CATS, 'families': meta['families'], 'chata': meta['chata'], 'weather': meta['weather'],
+        'highlights': meta.get('highlights', []), 'gastro': meta.get('gastro', []),
         'places': places, 'routes': routes, 'program': program, 'sun': build_sun(),
         'fromCities': from_cities, 'credits': CREDITS,
     }
