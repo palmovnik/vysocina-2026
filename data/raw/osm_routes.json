@@ -1,0 +1,3836 @@
+{
+ "version": 0.6,
+ "generator": "Overpass API 0.7.62.11 87bfad18",
+ "osm3s": {
+  "timestamp_osm_base": "2026-09-26T07:14:51Z",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+ },
+ "elements": [
+  {
+   "type": "relation",
+   "id": 12925,
+   "tags": {
+    "complete": "yes",
+    "name": "4113 Trhová Kamenice - Slatiňany",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4113",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 12926,
+   "tags": {
+    "complete": "yes",
+    "name": "4115 Ležáky - Ústupky",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4115",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 12927,
+   "tags": {
+    "complete": "yes",
+    "name": "4120 Čachnov - Vysoká nad Labem",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4120",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 12928,
+   "tags": {
+    "complete": "no",
+    "name": "4022 Svitavy - Blatka",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4022",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 14711,
+   "tags": {
+    "complete": "yes",
+    "name": "5215 okruh kolem Jihlavy",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5215",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 14712,
+   "tags": {
+    "complete": "yes",
+    "name": "4336 Dobronín-Dolní Sázava",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4336",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 22721,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Lísek;Nové Město n.Mor.;Žďár n.Sáz.;Havlíčkův Brod;Zruč n. Sáz.;Týnec;Davle",
+    "distance": "241",
+    "name": "19 Posázavská cyklotrasa (Lísek - Davle)",
+    "network": "ncn",
+    "operator": "cz:KČT",
+    "ref": "19",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 22728,
+   "tags": {
+    "complete": "yes",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4156",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 23495,
+   "tags": {
+    "destinations": "Čachnov;Kameničky;Hlinsko;Veselý kopec;Horní Bradlo",
+    "distance": "25.5",
+    "educational": "yes",
+    "kct_green": "major",
+    "name": "[Z] Vlastivědná stezka Krajem Chrudimky",
+    "network": "rwn",
+    "note:destinations": "Čachnov ŽST - Veselý kopec - Horní Bradlo",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4308",
+    "route": "hiking",
+    "short_name": "Krajem Chrudimky",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 23496,
+   "tags": {
+    "complete": "yes",
+    "destination": "Praha - Brno",
+    "name": "1 Praha - Brno",
+    "name:de": "Prag - Brünn",
+    "network": "ncn",
+    "operator": "cz:KČT",
+    "ref": "1",
+    "route": "bicycle",
+    "source": "www.prahounakole.cz;euler.blog.cz;survey",
+    "type": "route",
+    "wikidata": "Q14541768",
+    "wikipedia": "cs:Cyklistická trasa 1"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 23589,
+   "tags": {
+    "complete": "yes",
+    "description": "Brušovec – Plaňkovka",
+    "distance": "8.5",
+    "name": "4337 Brušovec-Čtyři Palice",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:yellow:green_bar",
+    "ref": "4337",
+    "route": "bicycle",
+    "symbol": "green stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 23595,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Krátká – Milovy",
+    "distance": "6",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4340",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 23596,
+   "tags": {
+    "complete": "no",
+    "destinations": "Městečko Trnávka;Křenov;Svojanov;Jimramov;Kadov",
+    "distance": "70",
+    "name": "104 Městečkov Trnávka - Kadov",
+    "network": "ncn",
+    "operator": "cz:KČT",
+    "ref": "104",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 23737,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Sněžné – Kučerův Mlýn",
+    "distance": "11",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:yellow:green_bar",
+    "ref": "4338",
+    "route": "bicycle",
+    "symbol": "green stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27314,
+   "tags": {
+    "complete": "yes",
+    "destinations": "N. Hrady;Proseč;Rychnov;Svratouch;Č. Herálec",
+    "distance": "28",
+    "name": "4180 Herálec-Nové Hrady",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4180",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27315,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Oldříš – Pustá Rybná – Čachnov",
+    "distance": "15.5",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "white:yellow:white_bar",
+    "ref": "4105",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27318,
+   "tags": {
+    "complete": "yes",
+    "name": "4021 Litomyšl-Borová u Poličky",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4021",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27319,
+   "tags": {
+    "complete": "no",
+    "destinations": "Žďárec u Sk.;Proseč;Budislav;Sebranice;Trstenice;Hradec n. Svit.;Křenov",
+    "distance": "70",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4024",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27471,
+   "tags": {
+    "complete": "yes",
+    "destination": "Přibyslav - Krucemburk – Dědová - Vrbatův Kostelec – Chrást – Hroch. Týnec – Dvakačovice",
+    "name": "4122 Přibyslav-Dašice",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4122",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27476,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Zelená křižovatka – Čtyři Palice, rozc.– (České Milovy)",
+    "distance": "7",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4184",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27477,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Polička – Telecí – Kučerův Mlýn",
+    "distance": "11.5",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:yellow:blue_bar",
+    "ref": "4101",
+    "route": "bicycle",
+    "symbol": "blue stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27478,
+   "tags": {
+    "complete": "yes",
+    "distance": "25.7",
+    "name": "9 Tereziánská stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "green:black_circle:green_dot:9:black",
+    "ref": "9",
+    "route": "bicycle",
+    "symbol": "green dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27480,
+   "tags": {
+    "complete": "yes",
+    "distance": "25.3",
+    "name": "5 Martinická stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "blue:black_circle:blue_dot:5:black",
+    "ref": "5",
+    "route": "bicycle",
+    "symbol": "blue dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 27481,
+   "tags": {
+    "complete": "no",
+    "fixme": "complete: konec na Františkách ano",
+    "name": "odbočka Františky - Čachnov",
+    "network": "lcn",
+    "note": "odbočka Františky - Čachnov",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "route": "bicycle",
+    "symbol": "yellow signs",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 66964,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Hluboká - Zubří",
+    "kct_yellow": "major",
+    "name": "[Ž] Hluboká - Zubří",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7353",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 113213,
+   "tags": {
+    "complete": "no",
+    "destinations": "Křižánky;Na Brušovci;Herálec;Žákova hora;Fryšava",
+    "distance": "16.5",
+    "kct_green": "major",
+    "name": "[Z] Křižánky - Fryšava",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4533",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 113279,
+   "tags": {
+    "complete": "no",
+    "destinations": "Čachnov;Karlštejn;Zkamenělý zámek;Křižánky;Devět skal;Herálec;Hlinsko",
+    "distance": "33",
+    "kct_blue": "major",
+    "name": "[M] Čachnov - Hlinsko",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "2036",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 113536,
+   "tags": {
+    "complete": "no",
+    "destinations": "Kadov;Medlov;Fryšava;Devět skal;Svratka;Svratouch;Čachnov",
+    "distance": "24.5",
+    "kct_yellow": "major",
+    "name": "[Ž] Kadov - Čachnov",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7549",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 114334,
+   "tags": {
+    "complete": "no",
+    "destinations": "Nedvědice;Vír;Karasín;Jimramov;Malinská;Žákova Hora;Žďár;Přibyslav",
+    "distance": "99",
+    "kct_red": "major",
+    "name": "[Č] Nedvědice - Přibyslav",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "ref": "110501",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 164300,
+   "tags": {
+    "complete": "yes",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4183",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 175205,
+   "tags": {
+    "complete": "no",
+    "destinations": "Kadov;Nové Město n. Mor.;Měřín;Třebíč",
+    "name": "103 Kadov - Třebíč",
+    "network": "ncn",
+    "note": "complete: konec na Kadově ano",
+    "operator": "cz:KČT",
+    "ref": "103",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 175206,
+   "tags": {
+    "complete": "yes",
+    "kct_white": "bicycle",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:yellow:white_bar",
+    "ref": "5130",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 223574,
+   "tags": {
+    "complete": "no",
+    "destinations": "Chřenovice - Přibyslav",
+    "kct_red": "major",
+    "name": "[Č] Chřenovice - Přibyslav",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "ref": "0454",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 223690,
+   "tags": {
+    "complete": "yes",
+    "description": "Hlinsko - Přibyslav - Polná - Jihlava - Třešť - Telč - Dačice - Slavonice",
+    "destinations": "Hlinsko - Přibyslav - Polná - Jihlava - Třešť - Telč - Dačice - Slavonice",
+    "distance": "125",
+    "from": "Hlinsko",
+    "name": "16 Hlinsko - Slavonice",
+    "network": "ncn",
+    "operator": "cz:KČT",
+    "ref": "16",
+    "route": "bicycle",
+    "to": "Slavonice",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 223691,
+   "tags": {
+    "complete": "no",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4335",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 374979,
+   "tags": {
+    "complete": "no",
+    "kct_green": "local",
+    "name": "NS Josefa Klementa",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_corner",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 375532,
+   "tags": {
+    "complete": "no",
+    "destinations": "Přibyslav - Polná",
+    "kct_green": "major",
+    "name": "[Z] Přibyslav - Polná",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 375533,
+   "tags": {
+    "complete": "no",
+    "destinations": "Polná - Kukle - Polná",
+    "kct_yellow": "major",
+    "name": "[Ž] Polná - Kukle, okruh",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 544508,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Buchtův kopec;Čtyři palice",
+    "distance": "6.5",
+    "kct_yellow": "major",
+    "name": "[Ž] Buchtův kopec - Čtyři palice",
+    "network": "nwn",
+    "note": "žlutá: Buchtův kopec - Čtyři palice",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7544",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 551848,
+   "tags": {
+    "complete": "no",
+    "destinations": "Nedvědice;Vír;Jimramov;Borovnice;Sádek;Polička",
+    "distance": "46",
+    "name": "4025 Nedvědice-Vír-Jimramov-Borovnice-Sádek-Polička",
+    "network": "rcn",
+    "note": "complete: konec v Poličce ano",
+    "operator": "cz:KČT",
+    "ref": "4025",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 906090,
+   "tags": {
+    "complete": "no",
+    "destinations": "Unčín – Ubušín",
+    "distance": "2",
+    "network": "rcn",
+    "note": "complete: konec v Unčíně ano",
+    "operator": "cz:KČT",
+    "ref": "4345",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1016951,
+   "tags": {
+    "complete": "yes",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5061",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1073949,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Skřinářovský les;Radešín",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5243",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1073951,
+   "tags": {
+    "complete": "no",
+    "destinations": "Tasov;Jabloňov;Ruda;Březejc, rozcestí;Křižanov;Dobrá Voda;Vídeň;Cyrilov;Radenice;Sklené nad Oslavou;Rousměrov;Bohdalec",
+    "name": "5240 Tasov - Bohdalec",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5240",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1076409,
+   "tags": {
+    "complete": "no",
+    "destinations": "Zvole;Velká Bíteš",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5235",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1076410,
+   "tags": {
+    "complete": "no",
+    "destinations": "Žďár nad Sázavou;Velké Meziříčí;Bojanov;Skryje;Předklášteří",
+    "kct_red": "major",
+    "name": "[Č] Předklášteří - Ždár nad Sázavou",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "ref": "0506",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1084800,
+   "tags": {
+    "name": "Mlynářská stezka",
+    "network": "ncn",
+    "operator": "Regionální rozvojová agentura Vysočina, z.s.p.o.",
+    "ref": "Mlynářská",
+    "route": "bicycle",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1084857,
+   "tags": {
+    "complete": "no",
+    "destinations": "Dolní Bradlo;Chrudim",
+    "educational": "yes",
+    "kct_blue": "major",
+    "name": "[M] Vlastivědná stezka krajem Chrudimky",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "1915",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1084858,
+   "tags": {
+    "complete": "no",
+    "destinations": "Pařížovská přehrada;Sečská přehrada, rozcestí",
+    "kct_yellow": "major",
+    "name": "[Ž] Pařížovská přehrada - Seč",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1117615,
+   "tags": {
+    "complete": "yes",
+    "name": "18 Hlinsko - České Petrovice",
+    "network": "ncn",
+    "operator": "cz:KČT",
+    "ref": "18",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1164158,
+   "tags": {
+    "complete": "no",
+    "destinations": "Podhradí;Horní Bradlo",
+    "kct_red": "major",
+    "name": "[Č] Podhradí - Horní Bradlo",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1165410,
+   "tags": {
+    "complete": "no",
+    "destinations": "Běstvina;Seč;Pod Ohebem",
+    "kct_green": "major",
+    "name": "[Z] Běstvina - Seč",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1172225,
+   "tags": {
+    "complete": "no",
+    "name": "bývalá Naučná stezka Tisůvka - Žákova hora",
+    "network": "lwn",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1172226,
+   "tags": {
+    "complete": "no",
+    "destinations": "Vojnův Městec;Tři Studně;Žďár n.S.;Polná;Jihlava;Pávov",
+    "distance": "52.5",
+    "kct_blue": "major",
+    "name": "[M] Pávov - Vojnův Městec",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "2001",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1202472,
+   "tags": {
+    "complete": "no",
+    "destinations": "Jestřebí;Černá Hora;Betlém;Lačnov;Jedlová;Trpín;Ústup;Sulíkov;Kunštát",
+    "name": "5085 Kunštát-Jestřebí",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5085",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1217288,
+   "tags": {
+    "complete": "no",
+    "complete:note": "konec v Bystrém ano",
+    "destinations": "Polánka;Košumberk;Krouna;Kameničky;Chlumětín;Svratka;Karlštejn;Lucký vrch;Polička;Bystré",
+    "distance": "46.5",
+    "kct_red": "major",
+    "network": "rwn",
+    "note:cs": "[Č] Bystré - Polánka",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "ref": "0446",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1221220,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Čtyři palice",
+    "kct_blue": "peak",
+    "network": "lwn",
+    "note": "Odbočka na Čtyři palice",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_triangle",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1221222,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Milovské perničky",
+    "kct_blue": "peak",
+    "network": "lwn",
+    "note": "Odbočka na Milovské perničky",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_triangle",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1221223,
+   "tags": {
+    "destinations": "Bystřice nad Pernštejnem;Písečné;Zuberský rybník;Studnice;Milovy;Čtyči palice;Pustá Rybná;Borová u Poličky;rybník Zimka",
+    "kct_green": "major",
+    "name": "[Z] Bystřice n. P. - Zimka (ryb.)",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4504",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1221540,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Devět skal (vyhlídka)",
+    "kct_blue": "peak",
+    "name": "[M] odbočka na vyhlídku",
+    "network": "lwn",
+    "note": "Odbočka na vyhlídku Devět skal",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_triangle",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1230187,
+   "tags": {
+    "complete": "no",
+    "destinations": "Chtěboř (náměstí) - Bílek - Pobočenský rybník",
+    "kct_red": "major",
+    "name": "[Č] Chtěboř - Pobočenský rybník",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "ref": "0453",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1230188,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Pod čertovým stolkem",
+    "distance": "0.5",
+    "kct_blue": "major",
+    "name": "[M] Pod čertovým stolkem - Nad čertovým stolkem",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "1932",
+    "route": "hiking",
+    "short_name": "Pod a nad čertovým stolkem",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1230189,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Bílek - Libice nad Doubravou - Modletín",
+    "kct_green": "major",
+    "name": "[Z] Bílek - Libice nad Doubravou - Modletín",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4315",
+    "route": "hiking",
+    "short_name": "Bílek - Modletín",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1263492,
+   "tags": {
+    "complete": "yes",
+    "name": "4112 Sezemice-Horní Bradlo",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4112",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1263493,
+   "tags": {
+    "complete": "yes",
+    "name": "4114 Seč-Žďárec u Skutče",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4114",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1267471,
+   "tags": {
+    "complete": "no",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4121",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1267472,
+   "tags": {
+    "complete": "no",
+    "destinations": "Radostín - Golčův Jeníkov",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5127",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1316251,
+   "tags": {
+    "complete": "no",
+    "destinations": "Netín;Kyjov;Stáj;Řehořov;Přímělkov;Na Kříži;Kobylí hlava;Krahulov",
+    "kct_green": "major",
+    "name": "[Z] Netín - Krahulov",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1424531,
+   "tags": {
+    "complete": "no",
+    "destinations": "Sklené - Lhotka - Žďár - Šlakhamry",
+    "distance": "22",
+    "kct_yellow": "major",
+    "name": "[Ž] Sklené - Šlakhamry",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7550",
+    "route": "hiking",
+    "symbol": "yellow stripe between white stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1424533,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Tálský mlýn - Vápenice",
+    "distance": "7.5",
+    "kct_blue": "major",
+    "name": "[M] Tálský mlýn - Vápenice",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "2010",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1424534,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Synkův kopec;Žďár n. S.;Medlov;Nové Město n. M.;Zubří",
+    "distance": "34",
+    "kct_green": "major",
+    "name": "[Z] Synkův kopec - Zubří",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4542",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1450004,
+   "tags": {
+    "complete": "no",
+    "destinations": "Nížkov;Velká Losenice;Račín;Velké Dářko;Světnov",
+    "distance": "15.5",
+    "kct_yellow": "major",
+    "name": "[Ž] Nížkov - Světnov",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7503",
+    "route": "hiking",
+    "symbol": "yellow stripe between white stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1451622,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Hlinsko - Ležáky - Žumberk - Zaječice",
+    "kct_blue": "major",
+    "name": "[M] Hlinsko - Zaječice",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "1919",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1474073,
+   "tags": {
+    "complete": "yes",
+    "kct_blue": "spring",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bowl",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1557461,
+   "tags": {
+    "complete": "yes",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "Naučná stezka Žákova hora",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1565219,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Polička;Telecí;Buchtův kopec",
+    "distance": "18",
+    "kct_green": "major",
+    "name": "[Z] Polička - Telecí - Buchtův kopec",
+    "network": "rwn",
+    "note": "zelená: Polička ŽST - Buchtův kopec",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4296",
+    "route": "hiking",
+    "short_name": "Polička - Buchtův kopec",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1565620,
+   "tags": {
+    "complete": "no",
+    "complete:note": "konec v Poličce ano",
+    "destinations": "Věžná;Odranec;Jimramov;Sedliště;Polička",
+    "kct_blue": "major",
+    "name": "[M] Věžná - Polička",
+    "network": "rwn",
+    "note": "modrá: Olešínky - Polička nám.",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "2042",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1567126,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Sněžné;Bohdalec",
+    "distance": "4.5",
+    "kct_green": "major",
+    "name": "[Z] Sněžné - Bohdalec",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4563",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1577946,
+   "tags": {
+    "complete": "no",
+    "destinations": "Rosička;Matějov;Nové Veselí;Rendlíček;Kyjov",
+    "kct_yellow": "major",
+    "name": "[Ž] Rosička - Matějov - Nové Veselí - Kyjov",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7547",
+    "route": "hiking",
+    "short_name": "Rosička - Kyjov",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1579467,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Jimramov;Javorek;Kutiny",
+    "distance": "6.5",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:yellow:green_bar",
+    "ref": "4339",
+    "route": "bicycle",
+    "symbol": "green stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1579482,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Polička – Borovnice – Krásné",
+    "distance": "15",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:yellow:red_bar",
+    "ref": "4106",
+    "route": "bicycle",
+    "symbol": "red stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1581909,
+   "tags": {
+    "complete": "no",
+    "destinations": "Jimramov;Trhonice",
+    "distance": "5.5",
+    "kct_yellow": "major",
+    "name": "[Ž] Jimramov - Trhonice - Jimramov",
+    "network": "nwn",
+    "note": "Jimramov - okružní trasa",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7502",
+    "route": "foot",
+    "symbol": "yellow stripe between white stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1597485,
+   "tags": {
+    "complete": "no",
+    "kct_yellow": "major",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7342",
+    "route": "foot",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1597486,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Luže;Ležáky",
+    "kct_green": "major",
+    "name": "[Z] Luže - Ležáky",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4309",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1604888,
+   "tags": {
+    "complete": "no",
+    "destinations": "Nové Město;Studnice;Odranec;Zuberský rybník",
+    "distance": "17",
+    "kct_yellow": "major",
+    "name": "[Ž] Nové Město - Studnice - Odranec - Zuberský rybník",
+    "network": "rwn",
+    "note": "žlutá: Nové Město n. M. - Zuberský rybník",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7552",
+    "route": "hiking",
+    "short_name": "Nové Město - Zuberský rybník",
+    "symbol": "yellow stripe between white stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1605326,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Medlov;Pasecká skála",
+    "distance": "2.5",
+    "kct_blue": "major",
+    "name": "[M] Medlov - Pasecká skála",
+    "network": "nwn",
+    "note": "modrá: Medlov hot. - Pasecká skála vyhl. rozc.",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "2037",
+    "route": "hiking",
+    "symbol": "blue stripe between white stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1613057,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Korouhev;Lačnov;Spělkov;Krásné;Březiny",
+    "distance": "13.5",
+    "kct_yellow": "major",
+    "name": "[Ž] Korouhev - Lačnov - Spělkov - Krásné - Březiny",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7367",
+    "route": "hiking",
+    "short_name": "Korouhev - Březiny",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1618295,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Fryšava – Sykovec",
+    "distance": "2.5",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:yellow:green_bar",
+    "ref": "4346",
+    "route": "bicycle",
+    "symbol": "green stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1623325,
+   "tags": {
+    "complete": "no",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5256",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1636179,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Borová, Dědek, Lucký Vrch, Telecí",
+    "distance": "6",
+    "kct_yellow": "major",
+    "name": "[Ž] Stezka Terezy Novákové",
+    "network": "lwn",
+    "note": "žlutá: Borová u Poličky ŽST - Telecí-horní BUS",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7333",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1636180,
+   "tags": {
+    "complete": "no",
+    "destinations": "Polička – Oldříš – Lubenská myslivna",
+    "distance": "13",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:yellow:green_bar",
+    "ref": "4103",
+    "route": "bicycle",
+    "symbol": "green stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1636181,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Oldříš;Lucký Vrch",
+    "distance": "3.5",
+    "kct_green": "major",
+    "network": "lwn",
+    "note": "zelená: Oldříš ŽST - Lucký Vrch",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4299",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1641217,
+   "tags": {
+    "complete": "yes",
+    "distance": "31.3",
+    "name": "3-Posekanecká stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "white:black_circle:white_dot:3:black",
+    "ref": "3",
+    "route": "bicycle",
+    "symbol": "white circle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1641218,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Borová u Poličky - okruh",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Borovská poznávací stezka",
+    "network": "lwn",
+    "note": "http://www.borova.cz/turistika",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1642558,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Odranec;Koníkov",
+    "distance": "3.5",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "Naučná stezka Metodka",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1642559,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Sněžné Roviny – Koníkov",
+    "distance": "5",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4341",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1642560,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Odranec – Míchov",
+    "distance": "4",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4342",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1656005,
+   "tags": {
+    "complete": "no",
+    "destinations": "Pivonice;Nedvědice",
+    "distance": "20",
+    "from": "Pivonice",
+    "kct_blue": "major",
+    "name": "[M] Zubštejn (zříc.) - Doubravník (bus)",
+    "network": "nwn",
+    "note": "modrá: Zubštejn - Nedvědice",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "2006",
+    "route": "hiking",
+    "symbol": "blue stripe between white stripes",
+    "to": "Nedvědice",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1656290,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Nové Město;Maršovice",
+    "distance": "18",
+    "kct_red": "local",
+    "name": "[Č] Nové Město - Maršovice, local",
+    "network": "lwn",
+    "note": "červená místní: Skihotel (Nové Město na Moravě)",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_corner",
+    "ref": "9503",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1657813,
+   "tags": {
+    "complete": "no",
+    "destinations": "Ochoza",
+    "distance": "11",
+    "kct_blue": "local",
+    "name": "[M] Ochoza - okruh, local",
+    "network": "lwn",
+    "note": "modrá místní: Skihotel (Nové Město na Moravě)",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_corner",
+    "ref": "9511",
+    "route": "hiking",
+    "short_name": "Ochoza - okruh",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1684586,
+   "tags": {
+    "complete": "yes",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "5257",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1684587,
+   "tags": {
+    "complete": "no",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:yellow:green_bar",
+    "ref": "5259",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1684588,
+   "tags": {
+    "complete": "no",
+    "destinations": "Bystřice nad Pernštejnem;Bobrová;Sklené nad Oslavou;Ostrov nad Oslavou;Řečice;Nové Město na Moravě",
+    "kct_red": "major",
+    "name": "[Č] Bystřice nad Pernštejnem - Nové Město na Moravě",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1687620,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Dolní Líšná – Věcov",
+    "distance": "2",
+    "network": "rcn",
+    "note": "pro silniční kolo nevhodné",
+    "operator": "cz:KČT",
+    "ref": "4343",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1715904,
+   "tags": {
+    "complete": "no",
+    "destinations": "Polička – Vysoký Les – Chmelík",
+    "distance": "13",
+    "network": "rcn",
+    "note": "complete: konec v Poličce ano",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:yellow:red_bar",
+    "ref": "4102",
+    "route": "bicycle",
+    "symbol": "red stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1715905,
+   "tags": {
+    "complete": "no",
+    "destinations": "Polička – Stašov – Svojanov, hrad",
+    "distance": "20.5",
+    "network": "rcn",
+    "note": "complete: konec v Poličce ano",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:yellow:blue_bar",
+    "ref": "4104",
+    "route": "bicycle",
+    "symbol": "blue stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1730899,
+   "tags": {
+    "complete": "no",
+    "destinations": "Filipov-Dědová-Hlinsko",
+    "kct_yellow": "major",
+    "name": "[Ž] Filipov - Hlinsko",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1730900,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Filipov - Kameničky - Vojtěchův kopec",
+    "kct_yellow": "major",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1744746,
+   "tags": {
+    "complete": "no",
+    "destinations": "Květná – Střítež – Na Babce",
+    "distance": "12.5",
+    "network": "rcn",
+    "note": "complete: konec Na Babce ano",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:yellow:blue_bar",
+    "ref": "4107",
+    "route": "bicycle",
+    "symbol": "blue stripe between white stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1744955,
+   "tags": {
+    "complete": "no",
+    "fixme": "complete: konec na Hatích ano",
+    "name": "odbočka Hatě - Borová",
+    "network": "lcn",
+    "note": "odbočka Hatě - Borová",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "route": "bicycle",
+    "symbol": "yellow signs",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1749782,
+   "tags": {
+    "complete": "no",
+    "destinations": "Dalečín;Sulkovec;Bystré;Svojanov;Olešnice",
+    "distance": "16.5",
+    "fixme": "complete: konec v Dalečíně ano",
+    "kct_green": "major",
+    "name": "[Z] Dalečín (bus) - Olešnice (bus)",
+    "network": "nwn",
+    "note": "zelená: Dalečín BUS - Svojanov BUS",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "4505",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1750749,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Bystřice n. P. – Karasín – Dalečín",
+    "distance": "10",
+    "network": "rcn",
+    "note": "complete: konec v Dalečíně ano",
+    "operator": "cz:KČT",
+    "ref": "5180",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1750750,
+   "tags": {
+    "complete": "no",
+    "destinations": "Dalečín;Olešnice",
+    "distance": "29",
+    "fixme": "complete: konec v Dalečíně ano",
+    "kct_yellow": "major",
+    "name": "[Ž] Dalečín - Olešnice",
+    "network": "rwn",
+    "note": "podle údajů na webu KČT k 12/2021 byl zrušen úsek žluté mezi Velkými Janovicemi a Pletenicemi",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7505",
+    "route": "hiking",
+    "short_name": "Dalečín - Olešnice",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1750751,
+   "tags": {
+    "complete": "no",
+    "destinations": "Dalečín;Vír;Švařec",
+    "distance": "16.1",
+    "educational": "yes",
+    "fixme": "complete: konec v Dalečíně ano",
+    "kct_green": "learning",
+    "name": "Svratecká vodohospodářská naučná stezka",
+    "network": "lwn",
+    "note": "Naučná: Dalečín - Švařec",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1754578,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Brožova skalka",
+    "kct_blue": "peak",
+    "name": "[M] odbočka Brožova skála",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_triangle",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1756531,
+   "tags": {
+    "complete": "no",
+    "destinations": "Hlinsko - Přibyslav",
+    "kct_red": "major",
+    "name": "[Č] Cesta Karla Havlíčka Borovského",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "ref": "0452",
+    "route": "hiking",
+    "short_name": "Cesta K. H. Borovského",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1756532,
+   "tags": {
+    "complete": "no",
+    "destinations": "Hlinsko - Zalíbené - Vojnův Městec",
+    "distance": "15",
+    "kct_yellow": "major",
+    "name": "[Ž] Hlinsko - Vojnův Městec",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "4302",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1759266,
+   "tags": {
+    "complete": "no",
+    "destinations": "Šlapanov - Havlíčkův Brod",
+    "kct_green": "major",
+    "name": "[Z] Šlapanov - Havlíčkův Brod",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "short_name": "Šlapanov - Havlíčkův Brod",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1764975,
+   "tags": {
+    "complete": "no",
+    "destinations": "Karasín – Nádrž Vír – Chlum – Nyklovice",
+    "distance": "16",
+    "network": "rcn",
+    "note": "konec v Nikovicích ano",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:yellow:blue_bar",
+    "ref": "5218",
+    "route": "bicycle",
+    "symbol": "blue stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1768674,
+   "tags": {
+    "complete": "no",
+    "destinations": "Nad Kůlnou-Aiglův lom, Kamenec",
+    "distance": "8",
+    "fixme": "závora u letiště",
+    "network": "rcn",
+    "note": "část je přeložena do nové trasy",
+    "operator": "cz:KČT",
+    "osmc:symbol": "white:yellow:white_bar",
+    "ref": "4110",
+    "route": "bicycle",
+    "symbol": "white stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1768675,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Kamenec – Jelínek",
+    "distance": "2.5",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "white:yellow:white_bar",
+    "ref": "4108",
+    "route": "bicycle",
+    "symbol": "white stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1826707,
+   "tags": {
+    "complete": "no",
+    "kct_blue": "horse",
+    "name": "Podmoklany- Lysá",
+    "network": "rhn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_dot",
+    "ref": "M03",
+    "route": "horse",
+    "source": "survey",
+    "type": "route",
+    "website": "https://www.kr-vysocina.cz/hipostezky/d-4058654"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1837966,
+   "tags": {
+    "complete": "no",
+    "destinations": "Chotěboř;Sobíňov;Velké Dářko",
+    "kct_blue": "major",
+    "name": "[M] Chotěboř - Velké Dářko",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "1925",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1837967,
+   "tags": {
+    "complete": "yes",
+    "kct_yellow": "major",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7348",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1839763,
+   "tags": {
+    "complete": "yes",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4186",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1862390,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Javorka, Pařížovská přehrada, Uhelná Příbram, Chotěboř",
+    "kct_blue": "major",
+    "name": "[M] Chotěboř - Javorka",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1958613,
+   "tags": {
+    "complete": "no",
+    "kct_yellow": "peak",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_triangle",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1996018,
+   "tags": {
+    "name": "Lyžařské Novoměstsko",
+    "operator": "Mikroregion Novoměstsko",
+    "piste:type": "nordic",
+    "route": "ski",
+    "source": "survey",
+    "type": "route",
+    "website": "http://lyzovani.nmnm.cz/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 1996019,
+   "tags": {
+    "complete": "no",
+    "distance": "128.3",
+    "kct_red": "horse",
+    "name": "[Č] Dukovany - Javorek",
+    "network": "rhn",
+    "note": "značení nechal udělat v roce 2012 Kraj Vysočina, měl by být asi i operator; udržba, ale moc neprobíhá",
+    "osmc:symbol": "red:white:red_dot",
+    "ref": "C01",
+    "route": "horse",
+    "source": "survey",
+    "type": "route",
+    "website": "https://www.vysocina.eu/vylety/1213-jezdecka-stezka-dukovany-javorek"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2117142,
+   "tags": {
+    "complete": "no",
+    "destinations": "Drhotín - Horní Roveň",
+    "name": "4111 Horní Roveň-Drhotín",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4111",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2278865,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Kamenice",
+    "distance": "0.2",
+    "kct_yellow": "peak",
+    "network": "lwn",
+    "note": "žlutá: odbočka na Kamenici",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_triangle",
+    "route": "foot",
+    "symbol": "yellow triangle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2280696,
+   "tags": {
+    "complete": "yes",
+    "destinations": "U Kolonie – Jimramov",
+    "distance": "6",
+    "name": "4344 Jimramov-Míchov",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4344",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2329592,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Fryšavský kopec",
+    "distance": "0.2",
+    "kct_blue": "interesting_object",
+    "name": "[M] odbočka k partizánskému památníku",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_turned_T",
+    "route": "hiking",
+    "symbol": "blue turned T",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2423838,
+   "tags": {
+    "complete": "yes",
+    "name": "4119 Pardubice - Rudov",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4119",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2444851,
+   "tags": {
+    "complete": "no",
+    "destinations": "Litomyšl;Polička;Bystré",
+    "distance": "41",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4019",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2468810,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Heřmanův Městec - Seč",
+    "kct_blue": "major",
+    "name": "[M] Heřmanův Městec - Seč",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "1917",
+    "route": "hiking",
+    "short_name": "Heřmanův Městec - Seč",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2654511,
+   "tags": {
+    "complete": "no",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4157",
+    "route": "bicycle",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2674778,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Věžná;Dolní Rožíka;Olešinky",
+    "kct_yellow": "major",
+    "name": "[Ž] Věžná - Olešínky",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2726604,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Slatiňany - Horní Bradlo",
+    "kct_yellow": "major",
+    "name": "[Ž] Slatiňany - Horní Bradlo",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7339",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2764193,
+   "tags": {
+    "colour": "yellow",
+    "complete": "no",
+    "cycle_network": "EuroVelo",
+    "icn_ref": "4",
+    "name": "EuroVelo 4 - Trasa střední Evropou - sekce Česká republika",
+    "name:cs": "EuroVelo 4 - Trasa střední Evropou - sekce Česká republika",
+    "name:en": "EuroVelo 4 - Central Europe Route - part Czech Republic",
+    "name:fr": "EuroVelo 4 - La route de l'Europe centrale - tronçon République tchèque",
+    "name:hu": "EuroVelo 4 - Közép-európai útvonal - rész Csehország",
+    "name:nl": "EuroVelo 4 - Centraal-Europaroute - deel Tsjechië",
+    "name:pl": "EuroVelo 4 - Szlak Europy Centralnej - część Czechy",
+    "name:sk": "EuroVelo 4 - Trasa strednou Európou - sekcia Česká republika",
+    "network": "icn",
+    "osmc:symbol": ":blue:yellow_circle:4:white",
+    "ref": "EV4",
+    "route": "bicycle",
+    "type": "route",
+    "website": "https://www.eurovelo.cz/EuroVelo/EuroVelo-v-CR/EuroVelo-4.aspx"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2813140,
+   "tags": {
+    "complete": "no",
+    "destinations": "Budislav;Polanka",
+    "kct_red": "major",
+    "network": "nwn",
+    "note:cs": "[Č] Budislav - Polanka",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2892590,
+   "tags": {
+    "complete": "no",
+    "destinations": "České Milovy",
+    "distance": "4.7 km",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "Naučná stezka Příběh krajiny pod Čtyřmi palicemi",
+    "network": "lwn",
+    "note": "http://projekty.krizanky.eu/projekt/milovska-stezka.html",
+    "operator": "cz:Křižánky",
+    "osmc:symbol": "none:none",
+    "route": "hiking",
+    "short_name": "Příběh krajiny pod Čtyřmi palicemi",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2911332,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Na přehradě – Šibeniční vrch",
+    "distance": "2",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "white:yellow:white_bar",
+    "ref": "4109",
+    "route": "bicycle",
+    "symbol": "white stripe between yellow stripes",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2911333,
+   "tags": {
+    "complete": "no",
+    "destinations": "Polička",
+    "distance": "10",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "Naučná stezka u Poličky",
+    "network": "lwn",
+    "note": "http://www.a21policka.org/stezka",
+    "operator": "A21 Polička",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 2912080,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Křižánky",
+    "kct_green": "learning",
+    "name": "Za pilníkáři na Český kopec",
+    "network": "lwn",
+    "note": "http://projekty.krizanky.eu/projekt/naucna-stezka-pilnikari.html",
+    "operator": "cz:Křižánky",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3101249,
+   "tags": {
+    "complete": "yes",
+    "distance": "30.5",
+    "name": "1 Maštalská stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "yellow:black_circle:yellow_dot:1:black",
+    "ref": "1",
+    "route": "bicycle",
+    "symbol": "yellow dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3101250,
+   "tags": {
+    "complete": "no",
+    "destinations": "Proseč",
+    "distance": "6",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "Planetární stezka",
+    "network": "lwn",
+    "note": "http://www.planetarnistezka.cz/",
+    "operator": "cz:Proseč",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3101251,
+   "tags": {
+    "complete": "yes",
+    "distance": "28.2",
+    "name": "4 Voštická stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "red:black_circle:red_dot:4:black",
+    "ref": "4",
+    "route": "bicycle",
+    "symbol": "red dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3193695,
+   "tags": {
+    "complete": "yes",
+    "name": "4026 Jarošov-Dolní Újezd",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4026",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3245287,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Skuteč - Kamenný val",
+    "kct_yellow": "major",
+    "name": "[Ž] Skuteč - Kamenný val",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3254984,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Nasavrky - okruh",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Keltská stezka Železnými horami",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "short_name": "Keltská stezka Železnými horami",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3255112,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Trhová Kamenice - Hlinsko",
+    "kct_red": "major",
+    "name": "[Č] Matulova stezka",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "ref": "0456",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3510100,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Bílek - Štěpánov - Horní Bradlo",
+    "kct_yellow": "major",
+    "name": "[Ž] Bílek - Štěpánov - Horní Bradlo",
+    "network": "rwn",
+    "note": "Bílek - Štěpánov - Horní Bradlo",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "short_name": "Bílek - Horní Bradlo",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3566347,
+   "tags": {
+    "description": "závodní tratě přístupné i pro veřejnost",
+    "name": "Vysočina Arena",
+    "operator": "Vysočina Arena",
+    "piste:grooming": "classic;skating",
+    "piste:lit": "yes",
+    "piste:type": "nordic",
+    "route": "ski",
+    "source": "survey",
+    "type": "route",
+    "website": "https://www.vysocina-arena.cz/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3568431,
+   "tags": {
+    "name": "Ski region Žďársko",
+    "operator": "SPORTIS",
+    "piste:grooming": "classic+skating",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route",
+    "website": "http://www.skizdarsko.cz/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 3913191,
+   "tags": {
+    "complete": "no",
+    "kct_blue": "spring",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bowl",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4021945,
+   "tags": {
+    "complete": "yes",
+    "kct_red": "spring",
+    "name": "Mojžíšova studánka",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bowl",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4021946,
+   "tags": {
+    "complete": "yes",
+    "kct_red": "spring",
+    "name": "Pod Cikánkou",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bowl",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4021947,
+   "tags": {
+    "complete": "yes",
+    "kct_red": "interesting_object",
+    "name": "Toulovcovy maštale",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_turned_T",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4036717,
+   "tags": {
+    "colour": "green",
+    "complete": "yes",
+    "distance": "3",
+    "mtb:type": "singletrack",
+    "name": "Handy Trail",
+    "operator": "Cyklo Aréna Vysočina",
+    "osmc:symbol": "green:green:white_triangle",
+    "roundtrip": "yes",
+    "route": "mtb",
+    "type": "route",
+    "website": "www.vysocina.bike/singletracky/okruhy/zazitkova-trasa",
+    "wheelchair": "designated"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4036718,
+   "tags": {
+    "colour": "red",
+    "complete": "no",
+    "distance": "7",
+    "mtb:type": "singletrack",
+    "name": "Hors Class Trail 1",
+    "operator": "Cyklo Aréna Vysočina",
+    "osmc:symbol": "red:red:white_triangle",
+    "roundtrip": "yes",
+    "route": "mtb",
+    "type": "route",
+    "website": "www.vysocina.bike/singletracky/okruhy/trasa-b"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4036719,
+   "tags": {
+    "colour": "blue",
+    "complete": "no",
+    "distance": "9",
+    "mtb:type": "singletrack",
+    "name": "Warm-Up Trail",
+    "operator": "Cyklo Aréna Vysočina",
+    "osmc:symbol": "blue:blue:white_triangle",
+    "roundtrip": "yes",
+    "route": "mtb",
+    "type": "route",
+    "website": "www.vysocina.bike/singletracky/okruhy/trasa-a"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4094772,
+   "tags": {
+    "colour": "orange",
+    "complete": "yes",
+    "distance": "4",
+    "mtb:type": "trial",
+    "name": "Hors Class Trail 2",
+    "operator": "Cyklo Aréna Vysočina",
+    "osmc:symbol": "orange:orange:white_triangle",
+    "roundtrip": "yes",
+    "route": "mtb",
+    "type": "route",
+    "website": "www.vysocina.bike/singletracky/okruhy/trasa-c"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4154322,
+   "tags": {
+    "complete": "no",
+    "kct_red": "spring",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bowl",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4154324,
+   "tags": {
+    "complete": "no",
+    "kct_green": "major",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4154325,
+   "tags": {
+    "complete": "no",
+    "kct_blue": "major",
+    "network": "nwn",
+    "note:cs": "[M] Proseč (nám.) - Jarošov (bus)",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4154353,
+   "tags": {
+    "complete": "no",
+    "kct_yellow": "major",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 4216777,
+   "tags": {
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "Výletní naučná stezka Okolím Bobrové (zelená)",
+    "network": "lwn",
+    "osmc:symbol": "green:white:green_circle",
+    "route": "hiking",
+    "short_name": "Výletní NS Okolím Bobrové",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5316478,
+   "tags": {
+    "colour": "purple",
+    "complete": "yes",
+    "distance": "1",
+    "mtb:type": "singletrack",
+    "name": "Bejby Trail",
+    "operator": "Cyklo Aréna Vysočina",
+    "osmc:symbol": "purple:purple:white_triangle",
+    "roundtrip": "yes",
+    "route": "mtb",
+    "type": "route",
+    "website": "www.vysocina.bike/singletracky/okruhy/bejby-trail"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5381213,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Bojanov - Paseky",
+    "kct_green": "major",
+    "name": "[Z] Bojanov - Paseky",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "ref": "1404",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5469948,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Dolany;Zderaz;Bor u Skutče",
+    "kct_yellow": "major",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5541407,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Hluboká - Trhová Kamenice - Petrkov",
+    "kct_yellow": "major",
+    "name": "[Ž] Hluboká - Petrkov",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5573851,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Libice nad Doubravou - Mladiny",
+    "kct_yellow": "major",
+    "name": "[Ž] Libice nad Doubravou - Mladiny",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7380",
+    "route": "hiking",
+    "short_name": "Libice nad Doubravou - Mladiny",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5613574,
+   "tags": {
+    "complete": "yes",
+    "kct_blue": "peak",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_triangle",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5623619,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Lysá - Česká Bělá - Havlíčkova Borová",
+    "kct_green": "major",
+    "name": "[Z] Lysá - Česká Bělá - Havlíčkova Borová",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "short_name": "Lysá - Havlíčkova Borová",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5672117,
+   "tags": {
+    "complete": "no",
+    "destinations": "Ronov nad Doubravou - Chitussiho údolí - Pod Luhy - Seč",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Krajem Železných hor",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5674228,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Polánka - Seč - Vápenný Podol - Berlova vápenka",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Historie vápenictví",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5678386,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Chotěboř - Rozsochatec - Havlíčkův Brod",
+    "kct_yellow": "major",
+    "name": "[Ž] Chotěboř - Rozsochatec - Havlíčkův Brod",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "short_name": "Rozsochatec - Havlíčkův Brod",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5681090,
+   "tags": {
+    "complete": "no",
+    "destinations": "Žižkovo Pole - Zádušní mlýn - Pod Kateřinou",
+    "kct_yellow": "major",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5904385,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Poříčí u Litomyšle",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Kolem Štimberka",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5938379,
+   "tags": {
+    "complete": "no",
+    "destinations": "lomy u Skutče",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Žulová stezka",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5938380,
+   "tags": {
+    "complete": "yes",
+    "destinations": "odbočka Vyhlídka na Kaňon",
+    "kct_yellow": "peak",
+    "name": "[Ž] odb. vyhlídka na Kaňon",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_triangle",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5941392,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Nové Hrady;Polánka hostinec",
+    "kct_red": "major",
+    "name": "[Č] Nové Hrady;Polánka hostinec",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5944619,
+   "tags": {
+    "complete": "no",
+    "description": "Naučná stezka z Hlinska do Svatojánských lázní a zpět",
+    "destinations": "Svatojánské lázně",
+    "educational": "yes",
+    "name": "Lázeňská stezka Hlinsko",
+    "network": "lwn",
+    "operator": "local",
+    "osmc:symbol": "none",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5947808,
+   "tags": {
+    "complete": "no",
+    "destinations": "Sobíňov",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Sobíňov",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5947809,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Sobíňov - okruh",
+    "kct_green": "major",
+    "name": "[Z] Sobíňov - okruh",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5947925,
+   "tags": {
+    "complete": "no",
+    "destinations": "Česká Bělá - Vysoká",
+    "kct_yellow": "major",
+    "name": "[Ž] Česká Bělá - Vysoká",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "short_name": "Česká Bělá - Vysoká",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 5951588,
+   "tags": {
+    "complete": "no",
+    "destinations": "Přibyslav",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Romana Podrázského",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6022553,
+   "tags": {
+    "complete": "no",
+    "description": "v terénu neznačeno",
+    "destinations": "Hlinsko - Ratajské rybníky",
+    "name": "Hlinsko - Ratajské rybníky",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6024701,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Horní Vestec",
+    "kct_yellow": "peak",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_triangle",
+    "route": "hiking",
+    "source": "survey",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6117238,
+   "tags": {
+    "complete": "no",
+    "destinations": "Hájek;Choceň;Vysoké Mýto;Polička",
+    "kct_yellow": "major",
+    "network": "rwn",
+    "note:cs": "[Ž] Hájek - Polička (nám.)",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "ref": "7332",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6136883,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Laštovičky žst;Laštovičky rozcestí",
+    "kct_yellow": "major",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6171421,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Krátká",
+    "educational": "yes",
+    "from": "Krátká",
+    "kct_green": "learning",
+    "name": "Naučná stezka Krátká",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "ref": "4504",
+    "roundtrip": "yes",
+    "route": "hiking",
+    "symbol": "green:white:green_backslash",
+    "to": "Krátká",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6172510,
+   "tags": {
+    "complete": "no",
+    "destinations": "Nové Město n. M.",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "NS Tři kříže",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "symbol": "green:white:green_backslash",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6232639,
+   "tags": {
+    "complete": "yes",
+    "destinations": "údolí Doubravy",
+    "educational": "yes",
+    "name": "NS Údolím Doubravy",
+    "network": "lwn",
+    "note": "neznačená naučná stezka",
+    "operator": "cz:AOPK",
+    "osmc:symbol": "none",
+    "route": "foot",
+    "symbol": "none",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6524138,
+   "tags": {
+    "complete": "yes",
+    "destinations": "odbočka - pramen Svratky",
+    "kct_blue": "interesting_object",
+    "name": "[M] odb. pramen Svratky",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_turned_T",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 6524139,
+   "tags": {
+    "complete": "yes",
+    "destinations": "odbočka Stržená voda",
+    "kct_blue": "interesting_object",
+    "name": "[M] odbočka Stržená voda",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_turned_T",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 7013398,
+   "tags": {
+    "complete": "no",
+    "fixme": "jen část tras",
+    "name": "Ski Velké Dářko",
+    "operator": "Ski Velké Dářko",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route",
+    "website": "https://www.ski-velkedarko.cz/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 7013473,
+   "tags": {
+    "complete": "no",
+    "name": "Bystřice nad Pernštejnem",
+    "operator": "Bystřice nad Pernštejnem",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route",
+    "website": "https://info.bystricenp.cz/lyzarske-trasy"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 7034247,
+   "tags": {
+    "complete": "no",
+    "description": "trasy pro psí spřežení",
+    "fixme": "není celá",
+    "piste:grooming": "classic",
+    "piste:type": "sleigh",
+    "route": "ski",
+    "source": "survey",
+    "type": "route",
+    "website": "http://www.trnkateam.cz/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 7358693,
+   "tags": {
+    "name": "Jezdecká trasa kraje Vysočina",
+    "network": "rhn",
+    "osmc:symbol": "yellow:white:yellow_dot",
+    "route": "horse",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 7358694,
+   "tags": {
+    "name": "Jezdecká trasa kraje Vysočina",
+    "network": "rhn",
+    "osmc:symbol": "yellow:white:yellow_dot",
+    "ref": "Horní Sokolovec",
+    "route": "horse",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8226016,
+   "tags": {
+    "name": "Cyklostezka Přibyslav–Sázava",
+    "network": "lcn",
+    "route": "bicycle",
+    "type": "route",
+    "wikidata": "Q11773827"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8362412,
+   "tags": {
+    "complete": "yes",
+    "kct_red": "spring",
+    "name": "Kapalice (stud.)",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_bowl",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8385241,
+   "tags": {
+    "complete": "yes",
+    "network": "rcn",
+    "operator": "cz:KČT",
+    "ref": "4369",
+    "route": "bicycle",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8403332,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Na Špičce;Seč",
+    "kct_blue": "major",
+    "name": "[M] Na Špičce - Seč",
+    "network": "lwn",
+    "note": "modrá",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "route": "hiking",
+    "short_name": "Na Špičce - Seč",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8432861,
+   "tags": {
+    "name": "Stezka poznání",
+    "network": "lwn",
+    "osmc:symbol": "none",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8437250,
+   "tags": {
+    "complete": "no",
+    "educational": "yes",
+    "name": "Naučná stezka kolem Zelené hory",
+    "network": "lwn",
+    "route": "foot",
+    "short_name": "NS kolem Zelené hory",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8451055,
+   "tags": {
+    "complete": "no",
+    "destinations": "Srní - Holetín - Čertovina (Hlinsko)",
+    "kct_green": "major",
+    "name": "[Z] Srní - Holetín - Čertovina (Hlinsko)",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "short_name": "Srní - Čertovina",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8545041,
+   "tags": {
+    "complete": "no",
+    "name": "8 Pivnická stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "blue:black_circle:blue_dot:8:black",
+    "ref": "8",
+    "route": "bicycle",
+    "symbol": "blue dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8545042,
+   "tags": {
+    "complete": "yes",
+    "name": "2-Všivická stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "green:black_circle:green_dot:2:black",
+    "ref": "2",
+    "route": "bicycle",
+    "symbol": "green dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8545663,
+   "tags": {
+    "complete": "yes",
+    "name": "7 Zámecká stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "white:black_circle:white_dot:7:black",
+    "ref": "7",
+    "route": "bicycle",
+    "symbol": "white dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8547860,
+   "tags": {
+    "complete": "yes",
+    "name": "6 Polanská stezka",
+    "network": "lcn",
+    "note": "https://www.mastale.cz/cs/cyklotrasy",
+    "operator": "cz:Sdružení obcí Toulovcovy Maštale",
+    "osmc:symbol": "red:black_circle:red_dot:6:black",
+    "ref": "6",
+    "route": "bicycle",
+    "symbol": "red dot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8551302,
+   "tags": {
+    "complete": "no",
+    "destinations": "Pustá Kamenice;Pustá Rybná",
+    "distance": "6",
+    "kct_blue": "major",
+    "name": "[M] Pustá Kamenice - Pustá Rybná",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "route": "hiking",
+    "short_name": "Pustá Kamenice - Pustá Rybná",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8630812,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Přibyslav;Štoky;Jihava",
+    "kct_blue": "major",
+    "name": "[M] Přibyslav - Jihava",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "ref": "1928",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8770895,
+   "tags": {
+    "complete": "yes?",
+    "distance": "3km",
+    "educational": "yes",
+    "name": "NS Dářská rašeliniště",
+    "network": "lwn",
+    "operator": "Správa CHKO Žďárské vrchy",
+    "route": "hiking",
+    "type": "route",
+    "wikimedia_commons": "Category:Naučná stezka Dářská rašeliniště"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 8771032,
+   "tags": {
+    "distance": "4",
+    "educational": "yes",
+    "name": "NS Babín",
+    "network": "lwn",
+    "operator": "Správa CHKO Žďárské vrchy",
+    "route": "foot",
+    "short_name": "NS Babín",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 9109380,
+   "tags": {
+    "complete": "no",
+    "educational": "yes",
+    "kct_red": "learning",
+    "name": "NS Okolím Bobrové (červená)",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "red:white:red_backslash",
+    "route": "foot",
+    "short_name": "NS Okolím Bobrové",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 9316922,
+   "tags": {
+    "complete": "no",
+    "fixme": "jen část",
+    "operator": "Ždírec nad Doubravou, Sobíňov, Krucemburk, Havlíčkova Borová",
+    "piste:grooming": "classic",
+    "piste:type": "nordic",
+    "route": "ski",
+    "type": "route",
+    "website": "https://www.zdirec.cz/lyzarske-bezecke-trasy"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 9587337,
+   "tags": {
+    "complete": "yes",
+    "kct_yellow": "major",
+    "name": "[Ž] Nedvědice - Pernštejn - Věžná",
+    "network": "nwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 9595166,
+   "tags": {
+    "complete": "yes",
+    "marking": "guideposts_only",
+    "network": "lwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "none:none",
+    "route": "hiking",
+    "type": "route",
+    "variant": "approach"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 10886341,
+   "tags": {
+    "destination": "Nedvědice, Pernštejn, Smrček, Nedvědice",
+    "distance": "5.2 km",
+    "educational": "yes",
+    "kct_green": "learning",
+    "name": "Po naučných stezkách na hrad Pernštejn II. etapa",
+    "network": "lwn",
+    "operator": "městys Nedvědice",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "hiking",
+    "type": "route",
+    "website": "https://www.pernstejnsko.cz/naucne-stezky/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 12485393,
+   "tags": {
+    "complete": "no",
+    "name": "Hamerský vycházkový okruh",
+    "network": "lwn",
+    "operator": "OÚ Hamry n. Sázavou",
+    "osmc:symbol": "yellow:yellow::H:black",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 12486354,
+   "tags": {
+    "complete": "yes",
+    "name": "Sázavský vycházkový okruh",
+    "network": "lwn",
+    "osmc:symbol": "blue:white:blue_rectangle:S:black",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 13094855,
+   "tags": {
+    "complete": "yes",
+    "destinations": "Nasavrky - Země Keltů, skanzen",
+    "kct_yellow": "major",
+    "name": "[Ž] Nasavrky - Země Keltů, skanzen",
+    "network": "lwn",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 13115934,
+   "tags": {
+    "complete": "yes",
+    "description": "trasa k Domu přírody na Krátké",
+    "destinations": "Samotín, Krátká, Blatiny",
+    "kct_yellow": "major",
+    "name": "[Ž] Samotín - Blatiny",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 13775089,
+   "tags": {
+    "from": "Velehrad",
+    "name": "Cyrilometodějská stezka",
+    "name:cs": "Cyrilometodějská stezka",
+    "name:en": "Cyril and Methodius Route",
+    "name:etymology:wikidata": "Q239925",
+    "name:sk": "Cyrilometodejská cesta",
+    "network": "iwn",
+    "route": "hiking",
+    "to": "Radhošť",
+    "type": "route",
+    "website": "https://www.cyril-methodius.eu/cs/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 15432288,
+   "tags": {
+    "name": "Běžecké stopy na Familích",
+    "operator": "SKI Team Herálec",
+    "piste:type": "nordic",
+    "route": "ski",
+    "source": "survey",
+    "type": "route",
+    "website": "https://www.obecheralec.cz/aktuality/aktualita/363-bezecke-stopy-na-familich"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 15432289,
+   "tags": {
+    "name": "Lyžařské tratě Svratka",
+    "operator": "XC SKI Svratka",
+    "piste:type": "nordic",
+    "route": "ski",
+    "source": "survey",
+    "type": "route",
+    "website": "https://www.facebook.com/xcskisvratka/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 16822200,
+   "tags": {
+    "colour": "orange",
+    "distance": "58 km",
+    "from": "Bystré",
+    "name": "Via Czechia - Českomoravská (4. Hornosvratecká vrchovina)",
+    "network": "nwn",
+    "operator": "Via Czechia",
+    "osmc:symbol": "orange:orange_diamond_line:orange_fork",
+    "ref": "VIA-CZE-604",
+    "route": "hiking",
+    "to": "Žďár nad Sázavou",
+    "type": "route",
+    "website": "https://viaczechia.cz/ceskomoravska-stezka-hornosvratecka-vrchovina/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 16824689,
+   "tags": {
+    "colour": "orange",
+    "distance": "81 km",
+    "from": "Žďár nad Sázavou",
+    "name": "Via Czechia - Českomoravská (5. Křižanovská vrchovina)",
+    "network": "nwn",
+    "operator": "Via Czechia",
+    "osmc:symbol": "orange:orange_diamond_line:orange_fork",
+    "ref": "VIA-CZE-605",
+    "route": "hiking",
+    "to": "Třešť",
+    "type": "route",
+    "website": "https://viaczechia.cz/ceskomoravska-stezka-krizanovska-vrchovina/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 16887995,
+   "tags": {
+    "colour": "purple",
+    "complete": "yes",
+    "distance": "84 km",
+    "from": "Ledeč nad Sázavou",
+    "name": "Via Czechia - Centrální (6. Hornosázavská pahorkatina a Železné hory)",
+    "network": "nwn",
+    "operator": "Via Czechia",
+    "osmc:symbol": "purple:purple_diamond_line:purple_fork",
+    "ref": "VIA-CZE-306",
+    "route": "hiking",
+    "to": "Hlinsko",
+    "type": "route",
+    "website": "https://viaczechia.cz/centralni-stezka-hornosazavska-pahorkatina-a-zelezne-hory/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 16888818,
+   "tags": {
+    "colour": "purple",
+    "complete": "yes",
+    "distance": "44 km",
+    "from": "Hlinsko",
+    "name": "Via Czechia - Centrální (7. Žďárské vrchy)",
+    "network": "nwn",
+    "operator": "Via Czechia",
+    "osmc:symbol": "purple:purple_diamond_line:purple_fork",
+    "ref": "VIA-CZE-307",
+    "route": "hiking",
+    "to": "Jimramov",
+    "type": "route",
+    "website": "https://viaczechia.cz/centralni-stezka-zdarske-vrchy/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 16888948,
+   "tags": {
+    "colour": "purple",
+    "complete": "yes",
+    "distance": "61 km",
+    "from": "Jimramov",
+    "name": "Via Czechia - Centrální (8. Údolí Svratky)",
+    "network": "nwn",
+    "operator": "Via Czechia",
+    "osmc:symbol": "purple:purple_diamond_line:purple_fork",
+    "ref": "VIA-CZE-308",
+    "route": "hiking",
+    "to": "Tišnov",
+    "type": "route",
+    "website": "https://viaczechia.cz/centralni-stezka-udoli-svratky/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 17005659,
+   "tags": {
+    "complete": "no",
+    "distance": "2.5 km",
+    "educational": "yes",
+    "name": "Naučná stezka Rácová",
+    "network": "lwn",
+    "operator": "local",
+    "osmc:symbol": "none:none",
+    "route": "foot",
+    "short_name": "NS Rácová",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 17133834,
+   "tags": {
+    "complete": "no",
+    "name": "Obrázková cesta lesem Ochoza",
+    "network": "lwn",
+    "operator": "local",
+    "osmc:symbol": "red:red:yellow_corner",
+    "roundtrip": "yes",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 17133902,
+   "tags": {
+    "educational": "yes",
+    "name": "Naučná stezka ZŠ Nové Město na Moravě",
+    "network": "lwn",
+    "operator": "ZŠ Nové Město na Moravě",
+    "osmc:symbol": "none:none",
+    "route": "foot",
+    "short_name": "NS ZŠ Nové Město",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 17270710,
+   "tags": {
+    "name": "Traily VIR",
+    "route": "mtb",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 17372368,
+   "tags": {
+    "complete": "no",
+    "educational": "yes",
+    "kct_green": "local",
+    "name": "Naučná stezka O Koních",
+    "network": "lwn",
+    "operator": "cz:Dobronín",
+    "osmc:symbol": "green:white:green_corner",
+    "route": "hiking",
+    "short_name": "NS O Koních",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 17960833,
+   "tags": {
+    "complete": "no",
+    "educational": "yes",
+    "name": "Po stopách posledního vlka Vysočiny",
+    "network": "lwn",
+    "operator": "local",
+    "osmc:symbol": "green:white:green_backslash",
+    "route": "foot",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 18888177,
+   "tags": {
+    "complete": "no",
+    "destinations": "Studnice - Stanský mlýn",
+    "distance": "5",
+    "fixme": "ref, operator ?",
+    "kct_blue": "major",
+    "name": "Po Martinových stopách",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "blue:white:blue_bar",
+    "route": "hiking",
+    "type": "route",
+    "website": "https://www.ic-hlinsko.cz/tipy-na-vylety/oddychove-stezky-mesta-hlinska/stezka-po-martinovych-stopach/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 18964478,
+   "tags": {
+    "complete": "no",
+    "distance": "17,5 km",
+    "educational": "yes",
+    "name": "NS Ranské polesí",
+    "network": "lwn",
+    "operator": "cs:Město Ždírec nad Doubravou",
+    "osmc:symbol": "green:white:green_backslash",
+    "roundtrip": "yes",
+    "route": "foot",
+    "type": "route",
+    "website": "https://www.zdirec.cz/kulturni-zarizeni-mesta/turisticke-informacni-centrum/naucna-stezka-ranske-polesi"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 19528323,
+   "tags": {
+    "destination": "Skalský rybník, Lísek, Bohuňov",
+    "distance": "7.8",
+    "kct_red": "local",
+    "name": "Cesta za dráčkem Popletou",
+    "network": "lwn",
+    "note": "pěší, rodiny s dětm",
+    "osmc:symbol": "red:white:red_corner",
+    "roundtrip": "yes",
+    "route": "hiking",
+    "type": "route",
+    "website": "https://www.skalskydvur.cz/cs/volny-cas/vyletokoutek/turisticke-trasy/turisticka-trasa-7"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 19538902,
+   "tags": {
+    "complete": "no",
+    "kct_yellow": "horse",
+    "name": "[Ž]",
+    "network": "lhn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_dot",
+    "route": "horse",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 19557041,
+   "tags": {
+    "colour": "black",
+    "complete": "no",
+    "distance": "1",
+    "mtb:type": "singletrack",
+    "name": "Jump trail",
+    "operator": "Cyklo Aréna Vysočina",
+    "osmc:symbol": "black:black:white_triangle",
+    "roundtrip": "yes",
+    "route": "mtb",
+    "type": "route",
+    "website": "www.vysocina.bike/singletracky/okruhy/"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 21171748,
+   "tags": {
+    "name": "[Ž] odbočka ke stanici",
+    "network": "lhn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "yellow:white:yellow_dot",
+    "route": "horse",
+    "type": "route"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 21237378,
+   "tags": {
+    "kct_green": "major",
+    "name": "[Z] Karasín - Nad Lamberkem",
+    "network": "rwn",
+    "operator": "cz:KČT",
+    "osmc:symbol": "green:white:green_bar",
+    "route": "hiking",
+    "type": "route"
+   }
+  }
+ ]
+}
