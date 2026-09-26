@@ -35,6 +35,14 @@
     nealko: ['🥤', 'bez alkoholu', 'nealkoholický podnik'],
     lokalni: ['🌿', 'místní suroviny', 'vaří z místních surovin']
   };
+  // pro koho se tip hodí: [ikona, krátce, celý popis]
+  var FIT = {
+    male: ['🧸', 'malí', 'pro malé děti (2–4 roky)'],
+    skolaci: ['🎒', 'školáci', 'pro školáky (6–10 let)'],
+    kocarek: ['🚼', 'kočárek', 'dá se projet s kočárkem'],
+    rain: ['☔', 'i za deště', 'hodí se, i když prší']
+  };
+  var FLAGS = [['top', '⭐ Top tipy'], ['male', '🧸 Pro malé'], ['skolaci', '🎒 Pro školáky'], ['kocarek', '🚼 S kočárkem'], ['rain', '☔ Když prší']];
 
   // ------------------------------------------------------------ helpers
   function esc(s) {
@@ -119,6 +127,23 @@
     if (!p) return '';
     return '<a class="link-chip" href="' + placeHref(id) + '" style="--c:' + catVar(p.cat) + '"><span class="d">' + placeIcon(p) + '</span>' + esc(p.name) + '</a>';
   }
+  function fitKeys(p) {
+    var k = (p.fit || []).slice();
+    if (p.rain) k.push('rain');
+    return k;
+  }
+  function fitChips(p) {
+    return fitKeys(p).map(function (k) {
+      return '<span class="fit fit-' + k + '" title="' + esc(FIT[k][2]) + '">' + FIT[k][0] + ' ' + FIT[k][1] + '</span>';
+    }).join('');
+  }
+  // filtr „jen vhodné“ (top tip, pro malé, pro školáky, s kočárkem, když prší)
+  function passFlags(p, f) {
+    if (f.top && !p.top) return false;
+    if (f.rain && !p.rain) return false;
+    var fit = p.fit || [];
+    return ['male', 'skolaci', 'kocarek'].every(function (k) { return !f[k] || fit.indexOf(k) >= 0; });
+  }
   function linkChips(ids, kind) { return (ids || []).map(function (id) { return linkChip(kind, id); }).join(''); }
   var toastT = null;
   function toast(msg) {
@@ -138,7 +163,8 @@
       adults += f.adults; kids += f.kids;
       fam.appendChild(el('span', { 'class': 'family' }, '<b>' + esc(f.name) + '</b> ' + f.adults + '+' + f.kids));
     });
-    fam.appendChild(el('span', { 'class': 'family total' }, '= <b>' + (adults + kids) + ' lidí</b> (' + adults + ' dospělých, ' + kids + ' dětí)'));
+    fam.appendChild(el('span', { 'class': 'family total' }, '= <b>' + (adults + kids) + ' lidí</b>: ' + adults + ' dospělých a ' + kids + ' dětí' +
+      (T.kidsSummary ? ' ' + esc(T.kidsSummary) : '')));
     var start = new Date('2026-10-08T15:00:00+02:00'), end = new Date('2026-10-11T18:00:00+02:00'), now = new Date();
     var cd = $('#countdown');
     if (now < start) {
@@ -260,13 +286,14 @@
   var legend = L.control({ position: 'bottomleft' });
   legend.onAdd = function () {
     return el('div', { 'class': 'map-legend' },
-      '<div><i style="border-color:#1f6fd1"></i>trasa na kolo</div><div><i class="dash" style="border-color:#e8590c"></i>trasa pěšky</div><div style="color:#b8541c">◌ 5 a 10 km od mlýna</div>');
+      '<div><span class="lg-star">★</span>top tip</div><div><i style="border-color:#1f6fd1"></i>trasa na kolo</div><div><i class="dash" style="border-color:#e8590c"></i>trasa pěšky</div><div style="color:#b8541c">◌ 5 a 10 km od mlýna</div>');
   };
   legend.addTo(map);
 
   // ------------------------------------------------------------ map filters
-  var state = store('filters2') || {};
-  state.cats = state.cats || T.cats.map(function (c) { return c.id; });
+  var ALL_CATS = T.cats.map(function (c) { return c.id; });
+  var state = store('filters3') || {};
+  state.cats = state.cats || ALL_CATS.slice();
   state.flags = state.flags || {};
   state.routeTypes = state.routeTypes || { bike: true, hike: true };
   var selectedRoute = null;
@@ -274,24 +301,34 @@
   function placeVisible(p) {
     if (p.cat === 'chata') return true;
     if (state.cats.indexOf(p.cat) < 0) return false;
-    if (state.flags.top && !p.top) return false;
-    if (state.flags.kids && (p.kids || 0) < 3) return false;
-    if (state.flags.rain && !p.rain) return false;
-    return true;
+    return passFlags(p, state.flags);
   }
+  function flagsOn() { return Object.keys(state.flags).some(function (k) { return state.flags[k]; }); }
+  function allOn() { return ALL_CATS.every(function (id) { return state.cats.indexOf(id) >= 0; }) && !flagsOn(); }
 
   function buildChips() {
     var box = $('#catChips');
     box.innerHTML = '';
+    var on = allOn();
+    // „Vše“: když je zapnuté všechno, vypne všechno (pak stačí vybrat, co chcete); jinak zapne vše a zruší filtry
+    var all = el('button', { 'class': 'chip toggle all', type: 'button', 'aria-pressed': String(on),
+      title: on ? 'Vypnout vše a pak vybrat jen to, co chcete' : 'Zobrazit vše a zrušit filtry' }, on ? '✓ Vše' : 'Vše');
+    all.addEventListener('click', function () {
+      if (allOn()) state.cats = ['chata'];
+      else { state.cats = ALL_CATS.slice(); state.flags = {}; }
+      buildChips();
+      applyFilters();
+    });
+    box.appendChild(all);
     T.cats.forEach(function (c) {
       if (c.id === 'chata') return;
       var n = T.places.filter(function (p) { return p.cat === c.id; }).length;
-      var b = el('button', { 'class': 'chip', type: 'button', 'aria-pressed': String(state.cats.indexOf(c.id) >= 0), style: '--c:' + catVar(c.id), title: 'Dvojklik: jen tato kategorie' },
+      var b = el('button', { 'class': 'chip', type: 'button', 'aria-pressed': String(state.cats.indexOf(c.id) >= 0), style: '--c:' + catVar(c.id), title: 'Klik: zapnout/vypnout · dvojklik: jen tato kategorie' },
         '<span class="dot">' + c.emoji + '</span>' + esc(c.name) + ' <span class="count">' + n + '</span>');
       b.addEventListener('click', function () {
         var i = state.cats.indexOf(c.id);
         if (i >= 0) state.cats.splice(i, 1); else state.cats.push(c.id);
-        b.setAttribute('aria-pressed', String(i < 0));
+        buildChips();
         applyFilters();
       });
       b.addEventListener('dblclick', function () {
@@ -303,23 +340,15 @@
     });
     var flags = $('#flagChips');
     flags.innerHTML = '';
-    [['top', '⭐ Top tipy'], ['kids', '🧒 Nejvíc pro děti'], ['rain', '☔ Za deště']].forEach(function (f) {
+    FLAGS.forEach(function (f) {
       var b = el('button', { 'class': 'chip toggle', type: 'button', 'aria-pressed': String(!!state.flags[f[0]]) }, f[1]);
       b.addEventListener('click', function () {
         state.flags[f[0]] = !state.flags[f[0]];
-        b.setAttribute('aria-pressed', String(state.flags[f[0]]));
+        buildChips();
         applyFilters();
       });
       flags.appendChild(b);
     });
-    var all = el('button', { 'class': 'chip toggle', type: 'button', 'aria-pressed': 'false', title: 'Zapnout všechny kategorie a zrušit filtry' }, '↺ Vše');
-    all.addEventListener('click', function () {
-      state.cats = T.cats.map(function (c) { return c.id; });
-      state.flags = {};
-      buildChips();
-      applyFilters();
-    });
-    flags.appendChild(all);
     var rc = $('#routeChips');
     rc.innerHTML = '';
     [['bike', '🚲 Na kolo'], ['hike', '🥾 Pěšky']].forEach(function (f) {
@@ -334,7 +363,7 @@
   }
 
   function applyFilters() {
-    store('filters2', state);
+    store('filters3', state);
     T.places.forEach(function (p) {
       var vis = placeVisible(p);
       if (vis && !map.hasLayer(markers[p.id])) markers[p.id].addTo(map);
@@ -354,6 +383,9 @@
     var box = $('#mapList');
     box.innerHTML = '';
     var items = T.places.filter(placeVisible).sort(function (a, b) { return a.dist - b.dist; });
+    var n = items.length - 1;   // bez chaty
+    box.appendChild(el('div', { 'class': 'list-head' }, n > 0 ? 'Na mapě ' + n + (n === 1 ? ' místo' : n < 5 ? ' místa' : ' míst') + ', od nejbližšího' :
+      'Nic není vybráno. Klikněte nahoře na <b>Vše</b> nebo na kategorii.'));
     items.forEach(function (p) {
       var b = el('button', { type: 'button', 'data-id': p.id, style: '--c:' + catVar(p.cat) },
         '<span class="ico">' + placeIcon(p) + '</span><span class="nm">' + esc(p.name) + (p.top ? ' ⭐' : '') + '</span><span class="dist">' + howFar(p) + '</span>');
@@ -362,7 +394,6 @@
       b.addEventListener('mouseleave', function () { hl(p.id, false); });
       box.appendChild(b);
     });
-    if (!items.length) box.innerHTML = '<p class="muted small" style="padding:10px">Žádné místo neodpovídá filtrům.</p>';
   }
   function hl(id, on) {
     var m = markers[id];
@@ -550,11 +581,11 @@
       '<h3 id="modalTitle">' + esc(p.name) + '</h3>';
     var badges = '';
     if (p.top) badges += '<span class="badge top">⭐ top tip</span>';
-    if (p.kids >= 3) badges += '<span class="badge kids">🧒 skvělé pro děti</span>';
-    if (p.rain) badges += '<span class="badge rain">☔ i za deště</span>';
     (p.tags || []).forEach(function (t) { if (TAGS[t]) badges += '<span class="badge">' + TAGS[t][0] + ' ' + esc(TAGS[t][2]) + '</span>'; });
     if (badges) h += '<div class="badges">' + badges + '</div>';
     h += '<p class="m-lead">' + esc(p.teaser) + '</p>';
+    var fk = fitKeys(p);
+    if (fk.length) h += '<div class="m-fit"><b>Hodí se:</b> ' + fk.map(function (k) { return '<span class="fit fit-' + k + '">' + FIT[k][0] + ' ' + esc(FIT[k][2]) + '</span>'; }).join('') + '</div>';
     var acc = accessRows(p);
     if (acc.length) {
       h += '<dl class="m-access">' + acc.map(function (a) {
@@ -565,13 +596,10 @@
     if (p.kidsNote) h += '<div class="m-note kids">🧒 ' + esc(p.kidsNote) + '</div>';
     if (p.info) h += '<div class="m-note info">ℹ️ ' + esc(p.info) + '</div>';
     // souvislosti: program, trasy, okolí
-    var inDays = [];
-    T.program.days.forEach(function (d) {
-      d.items.forEach(function (it) {
-        if ((it.places || []).indexOf(p.id) >= 0) inDays.push('<a href="#day-' + d.id + '" data-act="day">' + esc(d.label) + ' · ' + esc(it.time) + '</a>');
-      });
-    });
-    if (inDays.length) h += '<div class="m-rel"><b>📅 V programu:</b> ' + inDays.join(', ') + '</div>';
+    var inDays = T.program.days.filter(function (d) {
+      return (d.tips || []).concat(d.rain || [], d.alt || []).indexOf(p.id) >= 0;
+    }).map(function (d) { return '<a href="#day-' + d.id + '" data-act="day">' + esc(d.label) + '</a>'; });
+    if (inDays.length) h += '<div class="m-rel"><b>📅 Nápad na den:</b> ' + inDays.join(', ') + '</div>';
     var onRoutes = T.routes.filter(function (r) { return (r.stops || []).indexOf(p.id) >= 0; }).map(function (r) { return r.id; });
     if (onRoutes.length) h += '<div class="m-rel"><b>Po cestě na trase:</b><div class="chips-row">' + linkChips(onRoutes, 'route') + '</div></div>';
     if (p.id !== 'mlyn') {
@@ -597,7 +625,8 @@
     var h = barHtml();
     h += '<div class="m-rhead"><div class="m-cat">' + (r.type === 'bike' ? '🚲 na kolo' : '🥾 pěšky') + (r.loop ? ' · okruh' : '') +
       ' · <span class="level ' + r.level + '">' + LEVEL[r.level] + '</span></div>' +
-      '<h3 id="modalTitle">' + esc(r.name) + '</h3><p class="m-lead">' + esc(r.teaser) + '</p></div>';
+      '<h3 id="modalTitle">' + esc(r.name) + '</h3><p class="m-lead">' + esc(r.teaser) + '</p>' +
+      (r.who ? '<div class="m-fit"><b>Pro koho:</b> ' + esc(r.who) + '</div>' : '') + '</div>';
     h += '<div class="m-body">';
     h += '<div class="stats"><div class="stat"><b>' + fmtKm(r.km) + '</b><span>délka</span></div>' +
       '<div class="stat"><b>↑ ' + r.up + ' m</b><span>stoupání</span></div>' +
@@ -770,15 +799,13 @@
   // ------------------------------------------------------------ dlaždice
   function tileHtml(p, big) {
     var ph = p.img ? '<img src="' + esc(p.img.thumb || p.img.src) + '" alt="" loading="lazy" decoding="async">' : '<span class="emo">' + placeIcon(p) + '</span>';
-    var flags = '';
-    if (p.kids >= 3) flags += '<span title="skvělé pro děti">🧒</span>';
-    if (p.rain) flags += '<span title="i za deště">☔</span>';
-    return '<a class="tile' + (big ? ' big' : '') + '" href="' + placeHref(p.id) + '" style="--c:' + catVar(p.cat) + '">' +
+    return '<a class="tile' + (big ? ' big' : '') + (p.top ? ' is-top' : '') + '" href="' + placeHref(p.id) + '" style="--c:' + catVar(p.cat) + '">' +
       '<span class="tile-ph">' + ph + (p.top && !big ? '<span class="star" title="top tip">★</span>' : '') + '</span>' +
       '<span class="tile-body"><span class="tile-cat">' + CATS[p.cat].emoji + ' ' + esc(placeLabel(p)) + '</span>' +
       '<span class="tile-name">' + esc(p.name) + '</span>' +
       '<span class="tile-teaser">' + esc(p.teaser) + '</span>' +
-      '<span class="tile-meta"><span>' + howFar(p) + '</span>' + flags + '</span></span></a>';
+      '<span class="tile-fits">' + fitChips(p) + '</span>' +
+      '<span class="tile-meta">' + howFar(p) + '</span></span></a>';
   }
   function gtileHtml(p) {
     var tags = (p.tags || []).filter(function (t) { return TAGS[t]; }).map(function (t) {
@@ -786,7 +813,7 @@
     }).join('');
     return '<a class="gtile" href="' + placeHref(p.id) + '" style="--c:' + catVar(p.cat) + '">' +
       '<span class="g-ico">' + (p.img ? '<img src="' + esc(p.img.thumb || p.img.src) + '" alt="" loading="lazy" decoding="async">' : placeIcon(p)) + '</span>' +
-      '<span class="g-body"><span class="g-name">' + esc(p.name) + '</span>' +
+      '<span class="g-body"><span class="g-name">' + (p.top ? '<span class="star-s" title="top tip">★</span> ' : '') + esc(p.name) + '</span>' +
       '<span class="g-where">' + (p.town ? esc(p.town) + ' · ' : '') + howFar(p) + '</span>' +
       '<span class="g-teaser">' + esc(p.teaser) + '</span>' +
       (tags ? '<span class="g-tags">' + tags + '</span>' : '') + '</span></a>';
@@ -799,7 +826,7 @@
       '<span class="rt-stats"><b>' + fmtKm(r.km) + '</b><span>↑ ' + r.up + ' m</span><span>⏱ ' + fmtDur(r.minKids) + '</span></span>' +
       sparkSvg(r) +
       '<span class="tile-teaser">' + esc(r.teaser) + '</span>' +
-      '<span class="rt-kids">🧒 ' + esc(r.kids) + '</span></a>';
+      '<span class="rt-kids">🧒 ' + esc(r.who || '') + '</span></a>';
   }
 
   // ------------------------------------------------------------ to nejlepší
@@ -811,61 +838,66 @@
     });
   })();
 
-  // ------------------------------------------------------------ program
-  (function program() {
+  // ------------------------------------------------------------ nápady po dnech
+  (function days() {
     var box = $('#days');
-    T.program.days.forEach(function (d) {
-      var sun = T.sun.filter(function (s) { return s.date === d.date; })[0];
-      var h = '<header><div class="date">' + esc(d.label) + '</div><h3>' + esc(d.title) + '</h3>' +
-        (sun ? '<div class="sun">🌅 ' + sun.rise + ' · 🌇 ' + sun.set + ' · tma ' + sun.dusk + '</div>' : '') +
-        (d.weather ? '<div class="small muted" style="margin-top:4px">' + esc(d.weather) + '</div>' : '') + '</header><ol>';
-      d.items.forEach(function (it) {
-        h += '<li><div class="t">' + esc(it.time) + '</div><div>' + esc(it.text) + '</div>';
-        var links = linkChips(it.routes, 'route') + linkChips(it.places, 'place');
-        if (links) h += '<div class="links">' + links + '</div>';
-        h += '</li>';
-      });
-      h += '</ol>';
-      if (d.planB) {
-        h += '<div class="planb"><b>☔ Plán B:</b> ' + esc(d.planB);
-        var pb = linkChips(d.planBRoutes, 'route') + linkChips(d.planBPlaces, 'place');
-        if (pb) h += '<div class="links" style="margin-top:6px">' + pb + '</div>';
-        h += '</div>';
+    function item(x) {
+      if (x.indexOf('route:') === 0) {
+        var r = ROUTES[x.slice(6)];
+        if (!r) return '';
+        return '<li><a href="' + routeHref(r.id) + '"><span class="d" style="--c:' + r.color + '">' + (r.type === 'bike' ? '🚲' : '🥾') + '</span>' +
+          '<span>' + esc(r.name) + ' <span class="muted">· ' + fmtKm(r.km) + '</span></span></a></li>';
       }
-      box.appendChild(el('article', { 'class': 'day', id: 'day-' + d.id }, h));
+      var p = PLACES[x];
+      if (!p) return '';
+      return '<li><a href="' + placeHref(p.id) + '"><span class="d" style="--c:' + catVar(p.cat) + '">' + placeIcon(p) + '</span>' +
+        '<span>' + esc(p.name) + (p.top ? ' <span class="star-s" title="top tip">★</span>' : '') + '</span></a></li>';
+    }
+    T.program.days.forEach(function (d) {
+      var h = '<header><div class="date">' + esc(d.label) + '</div><h3>' + esc(d.title) + '</h3></header>' +
+        '<ul class="daylist">' + (d.tips || []).map(item).join('') + '</ul>';
+      if (d.rain && d.rain.length) h += '<div class="dayalt"><b>☔ Když prší</b><ul class="daylist">' + d.rain.map(item).join('') + '</ul></div>';
+      if (d.alt && d.alt.length) h += '<div class="dayalt"><b>↪ ' + esc(d.altLabel || 'Jiná možnost') + '</b><ul class="daylist">' + d.alt.map(item).join('') + '</ul></div>';
+      box.appendChild(el('article', { 'class': 'day', id: 'day-' + d.id, 'data-list': 'day-' + d.id }, h));
     });
   })();
 
   // ------------------------------------------------------------ výlety a místa
   (function placesSection() {
-    var tabs = $('#placeTabs'), box = $('#places');
-    var st = store('placeTab2') || {};
+    var tabs = $('#placeTabs'), flagBox = $('#placeFlags'), box = $('#places');
+    var st = store('placeTab3') || {};
     st.cat = st.cat || 'all';
+    st.flags = st.flags || {};
     var pool = T.places.filter(function (p) { return TOUR_CATS.indexOf(p.cat) >= 0; });
     function render() {
-      store('placeTab2', st);
+      store('placeTab3', st);
       var list = pool.filter(function (p) {
-        return (st.cat === 'all' || p.cat === st.cat) && (!st.rain || p.rain) && (!st.kids || p.kids >= 3);
+        return (st.cat === 'all' || p.cat === st.cat) && passFlags(p, st.flags);
       }).sort(function (a, b) { return (b.top ? 1 : 0) - (a.top ? 1 : 0) || a.dist - b.dist; });
-      box.innerHTML = list.map(function (p) { return tileHtml(p); }).join('') ||
-        '<p class="muted">Tomu nic neodpovídá. Zkuste jiný filtr.</p>';
-      $$('button', tabs).forEach(function (b) {
-        var k = b.getAttribute('data-k'), v = b.getAttribute('data-v');
-        b.setAttribute('aria-pressed', String(k === 'cat' ? st.cat === v : !!st[k]));
+      // ve „Vše“ po kategoriích s nadpisem, jinak jen dlaždice vybrané kategorie
+      var html = '';
+      TOUR_CATS.forEach(function (id) {
+        if (st.cat !== 'all' && st.cat !== id) return;
+        var part = list.filter(function (p) { return p.cat === id; });
+        if (!part.length) return;
+        if (st.cat === 'all') html += '<h3 class="tiles-head" style="--c:' + catVar(id) + '"><span class="dot">' + CATS[id].emoji + '</span>' + esc(CATS[id].name) + ' <span class="muted small">(' + part.length + ')</span></h3>';
+        html += part.map(function (p) { return tileHtml(p); }).join('');
       });
+      box.innerHTML = html || '<p class="muted">Tomu nic neodpovídá. Zkuste vypnout některý filtr.</p>';
+      $$('button', tabs).forEach(function (b) { b.setAttribute('aria-pressed', String(st.cat === b.getAttribute('data-v'))); });
+      $$('button', flagBox).forEach(function (b) { b.setAttribute('aria-pressed', String(!!st.flags[b.getAttribute('data-v')])); });
     }
-    var defs = [['cat', 'all', '✨ Vše', pool.length]].concat(TOUR_CATS.map(function (id) {
-      return ['cat', id, CATS[id].emoji + ' ' + CATS[id].name, pool.filter(function (p) { return p.cat === id; }).length];
-    }));
-    defs.push(['kids', '1', '🧒 Nejvíc pro děti'], ['rain', '1', '☔ Když prší']);
-    defs.forEach(function (d) {
-      var b = el('button', { 'class': 'chip toggle' + (d[0] === 'cat' ? '' : ' flag'), type: 'button', 'data-k': d[0], 'data-v': d[1] },
-        esc(d[2]) + (d[3] != null ? ' <span class="count">' + d[3] + '</span>' : ''));
-      b.addEventListener('click', function () {
-        if (d[0] === 'cat') st.cat = d[1]; else st[d[0]] = !st[d[0]];
-        render();
-      });
+    [['all', '✨ Vše', pool.length]].concat(TOUR_CATS.map(function (id) {
+      return [id, CATS[id].emoji + ' ' + CATS[id].name, pool.filter(function (p) { return p.cat === id; }).length];
+    })).forEach(function (d) {
+      var b = el('button', { 'class': 'chip toggle', type: 'button', 'data-v': d[0] }, esc(d[1]) + ' <span class="count">' + d[2] + '</span>');
+      b.addEventListener('click', function () { st.cat = d[0]; render(); });
       tabs.appendChild(b);
+    });
+    FLAGS.forEach(function (f) {
+      var b = el('button', { 'class': 'chip toggle flag', type: 'button', 'data-v': f[0] }, f[1]);
+      b.addEventListener('click', function () { st.flags[f[0]] = !st.flags[f[0]]; render(); });
+      flagBox.appendChild(b);
     });
     render();
   })();
@@ -919,6 +951,7 @@
       '<dt>GPS</dt><dd><button type="button" class="btn small" id="copyGps">' + MILL.lat.toFixed(5) + ' N, ' + MILL.lon.toFixed(5) + ' E 📋</button></dd>' +
       '<dt>Kontakt</dt><dd><a href="tel:+420602768375">+420 602 768 375</a> · <a href="mailto:info@mlyn-vikinek.cz">info@mlyn-vikinek.cz</a></dd>' +
       '<dt>Kapacita</dt><dd>' + esc(c.capacity) + '</dd>' +
+      (c.checkin ? '<dt>Příjezd</dt><dd>' + esc(c.checkin) + '</dd>' : '') +
       '<dt>Vybavení</dt><dd>' + esc(c.amenities) + '</dd>' +
       '<dt>Web</dt><dd><a href="https://mlyn-vikinek.cz/" target="_blank" rel="noopener">mlyn-vikinek.cz</a></dd></dl>' +
       (c.note ? '<div class="note">⚠️ ' + esc(c.note) + '</div>' : '') + '</div>';
@@ -967,8 +1000,12 @@
   }
   (function practical() {
     var box = $('#practical');
-    var p1 = el('div', { 'class': 'panel' }, '<h3>📞 Rezervovat předem</h3>');
-    p1.appendChild(checklist('res', T.program.reservations));
+    function linkPhones(t) {
+      return esc(t).replace(/(\+?\d[\d ]{7,}\d)/g, function (m) { return '<a href="tel:' + m.replace(/\s/g, '') + '">' + m + '</a>'; });
+    }
+    var p1 = el('div', { 'class': 'panel' }, '<h3>📞 Kam zavolat předem</h3><ul class="plain">' + T.program.reservations.map(function (r) {
+      return '<li><span class="t">' + esc(r.text) + '</span><span class="how">' + linkPhones(r.how) + '</span></li>';
+    }).join('') + '</ul>');
     var sunRows = T.sun.map(function (s) {
       return '<tr><td>' + esc(s.label) + '</td><td>' + s.rise + '</td><td>' + s.set + '</td><td>' + s.dusk + '</td></tr>';
     }).join('');
