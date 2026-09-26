@@ -360,5 +360,48 @@
   "url": "https://www.syryzbrezin.cz/kontakt/",
   "file": "syry-brezin-kontakt.html",
   "bytes": 178312
+ },
+ "blatiny-jidlo": {
+  "url": "https://www.statek-blatiny.cz/jidlo-piti",
+  "error": true
+ },
+ "blatiny-home": {
+  "url": "https://www.statek-blatiny.cz/",
+  "error": true
+ },
+ "blatiny-firmy": {
+  "url": "https://www.firmy.cz/detail/2646231-restaurace-blatiny-snezne-blatiny.html",
+  "file": "blatiny-firmy.html",
+  "bytes": 730920
+ },
+ "selsky-dvur-doba": {
+  "url": "https://www.selskydvur.net/stranka/9/oteviraci-doba",
+  "file": "selsky-dvur-doba.html",
+  "bytes": 41908
+ },
+ "selsky-dvur-rest": {
+  "url": "https://selskydvur.net/restaurace/",
+  "file": "selsky-dvur-rest.html",
+  "bytes": 42272
+ },
+ "selsky-dvur-firmy": {
+  "url": "https://www.firmy.cz/detail/13277056-restaurace-selsky-dvur-dankovice.html",
+  "file": "selsky-dvur-firmy.html",
+  "bytes": 993880
+ },
+ "selsky-dvur-vys": {
+  "url": "https://www.vysocina.eu/sluzby/stravovani/942-selsky-dvur-dankovice",
+  "file": "selsky-dvur-vys.html",
+  "bytes": 159256
+ },
+ "uhrocha-restaurace": {
+  "url": "https://www.uhrocha.com/index.php?pg=restaurace",
+  "file": "uhrocha-restaurace.html",
+  "bytes": 14198
+ },
+ "black-cup-vys": {
+  "url": "https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika?page=3",
+  "file": "black-cup-vys.html",
+  "bytes": 151216
  }
 }

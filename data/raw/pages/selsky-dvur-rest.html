@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="Filip Němeček"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Penzion a restaurace Selský Dvůr">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/static/images/favicon//android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/static/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/static/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    
+
+    <!-- Fonts
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes%7CKaushan+Script%7CRaleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet" type="text/css">
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <link href="/static/css/styles.min.css" rel="stylesheet">
+
+    <script src="/static/js/jquery-2.2.4.min.js"></script>
+
+    <!-- RS5.0 Main Stylesheet -->
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/html5shiv.js"></script>
+      <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+
+    
+    <title>Restaurace | Penzion a restaurace Selský dvůr</title>
+
+
+    <meta property="og:url" content="selskydvur.net"/>
+
+
+    
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Restaurace | Penzion a restaurace Selský dvůr"/>
+    <meta property="og:description" content="Související stránky: Rezervace, Dárkové poukazy, Restaurace: Denní menu, Otevírací doba "/>
+    <meta property="og:image" content="selskydvur.net/static/images/facebook/kolaz.jpg"/>
+
+
+    <meta property="og:image:width" content="1440px"/>
+    <meta property="og:image:height" content="900px"/>
+</head>
+<body style="background: white;">
+
+<div id="wrapper" class="wrapper clearfix">
+    <header id="navbar-spy" class="header header-1 header-transparent header-bordered header-fixed">
+        <nav id="primary-menu" class="navbar navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="logo" href="/">
+                        <img class="logo-light" src="/static/images/logo/sd-light-max-res.png" width="170px"
+                             alt="Selský dvůr logo">
+                        <img class="logo-dark" src="/static/images/logo/sd-dark-max-res.png" width="170px"
+                             alt="Selský dvůr logo">
+                    </a>
+                </div>
+
+                <div class="module-container pull-right">
+                    <!-- Module Search -->
+                    <div class="module module-search">
+                        <div class="module-icon search-icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="module-content module-fullscreen module--search-box">
+                            <div class="pos-vertical-center">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+
+                                            <input type="text" class="form-control" id="search-input"
+                                                   placeholder="Zadejte dotaz a potvrďte klávesou Enter">
+                                            <button id="search-btn" class="btn" type="button"><i
+                                                    class="fa fa-search"></i></button>
+
+                                            <!-- .form-search end -->
+                                        </div>
+                                        <!-- .col-md-8 end -->
+                                    </div>
+                                    <!-- .row end -->
+                                </div>
+                                <!-- .container end -->
+                            </div>
+                            <a class="module-cancel" href="#">zavřít</a>
+                        </div>
+                    </div>
+                    <!-- .module-search end -->
+
+                </div>
+                <!-- .module-container end -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav nav-pos-right navbar-left">
+                        
+                        <li><a class="menu-item" href="/">domů</a></li>
+
+                        <li><a class="menu-item" href="/aktuality">aktuality</a></li>
+
+                        
+
+                        
+                            
+                                <li class="has-dropdown">
+                                    <a href="#" data-toggle="dropdown"
+                                       class="dropdown-toggle menu-item">O nás</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="/o-nas">O nás</a>
+                                        </li>
+
+                                        
+                                            <li>
+                                                <a href="/stranka/11/partneri">S kým rádi spolupracujeme?</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/21/webkamera">Webkamera</a>
+                                            </li>
+                                        
+
+                                        
+                                    </ul>
+                                </li>
+                            
+
+                        
+                            
+                                <li class="has-dropdown">
+                                    <a href="#" data-toggle="dropdown"
+                                       class="dropdown-toggle menu-item">Penzion</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="/penzion">Penzion</a>
+                                        </li>
+
+                                        
+                                            <li>
+                                                <a href="/stranka/14/rezervace-ubytovani">Rezervace ubytování</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/12/provozni-podminky">Provozní podmínky</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/18/darkove-poukazy">Dárkové poukazy</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/13/stravovani-v-penzionu">Stravování v penzionu</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/20/penzion-pobyt-zvirat">Pobyt zvířat v penzionu</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/1/cenik">Ceník</a>
+                                            </li>
+                                        
+
+                                        
+                                            <li>
+                                                <a href="/galerie/">Galerie</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="static/d/up.pdf">Ubytovací pořádek</a>
+                                            </li>
+                                        
+                                    </ul>
+                                </li>
+                            
+
+                        
+                            
+                                <li class="has-dropdown">
+                                    <a href="#" data-toggle="dropdown"
+                                       class="dropdown-toggle menu-item">Wellness</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="/wellness">Wellness</a>
+                                        </li>
+
+                                        
+                                            <li>
+                                                <a href="/stranka/2/provozni-rad">Provozní řád</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/19/darkove-poukazy">Dárkové poukazy</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/3/cenik">Ceník</a>
+                                            </li>
+                                        
+
+                                        
+                                            <li>
+                                                <a href="/galerie/4">Galerie</a>
+                                            </li>
+                                        
+                                    </ul>
+                                </li>
+                            
+
+                        
+                            
+                                <li class="has-dropdown">
+                                    <a href="#" data-toggle="dropdown"
+                                       class="dropdown-toggle menu-item">Volný čas</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="/volny-cas">Volný čas</a>
+                                        </li>
+
+                                        
+                                            <li>
+                                                <a href="/stranka/6/koupani">Co dělat v létě</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/7/sport">Výlety do okolí</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/5/priroda">Do přírody</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/4/pamatky">Za historií</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/22/zazitkova-karta">Zážitková karta</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/8/ostatni">Tématické výlety</a>
+                                            </li>
+                                        
+
+                                        
+                                    </ul>
+                                </li>
+                            
+
+                        
+                            
+                                <li class="has-dropdown">
+                                    <a href="#" data-toggle="dropdown"
+                                       class="dropdown-toggle menu-item">Restaurace</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="/restaurace">Restaurace</a>
+                                        </li>
+
+                                        
+                                            <li>
+                                                <a href="/stranka/10/rezervace">Rezervace</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/17/darkove-poukazy">Dárkové poukazy</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/23/restaurace-denni-menu">Restaurace: Denní menu</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/stranka/9/oteviraci-doba">Otevírací doba</a>
+                                            </li>
+                                        
+
+                                        
+                                            <li>
+                                                <a href="/menu">Menu</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/galerie/2">Galerie</a>
+                                            </li>
+                                        
+                                    </ul>
+                                </li>
+                            
+
+                        
+                            
+                                <li class="has-dropdown">
+                                    <a href="#" data-toggle="dropdown"
+                                       class="dropdown-toggle menu-item">Kontakty</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>
+                                            <a href="/kontakty">Kontakty</a>
+                                        </li>
+
+                                        
+                                            <li>
+                                                <a href="/stranka/16/jak-se-k-nam-dostanete">Jak se k nám dostanete?</a>
+                                            </li>
+                                        
+
+                                        
+                                    </ul>
+                                </li>
+                            
+
+                        
+
+                        
+                        <li class="has-dropdown">
+                            <a href="/galerie" data-toggle="dropdown" class="dropdown-toggle menu-item">galerie</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/galerie">Galerie</a>
+                                </li>
+                                
+                                    <li>
+                                        <a href="/galerie/1">Exteriér</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/2">Restaurace</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/3">Jídelna</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/4">Wellness</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/5">Klubovna</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/6">Pokoje</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/8">Interiéry penzionu</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/9">Relaxační jezírko</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/10">Pokoje v bočním křídle - Stodola</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/11">Selský dvůr - z ptačí perspektivy - foto z dronu</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/12">Pokoje v bočním křídle nad restaurací</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="/galerie/13">Rautová místnost</a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+            <!-- /.navbar-collapse -->
+
+            <!-- /.container-fluid -->
+        </nav>
+
+    </header>
+
+    <section id="page-title" class="page-title bg-overlay bg-parallax bg-overlay-gradient">
+        <div class="bg-section">
+            
+
+            <img src="/static/images/selskydvur/wide_4.jpg" alt="Obrázek na pozadí"/>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="title title-4 text-center">
+                        <div class="title--content">
+                            <div class="title--subtitle"></div>
+                            <div class="title--heading">
+                                <h1>Restaurace</h1>
+                            </div>
+                            
+
+                            
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="divider--shape-1down divider--shape-gray"></div>
+                    </div>
+                    <!-- .title end -->
+                </div>
+                <!-- .col-md-12 end -->
+            </div>
+            <!-- .row end -->
+        </div>
+        <!-- .container end -->
+    </section>
+
+    
+
+    <section id="blog" class="blog blog-single bg-gray pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                    <!-- Blog Entry -->
+                    <div class="blog-entry">
+
+                        <div class="entry--content">
+
+                            
+                            <div class="entry--bio" id="blog-content">
+                                <p><font face="Helvetica"><em>Vážení hosté, těší nás, že jste zavítali na stránky restaurace Selský dvůr, kterou jsme pro vás otevřeli v roce 2008.<br></em></font></p><p>Celá restaurace je nekuřácká a posedět si můžete ve vnitřní části nebo v prosklené terase, ze které se můžete kochat krásným výhledem do okolní přírody naší krásné Vysočiny. Kapacita celé restaurace je max. 50 míst.</p><p>Ve vnitřní části je stálá prodejní výstava obrazů z Vysočiny malíře Jiřího Peřiny z Herálce.</p><p>Na terase je pro naše nejmenší hosty k dispozici dětský koutek.</p><p>Každý den nabízíme menu, které se skládá ze 2 polévek a 3 hlavních chodů většinou klasické české kuchyně.</p><p>V jídelním lístku nabízíme širokou škálu alkoholických i nealkoholických nápojů a pestrý výběr jídel pro všechny generace.<br></p><p>Čepujeme humpolecké alkoholické i nealkoholické pivo Bernard a originální točenou Kofolu.</p><p>Jídelní lístek se snažíme každou sezónu obměňovat. Aktuální vždy najdete na těchto stránkách.</p><p><b>Z technických a organizačních důvodů nepřijímáme platby stravenkami, <span style="color: rgb(255, 0, 0);">kartou u nás platit lze.</span></b></p><p>Vzhledem k většímu zájmu hostů o víkendu upozorňujeme, že při plně obsazené restauraci můžete na jídlo čekat 20 – 60 minut.</p><p>Prostory restaurace jsou k dispozici k příjemnému posezení dle <a href="https://selskydvur.net/stranka/9/oteviraci-doba" target="_blank">aktuální otevírací doby.</a></p><p>Pokud jste u nás byli spokojeni, tak nás chvalte a doporučte dál, pokud nastal nějaký problém, neváhejte nám jej sdělit a my se postaráme o brzkou nápravu.</p><p><b>Pokud máte zájem o posezení v naší restauraci o víkendech a svátcích, je nutné vzhledem k omezené kapacitě restaurace, zarezervovat si předem místo u stolu nejlépe na tel. čísle 566 664 389.</b></p><p><i>Děkujeme a těšíme se na vaši návštěvu</i></p>
+                                <br>
+
+                                
+                                    
+
+                                        
+                                            <hr>
+                                            <div class="entry--title">
+                                                <h4>Související stránky</h4>
+                                            </div>
+                                            
+                                                <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom: 10px">
+                                                    <a class="btn btn--primary btn--block"
+                                                       href="/stranka/10/rezervace">Rezervace</a>
+                                                </div>
+                                            
+                                                <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom: 10px">
+                                                    <a class="btn btn--primary btn--block"
+                                                       href="/stranka/17/darkove-poukazy">Dárkové poukazy</a>
+                                                </div>
+                                            
+                                                <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom: 10px">
+                                                    <a class="btn btn--primary btn--block"
+                                                       href="/stranka/23/restaurace-denni-menu">Restaurace: Denní menu</a>
+                                                </div>
+                                            
+                                                <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom: 10px">
+                                                    <a class="btn btn--primary btn--block"
+                                                       href="/stranka/9/oteviraci-doba">Otevírací doba</a>
+                                                </div>
+                                            
+                                            
+                                                 <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom: 10px">
+                                                    <a class="btn btn--primary btn--block"
+                                                       href="/menu">Menu</a>
+                                                </div>
+                                            
+                                                 <div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom: 10px">
+                                                    <a class="btn btn--primary btn--block"
+                                                       href="/galerie/2">Galerie</a>
+                                                </div>
+                                            
+
+                                        
+                                    
+                                
+
+
+
+                                <span class="clear" style="clear: left; display: block;"></span>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $('#blog-content img').addClass('img-responsive');
+            $('#blog-content iframe').css({'width': '100%'});
+        });
+    </script>
+
+
+
+
+     <footer id="footer" class="footer footer-1 text-center bg-gray">
+        <!-- Widget Section
+        ============================================= -->
+        <div class="footer--widget text--center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-4">
+                        <div class="footer--widget-content">
+                            <h3>Adresa</h3>
+                            <p>Selský dvůr<br>Daňkovice 24<br>592 03 Sněžné</p>
+                            <a class="link--styled" href="https://mapy.cz/s/31X48" target="_blank">Zobrazit na mapě</a>
+                        </div>
+                    </div>
+                    <!-- .col-md-3 end -->
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footer--reservation">
+                            <div class="divider--shape-10up"></div>
+                            <h3>Otevírací doba restaurace</h3>
+                            <div class="divider--shape-11"></div>
+                            <div class="footer--reservation-wrapper">
+                                <ul class="list-unstyled">
+                                    <li><b>PO - ČT <span>11.00 – 20:00</span></b><br>Objednávky jídla do 19 hodin</li>
+                                    <li><b>PÁ, SO <span>11.00 – 22.00</span></b><br>Objednávky jídla do 21 hodin</li>
+                                    <li><b>NE <span>11.00 – 19.00</span></b><br>Objednávky jídla do 18 hodin</li>
+                                </ul>
+
+                                <p>Ve všedních dnech od 11 do 12 hodin podáváme pouze denní menu,
+                                    jídelní lístek je k dispozici od 12 hodin.</p>
+
+                                <p>Mezi 15. a 17. hodinou je tzv. KUCHYŇSKÁ  PAUZA - tzn. bar v provozu, možné objednat dezert. - <b>kuchyňská pauza neplatí pro neděli</b>.</p>
+
+                                <p>Věnujte, prosím, pozornost <a href="/aktuality">aktualitám</a>, kvůli možné dočasné
+                                    změně otevírací doby.</p>
+                            </div>
+                            <div class="divider--shape-10down"></div>
+                        </div>
+                    </div>
+                    <!-- .col-md-3 end -->
+                    <div class="col-xs-12 col-sm-3 col-md-4">
+                        <div class="footer--widget-content" style="margin-bottom: 25px;">
+                            <h3>Kontakt</h3>
+                            <p class="mb-0">Pavel Tlustoš</p>
+                            <p class="mb-0">E-mail: info@selskydvur.net</p>
+                            <p class="mb-0">Telefon: 566 664 389</p>
+                            <p class="mb-0">Mobil: 604 360 045</p>
+                            <p class="mt-5 mb-5" style="margin-top: 10px;font-size: 0.85em;">Upřednostňujeme e-mail.</p>
+
+                            <a  href="https://www.facebook.com/Penzion-a-restaurace-Selský-dvůr-Oficiální-111415714096227" target="_blank" style="margin-top: 10px; display: block; height: auto; margin-left: auto; margin-right: auto">
+                                <img style="width: 50px; height: auto" alt="Ikonka Facebook" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAc8klEQVR4nO3de3hcZZ0H8O/vnck9M0kvySShQKlcqtAWEJdbBSwgZRVXC2y78OyyymUXXcWubZMW2A5KzSSFhZVdL1UR10WtoCKygIiA0KKLhVJquVt6SefStGmTyXUy5/z2j6Q0bW5zOWfec2Z+n+fJ0yadc86XMufbc+a85z0E4WoNwXC52ec7Aco8ng2qJ8I0MKaDMI2AaQxMA6MahFIwl4CohIFiAkow9AUAAwwMEJAA8wCIBsDoB+EgAfsZ2A/GfhD2MWM/eTgCU+1UZfH3wsGGXp3//SI7pDuASMFNXBSY0jNbsTEXik5l5g8ANBPACQBqtGYD2gG8B/AOIvoLTN5mkue12IGKN7GOBjVnE5OQAnCYGUu5zCju/ggTn82gecQ8F8ApAIp1Z0tTAoQ3GbSVwFuI6f9Kyipf2hGkft3BxGFSAJrVrYzXEPN8NnE+CPMBnAmgSHcumyQAvALGRgVsMD20Mdrsa9cdqpBJAeTYqUEu3tffPZ+YLwdjIQin6c6kFePPIDzJRE9ML63csC1ICd2RCokUQA7MuLX3mGTS+BTAlwP4GIBK3ZkcqhuEZ8D0pNfrebRtTfke3YHynRSATaav6qn3GMmrwLSYCOdB/q7Txcx4EcTrTdPzUPvayqjuQPlI3pQWmrG0c2qyWC0G8WIwPgpA6c6UJ0wQXgDTem/CXN92T1WH7kD5Qgoga0x1K7ovIuBGJl6Ew9fWhT0GiOkXrLAuGvI9pzuM20kBZCiwLF5LXv4sGDcAOFF3nkJEwDsMfI8NeiB2l2+v7jxuJAWQptrG7nkEcxkBi5G/l+vcZpCB9Qx1196Wyi26w7iJFECK6ps6FzJjGUAX684ixkfgpwHcFWmp+o3uLG4gBTCRq9lTN6vrWoCWAZijO45Iy1aA74pu9z+Ih8jQHcappADGEmQV6OtaQqDVAE7WHUdk5W0mDsZK/esRJFN3GKeRAjgCU31T9yJmvgPAqbrTCEttI6LVkVDlLwBi3WGcQgpgWKCp+xKwsZZAp+vOIuzEm5k8K2Khyqd1J3GCgi+AmuWdJ3kU3Q3gCt1ZRA4RHjXAX2kPVb2rO4pOBVsAUxo7qkrYezsIX4T7brUV1kiAcd8AJb92oGVqp+4wOhRkAQSauj5HjBD0T6YhnGEvE1bGQv77dQfJtYIqgJqmzhM9TOswdEeeEEd71iC+qZBOCwqjAILsDfTFlxGwGkCp7jjC0fpAuCNa6rsbQUrqDmO3vC+AhqaeM0xOfh+gM3RnEW7CmxV5rw+HKjbrTmKn/C2AIKtAX7yJgCBkzL7IzCADwViZL5Svg4jysgAaGjuOM+H9EYALdGcReeF5heTfh1um7tIdxGp5N2FFoDG+xIB3C2TnF9a5wIB3S6Apvlh3EKvlzRFAQzBcbvZXfhOM63RnEXmM8EPvgO/mtnuoT3cUK+RFAQSaDs4iqF+CMVd3FpH/CNhikrkoFqrerjtLtlx/ClDX2Hk5sdokO7/IFQbmEatNdY2dl+vOki0XFwBTXWP83wB6DMAU3WlEwZkC0GND70F27ZG0K4M3BMPlRl/lgwR8WncWIRh4xFPWfa0bH5TqugKoXdUdUIb5GICzdGcRYoQ/mR51xd6vV8Z0B0mHqwqgbmX8Q2B+HIzjdWcRYgw7oOgT0Wbf67qDpMo1nwEEVnRfDJNflJ1fONhMNnljoCm+QHeQVLmiAAKN8SVE5hMAqnRnEWIiBFQT85NuGTTk+AIIrOi6nsAPQsbzC/coIuYfB1Z0Xa87yGQcXQCBxs5biPBdODynEGNQRPhuoLHzFt1BJuLYHau+MX4bge6Fyz6oFGIEItC99Svit+oOMh5H7lz1jV1rGFilO4cQVmHiNbFQ1W26cxzNcUcA9Svit8rOL/INMd0aaOxy3PvaUUcAgcbOW4YP+4XIS8x8S6y16hu6cxzimAIIrOi6fvgDP8dkEsIGzIQbnDIDsSN2tkBjfMnwpT7HnZIIYQOTQdfGWnw/1R1EewEEmuILiPlJyHV+UVgGmWhhLOR7RmcIrQVQtzL+IZj8ImSEnyhADBxUTOdFWn1v6Mqg7ZC7dlV3AMyPQ3Z+UaAIqGbix2tXdQd0ZdBSAA3BcLkyzMfkxh4hMFMZ5q8bguFyHRvXUABMRl/lg5D7+YU45CND+0TuZxbKeQHUNXbfLjP5CHEkAj5dt6I75yMFc9o4Q5Mo0mOQy31CjMUE+JPRlqoncrXBnBVAoOngLGK1CTKBpxATOcBknpWrKcdzUgAzlnKZURz/AwPzcrE9kVsBH7XPO1aFP1Tvic+u9SQ/UEPe+ipVUVFMFUqhxEMoVQolBJRhaLxHPwP9JqPfMDFgGEgkTCQGDR7sHzSNgUEk+wZhtMfZ2NXBtPMAe3d0JMt3d8C/56A59UAvV+v+b7YTg18tSvjPy8XDR7x2bwAAkiXxb4Fl588HJV7q/9jJ6s3LPlTUee4sVTpjiuc4D6EeQE0aqyknoNxDgMcDwDPUDEP/HnnGWaR45DcJg7GvL8EH9/eg6529xsCfw4bauses3BYxA7sPmHUmu/c0k0CnJ0vi3wLwj/Zvy2bDw3x/Yvd2hH2mVlDHP5xT9Pq1ZxUXzZhCcwBouWSVhkTCwJ6OHt733n6jb9F3+lz5nEgmWhIL+dbbuQ1bC6ChseM4A94tBOT1IVs+8iok/+Gcok1LF5SUTK+kuRj/n2bHq2+K646QEQYOerzeueE15bvt2oZ9pwBBVmZf/Eey87vLtArqCH6yZOtn5hWd7FE4R3eeQkZAtWkkf4QgL0CQTDu2YVsBBPriTZBHdLtGVSl1ffPvSjcvOMV7NoALdecRwxgXBnrjjTGg2Y7V23IK0LD84JmmUn+E3OHneMUeDN7+idI/fO5c72mKaKruPHZw6ynACIOKPGeHQxWbrV6x9Z+UBtlrKvoeZOd3vAtO8vz5na/62m44r+iCfN3580SRycnvI8iWH7FbXgB1/fGvAHSG1esV1vEoGOuuLXtu/fXls4s9OEF3HpEKOqOuL/6vlq/VypXVNHWe6GF6DYcu6wrHmVXj2f34F8oPVpViju4suZIHpwCH9BnEc9tDVe9atUILjwCYPEzfhez8jjX/A55tL/xrWUUh7fx5pszDtM7KFVpWAIGm+GcBXGTV+oS1/u6sopceurH8BDnXd72PBZq6PmfVyiwpgCmNHVXECFmxLmG9xo8Xv/DvV5V+GM4fwSdSQIzmqcH9fivWZUkBlLD3dqQ3FlzkyBcvKt745QUl8+HikXxilNrivqLbrVhR1gVQs7zzJBC+ZEUYYa1PzfG+smphyV/BAbM/C8t9qaap88RsV5J1AXgU3Q255u84Z830vvnta8pOhvy/yVfFHtDd2a4kqwKoXXHwUgBXZBtCWGtaBXU8clPZFCJU6s4ibMT4VKCp+5JsVpFFATARUWs2Gxf2eOILZe94FLRNNS1yh9hozWYy0YwLoL6pexGBTs90eWGP5ZcWbzh2quds3TlErtAZ9Su6P5Pp0pkVQJAVM9+R6UaFPU6sVbuWLiiRYdgFhsF3IMgZ7csZLRTo61oC4NRMlhX2eeiG8r1EqNCdQ+QY4bRAf9fiTBZNvwCuZg+BVmeyMWGfK+Z4X6nzkzxspUARUxBXc9pjPdIugLpZXdcCODnd5YR9FMH8j6tL5RP/wnZy/Qld16S7UPpHAEzL015G2OrLC4r/UFZMUsoFjin9fTOtAqhv6lwIwmnpbkTYRxHMWxYUH6c7h3CEOfWNnZels0B6RwCMr6T1emG7q88sernYQ8fqziGcQqW1j6ZcALWN3fMYlNWoI2G9VZeVuPYBGMJ6DL60dln33FRfn/Kbh2AuyyySsMspAbWj1k9n6s4hnEV5U99XUyqAwLJ4LQEZXWcU9vnaFSU7IXf6iaMxlgSWxWtTeWlKBUAe/kfIXWWOc+4sb9a3g4q8VERevi6VF6ZQAEwE3JBtImGtM49Vb3sVjtGdQzgTMW5M5XWTFkDdiu6LGDgp+0jCSjfNLwnrziCci4GT6priF032ukkLgJBak4jcuuSDnjrdGYSzpXIUMGEBzFjaOZWJF1kXSVih1kf7Kopptu4cwtkYfOWMpZ0TzgI94aOGksVqMcAl1sYS2Vow2/segOm6c1glaaJt+z7eueEvyeRrbUb5mzFzSrTTrO4d4LLeJEoNUyY0zVCJUaL+FsC3x3vBxM8aI14MtjqTyNbHT/H26M6QLYMR/t+tg+9849mBY7dFeBaAGboz5SNmXowJCmDca8jTV/XUew2jDXY8QFRkZcuqypdr/fRh3TkywcCB/3kp+dptj/afk0jK0WUOmIapjmlfWxkd6w/HPQLwGMmrAJKd34Fq/OTGB3rys28ln7/5J/1ndPbzhbrDFBDlIeMqAP855h+OuxiTjPxzoOOnqT0EuO3xXoN3Pjnw4jU/6Luws58teaKNSAONvy+PWQAzbu09hgjn2ZdIZGp2QLXrzpCmni/8tH/Lfz2XOF93kAJ2/oxbe8ccNDZmASSTxqcgY8wdaXadctMHgPzPPx548xevDspUZXqRYRhjPr9j7FMA4oW2xhEZmx3wDOrOkKqXdhgv/Oq1hCs/rMw7PPY+PaoATg1yMRgL7E8kMnHCdJr40q1DJAzsWHJ/v/zL7xAMXIybeNQNfaMKYF9/93xAHinlVA1VyhWP+F7+8/72voTpiqwForKuunv+0T8cVQDEfHlu8ohMlBc5f97/QRO7H948KIf+jjN63x79GQBDzv8drMhLjp+X4eevDG43WQaQOQ6N3reP+J9UtzJeI7P+OpsiLtWdYRLGnU8MzNEdQoxpTt3KeM3IHxxRAMQ86hxBOIsicvTw2f5BbN/fw24bqFQwlMFHjMc4ogDYhAzWcDgCl+nOMJG39hox3RnE+EzC+AUAkgJwOiJy9CnA798x5f5RJ+NxCmDGUi4DIFNMO5+jP1z74/bBat0ZxAQIH54ZPPw50vtvJqO4+yMAirWEEnljb9x0/GXKAlc80BP/yKFv3i8AJj5bTx6RT/b3yiAyp2MPzjn0+8MFAJqnJ47IJx09qNKdQUyMGe8/Ouz9AiCwXLsVWZNZfpxPAXNG/B7ATVwEhswyK0QBYOCDCLIXGC6AwJSe2ZAPAIUoFMWBRPdsYLgAFBspP05YCJEHDHMucOgUQNGpWsMIIXJKEZ0GDBcAM39AbxwhRC6xybOA968C0ExtSYQQuUc0Ezh8GdCN88wLITJ3AgCowLJoBYCaSV4shMgvtQ3BcLkiT8VM3UmEELlnDvhmKijzeN1BhBA6mDMVG1SvO4YQIveYqU4RYZruIEKI3CNgmgJjuu4gQggNGNMV5AhAiIJEwDRFkAIQohCZwDTFUgBCFCSioc8AZBJHIQqRiSkKBEdPMy2EsAcRShRYpnASohAxqETB4Y+aEkLYhUsUy1RgQhSqYkWAHAEIUZCoREEKQIgCxSVe3RHcZN21pb+/Yk7RhbpzOFkk5NMd4X3rNg4+v/rX/RfozuFkCkBCdwgh7LBpR1IeUzaxhBSAyFuvtpl1ujM4nBSAyFu9bQdNmetiYlIAIj/1JbCbGaQ7h5PxcAEM6A4ihNXCnbxfdwanIyChwOjRHUQIq70RNeTIdnLdCoQO3SmEsNrLu0wZ4ToZQodiSAGI/PPyrkGZ52ISzOhQBBzQHUQIi/G2CGboDuF0BBxQYDkCEPnFMBHtTZgVunO4QIdi+QxA5JkDvRzVncENhk4BGBHdQYSw0nsdZlx3BjcghYhipXbrDiKElbbsNnVHcAU21W7lMU0pAJFXNu2U8/9UeD3mboXybikAkVde3ZOUm4BSQP2+3SocbOiFjAUQ+aNvV4fZoDuEC+xvu4f6FAAweJfuNEJYoS/BchNQChi8GxiaEAQEvK03jhDWiHZCbgJKATHeAoYLAIQ3tKYRwiJvxgy5uzUl6g1guAB4+Bsh3O7lNrkJKCXD/+gPFUCSpABEXti0IzlFdwY3YNDhAvAPVLwFwNCaSAgLvB4xjtWdwQWM6WUVhz8DePc+GgDwrtZIQmTJMBGLD0BmAp7cu9uClAAOfQgIgIk26csjRPY6+1jua0kBA3869Ht1+Kfmn8Z8tRAusX2/2aU7gyswjy4ABkkBCFfbusdk3RncgD00ugCKE77NAJJaEglhgU07DbkJaHLJ4n7fq4e+eb8A2u6hPgK26ckkRPY2y5OAJsXgP7fdQ32HvldH/eGG3EcSwhL9O/cbchPQJAjYOPL7IwqASD2b2zhCWKN/ELtNPvL9LEYjVs+M/P6IvzBF/BwA+SBFuE60y5CbgCbHnkHzuZE/OKIA9jT79xPwWk4jCWGBN2MsNwFNgsFb2u6pOmLuj1GHTCZITgOE67yyy/DqzuB8o/ft0edMJv8uJ1mEsNCmnYbcBDQJwuh9e1QBeCq6nwHQd/TPhXCybWG5CWgSfd6E/5mjfziqAMLBhl4Q5ChAuIbJ2Ns1AJ/uHA739Mjr/4eMed5EjEcZ+KT9mdzlpgf7LwT6tWaIhJz9Pq9v0vJMjlodG3UTJjw61s/HvG6aNNWvIZcDhcgXzEr9eqw/GLMA2tdWRjHilkEhhKu9tPfrlbGx/mCikVMP2RRGCJFLNP6+PG4BeL3enwCQh6wJ4W6m1+P96Xh/OG4BtK0p3wPgeVsiCSFy5ffD+/KYJrx5goAfW59HCJErTBPvwxMWQBGZDwNIWJpICJErA2X9xsMTvWDCAtgVqj4AYMzLB0IIx3tsx71TDk70gknvn1ZkrrMujxAiV0w2vzPZayYtgHCo6rcA/mJJIiFErry7t7Xq6clelMIMKsQA5ChACDchrBvedyeU0hRKKon7IR8GCuEWA2oQP0jlhSkVQPhu/z4mkpGBQrgAEz0cvtu/L5XXpjyJoscw/j3zSEKIXPFA3Z3qa1MugPDa6lcAyHRhQjjbM+FQxeZUX5zmNMq8Nt00QojcIUpvH02rAKItVU9Anh4khFNtjYSqnkxngfQfpMCQowAhHInvSneJtAsg+p7vfwC8ke5yQghbvR7d7n8w3YXSPwJ4iAzFWJX2ckII2zCwCg+Rke5yGT1LLdzqf4SAFzNZVghhLWZsjLX4f5XJshk/TJGAxkyXFUJYx+PJfF/MuADCLf4NkFuFhdCL8Gi42b9x8heOLcvHKdNKAGmfdwghLGGAaGU2K8iqAKItvm0AfpjNOoQQmSHggWiz7/Vs1pHlEQDgYe9qyLMEhci1Po/XuzrblWRdAHtay9sA3JfteoQQaWB8Y6LZflOVdQEAQOmA0Qyg3Yp1CSEm1V6aMEJWrMiSAthx75SDDPqSFesSQkyMib442WSfqbKkAAAg1uL7KQOPWLU+IcRoDPwyFvKtt2p9lhUAAJimuhnAASvXKYR4X4dpqs9buUJLC6B9bWUUjKVWrlMIcQgvHX5yt2UsLQAAiLb6fwjG41avV4iCxng82lL131av1vICAAAPvP8EoMuOdQtRgDq9Rd6b7FixLQWwp7W8jYiW27FuIQoNAcutuOY/FlsKAAAiId86gH9n1/qFKAQEfjrS4v+uXeu3rQAAAGTeAKDb1m0Ikb+6mcwb7dyArQUQDU3ZwUQ32LkNIfIXXR8NTdlh5xbsPQIAEAv51oOR8oMKhBAAgLuiLb6f2b0R2wsAAKLv+RohDxURIlXPRLf7mnKxoZwUAB4iA4oWg3l3TrYnhGvRLpXE4kwm+MxEbgoAQLTZ1w6FKwEM5GqbQrhMP7FxZaoP9rRCzgoAAKKhqj8xwdKxzELkDcbnI63Vm3K5yZwWAADEQv77mbEu19sVwskY+E601f+DXG835wUAANPLfV8E8Ecd2xbCgf44vcynZT4NLQWwLUgJr9d7FYCwju0L4SDhJHuu3BakhI6NaykAAGhbU74Hii4FkLMPPIRwmH3EdMm+1gpt/xBqKwAAiDb7XicyF0LuHBSFp0uZ5mWRVp/WB+1qLQAAiISqXyYTn4RMLS4KBvUq4BPhtdWv6E6ivQAAILLW/wIRLwKg5TxIiBxKEMxFw4/W084RBQAAkVDVk2C6FvKoMZG/DCK6JtJS9RvdQQ5xTAEAQLTV9zAYNwJg3VmEsBiDcEMk5Pu57iAjOaoAACDa6v8Bg2ViUZFXmPnL0ZD/Ad05jua4AgCAWEvVfxDTbbpzCGEFYrot1lr1Dd05xuLIAgCASKtvDUCfB2DqziJEhkwiunnovexMji0AAIi2+L5FhKsA9OvOIkSa+hXjykjI923dQSbi6AIAgEjI/0ulcAnkiUPCPTqUwiXhVr/jH5Xn+AIAgHCzfyMxnQ/QLt1ZhJgY7SKm+eFm/0bdSVLhigIAgEir7w2v13MegK26swgxJsJrSVbn6h7emw7XFAAwdAPRAJIfBeH3urMIcZTnBjh5gc4bezLhqgIAgAMtUzsre3yXAWz7jKlCpIZ/VtnrW3igZWqn7iTp8uoOkIl376MBgJfUN3ZvZXAQgEd3JlGQDAIFIy2+NQC5cvSq644ADiOOtPjuJNACyMQiIvciMOniSIvvTrfu/ICrC2BIpMX3PBSdzqCndGcRhYFBT7FBp0fX+lz/WZTrCwAYmnI81lK5cHj4sNxNKOxiENNtsZbKhbG7fHt1h7FCXhTAEOJIq2+NnBIImwwd8re693x/LHlUAEMOnRIA5Jh7roW7Eei3+XLIf7S8KwBg6JQg2lJ5OTNWARjUnUe41iCBbo+U5c8h/9HysgCGEMda/c1QdDoIL+hOI9yFGRsBOiPS4rsTQcrbO1JdOQ4gHdFm3+sAXxhoin+WGGsBTNWdSThaBxMaYy2+7+fTuf548vgIYCTiWMh/PxTNBvDfutMIhyL8CIpmx0L+7xXCzg8UwBHASNFmXzuA6+pWxB8A8bcAnKI7k3CEt8B0c7TF96zuILlWIEcAR4q2+p6t7PXNA1MQ8rjyQjYA0OrKXt+8aGvh7fwAQLoD6HbMyq6TDRP3Arhcd5ZUREI+3REmVN8U1x0hVU94FL68p9n/tu4gOhXUKcBYht8Af127sutcj8lfZdAlujMJ+xDot4bi1Xub/X/QncUJCr4ADhl+Q1xav7zro6zwVQAXaY4krPWsAv4t3OJzxBN5nEIK4CiRtf4XAHysril+EZjvAHCB7kwiK8+DaHU05HtOdxAnkgIYx/Ab5sLAiu6LAfMOIpyvO5NI3dBAHrU61lr5O91ZnEwKYBLDb6DfNTQd/LjJ6nYA83VnEhPaoMj8WrilWm4PT4EUQIrCoeqnADzV0NRzhsnGvwC4BkCp5lhiSB+An3hMdd+etZWv6g7jJgV/GTBTx6zsmmaYuB6Ez4NxfK62K5cBRyDsBOObHoXv72n278/dhvOHFEC2gqwC/T0LwOZ1BFoEcLmdm5MCoF4G/wKsHoi1VjxTKEN27SIFYKHpK9p9HpT8LSlcB8Z82PD3W6AFwCBsYBM/NDDws32tNa4ZbeR0UgA2mXFr7zHJwcHPgOhKAB+FRTMXF1ABGABeAPPPvUVFv2xbU77HqhWLw6QAcqBuZbyGTP40A3+DoQFGFZmuK88LoAfAcwT8ihU9MnzzlrCRFECOnRrk4v293ecDfBmIPw7Q6Ujj/0OeFQAD/CqYngLoN9PKKzduC1LCrmxiNCkAzQLL4rVKYT6Dz8PQYKMzARSP93qXF0ACwCtgbCTQi6aJDfk61ZZbSAE4zMwglyb64meZhLMBzGPmOQT6IIASwFUFMMDgN4hoK4AtivF/xWW+TTuC1K8xnjiKDARymOEdZMPw15Age+v6uk9hMucCOBnAccNfxwM4FvoGJPUD2DXyi4nfJlavRcsq30KQkppyiRTJEUAeYOZaDJXBcSO+agBUDX9VD/9aBqAIQ8VfNPwFDM2cPAggOfxrH4BOAAeHf+0E0I7DO/pOALuISA7fXe7/AVJd0+ZTesu1AAAAAElFTkSuQmCC">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- .col-md-3 end -->
+
+                </div>
+            </div>
+            <!-- .container end -->
+        </div>
+        <!-- .footer-widget end -->
+        <!--Social
+        ============================================= -->
+
+        <!-- .footer-widget end -->
+        <!-- Copyrights
+        ============================================= -->
+        <div class="footer--copyright text-center">
+            <div class="divider--shape-dark"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <span>&copy; 2026 Penzion a restaurace Selský dvůr</span></div>
+                </div>
+            </div>
+            <!-- .container end -->
+        </div>
+        <!-- .footer-copyright end -->
+    </footer>
+
+</div>
+
+
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/functions.js"></script>
+<script src="/static/js/search.js"></script>
+
+
+</body>
+</html>

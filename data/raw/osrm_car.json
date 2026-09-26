@@ -560,14 +560,14 @@
   "snap_m": 7
  },
  "talsky-mlyn": {
-  "km": 8.5,
+  "km": 8.8,
   "min": 10,
   "target": [
-   49.588823,
-   15.93222
+   49.58756,
+   15.92928
   ],
-  "via": "parkoviště w294664457  (254 m)",
-  "snap_m": 7
+  "via": "ručně",
+  "snap_m": 13
  },
  "zamecka-kavarna": {
   "km": 8.6,
@@ -589,24 +589,64 @@
   "via": "parkoviště w1324339983  (75 m)",
   "snap_m": 7
  },
- "zookoutek": {
-  "km": 20.4,
-  "min": 24,
+ "panmama": {
+  "km": 20.2,
+  "min": 25,
   "target": [
-   49.560305,
-   16.062641
+   49.652341,
+   16.098469
   ],
-  "via": "parkoviště w1392535650 Parkoviště ředitelství (322 m)",
-  "snap_m": 14
+  "via": "parkoviště n2535001002  (286 m)",
+  "snap_m": 28
+ },
+ "selsky-dvur": {
+  "km": 24.0,
+  "min": 28,
+  "target": [
+   49.653812,
+   16.147084
+  ],
+  "via": "parkoviště w1415219889  (111 m)",
+  "snap_m": 7
+ },
+ "black-cup": {
+  "km": 21.6,
+  "min": 25,
+  "target": [
+   49.56051,
+   16.072973
+  ],
+  "via": "parkoviště w1484083913  (116 m)",
+  "snap_m": 5
+ },
+ "kafe-133": {
+  "km": 21.9,
+  "min": 25,
+  "target": [
+   49.563085,
+   16.076023
+  ],
+  "via": "parkoviště w1484083915  (18 m)",
+  "snap_m": 1
+ },
+ "zookoutek": {
+  "km": 20.2,
+  "min": 22,
+  "target": [
+   49.55745,
+   16.06192
+  ],
+  "via": "ručně",
+  "snap_m": 58
  },
  "falbgery": {
-  "km": 29.1,
-  "min": 30,
+  "km": 29.4,
+  "min": 31,
   "target": [
-   49.743109,
-   16.160684
+   49.75113,
+   16.15231
   ],
-  "via": "parkoviště w1199722920  (1076 m)",
+  "via": "ručně",
   "snap_m": 11
  },
  "maso-svetnov": {
