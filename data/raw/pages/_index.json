@@ -834,5 +834,49 @@
   "url": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A49.2975%2C%22lon%22%3A17.3931%7D%2C%7B%22lat%22%3A49.64427%2C%22lon%22%3A15.96844%7D%5D%2C%22costing%22%3A%22auto%22%2C%22units%22%3A%22kilometers%22%2C%22alternates%22%3A2%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%2C%22language%22%3A%22cs-CZ%22%7D%7D",
   "file": "rt-valhalla-kromeriz.json",
   "bytes": 44095
+ },
+ "gm-praha-zdar": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-zdar_nad_sazavou-cestovni_mapa_km-53.html",
+  "error": true
+ },
+ "gm-praha-hbrod": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-havlickuv_brod-cestovni_mapa_km-52.html",
+  "error": true
+ },
+ "gm-praha-brno": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-brno_stred-cestovni_mapa_km-85189.html",
+  "error": true
+ },
+ "gm-hbrod-zdar": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-havlickuv_brod-zdar_nad_sazavou-cestovni_mapa_km-5046.html",
+  "error": true
+ },
+ "gm-humpolec-hbrod": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-humpolec-havlickuv_brod-cestovni_mapa_km-14039.html",
+  "error": true
+ },
+ "gm-jihlava-zdar": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-jihlava-zdar_nad_sazavou-cestovni_mapa_km-2070.html",
+  "error": true
+ },
+ "gm-zdar-brno": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-brno-cestovni_mapa_km-5091.html",
+  "error": true
+ },
+ "gm-zdar-kromeriz": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-kromeriz-cestovni_mapa_km-5129.html",
+  "error": true
+ },
+ "gm-pardubice-zdar": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-pardubice-zdar_nad_sazavou-cestovni_mapa_km-917.html",
+  "error": true
+ },
+ "gm-hk-zdar": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-hradec_kralove-zdar_nad_sazavou-cestovni_mapa_km-725.html",
+  "error": true
+ },
+ "gm-tabor-zdar": {
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-tabor-zdar_nad_sazavou-cestovni_mapa_km-2838.html",
+  "error": true
  }
 }
