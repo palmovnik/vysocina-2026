@@ -16,16 +16,18 @@
 <body>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="kicker">Žďárské vrchy · podzim 2026</div>
-    <h1>Vysočina 2026</h1>
-    <p class="lead">Tipy na výlety kolem <b>Mlýna Vikinek</b> v Cikháji: skály, jeskyně, zábava pro malé i školáky, dobré jídlo, pivovary, farmy a trasy na kolo i pěšky.</p>
-    <div class="hero-meta">
-      <span class="pill">📅 čt 8. – ne 11. října 2026 <span class="pill-sub">(možná do po 12.)</span></span>
-      <a class="pill link" href="https://www.google.com/maps/search/?api=1&amp;query=Cikh%C3%A1j%2057%2C%20591%2002%20%C5%BD%C4%8F%C3%A1r%20nad%20S%C3%A1zavou" target="_blank" rel="noopener" title="Otevřít adresu v Google Mapách">📍 Cikháj 57, 675 m n. m. <span class="pill-go" aria-hidden="true">↗</span></a>
-      <a class="pill link" href="https://mapy.com/fnc/v1/search?query=Cikh%C3%A1j%2057&amp;mapset=outdoor&amp;center=15.96844,49.64427&amp;zoom=15" target="_blank" rel="noopener" title="Otevřít adresu v Mapy.com">🗺️ Mapy.com <span class="pill-go" aria-hidden="true">↗</span></a>
-      <span class="pill countdown" id="countdown"></span>
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <div class="kicker">Žďárské vrchy · podzim 2026</div>
+      <h1>Vysočina 2026</h1>
+      <p class="lead">Tipy na výlety kolem <b>Mlýna Vikinek</b> v Cikháji: skály, jeskyně, zábava pro malé i školáky, dobré jídlo, pivovary, farmy a trasy na kolo i pěšky.</p>
+      <div class="hero-meta">
+        <span class="pill">📅 čt 8. – ne 11. října 2026</span>
+        <a class="pill link" href="#misto/mlyn" title="Adresa, navigace, kontakt a web">📍 Mlýn Vikinek <span class="pill-go" aria-hidden="true">›</span></a>
+        <span class="pill countdown" id="countdown"></span>
+      </div>
     </div>
+    <section class="wxh" id="wxHero" aria-label="Počasí na mlýně"></section>
     <div class="families" id="families"></div>
   </div>
 </header>
@@ -131,7 +133,7 @@
       <div class="block-head">
         <div>
           <h2>Nápady po dnech</h2>
-          <p class="muted">Jen pro inspiraci, co se ke kterému dni hodí. Pondělí platí, jen když pobyt prodloužíte.</p>
+          <p class="muted">Jen pro inspiraci, co se ke kterému dni hodí.</p>
         </div>
         <button class="btn small acc-all" type="button" data-target="days">Rozbalit vše</button>
       </div>
