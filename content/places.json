@@ -209,92 +209,6 @@
   "q": "Toulovcovy maštale"
  },
  {
-  "id": "balcarka",
-  "cat": "jeskyne",
-  "name": "Jeskyně Balcarka",
-  "lat": 49.3768,
-  "lon": 16.75815,
-  "top": true,
-  "rain": true,
-  "teaser": "V sobotu 10. 10. „Škola malých jeskyňářů“ pro děti od 5 let, s diplomem!",
-  "text": "Jedna z nejbohatěji zdobených jeskyní Moravského krasu s barevnými krápníky. Prohlídková trasa měří 720 m a trvá asi hodinu. V sobotu 10. 10. 2026 tu od 9 do 16 hodin běží interaktivní dětské prohlídky „Škola malých jeskyňářů“: děti projdou výcvikem a dostanou osvědčení mladého jeskyňáře.",
-  "kidsNote": "Škola malých jeskyňářů je pro děti od 5 let a je nutná telefonická rezervace předem: 516 444 330. Běžná prohlídka trvá asi hodinu, s kočárkem se do jeskyně nesmí, nejmenší v nosítku. Vstupné 220 Kč, děti 3–15 let 110 Kč, rodinné 620 Kč (2+2) nebo 720 Kč (2+3).",
-  "info": "V říjnu út–pá vstupy v 9–14 h, o víkendu v 9–15 h, v pondělí zavřeno. Prohlídka trvá asi hodinu, uvnitř je kolem 8 °C, vezměte bundu.",
-  "phone": "+420 516 444 330",
-  "web": "https://balcarka.caves.cz/aktuality/balcarka-nabidne-detem-26-9-a-10-10-skolu-malych-jeskynaru",
-  "fit": [
-   "male",
-   "skolaci"
-  ],
-  "q": "Jeskyně Balcarka"
- },
- {
-  "id": "punkevni",
-  "cat": "jeskyne",
-  "name": "Punkevní jeskyně a propast Macocha",
-  "lat": 49.37114,
-  "lon": 16.72619,
-  "car": [
-   49.36339,
-   16.70874
-  ],
-  "top": true,
-  "rain": true,
-  "teaser": "Krápníky, dno propasti Macocha a plavba na lodičkách po podzemní říčce Punkvě.",
-  "text": "Nejslavnější jeskyně Česka: pěšky se projde krápníkovými dómy až na dno 138 m hluboké propasti Macocha, pak se pokračuje lodičkou po podzemní Punkvě. Od jeskyně jezdí lanovka na horní můstek Macochy.",
-  "kidsNote": "Plavba lodičkou je zážitek pro všechny věky. Kočárek do jeskyně nepatří, nejmenší v nosítku. Vstupenky se vyprodávají, rezervujte co nejdřív.",
-  "info": "Říjen: út–pá 8:40–14:00, so–ne 8:20–16:00, po zavřeno; v sobotu 10. 10. výjimečně 8:20–16:50 a vláček s lanovkou jezdí do 18 h. Vstupné: dospělí 450 Kč, děti 200 Kč, rodinné 1 260 Kč (2+2) nebo 1 450 Kč (2+3). Rezervace: ÚIS Skalní Mlýn +420 516 413 575, info@caves.cz. Z parkoviště Skalní Mlýn (placené) 1,6 km pěšky nebo ekovláčkem.",
-  "phone": "+420 516 413 575",
-  "web": "https://punkevni.caves.cz/oteviraci-doba",
-  "fit": [
-   "male",
-   "skolaci"
-  ],
-  "q": "Punkevní jeskyně"
- },
- {
-  "id": "macocha",
-  "cat": "jeskyne",
-  "name": "Propast Macocha – horní můstek",
-  "lat": 49.37314,
-  "lon": 16.72932,
-  "park_max_m": 900,
-  "teaser": "Pohled 138 m do hloubky z vyhlídkového můstku, zdarma i bez prohlídky jeskyní.",
-  "text": "Horní a dolní můstek nad propastí Macocha nabízí závratný pohled na dno, kde teče Punkva. Nahoru vede lanovka od Punkevních jeskyní, nebo 1,7 km dlouhá stezka se 130 m převýšení. Z Balcarky je to autem pár minut.",
-  "info": "Volně přístupné. Lanovka jezdí i v říjnu (jízdenky v ÚIS Skalní Mlýn a u lanovky).",
-  "fit": [
-   "male",
-   "skolaci",
-   "kocarek"
-  ],
-  "kidsNote": "Na horní můstek se dá dojít i s kočárkem, u zábradlí držte malé děti za ruku.",
-  "web": "https://punkevni.caves.cz/",
-  "q": "Horní můstek Macocha"
- },
- {
-  "id": "katerinska",
-  "cat": "jeskyne",
-  "name": "Kateřinská jeskyně",
-  "lat": 49.36054,
-  "lon": 16.71005,
-  "car": [
-   49.36169,
-   16.70965
-  ],
-  "rain": true,
-  "teaser": "Obří podzemní dóm a „bambusový lesík“ hůlkových krápníků. Krátká prohlídka.",
-  "text": "Kateřinská jeskyně má jeden z největších zpřístupněných podzemních dómů v Česku a unikátní hůlkové stalagmity. Prohlídka trvá asi 30 minut, takže je vhodná i pro menší děti. Vchod je 300 m od Skalního Mlýna.",
-  "info": "V říjnu út–pá vstupy v 9–14 h, o víkendu 9–16 h (v sobotu 10. 10. výjimečně až do 17:40), v pondělí zavřeno. Vstupné 220 Kč, děti 110 Kč, rodinné 620 Kč (2+2) nebo 720 Kč (2+3).",
-  "web": "https://katerinska.caves.cz/oteviraci-doba",
-  "fit": [
-   "male",
-   "skolaci"
-  ],
-  "top": true,
-  "kidsNote": "Prohlídka trvá jen asi 30 minut, takže je ideální i pro malé děti. Nejmenší v nosítku.",
-  "q": "Kateřinská jeskyně"
- },
- {
   "id": "medlov",
   "cat": "deti",
   "icon": "🧗",
@@ -603,7 +517,8 @@
   "fit": [
    "skolaci"
   ],
-  "q": "Hrad Pernštejn"
+  "q": "Hrad Pernštejn",
+  "top": true
  },
  {
   "id": "slakhamr",
@@ -846,20 +761,6 @@
   "info": "Po–čt 11–20, pá–so 11–21, ne 11–18. Tel. +420 737 052 583.",
   "phone": "+420 737 052 583",
   "web": "https://www.hostineczarekou.cz/"
- },
- {
-  "id": "rest-skalni-mlyn",
-  "cat": "jidlo",
-  "sub": "cesta",
-  "icon": "🍽️",
-  "town": "Moravský kras",
-  "name": "Hotel a restaurace Skalní Mlýn",
-  "lat": 49.36373,
-  "lon": 16.70822,
-  "teaser": "Restaurace a informační centrum u Punkevních a Kateřinské jeskyně.",
-  "text": "Rozcestí Moravského krasu: parkoviště, restaurace, pokladna jeskyní (ÚIS), start ekovláčku k Punkevním jeskyním a Dům přírody Moravského krasu.",
-  "web": "https://www.skalnimlyn.cz/",
-  "q": "Hotel Skalní Mlýn"
  },
  {
   "id": "kiosek-kadov",
@@ -1288,12 +1189,13 @@
   "teaser": "Největší farma koutek na Vysočině: zvířata k pohlazení a nakrmení, stará řemesla a minipivovar. V říjnu jen v sobotu.",
   "text": "Obnovený statek, kde si děti můžou v „babiččině zahradě“ pohladit a nakrmit malá zvířata a podívat se na krávy, prasata, kozy, ovce i koně. Vedle je horácká vesnička se starými řemesly a v areálu se vaří i vlastní pivo.",
   "info": "V říjnu otevřeno jen v sobotu 9:30–17:30 (do Hubertovy jízdy), tedy v sobotu 10. 10. Aktuální vstupné je na edencentrum.cz.",
-  "kidsNote": "Když školáci jedou v sobotu do Moravského krasu, je to dobrý program pro ty nejmenší.",
+  "kidsNote": "Hrad Pernštejn je odsud asi čtvrt hodiny autem, takže se dá skupina rozdělit: školáci na hrad, nejmenší na farmu.",
   "fit": [
    "male",
    "skolaci",
    "kocarek"
-  ]
+  ],
+  "top": true
  },
  {
   "id": "shop-skrdlovice",

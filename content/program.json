@@ -40,24 +40,25 @@
    "id": "so",
    "date": "2026-10-10",
    "label": "Sobota 10. 10.",
-   "title": "Moravský kras",
+   "title": "Pernštejn a farma Eden",
+   "note": "Pernštejn má v říjnu otevřeno jen o víkendu a Farma Eden jen v sobotu. Jsou od sebe asi čtvrt hodiny autem, takže se dá rozdělit: školáci na hrad, nejmenší na farmu.",
    "tips": [
-    "balcarka",
-    "macocha",
-    "punkevni",
-    "katerinska",
-    "rest-skalni-mlyn",
+    "pernstejn",
+    "eden",
     "racin"
    ],
+   "rain": [
+    "peklo",
+    "relax",
+    "mng"
+   ],
    "alt": [
-    "eden",
     "vesely-kopec",
     "rychtar",
     "mastale",
-    "udoli-doubravy",
-    "pernstejn"
+    "udoli-doubravy"
    ],
-   "altLabel": "Nebo blíž, třeba když se rozdělíte"
+   "altLabel": "Nebo jinam, třeba když se rozdělíte"
   },
   {
    "id": "ne",
@@ -84,16 +85,10 @@
  ],
  "reservations": [
   {
-   "id": "res-balcarka",
-   "text": "Balcarka – Škola malých jeskyňářů (so 10. 10., od 5 let)",
-   "how": "516 444 330",
-   "place": "balcarka"
-  },
-  {
-   "id": "res-punkevni",
-   "text": "Punkevní jeskyně (vstupenky se vyprodávají)",
-   "how": "+420 516 413 575, info@caves.cz",
-   "place": "punkevni"
+   "id": "res-pernstejn",
+   "text": "Hrad Pernštejn: sobotní prohlídka (v říjnu jen o víkendu, rezervace ušetří čekání)",
+   "how": "online na webu hradu",
+   "place": "pernstejn"
   },
   {
    "id": "res-panmama",
@@ -146,8 +141,8 @@
  ],
  "packing": [
   "Nepromokavé bundy a boty, gumáky na louky kolem potoka",
-  "Teplé vrstvy: noci kolem 0–5 °C, v jeskyních 8 °C",
-  "Nosítko nebo krosnu pro nejmenší (na skály a do jeskyní se kočárek nehodí)",
+  "Teplé vrstvy: noci kolem 0–5 °C",
+  "Nosítko nebo krosnu pro nejmenší (na skály a na hrad se kočárek nehodí)",
   "Odrážedla a helmy (dětský pumptrack ve Vysočina Areně)",
   "Vozík nebo sedačku na kolo pro malé, světla a zámky na kola",
   "Čelovky (jeskyňky, bunkr, maštale, večerní hvězdy)",
@@ -167,7 +162,7 @@
   "Vylézt na vyhlídku na Devíti skalách, nejvyšší místo Žďárských vrchů (836 m)",
   "Najít na Milovských perničkách všech 8 skalních „perníčků“",
   "Nakouknout do jeskyňky na Malinské skále",
-  "Získat v Balcarce osvědčení mladého jeskyňáře",
+  "Pohladit a nakrmit zvířátka na farmě Eden",
   "Vidět, jak sklář fouká sklenici",
   "Spočítat, kolikrát najdete na Zelené hoře číslo 5",
   "Postavit skřítkům domeček ve skřítčí vesničce u Medlova",

@@ -1,12 +1,7 @@
 [
  {
-  "id": "osrm-mill-zoo-ricany",
-  "url": "https://router.project-osrm.org/route/v1/driving/15.96844,49.64427;15.59663,49.39715;14.6544,49.9911?overview=false",
-  "ext": "json"
- },
- {
-  "id": "osrm-mill-ricany",
-  "url": "https://router.project-osrm.org/route/v1/driving/15.96844,49.64427;14.6544,49.9911?overview=false",
+  "id": "osrm-eden-pernstejn",
+  "url": "https://router.project-osrm.org/route/v1/driving/16.24641,49.51636;16.31837,49.45086?overview=false",
   "ext": "json"
  }
 ]

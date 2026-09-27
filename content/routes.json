@@ -268,26 +268,5 @@
    "male",
    "skolaci"
   ]
- },
- {
-  "id": "h-macocha",
-  "type": "hike",
-  "level": "medium",
-  "name": "Moravský kras: Skalní Mlýn – Punkevní jeskyně – Macocha",
-  "teaser": "Pěšky nebo ekovláčkem k Punkevním jeskyním, lodičkou podzemím, lanovkou na Macochu a zpět.",
-  "text": "Ze Skalního Mlýna podél Punkvy k Punkevním jeskyním (1,6 km), prohlídka s plavbou, lanovkou nebo pěšky (130 m převýšení) na horní můstek Macochy a lesem zpět na Skalní Mlýn. Kateřinská jeskyně je 300 m od parkoviště, Balcarka pár minut autem.",
-  "stops": [
-   "punkevni",
-   "macocha",
-   "katerinska",
-   "balcarka",
-   "rest-skalni-mlyn"
-  ],
-  "tip": "Vstupenky do Punkevních jeskyní rezervujte předem. V sobotu 10. 10. je v Balcarce Škola malých jeskyňářů.",
-  "start": "placené parkoviště Skalní Mlýn",
-  "who": "školáci; malí ekovláčkem a lanovkou",
-  "fit": [
-   "skolaci"
-  ]
  }
 ]

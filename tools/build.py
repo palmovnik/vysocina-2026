@@ -24,7 +24,6 @@ MILL = (49.64427, 15.96844)
 CATS = [
     {'id': 'chata', 'name': 'Chata', 'emoji': '🏠'},
     {'id': 'skaly', 'name': 'Skály a vyhlídky', 'emoji': '🪨'},
-    {'id': 'jeskyne', 'name': 'Jeskyně a podzemí', 'emoji': '🦇'},
     {'id': 'deti', 'name': 'Pro děti', 'emoji': '🎈'},
     {'id': 'pamatky', 'name': 'Památky a muzea', 'emoji': '🏰'},
     {'id': 'priroda', 'name': 'Příroda a voda', 'emoji': '🌲'},
