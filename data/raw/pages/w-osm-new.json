@@ -1,0 +1,581 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-27T07:19:34Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 365747894,
+  "lat": 49.5616085,
+  "lon": 16.0698170,
+  "tags": {
+    "amenity": "pub",
+    "craft": "brewery",
+    "email": "hejkal@pivovarhejkal.cz",
+    "microbrewery": "yes",
+    "name": "Hejkal",
+    "opening_hours": "Mo-Su 14:00-22:00",
+    "outdoor_seating": "yes",
+    "phone": "+420 720623902",
+    "website": "https://pivovarhejkal.cz/"
+  }
+},
+{
+  "type": "node",
+  "id": 1476995546,
+  "lat": 49.4131782,
+  "lon": 15.9508548,
+  "tags": {
+    "amenity": "pub",
+    "name": "Na Jedenáctce",
+    "opening_hours": "We,Fr,Su 16:00-22:00",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 3781762994,
+  "lat": 49.5154191,
+  "lon": 16.2469031,
+  "tags": {
+    "craft": "brewery",
+    "name": "Pivovar Centrum Eden",
+    "name:en": "brewery Eden Centre",
+    "operator": "Centrum Eden"
+  }
+},
+{
+  "type": "node",
+  "id": 3781763115,
+  "lat": 49.5154907,
+  "lon": 16.2475637,
+  "tags": {
+    "addr:conscriptionnumber": "318",
+    "addr:country": "CZ",
+    "addr:housenumber": "318",
+    "addr:place": "Bystřice nad Pernštejnem",
+    "addr:postcode": "59301",
+    "addr:street": "Nový dvůr",
+    "name": "Eden -- Centrum zelených vědinistá",
+    "name:en": "Eden -- The green \"knowleage\" centre",
+    "ref:ruian:addr": "3439437"
+  }
+},
+{
+  "type": "node",
+  "id": 3922381021,
+  "lat": 49.6105465,
+  "lon": 16.0322016,
+  "tags": {
+    "artist_name": "Michal Olšiak",
+    "artwork_type": "sculpture",
+    "name": "Hejkal Pepino",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 4014269093,
+  "lat": 49.7106276,
+  "lon": 16.2600858,
+  "tags": {
+    "craft": "brewery",
+    "name": "Měšťanský pivovar",
+    "source": "survey",
+    "website": "https://www.pivovar-policka.cz/"
+  }
+},
+{
+  "type": "node",
+  "id": 5435675147,
+  "lat": 49.8709643,
+  "lon": 16.3166167,
+  "tags": {
+    "amenity": "restaurant",
+    "craft": "brewery",
+    "cuisine": "regional",
+    "internet_access": "wlan",
+    "name": "Minipivovar & Restaurace Veselka",
+    "opening_hours": "Mo-Su 11:00-22:00",
+    "website": "https://www.litomysl-veselka.cz/"
+  }
+},
+{
+  "type": "node",
+  "id": 7079830385,
+  "lat": 49.5620409,
+  "lon": 15.9392173,
+  "tags": {
+    "addr:housenumber": "64/14",
+    "addr:street": "nám. Republiky",
+    "amenity": "cafe",
+    "contact:facebook": "https://www.facebook.com/revoltabeerandcafe/",
+    "email": "blazejovska.petra@gmail.com",
+    "mobile": "+420 728 157 785",
+    "name": "Revolta Beer & Cafe s.r.o.",
+    "name:cs": "Revolta Beer & Cafe",
+    "opening_hours": "Mo-Fr 12:00-20:00; Sa 14:00-20:00",
+    "outdoor_seating": "yes",
+    "payment:american_express": "yes",
+    "payment:diners_club": "yes",
+    "payment:jcb": "yes",
+    "payment:maestro": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "payment:visa_debit": "yes",
+    "payment:visa_electron": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10793716123,
+  "lat": 49.5807418,
+  "lon": 16.0650896,
+  "tags": {
+    "artwork_type": "painting",
+    "name": "Rychtářovec",
+    "ref": "8",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 10793716125,
+  "lat": 49.5823067,
+  "lon": 16.0655927,
+  "tags": {
+    "name": "Maršovický Rychtářovec",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 11144640345,
+  "lat": 49.5620952,
+  "lon": 15.9390619,
+  "tags": {
+    "craft": "brewery",
+    "email": "pivovar@revolta.beer",
+    "microbrewery": "yes",
+    "mobile": "+420 606 184 138",
+    "name": "Revolta",
+    "website": "https://www.revolta.beer/"
+  }
+},
+{
+  "type": "node",
+  "id": 11516866041,
+  "lat": 49.5900574,
+  "lon": 16.0344007,
+  "tags": {
+    "name": "U Hejkala",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 11516866042,
+  "lat": 49.5900751,
+  "lon": 16.0344900,
+  "tags": {
+    "artwork_type": "sculpture",
+    "material": "wood",
+    "name": "Hejkal",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 11564570608,
+  "lat": 49.5723102,
+  "lon": 16.1482728,
+  "tags": {
+    "ele": "707.8",
+    "name": "Rychtářův kopec",
+    "natural": "peak"
+  }
+},
+{
+  "type": "node",
+  "id": 11904569769,
+  "lat": 49.7018355,
+  "lon": 15.7672150,
+  "tags": {
+    "craft": "brewery",
+    "name": "Domácí pivovar Sobíňov"
+  }
+},
+{
+  "type": "node",
+  "id": 12668880274,
+  "lat": 49.7462894,
+  "lon": 16.2213140,
+  "tags": {
+    "contact:facebook": "https://www.facebook.com/pivovarsirokydul/",
+    "craft": "brewery",
+    "mobile": "+420 731 555 850",
+    "name": "Volf",
+    "payment:maestro": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "payment:visa_debit": "yes",
+    "payment:visa_electron": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12874053739,
+  "lat": 49.7018628,
+  "lon": 15.7670786,
+  "tags": {
+    "amenity": "biergarten",
+    "contact:facebook": "https://www.facebook.com/minipivovar.Sobinov",
+    "craft": "brewery",
+    "name": "Minipivovar Sobíňov"
+  }
+},
+{
+  "type": "node",
+  "id": 12996382405,
+  "lat": 49.4248348,
+  "lon": 15.8597543,
+  "tags": {
+    "craft": "brewery",
+    "email": "pivo-pesek@m-step.cz",
+    "mobile": "+420 724 088 822",
+    "name": "Pešek",
+    "website": "https://www.pivo-pesek.cz/"
+  }
+},
+{
+  "type": "node",
+  "id": 13198245900,
+  "lat": 49.6168552,
+  "lon": 15.8671333,
+  "tags": {
+    "craft": "brewery",
+    "name": "Richard",
+    "website": "https://www.pivo-richard.cz/"
+  }
+},
+{
+  "type": "node",
+  "id": 13970692692,
+  "lat": 49.8505451,
+  "lon": 15.6204568,
+  "tags": {
+    "amenity": "pub",
+    "brewery": "various",
+    "microbrewery": "yes",
+    "name": "Pivovar Hančar",
+    "opening_hours": "Fr 17:00-22:00; Sa 10:00-22:00; Su 10:00-20:00",
+    "outdoor_seating": "yes",
+    "website": "https://pivovar-libor-hancar-pocatky.webnode.cz/"
+  }
+},
+{
+  "type": "node",
+  "id": 14061044415,
+  "lat": 49.7102369,
+  "lon": 16.1163435,
+  "tags": {
+    "climbing": "route_bottom",
+    "climbing:grade:uiaa": "4-",
+    "name": "Hejkal",
+    "sport": "climbing"
+  }
+},
+{
+  "type": "node",
+  "id": 14061044416,
+  "lat": 49.7102691,
+  "lon": 16.1162866,
+  "tags": {
+    "climbing": "route_bottom",
+    "climbing:grade:uiaa": "4-",
+    "name": "Hejkal - varianta Užovka",
+    "sport": "climbing"
+  }
+},
+{
+  "type": "node",
+  "id": 14063463796,
+  "lat": 49.6156509,
+  "lon": 16.0814591,
+  "tags": {
+    "climbing": "route_bottom",
+    "climbing:grade:uiaa": "6+",
+    "name": "Odvedenecká",
+    "sport": "climbing"
+  }
+},
+{
+  "type": "node",
+  "id": 14070366429,
+  "lat": 49.5675002,
+  "lon": 15.8803440,
+  "tags": {
+    "climbing": "route_bottom",
+    "climbing:grade:uiaa": "5-",
+    "name": "Jedenapůltá",
+    "sport": "climbing"
+  }
+},
+{
+  "type": "way",
+  "id": 28752345,
+  "center": {
+    "lat": 49.7594924,
+    "lon": 15.9154424
+  },
+  "tags": {
+    "landuse": "industrial",
+    "name": "pivovar Rychtář"
+  }
+},
+{
+  "type": "way",
+  "id": 42923666,
+  "center": {
+    "lat": 49.4263110,
+    "lon": 15.5990533
+  },
+  "tags": {
+    "building": "house",
+    "building:levels": "1",
+    "building:ruian:type": "7",
+    "craft": "brewery",
+    "name": "Pivovar Horác",
+    "ref:ruian:building": "12291226",
+    "source": "cuzk:ruian"
+  }
+},
+{
+  "type": "way",
+  "id": 50991735,
+  "center": {
+    "lat": 49.4440613,
+    "lon": 15.8200439
+  },
+  "tags": {
+    "dibavod:id": "416020260006",
+    "name": "Rychtářský rybník",
+    "natural": "water",
+    "source": "vuv:dibavod:a05",
+    "water": "pond",
+    "wikidata": "Q96159897"
+  }
+},
+{
+  "type": "way",
+  "id": 83837583,
+  "center": {
+    "lat": 49.8935445,
+    "lon": 15.5660395
+  },
+  "tags": {
+    "addr:city": "Třemošnice",
+    "addr:conscriptionnumber": "88",
+    "addr:country": "CZ",
+    "addr:housenumber": "88",
+    "addr:place": "Žlebské Chvalovice",
+    "addr:postcode": "53843",
+    "building": "yes",
+    "building:ruian:type": "19",
+    "craft": "brewery",
+    "email": "info@kutilkovapalirna.cz",
+    "name": "Kutílkova palírna a pivovar Žlebské Chvalovice",
+    "ref:ruian:addr": "5420571",
+    "ref:ruian:building": "5387663",
+    "source": "cuzk:ruian",
+    "website": "https://kutilkovapalirna.cz/"
+  }
+},
+{
+  "type": "way",
+  "id": 87541315,
+  "center": {
+    "lat": 49.6103623,
+    "lon": 15.5764623
+  },
+  "tags": {
+    "addr:city": "Havlíčkův Brod",
+    "addr:housenumber": "2027",
+    "addr:postcode": "58001",
+    "addr:street": "Dobrovského",
+    "building": "warehouse",
+    "building:flats": "6",
+    "building:levels": "3",
+    "building:ruian:type": "12",
+    "craft": "brewery",
+    "name": "Pivovar Rebel",
+    "operator": "Měšťanský pivovar Havlíčkův Brod a.s",
+    "product": "beer",
+    "ref:ruian:building": "9554238",
+    "source": "cuzk:ruian"
+  }
+},
+{
+  "type": "way",
+  "id": 164499095,
+  "center": {
+    "lat": 49.7996723,
+    "lon": 16.1113402
+  },
+  "tags": {
+    "highway": "service",
+    "name": "Rychtářská",
+    "service": "driveway",
+    "source": "cuzk:km;uhul:ortofoto"
+  }
+},
+{
+  "type": "way",
+  "id": 362759687,
+  "center": {
+    "lat": 49.7994044,
+    "lon": 16.1108222
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Rychtářovy sady",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 364812472,
+  "center": {
+    "lat": 49.5163587,
+    "lon": 16.2464138
+  },
+  "tags": {
+    "crop": "yes",
+    "landuse": "farmyard",
+    "name": "Farma EDEN"
+  }
+},
+{
+  "type": "way",
+  "id": 506869208,
+  "center": {
+    "lat": 49.6991195,
+    "lon": 15.8870089
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "lanes": "2",
+    "maxspeed": "90",
+    "name": "Rychtářka",
+    "ref": "03426",
+    "source:ref": "rsd_cr",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1217749208,
+  "center": {
+    "lat": 49.3971528,
+    "lon": 15.5966270
+  },
+  "tags": {
+    "contact:facebook": "https://www.facebook.com/zoojihlava/",
+    "contact:instagram": "https://www.instagram.com/zoojihlava/",
+    "contact:youtube": "https://www.youtube.com/channel/UCNQVeurZdLYaCvuEhuUpS3w",
+    "email": "info@zoojihlava.cz",
+    "phone": "+420 565 596 999",
+    "tourism": "zoo",
+    "website": "https://zoojihlava.cz/",
+    "wheelchair": "yes",
+    "wikidata": "Q10861309",
+    "wikipedia": "cs:Zoologická zahrada Jihlava",
+    "zoo": "enclosure"
+  }
+},
+{
+  "type": "way",
+  "id": 1268975511,
+  "center": {
+    "lat": 49.4447387,
+    "lon": 15.8198671
+  },
+  "tags": {
+    "boundary": "protected_area",
+    "iucn_level": "IV",
+    "leisure": "nature_reserve",
+    "name": "PP Rychtářský rybník",
+    "operator": "cz:AOPK ČR",
+    "protect_class": "3",
+    "start_date": "2013",
+    "wikidata": "Q20851801",
+    "wikimedia_commons": "Category:Rychtářský rybník",
+    "wikipedia": "cs:Rychtářský rybník"
+  }
+},
+{
+  "type": "way",
+  "id": 1454517157,
+  "center": {
+    "lat": 49.8236216,
+    "lon": 15.9886133
+  },
+  "tags": {
+    "gauge": "1435",
+    "name": "původní vedení trati",
+    "railway": "abandoned"
+  }
+},
+{
+  "type": "way",
+  "id": 1454517158,
+  "center": {
+    "lat": 49.8233403,
+    "lon": 15.9874908
+  },
+  "tags": {
+    "bridge": "yes",
+    "gauge": "1435",
+    "layer": "1",
+    "name": "původní vedení trati",
+    "railway": "abandoned"
+  }
+},
+{
+  "type": "way",
+  "id": 1454517159,
+  "center": {
+    "lat": 49.8231829,
+    "lon": 15.9839927
+  },
+  "tags": {
+    "gauge": "1435",
+    "name": "původní vedení trati",
+    "railway": "abandoned"
+  }
+},
+{
+  "type": "relation",
+  "id": 21164166,
+  "center": {
+    "lat": 49.6852369,
+    "lon": 16.0931875
+  },
+  "tags": {
+    "climbing": "crag",
+    "climbing:restriction": "yes",
+    "climbing:restriction:time_description": "Lezení zakázáno",
+    "name": "Opomenutá - Kredenc",
+    "site": "climbing",
+    "sport": "climbing",
+    "type": "site"
+  }
+}
+
+  ]
+}

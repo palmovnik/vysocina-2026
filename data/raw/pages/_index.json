@@ -498,5 +498,127 @@
   "url": "https://sloupskososuvske.caves.cz/oteviraci-doba",
   "file": "v-sloupsko.html",
   "bytes": 47053
+ },
+ "w-osm-new": {
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%0A%28%0A%20%20nwr%5B%22craft%22%3D%22brewery%22%5D%2849.40%2C15.50%2C49.90%2C16.40%29%3B%0A%20%20nwr%5B%22microbrewery%22%3D%22yes%22%5D%2849.40%2C15.50%2C49.90%2C16.40%29%3B%0A%20%20nwr%5B%22name%22~%22Rycht%C3%A1%C5%99%7CEden%7CHop%C3%ADk%7CHopik%7CRevolta%7CSpor%C5%A5%C3%A1k%7CHejkal%22%2Ci%5D%2849.40%2C15.50%2C49.90%2C16.40%29%3B%0A%20%20nwr%5B%22tourism%22%3D%22zoo%22%5D%2849.38%2C15.55%2C49.42%2C15.62%29%3B%0A%20%20nwr%5B%22leisure%22%3D%22playground%22%5D%5B%22indoor%22%3D%22yes%22%5D%2849.54%2C15.90%2C49.59%2C15.97%29%3B%0A%29%3B%0Aout%20center%20tags%3B",
+  "file": "w-osm-new.json",
+  "bytes": 11958
+ },
+ "w-nom-eden": {
+  "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Centrum%20Eden%2C%20Byst%C5%99ice%20nad%20Pern%C5%A1tejnem",
+  "file": "w-nom-eden.json",
+  "bytes": 529
+ },
+ "w-nom-hopik": {
+  "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=n%C3%A1m%C4%9Bst%C3%AD%20Republiky%20147%2C%20%C5%BD%C4%8F%C3%A1r%20nad%20S%C3%A1zavou",
+  "file": "w-nom-hopik.json",
+  "bytes": 519
+ },
+ "w-nom-rychtar": {
+  "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Pivovar%20Rycht%C3%A1%C5%99%2C%20Hlinsko",
+  "file": "w-nom-rychtar.json",
+  "bytes": 497
+ },
+ "w-revolta": {
+  "url": "https://www.revolta.beer/",
+  "file": "w-revolta.html",
+  "bytes": 157528
+ },
+ "w-revolta-vys": {
+  "url": "https://www.vysocina.eu/turisticke-cile/pivovar-revolta-zdar-nad-sazavou",
+  "file": "w-revolta-vys.html",
+  "bytes": 172002
+ },
+ "w-hejkal-koruna": {
+  "url": "https://www.korunavysociny.cz/ubytovani-a-sluzby/2789-pivovar-hejkal",
+  "file": "w-hejkal-koruna.html",
+  "bytes": 43533
+ },
+ "w-rychtar-exkurze": {
+  "url": "https://www.pivo-rychtar.cz/exkurze/",
+  "file": "w-rychtar-exkurze.html",
+  "bytes": 74035
+ },
+ "w-rychtar": {
+  "url": "https://www.pivo-rychtar.cz/",
+  "file": "w-rychtar.html",
+  "bytes": 80994
+ },
+ "w-eden": {
+  "url": "https://www.edencentrum.cz/",
+  "file": "w-eden.html",
+  "bytes": 1143598
+ },
+ "w-eden-vys": {
+  "url": "https://www.vysocina.eu/turisticke-cile/centrum-eden-bystrice-nad-pernstejnem",
+  "file": "w-eden-vys.html",
+  "bytes": 171143
+ },
+ "w-eden-pivovar-vys": {
+  "url": "https://www.vysocina.eu/turisticke-cile/pivovar-centrum-eden-bystrice-nad-pernstejnem",
+  "file": "w-eden-pivovar-vys.html",
+  "bytes": 169714
+ },
+ "w-hopik": {
+  "url": "http://www.hopik-zdar.cz/",
+  "file": "w-hopik.html",
+  "bytes": 59505
+ },
+ "w-hopik-kudy": {
+  "url": "https://www.kudyznudy.cz/aktivity/herna-hopik",
+  "file": "w-hopik-kudy.html",
+  "bytes": 131823
+ },
+ "w-zoo-jihlava": {
+  "url": "https://zoojihlava.cz/dulezite-informace/",
+  "file": "w-zoo-jihlava.html",
+  "bytes": 41727
+ },
+ "w-vesely-kopec": {
+  "url": "https://www.nmvp.cz/vysocina/pro-navstevniky/prohlidka-expozicnich-arealu/vesely-kopec",
+  "file": "w-vesely-kopec.html",
+  "bytes": 121072
+ },
+ "w-zv-cile": {
+  "url": "https://www.zdarskevrchy.cz/cz/turisticke-cile",
+  "file": "w-zv-cile.html",
+  "bytes": 79497
+ },
+ "w-zv-cile-2": {
+  "url": "https://www.zdarskevrchy.cz/cz/turisticke-cile?page=2",
+  "file": "w-zv-cile-2.html",
+  "bytes": 79648
+ },
+ "w-mlyn-rezervace": {
+  "url": "https://mlyn-vikinek.cz/rezervace/",
+  "file": "w-mlyn-rezervace.html",
+  "bytes": 82103
+ },
+ "w-mlyn-kontakt": {
+  "url": "https://mlyn-vikinek.cz/kontakt/",
+  "file": "w-mlyn-kontakt.html",
+  "bytes": 46191
+ },
+ "w-black-cup": {
+  "url": "https://europeancoffeetrip.com/cafe/theblackcup-novemestonamorave/",
+  "error": true
+ },
+ "w-kafe133": {
+  "url": "https://www.vysocina.eu/stravovaci-zarizeni/kafe",
+  "file": "w-kafe133.html",
+  "bytes": 153822
+ },
+ "w-svoboda-exkurze": {
+  "url": "https://ags-svoboda.cz/exkurze/",
+  "error": true
+ },
+ "w-relax-provoz": {
+  "url": "https://www.sportiszdar.cz/relaxacni-centrum/provozni-doba",
+  "error": true
+ },
+ "w-policka": {
+  "url": "https://www.pivovar-policka.cz/",
+  "file": "w-policka.html",
+  "bytes": 23007
  }
 }
