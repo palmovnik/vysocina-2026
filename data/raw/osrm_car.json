@@ -19,16 +19,6 @@
   "via": "ručně",
   "snap_m": 3
  },
- "lisovska": {
-  "km": 10.8,
-  "min": 14,
-  "target": [
-   49.660109,
-   16.033445
-  ],
-  "via": "ručně",
-  "snap_m": 3
- },
  "malinska": {
   "km": 20.9,
   "min": 26,
@@ -69,16 +59,6 @@
   "via": "ručně",
   "snap_m": 27
  },
- "zkameneny-zamek": {
-  "km": 14.3,
-  "min": 19,
-  "target": [
-   49.71477,
-   16.06443
-  ],
-  "via": "ručně",
-  "snap_m": 4
- },
  "pasecka": {
   "km": 18.6,
   "min": 24,
@@ -98,16 +78,6 @@
   ],
   "via": "bod",
   "snap_m": 1073
- },
- "rosicka": {
-  "km": 19.3,
-  "min": 29,
-  "target": [
-   49.53854,
-   15.8426
-  ],
-  "via": "bod",
-  "snap_m": 11
  },
  "udoli-doubravy": {
   "km": 29.5,
@@ -169,26 +139,6 @@
   "via": "ručně",
   "snap_m": 13
  },
- "sloupsko": {
-  "km": 82.8,
-  "min": 87,
-  "target": [
-   49.41045,
-   16.73902
-  ],
-  "via": "bod",
-  "snap_m": 109
- },
- "jihlava-podzemi": {
-  "km": 49.7,
-  "min": 58,
-  "target": [
-   49.39693,
-   15.59136
-  ],
-  "via": "bod",
-  "snap_m": 27
- },
  "medlov": {
   "km": 21.1,
   "min": 29,
@@ -228,16 +178,6 @@
   ],
   "via": "parkoviště w509949056  (104 m)",
   "snap_m": 11
- },
- "sklarna-hroch": {
-  "km": 7.5,
-  "min": 9,
-  "target": [
-   49.634788,
-   15.92659
-  ],
-  "via": "parkoviště w1358181913  (246 m)",
-  "snap_m": 6
  },
  "sklarna-svoboda": {
   "km": 8.9,
@@ -298,6 +238,26 @@
   ],
   "via": "parkoviště w270441950  (22 m)",
   "snap_m": 9
+ },
+ "hopik": {
+  "km": 10.9,
+  "min": 13,
+  "target": [
+   49.563236,
+   15.93991
+  ],
+  "via": "parkoviště w510013382  (26 m)",
+  "snap_m": 4
+ },
+ "zoo-jihlava": {
+  "km": 47.9,
+  "min": 55,
+  "target": [
+   49.39715,
+   15.59663
+  ],
+  "via": "bod",
+  "snap_m": 71
  },
  "zelena-hora": {
   "km": 9.4,
@@ -369,16 +329,6 @@
   "via": "bod",
   "snap_m": 1412
  },
- "stribrna-studanka": {
-  "km": 9.4,
-  "min": 13,
-  "target": [
-   49.65439,
-   15.9989
-  ],
-  "via": "bod",
-  "snap_m": 1224
- },
  "zakova-hora": {
   "km": 2.1,
   "min": 3,
@@ -388,16 +338,6 @@
   ],
   "via": "bod",
   "snap_m": 1336
- },
- "fryskop": {
-  "km": 22.1,
-  "min": 28,
-  "target": [
-   49.6377,
-   16.00217
-  ],
-  "via": "bod",
-  "snap_m": 2219
  },
  "velke-darko": {
   "km": 8.3,
@@ -419,16 +359,6 @@
   "via": "ručně",
   "snap_m": 14
  },
- "sykovec": {
-  "km": 20.5,
-  "min": 24,
-  "target": [
-   49.611278,
-   16.038822
-  ],
-  "via": "parkoviště w1309551000  (300 m)",
-  "snap_m": 5
- },
  "rest-tisuvka": {
   "km": 0.7,
   "min": 2,
@@ -447,16 +377,6 @@
    15.92659
   ],
   "via": "parkoviště w1358181913  (272 m)",
-  "snap_m": 6
- },
- "rest-darko": {
-  "km": 7.5,
-  "min": 9,
-  "target": [
-   49.634788,
-   15.92659
-  ],
-  "via": "parkoviště w1358181913  (262 m)",
   "snap_m": 6
  },
  "rest-kolousek": {
@@ -478,16 +398,6 @@
   ],
   "via": "parkoviště w345544437  (209 m)",
   "snap_m": 14
- },
- "rest-tri-studne": {
-  "km": 20.3,
-  "min": 24,
-  "target": [
-   49.612297,
-   16.035919
-  ],
-  "via": "parkoviště w1426368131  (35 m)",
-  "snap_m": 4
  },
  "rest-polnicka": {
   "km": 7.3,
@@ -609,16 +519,6 @@
   "via": "parkoviště w1415219889  (25 m)",
   "snap_m": 7
  },
- "black-cup": {
-  "km": 21.6,
-  "min": 25,
-  "target": [
-   49.56051,
-   16.072973
-  ],
-  "via": "parkoviště w1484083913  (116 m)",
-  "snap_m": 5
- },
  "kafe-133": {
   "km": 21.9,
   "min": 25,
@@ -627,6 +527,46 @@
    16.076023
   ],
   "via": "parkoviště w1484083915  (18 m)",
+  "snap_m": 1
+ },
+ "racin": {
+  "km": 10.5,
+  "min": 14,
+  "target": [
+   49.61733,
+   15.867335
+  ],
+  "via": "parkoviště w849535400  (54 m)",
+  "snap_m": 7
+ },
+ "hejkal": {
+  "km": 20.9,
+  "min": 24,
+  "target": [
+   49.560979,
+   16.07079
+  ],
+  "via": "parkoviště w1290196028  (99 m)",
+  "snap_m": 1
+ },
+ "revolta": {
+  "km": 11.1,
+  "min": 14,
+  "target": [
+   49.562442,
+   15.939531
+  ],
+  "via": "parkoviště w510013936  (51 m)",
+  "snap_m": 3
+ },
+ "rychtar": {
+  "km": 18.7,
+  "min": 21,
+  "target": [
+   49.759867,
+   15.91437
+  ],
+  "via": "parkoviště w499120340  (93 m)",
   "snap_m": 1
  },
  "zookoutek": {
@@ -659,16 +599,6 @@
   "via": "bod",
   "snap_m": 15
  },
- "cesky-dvur": {
-  "km": 6.3,
-  "min": 7,
-  "target": [
-   49.690781,
-   15.994523
-  ],
-  "via": "parkoviště n257452896  (219 m)",
-  "snap_m": 2
- },
  "syry-brezin": {
   "km": 20.8,
   "min": 25,
@@ -679,15 +609,15 @@
   "via": "bod",
   "snap_m": 8
  },
- "obora": {
-  "km": 22.7,
-  "min": 30,
+ "eden": {
+  "km": 38.6,
+  "min": 43,
   "target": [
-   49.74617,
-   15.87699
+   49.515158,
+   16.246952
   ],
-  "via": "bod",
-  "snap_m": 75
+  "via": "parkoviště w374796734  (139 m)",
+  "snap_m": 7
  },
  "shop-skrdlovice": {
   "km": 7.5,

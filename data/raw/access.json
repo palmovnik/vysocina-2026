@@ -29,18 +29,6 @@
    "time_s": 3354
   }
  },
- "lisovska": {
-  "at": [
-   49.6618,
-   16.03817
-  ],
-  "bike": {
-   "length_m": 8559,
-   "ascend_m": 248,
-   "plain_ascend_m": 129,
-   "time_s": 2943
-  }
- },
  "malinska": {
   "at": [
    49.66103,
@@ -87,18 +75,6 @@
    "ascend_m": 179,
    "plain_ascend_m": 79,
    "time_s": 3553
-  }
- },
- "zkameneny-zamek": {
-  "at": [
-   49.70894,
-   16.07367
-  ],
-  "bike": {
-   "length_m": 14133,
-   "ascend_m": 165,
-   "plain_ascend_m": 74,
-   "time_s": 3250
   }
  },
  "pasecka": {
@@ -165,24 +141,6 @@
    "ascend_m": 66,
    "plain_ascend_m": -88,
    "time_s": 1506
-  }
- },
- "sklarna-hroch": {
-  "at": [
-   49.63424,
-   15.9299
-  ],
-  "walk": {
-   "length_m": 3507,
-   "ascend_m": 29,
-   "plain_ascend_m": -7,
-   "time_s": 2489
-  },
-  "bike": {
-   "length_m": 4317,
-   "ascend_m": 36,
-   "plain_ascend_m": -5,
-   "time_s": 848
   }
  },
  "sklarna-svoboda": {
@@ -293,18 +251,6 @@
    "time_s": 1660
   }
  },
- "stribrna-studanka": {
-  "at": [
-   49.65439,
-   15.9989
-  ],
-  "walk": {
-   "length_m": 4160,
-   "ascend_m": 123,
-   "plain_ascend_m": 118,
-   "time_s": 3295
-  }
- },
  "zakova-hora": {
   "at": [
    49.65699,
@@ -323,24 +269,6 @@
    "time_s": 1799
   }
  },
- "fryskop": {
-  "at": [
-   49.6377,
-   16.00217
-  ],
-  "walk": {
-   "length_m": 3679,
-   "ascend_m": 144,
-   "plain_ascend_m": 145,
-   "time_s": 3023
-  },
-  "bike": {
-   "length_m": 4019,
-   "ascend_m": 144,
-   "plain_ascend_m": 145,
-   "time_s": 1682
-  }
- },
  "velke-darko": {
   "at": [
    49.63177,
@@ -351,18 +279,6 @@
    "ascend_m": 38,
    "plain_ascend_m": -38,
    "time_s": 1008
-  }
- },
- "sykovec": {
-  "at": [
-   49.60861,
-   16.03817
-  ],
-  "bike": {
-   "length_m": 8682,
-   "ascend_m": 143,
-   "plain_ascend_m": 64,
-   "time_s": 2244
   }
  },
  "rest-tisuvka": {
@@ -389,18 +305,6 @@
    "time_s": 856
   }
  },
- "rest-darko": {
-  "at": [
-   49.63709,
-   15.92582
-  ],
-  "bike": {
-   "length_m": 4182,
-   "ascend_m": 38,
-   "plain_ascend_m": -2,
-   "time_s": 839
-  }
- },
  "rest-kolousek": {
   "at": [
    49.65039,
@@ -423,18 +327,6 @@
    "ascend_m": 144,
    "plain_ascend_m": 50,
    "time_s": 1941
-  }
- },
- "rest-tri-studne": {
-  "at": [
-   49.61248,
-   16.03632
-  ],
-  "bike": {
-   "length_m": 8120,
-   "ascend_m": 145,
-   "plain_ascend_m": 76,
-   "time_s": 2179
   }
  },
  "rest-polnicka": {
