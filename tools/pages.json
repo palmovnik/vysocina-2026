@@ -1,17 +1,12 @@
 [
  {
-  "id": "geo-ricany",
-  "url": "https://nominatim.openstreetmap.org/search?q=%C5%98%C3%AD%C4%8Dany&countrycodes=cz&format=json&limit=3",
+  "id": "osrm-mill-zoo-ricany",
+  "url": "https://router.project-osrm.org/route/v1/driving/15.96844,49.64427;15.59663,49.39715;14.6544,49.9911?overview=false",
   "ext": "json"
  },
  {
-  "id": "geo-holesov",
-  "url": "https://nominatim.openstreetmap.org/search?q=Hole%C5%A1ov&countrycodes=cz&format=json&limit=3",
-  "ext": "json"
- },
- {
-  "id": "geo-kromeriz",
-  "url": "https://nominatim.openstreetmap.org/search?q=Krom%C4%9B%C5%99%C3%AD%C5%BE&countrycodes=cz&format=json&limit=3",
+  "id": "osrm-mill-ricany",
+  "url": "https://router.project-osrm.org/route/v1/driving/15.96844,49.64427;14.6544,49.9911?overview=false",
   "ext": "json"
  }
 ]
