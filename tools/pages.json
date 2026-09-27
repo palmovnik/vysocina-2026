@@ -1,32 +1,12 @@
 [
  {
-  "id": "wx-om-trip",
-  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m,precipitation,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m,is_day&start_date=2026-10-08&end_date=2026-10-11",
-  "ext": "json"
- },
- {
-  "id": "wx-om-near",
-  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m,precipitation,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m,is_day&start_date=2026-09-28&end_date=2026-10-01",
-  "ext": "json"
- },
- {
-  "id": "wx-om-16",
-  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&forecast_days=16",
-  "ext": "json"
- },
- {
-  "id": "wx-om-toolate",
-  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&start_date=2026-10-08&end_date=2026-10-20",
-  "ext": "json"
- },
- {
-  "id": "wx-windy-embed",
-  "url": "https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km%2Fh&zoom=9&overlay=rain&product=ecmwf&level=surface&lat=49.644&lon=15.968&detailLat=49.644&detailLon=15.968&detail=true&message=true&marker=true",
+  "id": "mapy-url-doc",
+  "url": "https://developer.mapy.com/further-uses-of-mapycz/mapy-cz-url/",
   "ext": "html"
  },
  {
-  "id": "wx-windy-point",
-  "url": "https://www.windy.com/49.644/15.968?49.644,15.968,10",
+  "id": "mapy-url-doc-cs",
+  "url": "https://developer.mapy.com/cs/dalsi-moznosti-vyuziti/mapy-cz-url/",
   "ext": "html"
  }
 ]
