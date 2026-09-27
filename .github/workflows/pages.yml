@@ -2,6 +2,8 @@ name: Nasazení webu (gh-pages)
 
 # Zkopíruje hotový web ze složky docs/ do větve gh-pages, ze které ho
 # GitHub Pages zveřejňuje na https://palmovnik.github.io/vysocina-2026/
+# a přidá čerstvou předpověď počasí (data/weather.json, záloha pro případ,
+# že si ji web při otevření nestáhne sám). Kvůli počasí běží i každé 3 hodiny.
 on:
   push:
     branches:
@@ -9,7 +11,10 @@ on:
       - 'main'
     paths:
       - 'docs/**'
+      - 'tools/weather.py'
       - '.github/workflows/pages.yml'
+  schedule:
+    - cron: '17 */3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -26,6 +31,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+      - name: Předpověď počasí (Open-Meteo)
+        run: python3 tools/weather.py /tmp/weather.json || echo "::warning::Předpověď se nepodařilo stáhnout, na webu zůstane poslední."
       - name: Publikace docs/ do větve gh-pages
         run: |
           set -e
@@ -37,7 +44,9 @@ jobs:
           else
             git worktree add --orphan -b gh-pages /tmp/site
           fi
-          rsync -a --delete --exclude '.git' docs/ /tmp/site/
+          # data/weather.json v docs/ není, na gh-pages ho rsync nechá a jen se přepíše čerstvým
+          rsync -a --delete --exclude '.git' --exclude '/data/weather.json' docs/ /tmp/site/
+          if [ -s /tmp/weather.json ]; then mkdir -p /tmp/site/data && cp /tmp/weather.json /tmp/site/data/weather.json; fi
           touch /tmp/site/.nojekyll
           cd /tmp/site
           git add -A
@@ -45,5 +54,9 @@ jobs:
             echo "Web se nezměnil."
             exit 0
           fi
-          git commit -m "Web z ${GITHUB_SHA::7}"
+          if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+            git commit -q -m "Počasí $(date -u '+%Y-%m-%d %H:%M') UTC"
+          else
+            git commit -q -m "Web z ${GITHUB_SHA::7}"
+          fi
           git push origin gh-pages

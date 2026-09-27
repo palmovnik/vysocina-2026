@@ -1,12 +1,15 @@
 # Vysočina 2026 – Mlýn Vikinek, Cikháj
 
 Průvodce okolím chaty **Mlýn Vikinek** (Cikháj 57, Žďárské vrchy) pro čtyři rodiny
-na pobyt **čt 8. – ne 11. 10. 2026** (možná do pondělí 12. 10.): interaktivní mapa, skály, jeskyně, tipy pro děti,
+na pobyt **čt 8. – ne 11. 10. 2026**: interaktivní mapa, skály, jeskyně, tipy pro děti,
 dobré jídlo, pivovary a farmy, cyklotrasy a pěší okruhy s výškovým profilem a GPX, jednoduché nápady po dnech
 a praktické informace. Každý tip se otevírá v okně s popisem, cestou od mlýna a navigací a má odkazy
 na oficiální web, Google Mapy a Mapy.com.
 Na mapě jsou trasy samostatnou kategorií vedle míst (tlačítko *Vše* zapne nebo vypne všechno),
 sekce pod mapou jsou sbalené do skupin a fotky se načtou až po rozbalení.
+Nahoře je souhrn předpovědi počasí pro mlýn, který se stahuje živě při každém otevření stránky
+(podrobně po hodinách v sekci *Praktické → Počasí a světlo*), a odkaz *Mlýn Vikinek* s adresou,
+navigací do Google Map, Mapy.com, Waze i Apple Map, kontaktem a webem mlýna.
 
 Web: **https://palmovnik.github.io/vysocina-2026/**
 
@@ -17,6 +20,17 @@ Web se zveřejňuje přes **GitHub Pages z větve `gh-pages`**. Workflow
 složku `docs/`, zkopíruje její obsah do větve `gh-pages` a GitHub Pages ho během
 minuty publikuje. V nastavení repozitáře (*Settings → Pages*) je zdroj
 *Deploy from a branch*, větev `gh-pages`, složka `/ (root)`.
+
+## Počasí
+
+Stránka si při každém otevření (a po návratu do ní po víc než půl hodině) stáhne předpověď
+z [Open-Meteo](https://open-meteo.com/) (zdarma, bez klíče, modely ECMWF, ICON, GFS a další).
+Poslední úspěšně stažená data si pamatuje prohlížeč. Jako záloha pro případ, že živé stažení
+selže, stejný workflow *Nasazení webu* každé 3 hodiny spustí `tools/weather.py` a uloží předpověď
+do `data/weather.json` na větvi `gh-pages` (po skončení pobytu už nic nestahuje).
+Windy se napojit nedá: předplatné Premium platí jen v aplikaci a na webu Windy, data přes API
+jsou samostatná placená služba. Na stránce je proto odkaz do Windy přímo na mlýn a jejich
+mapa (vložený widget), která se načte až po kliknutí.
 
 ## Jak to funguje
 
@@ -29,6 +43,7 @@ minuty publikuje. V nastavení repozitáře (*Settings → Pages*) je zdroj
 | `tools/pages.json` | weby podniků k ověření otevírací doby (uloží se do `data/raw/pages/`) |
 | `tools/photo_candidates.json` | místa bez fotky: v okolí bodu se hledají kandidáti na Commons (`data/raw/photos/`) |
 | `tools/build.py` | spojí obsah a podklady do `docs/data/trip.js` a vygeneruje GPX do `docs/gpx/` |
+| `tools/weather.py` | záložní předpověď počasí pro web (běží v GitHub Actions každé 3 hodiny) |
 | `data/raw/` | stažené podklady (OSM, trasy, časy) |
 | `docs/` | hotový web (HTML, CSS, JS, Leaflet, fotky, GPX) |
 
@@ -44,5 +59,6 @@ trasy [BRouter](https://brouter.de/), časy jízdy [OSRM](https://project-osrm.o
 fotografie z [Wikimedia Commons](https://commons.wikimedia.org/) (autor a licence u každé fotky),
 gastro tipy mimo jiné z [Gastromapy Lukáše Hejlíka](https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika),
 průvodce [Gault&Millau](https://www.gault-millau.cz/) a [Maurerova výběru](https://maureruv-vyber.cz/),
-mapová knihovna [Leaflet](https://leafletjs.com/) (BSD-2).
-Otevírací doby, vstupné a akce jsou převzaté z webů provozovatelů (stav k 26. 9. 2026).
+mapová knihovna [Leaflet](https://leafletjs.com/) (BSD-2),
+předpověď počasí [Open-Meteo.com](https://open-meteo.com/) (CC BY 4.0).
+Otevírací doby, vstupné a akce jsou převzaté z webů provozovatelů (stav k 27. 9. 2026).

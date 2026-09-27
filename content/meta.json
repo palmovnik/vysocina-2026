@@ -34,19 +34,24 @@
    "benzinka",
    "nemocnice"
   ],
-  "checkin": "příjezd od 15:00, odjezd do 10:00"
+  "checkin": "příjezd od 15:00, odjezd do 10:00",
+  "stay": "čt 8. 10. od 15:00 – ne 11. 10. do 10:00"
  },
  "weather": {
   "text": "Cikháj leží v 675 m n. m., takže je tu o pár stupňů chladněji než v nížině. Začátkem října bývá přes den zhruba 7–13 °C a v noci 0–5 °C, ráno často mlha a první mrazíky, občas prší. Na hřebenech nad 800 m fouká.",
   "moon": "Nov je v sobotu 10. 10. v 17:50, takže noci jsou úplně tmavé a za jasna je vidět Mléčná dráha. Kolem 8.–9. 10. vrcholí meteorický roj Drakonidy, nejlépe večer po setmění.",
   "links": [
    {
-    "name": "Předpověď ČHMÚ – Žďárské vrchy",
-    "url": "https://www.chmi.cz/predpoved-pocasi/lyzarska-strediska-a-hory/zdarske-vrchy"
+    "name": "Windy – předpověď pro mlýn",
+    "url": "https://www.windy.com/49.644/15.968?49.644,15.968,10"
    },
    {
-    "name": "Windy – Cikháj",
-    "url": "https://www.windy.com/?49.644,15.968,11"
+    "name": "Windy – radar",
+    "url": "https://www.windy.com/?radar,49.644,15.968,9"
+   },
+   {
+    "name": "ČHMÚ – Žďárské vrchy",
+    "url": "https://www.chmi.cz/predpoved-pocasi/lyzarska-strediska-a-hory/zdarske-vrchy"
    },
    {
     "name": "Meteobox – Žďárské vrchy",

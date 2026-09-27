@@ -63,14 +63,16 @@
    "id": "ne",
    "date": "2026-10-11",
    "label": "Neděle 11. 10.",
-   "title": "Skály a Blatiny",
+   "title": "Skály na rozloučenou",
+   "note": "Z mlýna se odjíždí do 10:00. Skály v Blatinách a v Milovech jsou kousek, Zelená hora leží cestou domů a Zoo Jihlava cestou do Prahy.",
    "tips": [
     "route:h-palice",
     "route:h-hreben-kratky",
     "panmama",
     "kiosek-kadov",
     "cukrarna-snezne",
-    "zelena-hora"
+    "zelena-hora",
+    "zoo-jihlava"
    ],
    "rain": [
     "mng",
@@ -78,35 +80,9 @@
     "modelove",
     "slakhamr"
    ]
-  },
-  {
-   "id": "po",
-   "date": "2026-10-12",
-   "label": "Pondělí 12. 10.",
-   "title": "Jen když prodloužíte: cestou domů",
-   "note": "Z mlýna se odjíždí do 10:00. V pondělí má zavřeno většina jeskyní, skanzen i řada hospod (Tisůvka, U Paňmámy, Táferna, Račín), tyhle tipy jsou otevřené.",
-   "tips": [
-    "sklarna-svoboda",
-    "mng",
-    "zamek-zdar",
-    "pilak",
-    "zookoutek",
-    "bistro4",
-    "zoo-jihlava"
-   ],
-   "rain": [
-    "hopik",
-    "relax"
-   ]
   }
  ],
  "reservations": [
-  {
-   "id": "res-mlyn",
-   "text": "Mlýn Vikinek: prodloužení do pondělí 12. 10. (noc z neděle na pondělí je teď v kalendáři volná, další noc stojí podle ceníku 6 000 Kč), nebo aspoň pozdější odjezd v neděli",
-   "how": "+420 602 768 375, info@mlyn-vikinek.cz",
-   "place": "mlyn"
-  },
   {
    "id": "res-balcarka",
    "text": "Balcarka – Škola malých jeskyňářů (so 10. 10., od 5 let)",

@@ -344,7 +344,7 @@ def sun_times_ephem(date):
 
 
 def build_sun():
-    days = ['čt 8. 10.', 'pá 9. 10.', 'so 10. 10.', 'ne 11. 10.', 'po 12. 10.']
+    days = ['čt 8. 10.', 'pá 9. 10.', 'so 10. 10.', 'ne 11. 10.']
     out = []
     for i, label in enumerate(days):
         d = datetime.date(2026, 10, 8 + i)
@@ -385,7 +385,8 @@ CREDITS = (
     '<a href="https://commons.wikimedia.org/">Wikimedia Commons</a> (autor a licence u každé fotky) · '
     'gastro tipy mimo jiné z <a href="https://gastromapa.hejlik.cz/">Gastromapy Lukáše Hejlíka</a> a '
     '<a href="https://maureruv-vyber.cz/">Maurerova výběru</a> · '
-    'mapa <a href="https://leafletjs.com/">Leaflet</a>, dlaždice OpenStreetMap, OpenTopoMap, CyclOSM a Waymarked Trails.'
+    'mapa <a href="https://leafletjs.com/">Leaflet</a>, dlaždice OpenStreetMap, OpenTopoMap, CyclOSM a Waymarked Trails · '
+    'předpověď počasí <a href="https://open-meteo.com/">Open-Meteo.com</a> (CC BY 4.0).'
     '<br>Otevírací doby, vstupné a akce jsou převzaté z webů provozovatelů (stav k 27. 9. 2026). '
     'Před výletem je prosím ověřte, v říjnu se často mění. '
     'Časy „s dětmi“ jsou hrubý odhad čisté chůze či jízdy bez zastávek.'

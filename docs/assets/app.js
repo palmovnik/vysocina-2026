@@ -97,6 +97,19 @@
     var t = p.carTarget || [p.lat, p.lon];
     return 'https://www.google.com/maps/dir/?api=1&destination=' + t[0] + ',' + t[1];
   }
+  // navigace autem k bodu ve všech běžných aplikacích (start = aktuální poloha)
+  function navApps(p) {
+    var ll = p.lat + ',' + p.lon;
+    return [
+      ['Google Mapy', 'https://www.google.com/maps/dir/?api=1&destination=' + ll + '&travelmode=driving'],
+      ['Mapy.com', 'https://mapy.com/fnc/v1/route?mapset=traffic&end=' + p.lon + ',' + p.lat + '&routeType=car_fast_traffic&navigate=true'],
+      ['Waze', 'https://waze.com/ul?ll=' + ll + '&navigate=yes'],
+      ['Apple Mapy', 'https://maps.apple.com/?daddr=' + ll + '&dirflg=d']
+    ];
+  }
+  function navAppsHtml(p) {
+    return '<div class="navgrid">' + navApps(p).map(function (n) { return extLink(n[1], esc(n[0]), 'btn nav'); }).join('') + '</div>';
+  }
   // odkazy do map: podniky a atrakce se hledají podle názvu (karta s fotkami, recenzemi
   // a otevírací dobou), přírodní místa bez vlastní karty ukážou přesný bod
   function mapQuery(p) {
@@ -133,6 +146,9 @@
     return '<span class="' + (cls || 'links') + '">' + extLink(r.mapy, 'Mapy.com') + extLink(routeGoogle(r), 'Google Mapy') +
       (r.start ? extLink(googleNav({ lat: r.geo[0][0], lon: r.geo[0][1] }), '🚗 Na start') : '') + '</span>';
   }
+  // „z Prahy“, „z Brna“ … (časy jízdy z měst)
+  var CITY_GEN = { Praha: 'Prahy', Brno: 'Brna', Jihlava: 'Jihlavy', Ostrava: 'Ostravy', Olomouc: 'Olomouce', Pardubice: 'Pardubic' };
+  function fromCity(k) { return 'z ' + (CITY_GEN[k] || k); }
   function placeHref(id) { return '#misto/' + id; }
   function routeHref(id) { return '#trasa/' + id; }
   // krátký údaj „jak daleko“ pro dlaždice a seznam
@@ -204,7 +220,7 @@
     });
     fam.appendChild(el('span', { 'class': 'family total' }, '= <b>' + (adults + kids) + ' lidí</b>: ' + adults + ' dospělých a ' + kids + ' dětí' +
       (T.kidsSummary ? ' (' + esc(T.kidsSummary) + ')' : '')));
-    var start = new Date('2026-10-08T15:00:00+02:00'), end = new Date('2026-10-12T18:00:00+02:00'), now = new Date();
+    var start = new Date('2026-10-08T15:00:00+02:00'), end = new Date('2026-10-11T18:00:00+02:00'), now = new Date();
     var cd = $('#countdown');
     if (now < start) {
       var d = Math.ceil((start - now) / 86400000);
@@ -697,6 +713,31 @@
     return h;
   }
 
+  // okno „Mlýn Vikinek“: jednoduché shrnutí – adresa, navigace do všech aplikací, kontakt a web
+  function copyBtn(text, what) {
+    return '<button type="button" class="copy" data-act="copy" data-copy="' + esc(text) + '" title="Zkopírovat ' + what + '" aria-label="Zkopírovat ' + what + '">📋</button>';
+  }
+  function millModalHtml(p) {
+    var c = T.chata, gps = p.lat.toFixed(5) + ', ' + p.lon.toFixed(5);
+    var drive = Object.keys(T.fromCities).map(function (k) {
+      return esc(fromCity(k)) + ' asi ' + fmtMin(T.fromCities[k].min) + ' (' + T.fromCities[k].km + ' km)';
+    }).join(', ');
+    var h = barHtml() + '<div class="m-rhead m-mill"><div class="m-cat">🏠 Naše chata</div>' +
+      '<h3 id="modalTitle">' + esc(p.name) + '</h3><p class="m-lead">' + esc(p.teaser) + '</p></div><div class="m-body">';
+    h += '<dl class="mill-kv">' +
+      '<div><dt>📍 Adresa</dt><dd>' + esc(c.address) + copyBtn(c.address, 'adresu') + '</dd></div>' +
+      '<div><dt>🛰️ GPS</dt><dd><span class="num">' + gps + '</span>' + copyBtn(gps, 'souřadnice') + ' <span class="muted">· 675 m n. m.</span></dd></div>' +
+      (c.stay ? '<div><dt>🗓️ Pobyt</dt><dd>' + esc(c.stay) + '</dd></div>' : '') +
+      '<div><dt>📞 Kontakt</dt><dd><a href="tel:+420602768375">602 768 375</a> · <a href="mailto:info@mlyn-vikinek.cz">info@mlyn-vikinek.cz</a></dd></div>' +
+      '<div><dt>🌐 Web</dt><dd>' + extLink(p.web, 'mlyn-vikinek.cz', '') + ' · ' + extLink('https://mlyn-vikinek.cz/galerie/', 'fotky mlýna', '') + '</dd></div>' +
+      '</dl>';
+    h += '<div class="navapps"><b>🧭 Navigovat autem</b>' + navAppsHtml(p) +
+      (drive ? '<p class="small muted">Cesta ' + drive + ', bez provozu.</p>' : '') + '</div>';
+    h += '</div><div class="m-actions"><button type="button" class="btn primary" data-act="map">🗺️ Na mapě</button>' +
+      '<a class="btn" href="#chata-info" data-act="day">ℹ️ Víc o mlýně</a></div>';
+    return h;
+  }
+
   function routeModalHtml(r) {
     var geom = profileSvg(r);
     var h = barHtml();
@@ -765,9 +806,9 @@
     destroyMini();
     cur = { kind: kind, id: id };
     var route = null;
-    if (kind === 'place') sheet.innerHTML = placeModalHtml(item);
+    if (kind === 'place') sheet.innerHTML = id === 'mlyn' ? millModalHtml(item) : placeModalHtml(item);
     else { route = routeModalHtml(item); sheet.innerHTML = route.html; }
-    sheet.className = 'sheet ' + (kind === 'place' ? 'is-place' : 'is-route');
+    sheet.className = 'sheet ' + (kind === 'place' ? 'is-place' : 'is-route') + (id === 'mlyn' ? ' is-mill' : '');
     sheet.style.setProperty('--c', kind === 'place' ? catVar(item.cat) : item.color);
     sheet.style.setProperty('--rc', kind === 'route' ? item.color : '');
     if (!modal.open) {
@@ -848,6 +889,10 @@
       var url = location.href;
       if (navigator.share) navigator.share({ title: document.title, url: url }).catch(function () {});
       else if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { toast('Odkaz zkopírován'); });
+    } else if (act === 'copy') {
+      var txt = b.getAttribute('data-copy');
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(function () { toast('Zkopírováno: ' + txt); }, function () { toast(txt); });
+      else toast(txt);
     } else if (act === 'map' && cur) {
       var pid = cur.id;
       closeModal('#mapa');
@@ -1050,7 +1095,7 @@
     var box = $('#chataBox');
     var c = T.chata;
     var left = '<p>' + esc(m.text) + '</p><dl class="kv">' +
-      '<dt>Adresa</dt><dd>' + extLink(googlePlace(m), esc(c.address) + ' ↗', '') + ' · ' + extLink(mapyPlace(m), 'Mapy.com', '') + '</dd>' +
+      '<dt>Adresa</dt><dd>' + esc(c.address) + ' · <a href="' + placeHref('mlyn') + '">🧭 navigace</a></dd>' +
       '<dt>GPS</dt><dd><button type="button" class="btn small" id="copyGps">' + MILL.lat.toFixed(5) + ' N, ' + MILL.lon.toFixed(5) + ' E 📋</button></dd>' +
       '<dt>Kontakt</dt><dd><a href="tel:+420602768375">+420 602 768 375</a> · <a href="mailto:info@mlyn-vikinek.cz">info@mlyn-vikinek.cz</a></dd>' +
       '<dt>Kapacita</dt><dd>' + esc(c.capacity) + '</dd>' +
@@ -1061,12 +1106,10 @@
     var cities = Object.keys(T.fromCities);
     cities.forEach(function (k) {
       var f = T.fromCities[k];
-      right += '<div class="stat"><b>' + fmtMin(f.min) + '</b><span>z ' + esc(k) + ' · ' + f.km + ' km</span></div>';
+      right += '<div class="stat"><b>' + fmtMin(f.min) + '</b><span>' + esc(fromCity(k)) + ' · ' + f.km + ' km</span></div>';
     });
-    right += '</div><div class="row">' +
-      '<a class="btn primary" href="' + googleNav(m) + '" target="_blank" rel="noopener">🧭 Navigovat (Google)</a>' +
-      '<a class="btn" href="' + mapyShow(m) + '" target="_blank" rel="noopener">Mlýn v Mapy.com</a>' +
-      '<a class="btn" href="gpx/vysocina-2026-mista.gpx" download>⬇ Všechna místa (GPX)</a></div>' +
+    right += '</div><h4 class="svc-h">🧭 Navigovat k mlýnu</h4>' + navAppsHtml(m) +
+      '<div class="row"><a class="btn" href="gpx/vysocina-2026-mista.gpx" download>⬇ Všechna místa do navigace (GPX)</a></div>' +
       '<h4 class="svc-h">🛒 Nejbližší služby</h4><ul class="svc">';
     c.services.forEach(function (id) {
       var p = PLACES[id];
@@ -1075,10 +1118,10 @@
         '<span class="how">' + esc(p.teaser) + '</span></span><span class="dist">' + howFar(p) + '</span></a></li>';
     });
     right += '</ul>';
-    box.appendChild(makeAcc({ emoji: '🏠', color: 'var(--c-chata)', title: m.name,
+    box.appendChild(makeAcc({ id: 'chata-info', emoji: '🏠', color: 'var(--c-chata)', title: m.name,
       preview: esc([c.address, '16 lůžek + dětská postýlka', 'sauna, krb, zahrada s ohništěm', c.checkin].filter(Boolean).join(' · ')), html: left }));
     box.appendChild(makeAcc({ emoji: '🚗', color: 'var(--c-sluzby)', title: 'Cesta a nejbližší služby',
-      preview: esc(cities.map(function (k) { return 'z ' + k + ' ' + fmtMin(T.fromCities[k].min); }).join(' · ') + ' · obchod, lékárna, benzinka, nemocnice'), html: right }));
+      preview: esc(cities.map(function (k) { return fromCity(k) + ' ' + fmtMin(T.fromCities[k].min); }).join(' · ') + ' · obchod, lékárna, benzinka, nemocnice'), html: right }));
     $('#copyGps').addEventListener('click', function (e) {
       var t = MILL.lat.toFixed(5) + ', ' + MILL.lon.toFixed(5);
       if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { e.target.textContent = 'Zkopírováno ✓'; });
@@ -1123,14 +1166,18 @@
     var sunRows = T.sun.map(function (s) {
       return '<tr><td>' + esc(s.label) + '</td><td>' + s.rise + '</td><td>' + s.set + '</td><td>' + s.dusk + '</td></tr>';
     }).join('');
-    box.appendChild(makeAcc({ emoji: '🌦️', color: 'var(--c-pamatky)', title: 'Počasí a světlo',
-      preview: esc('přes den kolem 7–13 °C, v noci 0–5 °C · slunce zapadá kolem ' + T.sun[0].set + ' · 10. 10. novoluní, tma na hvězdy'),
-      html: '<p>' + esc(T.weather.text) + '</p>' +
+    // živou předpověď doplní modul počasí níž (#wxDetail), zbytek je statický
+    box.appendChild(makeAcc({ id: 'pocasi', emoji: '🌦️', color: 'var(--c-pamatky)', title: 'Počasí a světlo',
+      preview: esc('aktuální předpověď pro mlýn · slunce zapadá kolem ' + T.sun[0].set + ' · 10. 10. novoluní, tma na hvězdy'),
+      html: '<div class="wx-live" id="wxDetail"></div>' +
+        '<h4 class="svc-h">Jak tu bývá a kdy je světlo</h4><p>' + esc(T.weather.text) + '</p>' +
         '<table class="sun"><thead><tr><th>Den</th><th>Východ</th><th>Západ</th><th>Tma</th></tr></thead><tbody>' + sunRows + '</tbody></table>' +
         '<p class="small" style="margin-top:10px">🌑 ' + esc(T.weather.moon) + '</p>' +
-        '<div class="row">' + T.weather.links.map(function (l) {
+        '<h4 class="svc-h">Další předpovědi</h4><div class="row">' + T.weather.links.map(function (l) {
           return '<a class="btn small" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.name) + '</a>';
-        }).join('') + '</div>' }));
+        }).join('') + '</div>' +
+        '<div class="wx-windy"><button type="button" class="btn" data-wx="windy">🌀 Zobrazit mapu Windy</button>' +
+        '<span class="small muted">radar, srážky a vítr v okolí, načte se až po kliknutí</span></div>' }));
     var quests = makeAcc({ emoji: '🧭', color: 'var(--c-deti)', title: 'Úkoly pro malé průzkumníky', count: (T.program.quests || []).length,
       preview: 'Kdo splní nejvíc? Lodička na pramenu, klokan v zookoutku, perníčky na skále …', html: '' });
     quests.querySelector('.acc-body').appendChild(checklist('quest', T.program.quests || []));
@@ -1159,6 +1206,529 @@
     box.addEventListener('toggle', sync, true);
     sync();
   });
+
+  // ------------------------------------------------------------ počasí (živá předpověď)
+  // Při každém otevření stránky se stáhne čerstvá předpověď z Open-Meteo (zdarma a bez klíče,
+  // kombinuje modely ECMWF, ICON, GFS a další). Poslední úspěšná data si pamatuje prohlížeč
+  // a GitHub Actions je každé 3 hodiny ukládá i do data/weather.json, takže bez signálu nebo
+  // při výpadku zůstane aspoň poslední známá předpověď.
+  (function weather() {
+    var LAT = 49.6443, LON = 15.9684, ELE = 675;
+    var DATES = T.program.days.map(function (d) { return d.date; });
+    var API = 'https://api.open-meteo.com/v1/forecast?latitude=' + LAT + '&longitude=' + LON + '&elevation=' + ELE +
+      '&timezone=Europe%2FPrague&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m,precipitation,is_day';
+    var DAILY = 'weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset';
+    var HOURLY = 'temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m,is_day';
+    var WINDY = 'https://www.windy.com/49.644/15.968?49.644,15.968,10';
+    var WINDY_EMBED = 'https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km%2Fh' +
+      '&zoom=9&overlay=rain&product=ecmwf&level=surface&lat=49.644&lon=15.968&detailLat=49.644&detailLon=15.968&detail=true&message=true&marker=true';
+    var CLIMATE = 'Začátkem října tu bývá přes den kolem 7–13 °C a v noci 0–5 °C.';
+    // kódy počasí WMO → [ikona, popis]
+    var CODES = {
+      0: ['☀️', 'jasno'], 1: ['🌤️', 'skoro jasno'], 2: ['⛅', 'polojasno'], 3: ['☁️', 'zataženo'],
+      45: ['🌫️', 'mlha'], 48: ['🌫️', 'mlha s námrazou'],
+      51: ['🌦️', 'slabé mrholení'], 53: ['🌦️', 'mrholení'], 55: ['🌧️', 'husté mrholení'], 56: ['🌧️', 'mrznoucí mrholení'], 57: ['🌧️', 'mrznoucí mrholení'],
+      61: ['🌦️', 'slabý déšť'], 63: ['🌧️', 'déšť'], 65: ['🌧️', 'silný déšť'], 66: ['🌧️', 'mrznoucí déšť'], 67: ['🌧️', 'mrznoucí déšť'],
+      71: ['🌨️', 'slabé sněžení'], 73: ['🌨️', 'sněžení'], 75: ['❄️', 'husté sněžení'], 77: ['🌨️', 'sněhová zrna'],
+      80: ['🌦️', 'přeháňky'], 81: ['🌧️', 'přeháňky'], 82: ['⛈️', 'prudké přeháňky'], 85: ['🌨️', 'sněhové přeháňky'], 86: ['🌨️', 'sněhové přeháňky'],
+      95: ['⛈️', 'bouřka'], 96: ['⛈️', 'bouřka s kroupami'], 99: ['⛈️', 'bouřka s kroupami']
+    };
+    var DOW = ['ne', 'po', 'út', 'st', 'čt', 'pá', 'so'];
+    var DOW_IN = ['v neděli', 'v pondělí', 'v úterý', 've středu', 've čtvrtek', 'v pátek', 'v sobotu'];
+    var DOW_NOM = ['neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sobota'];
+    var hero = $('#wxHero'), acc = $('#pocasi'), detail = $('#wxDetail');
+    var dayAccs = {};
+    T.program.days.forEach(function (d) { var a = document.getElementById('day-' + d.id); if (a) dayAccs[d.date] = a; });
+    var st = { raw: null, at: 0, src: '', loading: false, failed: false };
+    var chart = null;   // stav grafu po hodinách (šířka, data pro přepočet při změně velikosti)
+
+    // ---- datum a čas v Praze (zařízení může být v jiném pásmu)
+    function prague(d) {
+      try {
+        var p = {};
+        new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Prague', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+          .formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
+        return { date: p.year + '-' + p.month + '-' + p.day, time: p.hour + ':' + p.minute };
+      } catch (e) {
+        var iso = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString();
+        return { date: iso.slice(0, 10), time: iso.slice(11, 16) };
+      }
+    }
+    function addDays(iso, n) { var d = new Date(iso + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+    function diffDays(a, b) { return Math.round((Date.parse(b + 'T12:00:00Z') - Date.parse(a + 'T12:00:00Z')) / 864e5); }
+    function dow(iso) { return new Date(iso + 'T12:00:00Z').getUTCDay(); }
+    function dShort(iso) { return DOW[dow(iso)] + ' ' + (+iso.slice(8, 10)) + '.'; }
+    function dLong(iso) { return dShort(iso) + ' ' + (+iso.slice(5, 7)) + '.'; }
+    // ---- čísla po česku
+    function num(x, dec) { return (dec ? x.toFixed(dec) : String(Math.round(x))).replace('.', ',').replace('-', '−'); }
+    function deg(x) { return num(x) + '°'; }
+    function mm(x) { var r = Math.round(x * 10) / 10; return r >= 10 || r % 1 === 0 ? num(r) : num(r, 1); }
+    function rangeC(a, b) {   // nezalomitelné mezery a pomlčka, ať se „15–17 °C“ nerozdělí na dva řádky
+      var lo = Math.round(a), hi = Math.round(b);
+      if (lo === hi) return 'kolem ' + num(lo) + '\u00a0°C';
+      return num(lo) + (lo < 0 ? '\u00a0až ' : '\u2060–\u2060') + num(hi) + '\u00a0°C';
+    }
+    function codeInfo(c, night) {
+      var x = CODES[c] || ['🌡️', 'bez údaje'];
+      if (night && c <= 1) return ['🌙', x[1]];
+      if (night && c === 2) return ['☁️', x[1]];
+      return x;
+    }
+    function rel(ms) {
+      var m = Math.round((Date.now() - ms) / 60000);
+      if (m < 1) return 'právě teď';
+      if (m < 60) return 'před ' + m + ' min';
+      if (m < 24 * 60) return 'před ' + Math.round(m / 60) + ' h';
+      var p = prague(new Date(ms));
+      return (+p.date.slice(8)) + '. ' + (+p.date.slice(5, 7)) + '. ' + p.time;
+    }
+
+    // ---- stažení
+    function apiUrl() {
+      var today = prague(new Date()).date;
+      var a = DATES[0], b = DATES[DATES.length - 1], lo = addDays(today, -60), hi = addDays(today, 15);
+      if (a < lo) a = lo;
+      if (b > hi) b = hi;
+      return API + (a <= b ? '&daily=' + DAILY + '&hourly=' + HOURLY + '&start_date=' + a + '&end_date=' + b : '');
+    }
+    function fetchJson(u, ms, sameOrigin) {
+      var ctl = window.AbortController ? new AbortController() : null;
+      var t = setTimeout(function () { if (ctl) ctl.abort(); }, ms);
+      return fetch(u, sameOrigin ? { cache: 'no-cache', signal: ctl && ctl.signal } : { signal: ctl && ctl.signal }).then(function (r) {
+        clearTimeout(t);
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }, function (e) { clearTimeout(t); throw e; });
+    }
+    function parse(j) {
+      var o = { cur: null, days: [], hours: [] };
+      function v(obj, k, i) { var a = obj[k]; return a && a[i] != null ? a[i] : null; }
+      var c = j && j.current;
+      if (c && c.temperature_2m != null) {
+        o.cur = { time: c.time, t: c.temperature_2m, feel: c.apparent_temperature, code: c.weather_code, night: c.is_day === 0 };
+      }
+      var d = j && j.daily, h = j && j.hourly;
+      if (d && d.time) d.time.forEach(function (date, i) {
+        if (DATES.indexOf(date) < 0 || v(d, 'temperature_2m_max', i) == null || v(d, 'temperature_2m_min', i) == null) return;
+        var sun = v(d, 'sunshine_duration', i);
+        o.days.push({ date: date, code: v(d, 'weather_code', i), tmax: v(d, 'temperature_2m_max', i), tmin: v(d, 'temperature_2m_min', i),
+          psum: v(d, 'precipitation_sum', i), pprob: v(d, 'precipitation_probability_max', i), gust: v(d, 'wind_gusts_10m_max', i),
+          sun: sun == null ? null : sun / 3600 });
+      });
+      var have = o.days.map(function (x) { return x.date; });
+      if (h && h.time) h.time.forEach(function (t, i) {
+        if (have.indexOf(t.slice(0, 10)) < 0) return;
+        o.hours.push({ time: t, t: v(h, 'temperature_2m', i), p: v(h, 'precipitation', i) || 0, pp: v(h, 'precipitation_probability', i),
+          code: v(h, 'weather_code', i), wind: v(h, 'wind_speed_10m', i), gust: v(h, 'wind_gusts_10m', i), night: v(h, 'is_day', i) === 0 });
+      });
+      return o;
+    }
+
+    // ---- slovní shrnutí
+    function isWet(d) { return (d.psum || 0) >= 2 || ((d.pprob || 0) >= 60 && (d.psum || 0) >= 0.5); }
+    function isShowery(d) { return !isWet(d) && ((d.psum || 0) >= 0.3 || (d.pprob || 0) >= 45); }
+    function isSunny(d) { return !isWet(d) && !isShowery(d) && d.sun != null && d.sun >= 6; }
+    function score(d) { return (d.sun || 0) - 3 * (d.psum || 0) - (d.pprob || 0) / 20 + d.tmax / 5 - Math.max(0, (d.gust || 0) - 45) / 10; }
+    function inDay(date, today) { return date === today ? 'dnes' : date === addDays(today, 1) ? 'zítra' : DOW_IN[dow(date)]; }
+    function listIn(ds, today) {
+      var a = ds.map(function (d) { return inDay(d.date, today); });
+      return a.length < 2 ? a[0] : a.slice(0, -1).join(', ') + ' a ' + a[a.length - 1];
+    }
+    function minOf(ds, k) { return Math.min.apply(null, ds.map(function (d) { return d[k]; })); }
+    function maxOf(ds, k) { return Math.max.apply(null, ds.map(function (d) { return d[k]; })); }
+    function summary(all, today) {
+      var past = all.every(function (d) { return d.date < today; });
+      var ds = past ? all : all.filter(function (d) { return d.date >= today; });
+      var one = ds.length === 1, s = [];
+      var wet = ds.filter(isWet), shw = ds.filter(isShowery), sunny = ds.filter(isSunny);
+      if (past) {
+        return 'Přes den bylo ' + rangeC(minOf(ds, 'tmax'), maxOf(ds, 'tmax')) + ', v noci ' + rangeC(minOf(ds, 'tmin'), maxOf(ds, 'tmin')) +
+          (wet.length ? ', pršelo ' + listIn(wet, '') : ', skoro bez deště') + '.';
+      }
+      if (wet.length === ds.length) s.push(one ? 'Vypadá to na deštivý den, hodí se tipy do deště.' : 'Vypadá to na deštivé dny, počítejte s pláštěnkami a tipy do deště.');
+      else if (wet.length) s.push('Déšť hlavně ' + listIn(wet, today) + (shw.length ? ', přeháňky ' + listIn(shw, today) : '') + '.');
+      else if (shw.length) s.push(one ? 'Spíš suchý den, ale můžou přijít přeháňky.' : 'Spíš sucho, jen ' + listIn(shw, today) + ' můžou přijít přeháňky.');
+      else if (one) s.push(sunny.length ? 'Vypadá to na suchý a slunečný den.' : 'Vypadá to na suchý den.');
+      else s.push(sunny.length * 2 >= ds.length ? 'Vypadá to na suché a slunečné dny.' : 'Vypadá to na suché dny.');
+      s.push('Přes den ' + rangeC(minOf(ds, 'tmax'), maxOf(ds, 'tmax')) + ', v noci ' + rangeC(minOf(ds, 'tmin'), maxOf(ds, 'tmin')) + '.');
+      if (minOf(ds, 'tmin') <= 1) s.push('Ráno může mrznout, hodí se čepice a rukavice.');
+      var windy = ds.filter(function (d) { return (d.gust || 0) >= 55; });
+      if (windy.length) s.push('Silný vítr ' + listIn(windy, today) + ' (nárazy až ' + num(maxOf(windy, 'gust')) + '\u00a0km/h), na hřebenech opatrně.');
+      if (ds.length >= 3 && (wet.length || shw.length) && wet.length < ds.length) {
+        var best = ds.slice().sort(function (a, b) { return score(b) - score(a); })[0];
+        if (!isWet(best) && !isShowery(best)) {
+          s.push('Na kolo nebo delší výlet vychází nejlépe ' + (best.date === today ? 'dnešek' : best.date === addDays(today, 1) ? 'zítřek' : DOW_NOM[dow(best.date)]) + '.');
+        }
+      }
+      return s.join(' ');
+    }
+    function reliability(lead) {
+      if (lead >= 8) return 'Víc než týden dopředu je to jen hrubý odhad, v týdnu před odjezdem se předpověď zpřesní.';
+      if (lead >= 4) return 'Na několik dní dopředu se předpověď ještě může změnit.';
+      return '';
+    }
+    function fallback(lead) {
+      var from = addDays(DATES[0], -15);
+      if (lead > 15) return 'Předpověď na pobyt se objeví ' + DOW_IN[dow(from)] + ' ' + (+from.slice(8)) + '. ' + (+from.slice(5, 7)) + '. ' + CLIMATE;
+      return (st.loading ? 'Načítám aktuální předpověď… ' : 'Předpověď se teď nepodařilo načíst. ') + CLIMATE;
+    }
+    function nowText(c) {
+      var ci = codeInfo(c.code, c.night), fresh = Date.now() - st.at < 90 * 60000;
+      return ci[0] + ' ' + (fresh ? 'Teď' : 'Naposledy') + ' ' + num(c.t) + ' °C, ' + ci[1] +
+        (c.feel != null && Math.abs(c.feel - c.t) >= 3 ? ', pocitově ' + num(c.feel) + ' °C' : '');
+    }
+    function updText() {
+      if (!st.at) return st.loading ? 'načítám předpověď…' : '';
+      return 'aktualizováno ' + rel(st.at) + (st.loading ? ' · načítám nová data…' : st.failed ? ' · nová data se teď nepodařilo stáhnout' : '') + ' · Open-Meteo';
+    }
+    function rainCell(d) {
+      var p = d.pprob, s = d.psum || 0;
+      if (s >= 1) return '<span class="wxh-rain" title="srážky ' + mm(s) + ' mm' + (p != null ? ', pravděpodobnost ' + p + ' %' : '') + '">💧 ' + mm(s) + ' mm</span>';
+      if (p != null) return '<span class="wxh-rain' + (p < 30 ? ' dim' : '') + '" title="pravděpodobnost srážek">💧 ' + p + ' %</span>';
+      return '<span class="wxh-rain dim">–</span>';
+    }
+    function dayAria(d) {
+      return dLong(d.date) + ': ' + codeInfo(d.code)[1] + ', ' + rangeC(d.tmin, d.tmax) +
+        (d.pprob != null ? ', pravděpodobnost srážek ' + d.pprob + ' %' : '') + ((d.psum || 0) >= 0.1 ? ', ' + mm(d.psum) + ' mm' : '');
+    }
+
+    // ---- souhrn nahoře
+    function renderHero(data, today) {
+      if (!hero) return;
+      var days = data ? data.days : [], byDate = {};
+      days.forEach(function (d) { byDate[d.date] = d; });
+      var lead = diffDays(today, DATES[0]), after = today > DATES[DATES.length - 1];
+      var badge = !days.length ? (st.loading ? 'načítám…' : lead > 15 ? 'zatím bez předpovědi' : 'bez spojení') :
+        after ? 'jak bylo' : lead <= 0 ? 'jsme tu' : lead >= 8 ? 'orientační výhled' : 'předpověď';
+      var lo = Infinity, hi = -Infinity;
+      days.forEach(function (d) { lo = Math.min(lo, d.tmin); hi = Math.max(hi, d.tmax); });
+      lo = Math.floor(lo) - 1; hi = Math.ceil(hi) + 1;
+      var rows = DATES.map(function (date) {
+        var d = byDate[date];
+        var cls = 'wxh-day' + (date === today ? ' is-today' : date < today && !after ? ' is-past' : '');
+        var name = date === today ? '<b>dnes</b>' : '<b>' + DOW[dow(date)] + '</b> ' + (+date.slice(8)) + '.';
+        if (!d) {
+          return '<li class="' + cls + ' is-empty"><span class="wxh-dn">' + name + '</span><span class="wxh-ico" aria-hidden="true">·</span>' +
+            '<span class="wxh-lo">–</span><span class="wxh-bar" aria-hidden="true"></span><span class="wxh-hi">–</span><span class="wxh-rain"></span></li>';
+        }
+        var ci = codeInfo(d.code), span = hi - lo;
+        var left = (d.tmin - lo) / span * 100, width = Math.max(4, (d.tmax - d.tmin) / span * 100);
+        var dot = date === today && data.cur ? '<span class="now" style="left:' + Math.max(0, Math.min(100, (data.cur.t - lo) / span * 100)).toFixed(1) + '%"></span>' : '';
+        return '<li class="' + cls + '" aria-label="' + esc(dayAria(d)) + '"><span class="wxh-dn" aria-hidden="true">' + name + '</span>' +
+          '<span class="wxh-ico" title="' + esc(ci[1]) + '" aria-hidden="true">' + ci[0] + '</span>' +
+          '<span class="wxh-lo" aria-hidden="true">' + deg(d.tmin) + '</span>' +
+          '<span class="wxh-bar" aria-hidden="true"><i style="left:' + left.toFixed(1) + '%;width:' + width.toFixed(1) + '%"></i>' + dot + '</span>' +
+          '<span class="wxh-hi" aria-hidden="true">' + deg(d.tmax) + '</span>' + rainCell(d).replace('<span ', '<span aria-hidden="true" ') + '</li>';
+      }).join('');
+      var cur = data && data.cur ? nowText(data.cur) : '';
+      hero.classList.toggle('is-loading', st.loading);
+      hero.setAttribute('aria-busy', st.loading ? 'true' : 'false');
+      hero.innerHTML = '<div class="wxh-head"><h2 class="wxh-title">🌦️ Počasí na mlýně</h2><span class="wxh-badge">' + esc(badge) + '</span></div>' +
+        '<ol class="wxh-days">' + rows + '</ol>' +
+        '<p class="wxh-sum">' + esc(days.length ? summary(days, today) : fallback(lead)) + '</p>' +
+        '<div class="wxh-foot"><span class="wxh-now">' + esc(cur) + '</span><span class="wxh-links">' +
+        '<a href="#pocasi" data-wx="open">Po hodinách ›</a><a href="' + WINDY + '" target="_blank" rel="noopener">Windy ↗</a></span></div>' +
+        '<div class="wxh-upd">' + esc(updText()) + '</div>';
+    }
+
+    // ---- detail v sekci Praktické
+    function daysTable(days, today) {
+      return '<div class="wx-tablewrap"><table class="wx-table"><thead><tr><th>Den</th><th>Počasí</th><th>Teplota</th><th>Srážky</th><th class="opt">Vítr</th><th class="opt">Slunce</th></tr></thead><tbody>' +
+        days.map(function (d) {
+          var ci = codeInfo(d.code);
+          return '<tr' + (d.date === today ? ' class="is-today"' : '') + '><td>' + dLong(d.date) + '</td><td><span aria-hidden="true">' + ci[0] + '</span> <span class="txt">' + esc(ci[1]) + '</span></td>' +
+            '<td><b>' + deg(d.tmax) + '</b> / ' + deg(d.tmin) + '</td>' +
+            '<td>' + mm(d.psum || 0) + ' mm' + (d.pprob != null ? ' · ' + d.pprob + ' %' : '') + '</td>' +
+            '<td class="opt">' + (d.gust != null ? 'nárazy ' + num(d.gust) + '\u00a0km/h' : '–') + '</td>' +
+            '<td class="opt">' + (d.sun != null ? num(d.sun, 1) + ' h' : '–') + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+    }
+    function hoursTable(hrs) {
+      var rows = '';
+      for (var i = 0; i < hrs.length; i += 3) {
+        var a = hrs[i];
+        if (a.time.slice(11, 13) === '00') rows += '<tr class="dh"><th colspan="5">' + dLong(a.time.slice(0, 10)) + '</th></tr>';
+        if (a.t == null) continue;
+        var p = 0, pp = null;
+        for (var k = i; k < i + 3 && k < hrs.length; k++) { p += hrs[k].p || 0; if (hrs[k].pp != null) pp = Math.max(pp || 0, hrs[k].pp); }
+        var ci = codeInfo(a.code, a.night);
+        rows += '<tr><td>' + a.time.slice(11, 16) + '</td><td><span aria-hidden="true">' + ci[0] + '</span> <span class="txt">' + esc(ci[1]) + '</span></td><td>' + deg(a.t) + '</td>' +
+          '<td>' + mm(p) + ' mm' + (pp != null ? ' · ' + pp + ' %' : '') + '</td><td>' + (a.wind != null ? num(a.wind) + ' km/h' : '–') + '</td></tr>';
+      }
+      return '<div class="wx-tablewrap"><table class="wx-table"><thead><tr><th>Čas</th><th>Počasí</th><th>Teplota</th><th>Srážky za 3 h</th><th>Vítr</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+    }
+    function renderDetail(data, today) {
+      if (!detail) return;
+      var days = data ? data.days : [], lead = diffDays(today, DATES[0]), h = '';
+      detail.classList.toggle('is-loading', st.loading);
+      if (days.length) {
+        var note = today <= DATES[DATES.length - 1] ? reliability(lead) : '';
+        h += '<p class="wx-sum">' + esc(summary(days, today)) + '</p>' + (note ? '<p class="wx-note">' + esc(note) + '</p>' : '') + daysTable(days, today);
+        if (data.hours.length) {
+          h += '<figure class="wxc" tabindex="0" aria-label="Graf po hodinách: teplota a srážky. Šipkami doleva a doprava se posouváte po hodinách.">' +
+            '<div class="wxc-box"></div><div class="wxc-tip" hidden></div></figure>' +
+            '<details class="wx-hours"><summary>Tabulka po 3 hodinách</summary>' + hoursTable(data.hours) + '</details>';
+        }
+      } else {
+        h += '<p class="wx-sum">' + esc(fallback(lead)) + '</p>';
+      }
+      h += '<p class="wx-src"><span class="wx-upd">' + esc(updText()) + '</span> <button type="button" class="btn small" data-wx="refresh">↻ Aktualizovat</button>' +
+        ' <a class="btn small" href="' + WINDY + '" target="_blank" rel="noopener">Windy ↗</a></p>';
+      detail.innerHTML = h;
+      chart = data && data.hours.length ? { data: data, w: 0 } : null;
+      drawChart();
+    }
+
+    // graf po hodinách: nahoře teplota (čára), dole srážky po 3 hodinách (sloupce) – každý se svou osou
+    function drawChart() {
+      var fig = detail && detail.querySelector('.wxc');
+      if (!fig || !chart) return;
+      var box = fig.querySelector('.wxc-box'), tip = fig.querySelector('.wxc-tip');
+      var W = Math.round(box.clientWidth);
+      if (W < 100) return;   // sbalená sekce – nakreslí se po rozbalení
+      chart.w = W;
+      var hrs = chart.data.hours, n = hrs.length;
+      var padL = 30, padR = 10, tTop = 26, tBot = 146, pTop = 180, pBot = 222, H = 258;
+      var step = (W - padL - padR) / n;
+      function X(i) { return padL + i * step; }
+      var ts = hrs.map(function (x) { return x.t; }).filter(function (v) { return v != null; });
+      var tmin = Math.min.apply(null, ts), tmax = Math.max.apply(null, ts);
+      var tst, lo, hi;
+      [1, 2, 5, 10].some(function (x) {   // krok osy tak, aby vyšlo nejvýš 5 dílků
+        tst = x; lo = Math.floor((tmin - 1) / x) * x; hi = Math.ceil((tmax + 2) / x) * x;
+        return (hi - lo) / x <= 5;
+      });
+      function YT(v) { return tBot - (v - lo) / (hi - lo) * (tBot - tTop); }
+      var bins = [];
+      for (var i = 0; i < n; i += 3) {
+        var sum = 0, pp = null;
+        for (var k = i; k < Math.min(n, i + 3); k++) { sum += hrs[k].p || 0; if (hrs[k].pp != null) pp = Math.max(pp || 0, hrs[k].pp); }
+        bins.push({ i: i, n: Math.min(3, n - i), s: sum, pp: pp });
+      }
+      var pRaw = Math.max.apply(null, bins.map(function (b) { return b.s; }));
+      var pmax = [1, 2, 5, 10, 20, 50].filter(function (v) { return v >= pRaw; })[0] || Math.ceil(pRaw / 10) * 10;
+      function YP(v) { return pBot - v / pmax * (pBot - pTop); }
+      function f(x) { return x.toFixed(1); }
+      var s = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Teplota ' +
+        esc(rangeC(tmin, tmax)) + ', srážky nejvýš ' + mm(pRaw) + ' mm za 3 hodiny. Hodnoty jsou i v tabulce pod grafem.">';
+      // noc
+      [[tTop, tBot], [pTop, pBot]].forEach(function (band) {
+        for (var i = 0; i < n; i++) {
+          if (!hrs[i].night) continue;
+          var j = i;
+          while (j + 1 < n && hrs[j + 1].night) j++;
+          s += '<rect class="night" x="' + f(X(i)) + '" y="' + band[0] + '" width="' + f(Math.min(j + 1, n) * step - i * step) + '" height="' + (band[1] - band[0]) + '"/>';
+          i = j;
+        }
+      });
+      // mřížka a osy
+      for (var v = lo; v <= hi + 1e-9; v += tst) {
+        s += '<line class="grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + f(YT(v)) + '" y2="' + f(YT(v)) + '"/>' +
+          '<text class="ytick" x="' + (padL - 5) + '" y="' + f(YT(v) + 4) + '" text-anchor="end">' + num(v) + '°</text>';
+      }
+      s += '<line class="grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + pTop + '" y2="' + pTop + '"/>' +
+        '<line class="axis" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + pBot + '" y2="' + pBot + '"/>' +
+        '<text class="ytick" x="' + (padL - 5) + '" y="' + (pBot + 4) + '" text-anchor="end">0</text>' +
+        '<text class="ytick" x="' + (padL - 5) + '" y="' + (pTop + 4) + '" text-anchor="end">' + num(pmax) + '</text>';
+      s += '<text class="plab" x="0" y="14">Teplota (°C)</text><text class="plab" x="0" y="' + (pTop - 12) + '">Srážky (mm za 3 hodiny)</text>';
+      // dny: dělicí čáry, hodiny a názvy
+      var starts = [];
+      hrs.forEach(function (x, i) { if (i === 0 || x.time.slice(11, 13) === '00') starts.push(i); });
+      starts.forEach(function (i, k) {
+        var end = k + 1 < starts.length ? starts[k + 1] : n, date = hrs[i].time.slice(0, 10);
+        if (i > 0) s += '<line class="sep" x1="' + f(X(i)) + '" x2="' + f(X(i)) + '" y1="' + (tTop - 6) + '" y2="' + (H - 2) + '"/>';
+        [6, 12, 18].forEach(function (hh) {
+          if (i + hh >= end) return;
+          var x = f(X(i + hh));
+          s += '<line class="tick" x1="' + x + '" x2="' + x + '" y1="' + pBot + '" y2="' + (pBot + 4) + '"/>';
+          if (hh === 12 || step * 6 >= 24) s += '<text class="xtick" x="' + x + '" y="' + (pBot + 16) + '" text-anchor="middle">' + hh + '</text>';
+        });
+        s += '<text class="day" x="' + f((X(i) + X(end)) / 2) + '" y="' + (H - 4) + '" text-anchor="middle">' + ((end - i) * step > 84 ? dLong(date) : dShort(date)) + '</text>';
+      });
+      // teplota: plocha, čára, nejvyšší a nejnižší hodnota každého dne
+      var line = '', first = -1, last = -1;
+      hrs.forEach(function (x, i) {
+        if (x.t == null) return;
+        line += (first < 0 ? 'M' : 'L') + f(X(i)) + ',' + f(YT(x.t));
+        if (first < 0) first = i;
+        last = i;
+      });
+      s += '<path class="t-area" d="' + line + 'L' + f(X(last)) + ',' + tBot + 'L' + f(X(first)) + ',' + tBot + 'Z"/><path class="t-line" d="' + line + '"/>';
+      // srážky: sloupce se zaobleným vrškem, rovné u základny
+      var bw = Math.max(2, Math.min(24, 3 * step - 2));
+      bins.forEach(function (b) {
+        if (b.s < 0.05) return;
+        var x0 = X(b.i) + b.n * step / 2 - bw / 2, y = YP(b.s), r = Math.min(4, bw / 2, pBot - y);
+        s += '<path class="bar" d="M' + f(x0) + ',' + pBot + 'V' + f(y + r) + 'A' + f(r) + ',' + f(r) + ' 0 0 1 ' + f(x0 + r) + ',' + f(y) +
+          'H' + f(x0 + bw - r) + 'A' + f(r) + ',' + f(r) + ' 0 0 1 ' + f(x0 + bw) + ',' + f(y + r) + 'V' + pBot + 'Z"/>';
+      });
+      if (pRaw < 0.05) s += '<text class="none" x="' + f((padL + W - padR) / 2) + '" y="' + ((pTop + pBot) / 2 + 4) + '" text-anchor="middle">bez srážek</text>';
+      starts.forEach(function (i, k) {
+        var end = k + 1 < starts.length ? starts[k + 1] : n, ma = -1, mi = -1;
+        for (var j = i; j < end; j++) {
+          if (hrs[j].t == null) continue;
+          if (ma < 0 || hrs[j].t > hrs[ma].t) ma = j;
+          if (mi < 0 || hrs[j].t < hrs[mi].t) mi = j;
+        }
+        if (ma < 0) return;
+        [[ma, -9], [mi, 17]].forEach(function (e) {
+          var x = X(e[0]), y = YT(hrs[e[0]].t);
+          s += '<circle class="t-dot" cx="' + f(x) + '" cy="' + f(y) + '" r="4"/>' +
+            '<text class="lbl" x="' + f(Math.max(padL + 10, Math.min(W - padR - 10, x))) + '" y="' + f(Math.max(tTop + 9, Math.min(tBot + 13, y + e[1]))) + '" text-anchor="middle">' + deg(hrs[e[0]].t) + '</text>';
+        });
+      });
+      // teď
+      var now = prague(new Date()), ni = -1;
+      hrs.forEach(function (x, i) { if (x.time.slice(0, 10) === now.date && x.time.slice(11, 13) === now.time.slice(0, 2)) ni = i; });
+      if (ni >= 0) {
+        var nx = f(X(ni) + (+now.time.slice(3, 5)) / 60 * step);
+        s += '<line class="now" x1="' + nx + '" x2="' + nx + '" y1="' + (tTop - 6) + '" y2="' + pBot + '"/>' +
+          '<text class="nowl" x="' + nx + '" y="' + (tTop - 10) + '" text-anchor="middle">teď</text>';
+      }
+      s += '<line class="cur" x1="-9" x2="-9" y1="' + (tTop - 6) + '" y2="' + pBot + '" visibility="hidden"/>' +
+        '<circle class="cur-dot" cx="-9" cy="-9" r="5" visibility="hidden"/></svg>';
+      box.innerHTML = s;
+      var svg = box.querySelector('svg'), cur = svg.querySelector('.cur'), dot = svg.querySelector('.cur-dot');
+      var pos = ni >= 0 ? ni : 12;
+      function show(i) {
+        pos = Math.max(0, Math.min(n - 1, i));
+        var x = hrs[pos], cx = f(X(pos)), ci = codeInfo(x.code, x.night);
+        cur.setAttribute('x1', cx); cur.setAttribute('x2', cx); cur.setAttribute('visibility', 'visible');
+        if (x.t != null) { dot.setAttribute('cx', cx); dot.setAttribute('cy', f(YT(x.t))); dot.setAttribute('visibility', 'visible'); }
+        else dot.setAttribute('visibility', 'hidden');
+        tip.innerHTML = '<b>' + (x.t != null ? num(x.t) + ' °C' : '–') + '</b> <span aria-hidden="true">' + ci[0] + '</span> ' + esc(ci[1]) +
+          '<span class="t2">' + esc(dLong(x.time.slice(0, 10))) + ' · ' + x.time.slice(11, 16) + '</span>' +
+          '<span class="t2">srážky ' + mm(x.p || 0) + '\u00a0mm' + (x.pp != null ? ' · ' + x.pp + '\u00a0%' : '') + '</span>' +
+          (x.wind != null ? '<span class="t2">vítr ' + num(x.wind) + ' km/h' + (x.gust != null ? ', nárazy ' + num(x.gust) : '') + '</span>' : '');
+        tip.hidden = false;
+        var right = X(pos) > W * 0.58;
+        tip.style.left = f(X(pos)) + 'px';
+        tip.style.transform = right ? 'translateX(calc(-100% - 12px))' : 'translateX(12px)';
+      }
+      function hide() {
+        cur.setAttribute('visibility', 'hidden'); dot.setAttribute('visibility', 'hidden'); tip.hidden = true;
+      }
+      function at(ev) { var r = svg.getBoundingClientRect(); return Math.round((ev.clientX - r.left - padL) / step); }
+      svg.addEventListener('pointermove', function (ev) { show(at(ev)); });
+      svg.addEventListener('pointerdown', function (ev) { show(at(ev)); });
+      svg.addEventListener('pointerleave', function (ev) { if (ev.pointerType === 'mouse') hide(); });
+      fig.onkeydown = function (ev) {
+        var d = { ArrowLeft: -1, ArrowRight: 1, PageUp: -6, PageDown: 6 }[ev.key];
+        if (ev.key === 'Home') d = -n;
+        if (ev.key === 'End') d = n;
+        if (!d) return;
+        ev.preventDefault();
+        show(pos + (ev.shiftKey ? d * 6 : d));
+      };
+      fig.onfocus = function () { show(pos); };
+      fig.onblur = hide;
+    }
+
+    // ---- štítek s počasím u nápadů po dnech
+    function renderDays(data, today) {
+      var byDate = {};
+      (data ? data.days : []).forEach(function (d) { byDate[d.date] = d; });
+      Object.keys(dayAccs).forEach(function (date) {
+        var a = dayAccs[date], d = byDate[date], sum = a.querySelector('summary'), body = a.querySelector('.acc-body');
+        var chip = sum.querySelector('.acc-wx'), line = body.querySelector('.daywx');
+        if (!d) {
+          if (chip) chip.parentNode.removeChild(chip);
+          if (line) line.parentNode.removeChild(line);
+          a.classList.remove('has-wx');
+          return;
+        }
+        var ci = codeInfo(d.code), wet = isWet(d) || isShowery(d);
+        if (!chip) { chip = el('span', { 'class': 'acc-wx' }); sum.insertBefore(chip, sum.querySelector('.acc-chev')); }
+        chip.className = 'acc-wx' + (wet ? ' wet' : '');
+        chip.title = (date < today ? 'Počasí: ' : 'Předpověď: ') + dayAria(d);
+        chip.innerHTML = '<span class="ico" aria-hidden="true">' + ci[0] + '</span><b>' + deg(d.tmax) + '</b><span class="lo">/' + deg(d.tmin) + '</span>' +
+          ((d.pprob || 0) >= 30 || (d.psum || 0) >= 1 ? '<span class="rn">💧' + ((d.psum || 0) >= 1 ? mm(d.psum) + ' mm' : d.pprob + ' %') + '</span>' : '');
+        a.classList.add('has-wx');
+        if (!line) { line = el('p', { 'class': 'daywx' }); body.insertBefore(line, body.firstChild); }
+        line.innerHTML = '<b>' + (date < today ? 'Počasí' : 'Předpověď') + ':</b> ' + ci[0] + ' ' + esc(ci[1]) + ', ' + esc(rangeC(d.tmin, d.tmax)) +
+          (d.pprob != null ? ', srážky ' + d.pprob + ' %' + ((d.psum || 0) >= 0.1 ? ' (' + mm(d.psum) + ' mm)' : '') : '') +
+          ((d.gust || 0) >= 40 ? ', nárazy větru ' + num(d.gust) + ' km/h' : '') + '.' +
+          (wet && date >= today ? ' <span class="muted">Hodí se tipy „Když prší“ níž.</span>' : '');
+      });
+    }
+    function renderPreview(data) {
+      if (!acc || !acc.setHead) return;
+      var days = data ? data.days : [];
+      acc.setHead('Počasí a světlo', null, esc(days.length ? days.map(function (d) {
+        return DOW[dow(d.date)] + ' ' + codeInfo(d.code)[0] + ' ' + deg(d.tmax) + '/' + deg(d.tmin);
+      }).join(' · ') + ' · ' + updText() : 'aktuální předpověď pro mlýn · slunce zapadá kolem ' + T.sun[0].set + ' · 10. 10. novoluní'));
+    }
+    function renderUpd() {
+      var t = updText();
+      $$('.wxh-upd, .wx-upd').forEach(function (x) { x.textContent = t; });
+    }
+    function renderAll() {
+      var data = st.raw ? parse(st.raw) : null, today = prague(new Date()).date;
+      renderHero(data, today);
+      renderDetail(data, today);
+      renderDays(data, today);
+      renderPreview(data);
+    }
+
+    // ---- načtení: hned poslední známá data, pak čerstvá z Open-Meteo, při chybě záloha z GitHubu
+    function set(raw, at, src) { st.raw = raw; st.at = at; st.src = src; }
+    var snapP = null;
+    function snapshot() {
+      if (!snapP) {
+        snapP = fetchJson('data/weather.json', 6000, true).then(function (s) {
+          var at = s && s.fetched ? Date.parse(s.fetched) : 0;
+          if (s && s.data && at && st.src !== 'live' && at > st.at) set(s.data, at, 'snap');
+        }).catch(function () {});
+      }
+      return snapP;
+    }
+    function load() {
+      if (st.loading) return;
+      st.loading = true; st.failed = false;
+      renderAll();
+      var live = fetchJson(apiUrl(), 10000).then(function (j) {
+        if (!j || (!j.current && !j.daily)) throw new Error('prázdná odpověď');
+        set(j, Date.now(), 'live');
+        store('wx1', { at: st.at, j: j });
+      });
+      if (!st.raw) snapshot().then(function () { if (st.loading && st.raw) renderAll(); });
+      live.catch(function () { st.failed = true; return snapshot(); }).then(function () {
+        st.loading = false;
+        renderAll();
+      });
+    }
+    var c0 = store('wx1');
+    if (c0 && c0.j && c0.at) set(c0.j, c0.at, 'cache');
+    load();
+
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-wx]');
+      if (!b) return;
+      var act = b.getAttribute('data-wx');
+      if (act === 'open') {
+        e.preventDefault();
+        if (acc) { acc.open = true; acc.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      } else if (act === 'refresh') load();
+      else if (act === 'windy') {
+        b.parentNode.innerHTML = '<iframe src="' + esc(WINDY_EMBED) + '" title="Windy: předpověď a radar pro Cikháj" allowfullscreen></iframe>';
+      }
+    });
+    if (acc) acc.addEventListener('toggle', function () { if (acc.open && chart && !chart.w) drawChart(); });
+    var rT = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(rT);
+      rT = setTimeout(function () {
+        var fig = detail && detail.querySelector('.wxc-box');
+        if (chart && fig && Math.abs(fig.clientWidth - chart.w) > 6) drawChart();
+      }, 150);
+    });
+    // po návratu do stránky (třeba ráno na mlýně) se předpověď obnoví sama
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && Date.now() - st.at > 30 * 60000) load();
+    });
+    setInterval(function () { if (!document.hidden) renderUpd(); }, 60000);
+    if (location.hash === '#pocasi' && acc) acc.open = true;
+  })();
 
   // ------------------------------------------------------------ credits
   $('#credits').innerHTML = T.credits;
