@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LAT, LON, ELE = 49.6443, 15.9684, 675
+MODEL = 'ecmwf_ifs'   # ECMWF IFS HRES 9 km, stejný model jako na webu (a výchozí ve Windy)
 CURRENT = 'temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m,precipitation,is_day'
 DAILY = ('weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,'
          'precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset')
@@ -36,7 +37,7 @@ def main():
     # denní a hodinová data jen pro dny pobytu, které už předpověď pokrývá (16 dní dopředu)
     start = max(dates[0], today - datetime.timedelta(days=60))
     end = min(dates[-1], today + datetime.timedelta(days=15))
-    url = (f'https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&elevation={ELE}'
+    url = (f'https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&elevation={ELE}&models={MODEL}'
            f'&timezone=Europe%2FPrague&current={CURRENT}')
     if start <= end:
         url += f'&daily={DAILY}&hourly={HOURLY}&start_date={start}&end_date={end}'
@@ -54,7 +55,7 @@ def main():
         print('Předpověď se nepodařilo stáhnout.')
         return 1
     snap = {'fetched': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-            'source': 'Open-Meteo', 'data': data}
+            'source': 'Open-Meteo', 'model': MODEL, 'data': data}
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     with open(out, 'w', encoding='utf-8') as f:
         json.dump(snap, f, ensure_ascii=False, separators=(',', ':'))

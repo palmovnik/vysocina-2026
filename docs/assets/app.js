@@ -1208,14 +1208,17 @@
   });
 
   // ------------------------------------------------------------ počasí (živá předpověď)
-  // Při každém otevření stránky se stáhne čerstvá předpověď z Open-Meteo (zdarma a bez klíče,
-  // kombinuje modely ECMWF, ICON, GFS a další). Poslední úspěšná data si pamatuje prohlížeč
-  // a GitHub Actions je každé 3 hodiny ukládá i do data/weather.json, takže bez signálu nebo
-  // při výpadku zůstane aspoň poslední známá předpověď.
+  // Při každém otevření stránky se stáhne čerstvá předpověď z Open-Meteo (zdarma a bez klíče).
+  // Model je napevno ECMWF IFS HRES 9 km (stejný jako výchozí ve Windy, dny pobytu pokryje
+  // celé až 15 dní dopředu), aby popisek v rohu vždycky platil a čísla šla porovnat s Windy.
+  // Poslední úspěšná data si pamatuje prohlížeč a GitHub Actions je každé 3 hodiny ukládá
+  // i do data/weather.json, takže bez signálu nebo při výpadku zůstane poslední známá předpověď.
   (function weather() {
     var LAT = 49.6443, LON = 15.9684, ELE = 675;
+    var MODEL = { id: 'ecmwf_ifs', name: 'ECMWF IFS 9 km',
+      title: 'Model ECMWF IFS HRES (Evropské centrum pro střednědobé předpovědi), rozlišení 9 km, stejný jako výchozí model ve Windy. Data přes Open-Meteo.' };
     var DATES = T.program.days.map(function (d) { return d.date; });
-    var API = 'https://api.open-meteo.com/v1/forecast?latitude=' + LAT + '&longitude=' + LON + '&elevation=' + ELE +
+    var API = 'https://api.open-meteo.com/v1/forecast?latitude=' + LAT + '&longitude=' + LON + '&elevation=' + ELE + '&models=' + MODEL.id +
       '&timezone=Europe%2FPrague&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m,precipitation,is_day';
     var DAILY = 'weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset';
     var HOURLY = 'temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m,is_day';
@@ -1379,7 +1382,10 @@
     }
     function updText() {
       if (!st.at) return st.loading ? 'načítám předpověď…' : '';
-      return 'aktualizováno ' + rel(st.at) + (st.loading ? ' · načítám nová data…' : st.failed ? ' · nová data se teď nepodařilo stáhnout' : '') + ' · Open-Meteo';
+      return 'aktualizováno ' + rel(st.at) + (st.loading ? ' · načítám nová data…' : st.failed ? ' · nová data se teď nepodařilo stáhnout' : '');
+    }
+    function modelTag() {
+      return '<span class="wxh-model" title="' + esc(MODEL.title) + '">' + esc(MODEL.name) + '</span>';
     }
     function rainCell(d) {
       var p = d.pprob, s = d.psum || 0;
@@ -1428,7 +1434,7 @@
         '<p class="wxh-sum">' + esc(days.length ? summary(days, today) : fallback(lead)) + '</p>' +
         '<div class="wxh-foot"><span class="wxh-now">' + esc(cur) + '</span><span class="wxh-links">' +
         '<a href="#pocasi" data-wx="open">Po hodinách ›</a><a href="' + WINDY + '" target="_blank" rel="noopener">Windy ↗</a></span></div>' +
-        '<div class="wxh-upd">' + esc(updText()) + '</div>';
+        '<div class="wxh-bot"><span class="wxh-upd">' + esc(updText()) + '</span>' + (st.raw ? modelTag() : '') + '</div>';
     }
 
     // ---- detail v sekci Praktické
@@ -1472,7 +1478,9 @@
       } else {
         h += '<p class="wx-sum">' + esc(fallback(lead)) + '</p>';
       }
-      h += '<p class="wx-src"><span class="wx-upd">' + esc(updText()) + '</span> <button type="button" class="btn small" data-wx="refresh">↻ Aktualizovat</button>' +
+      h += '<p class="wx-src"><span class="wx-upd">' + esc(updText()) + '</span>' +
+        '<span class="wx-model" title="' + esc(MODEL.title) + '">model ' + esc(MODEL.name) + ' · data <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></span>' +
+        ' <button type="button" class="btn small" data-wx="refresh">↻ Aktualizovat</button>' +
         ' <a class="btn small" href="' + WINDY + '" target="_blank" rel="noopener">Windy ↗</a></p>';
       detail.innerHTML = h;
       chart = data && data.hours.length ? { data: data, w: 0 } : null;
@@ -1530,7 +1538,8 @@
         '<line class="axis" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + pBot + '" y2="' + pBot + '"/>' +
         '<text class="ytick" x="' + (padL - 5) + '" y="' + (pBot + 4) + '" text-anchor="end">0</text>' +
         '<text class="ytick" x="' + (padL - 5) + '" y="' + (pTop + 4) + '" text-anchor="end">' + num(pmax) + '</text>';
-      s += '<text class="plab" x="0" y="14">Teplota (°C)</text><text class="plab" x="0" y="' + (pTop - 12) + '">Srážky (mm za 3 hodiny)</text>';
+      s += '<text class="plab" x="0" y="14">Teplota (°C)</text><text class="plab" x="0" y="' + (pTop - 12) + '">Srážky (mm za 3 hodiny)</text>' +
+        '<text class="mlab" x="' + (W - padR) + '" y="14" text-anchor="end">model ' + esc(MODEL.name) + '</text>';
       // dny: dělicí čáry, hodiny a názvy
       var starts = [];
       hrs.forEach(function (x, i) { if (i === 0 || x.time.slice(11, 13) === '00') starts.push(i); });
@@ -1677,7 +1686,7 @@
       if (!snapP) {
         snapP = fetchJson('data/weather.json', 6000, true).then(function (s) {
           var at = s && s.fetched ? Date.parse(s.fetched) : 0;
-          if (s && s.data && at && st.src !== 'live' && at > st.at) set(s.data, at, 'snap');
+          if (s && s.data && at && (s.model || 'best_match') === MODEL.id && st.src !== 'live' && at > st.at) set(s.data, at, 'snap');
         }).catch(function () {});
       }
       return snapP;
@@ -1689,7 +1698,7 @@
       var live = fetchJson(apiUrl(), 10000).then(function (j) {
         if (!j || (!j.current && !j.daily)) throw new Error('prázdná odpověď');
         set(j, Date.now(), 'live');
-        store('wx1', { at: st.at, j: j });
+        store('wx1', { at: st.at, model: MODEL.id, j: j });
       });
       if (!st.raw) snapshot().then(function () { if (st.loading && st.raw) renderAll(); });
       live.catch(function () { st.failed = true; return snapshot(); }).then(function () {
@@ -1698,7 +1707,7 @@
       });
     }
     var c0 = store('wx1');
-    if (c0 && c0.j && c0.at) set(c0.j, c0.at, 'cache');
+    if (c0 && c0.j && c0.at && c0.model === MODEL.id) set(c0.j, c0.at, 'cache');
     load();
 
     document.addEventListener('click', function (e) {

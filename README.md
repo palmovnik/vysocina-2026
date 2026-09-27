@@ -24,7 +24,10 @@ minuty publikuje. V nastavení repozitáře (*Settings → Pages*) je zdroj
 ## Počasí
 
 Stránka si při každém otevření (a po návratu do ní po víc než půl hodině) stáhne předpověď
-z [Open-Meteo](https://open-meteo.com/) (zdarma, bez klíče, modely ECMWF, ICON, GFS a další).
+z [Open-Meteo](https://open-meteo.com/) (zdarma, bez klíče). Model je napevno **ECMWF IFS HRES 9 km**
+(stejný jako výchozí ve Windy, pokryje 15 dní dopředu); jeho název je malým písmem v rohu karty
+s počasím i grafu. Výchozí „best match“ z Open-Meteo by pro Cikháj střídal modely podle toho,
+jak daleko je den (do týdne DWD ICON, dál ECMWF), a popisek by neseděl.
 Poslední úspěšně stažená data si pamatuje prohlížeč. Jako záloha pro případ, že živé stažení
 selže, stejný workflow *Nasazení webu* každé 3 hodiny spustí `tools/weather.py` a uloží předpověď
 do `data/weather.json` na větvi `gh-pages` (po skončení pobytu už nic nestahuje).
@@ -60,5 +63,5 @@ fotografie z [Wikimedia Commons](https://commons.wikimedia.org/) (autor a licenc
 gastro tipy mimo jiné z [Gastromapy Lukáše Hejlíka](https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika),
 průvodce [Gault&Millau](https://www.gault-millau.cz/) a [Maurerova výběru](https://maureruv-vyber.cz/),
 mapová knihovna [Leaflet](https://leafletjs.com/) (BSD-2),
-předpověď počasí [Open-Meteo.com](https://open-meteo.com/) (CC BY 4.0).
+předpověď počasí: model ECMWF IFS (© [ECMWF](https://www.ecmwf.int/), CC BY 4.0) přes [Open-Meteo.com](https://open-meteo.com/) (CC BY 4.0).
 Otevírací doby, vstupné a akce jsou převzaté z webů provozovatelů (stav k 27. 9. 2026).
