@@ -2,8 +2,6 @@
 <gpx version="1.1" creator="Vysočina 2026 – Mlýn Vikinek" xmlns="http://www.topografix.com/GPX/1/1">
 <metadata><name>Pramen Svratky a Žákova hora</name><desc>Z mlýna k pramenu Svratky, na Fryšavský kopec k partyzánskému památníku a přes Žákovu horu zpět.</desc></metadata>
 <wpt lat="49.643880" lon="15.999420"><name>Pramen Svratky</name><desc>Tady se rodí Svratka. Její voda doteče přes Brno a Dunaj až do Černého moře.</desc></wpt>
-<wpt lat="49.637700" lon="16.002170"><name>Fryšavský kopec: partyzánský památník</name><desc>Pomník partyzánské brigády Mistr Jan Hus s replikou partyzánského bunkru.</desc></wpt>
-<wpt lat="49.654390" lon="15.998900"><name>Stříbrná studánka</name><desc>Studánka na jižním svahu Žákovy hory, dlouho považovaná za pramen Svratky.</desc></wpt>
 <wpt lat="49.656990" lon="15.991830"><name>Žákova hora (810 m): prales</name><desc>Národní přírodní rezervace se starým jedlo-bukovým lesem a naučnou stezkou.</desc></wpt>
 <trk><name>Pramen Svratky a Žákova hora</name><trkseg>
 <trkpt lat="49.643916" lon="15.968121"><ele>658</ele></trkpt>
