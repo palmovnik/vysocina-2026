@@ -10,6 +10,7 @@ Vstupy (vše v tools/):
   images.json          – soubory z Wikimedia Commons ke stažení (náhledy)
   pages.json           – webové stránky k ověření údajů (otevírací doby, Gastromapa)
   photo_candidates.json – místa bez fotky: hledají se snímky z Commons v okolí bodu
+  origins.json         – místa, odkud se jede na chatu (čas a km autem k mlýnu)
 """
 import hashlib
 import json
@@ -311,19 +312,31 @@ def run_osrm():
                                'target': [round(c[0], 6), round(c[1], 6)], 'via': how,
                                'snap_m': round(snap.get('distance', 0))}
         time.sleep(2)
-    # Příjezd z domova (orientačně)
-    for name, (lat, lon) in (('Praha', (50.0755, 14.4378)), ('Brno', (49.1951, 16.6068)),
-                             ('Jihlava', (49.3961, 15.5912))):
-        url = (f'https://router.project-osrm.org/route/v1/driving/{lon},{lat};{MILL[1]},{MILL[0]}'
-               '?overview=false')
-        raw = http(url, timeout=60)
-        if raw:
-            js = json.loads(raw)
-            if js.get('code') == 'Ok':
-                rt = js['routes'][0]
-                result['_from_' + name] = {'km': round(rt['distance'] / 1000), 'min': round(rt['duration'] / 60)}
-        time.sleep(1)
     save('osrm_car.json', result)
+
+
+def run_origins():
+    """Cesta autem k mlýnu z míst, odkud se jede (tools/origins.json): čas, km a zjednodušená trasa."""
+    origins = load_input('origins.json', [])
+    if not origins:
+        return
+    log(f'OSRM: cesta k mlýnu z {len(origins)} míst')
+    out = {}
+    for o in origins:
+        url = (f'https://router.project-osrm.org/route/v1/driving/{o["lon"]},{o["lat"]};{MILL[1]},{MILL[0]}'
+               '?overview=simplified&geometries=geojson')
+        raw = http(url, timeout=60)
+        js = json.loads(raw) if raw else {}
+        if js.get('code') != 'Ok':
+            log(f'  ! {o["name"]}: {js.get("code")} {js.get("message")}')
+            continue
+        rt = js['routes'][0]
+        out[o['id']] = {'km': round(rt['distance'] / 1000), 'min': round(rt['duration'] / 60),
+                        'from': [o['lat'], o['lon']],
+                        'geo': [[round(c[1], 5), round(c[0], 5)] for c in rt['geometry']['coordinates']]}
+        log(f'  {o["from"]}: {out[o["id"]]["km"]} km, {out[o["id"]]["min"]} min')
+        time.sleep(1)
+    save('origins.json', out)
 
 
 # ---------------------------------------------------------------- Wikidata
@@ -505,7 +518,7 @@ def run_missing():
 
 
 def main():
-    steps = sys.argv[1:] or ['missing', 'brouter', 'osrm', 'commons']
+    steps = sys.argv[1:] or ['missing', 'brouter', 'osrm', 'origins', 'commons']
     for s in steps:
         globals()['run_' + s]()
 

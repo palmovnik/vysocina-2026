@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       steps:
-        description: 'Kroky (missing overpass brouter osrm wikidata commons pages photos), prázdné = výchozí'
+        description: 'Kroky (missing overpass brouter osrm origins wikidata commons pages photos), prázdné = výchozí'
         required: false
         default: ''
   push:
@@ -17,6 +17,7 @@ on:
       - 'tools/images.json'
       - 'tools/pages.json'
       - 'tools/photo_candidates.json'
+      - 'tools/origins.json'
 
 permissions:
   contents: write
@@ -53,6 +54,7 @@ jobs:
             if has images.json; then STEPS="$STEPS commons"; fi
             if has pages.json; then STEPS="$STEPS pages"; fi
             if has photo_candidates.json; then STEPS="$STEPS photos"; fi
+            if has origins.json; then STEPS="$STEPS origins"; fi
           fi
           echo "Kroky: ${STEPS:-výchozí}"
           echo "steps=$STEPS" >> "$GITHUB_OUTPUT"
