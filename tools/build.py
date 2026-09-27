@@ -97,9 +97,39 @@ def make_thumb(pid, width=420):
     return f'img/t/{pid}.jpg'
 
 
-def build_places():
+# ------------------------------------------------------------------ časy jízdy autem
+# Trasy počítá OSRM nad OpenStreetMap. Jeho časy jsou oproti Google Mapám delší, hlavně
+# na silnicích II. třídy (povolenou rychlost krátí o 20 %). Čas se proto přepočítá po
+# třídách silnic koeficienty, které se při každém buildu nafitují na srovnávací trasy
+# s časy z Google Map (tools/drive_check.json, data/raw/drive.json z kroku drive).
+DRIVE_CLASSES = ('D', 'I', 'II')        # III. třída a místní ulice zůstávají podle OSRM
+
+
+def fit_drive_factors(drive):
+    rows = [(drive['check'][c['id']]['cls'], c['google_min']) for c in load(rel('tools', 'drive_check.json'), [])
+            if c['id'] in drive.get('check', {}) and c.get('google_min')]
+    if len(rows) < 4:
+        return {}, None
+    grid = [x / 100 for x in range(70, 111)]
+    best = None
+    for fd in grid:
+        for f1 in grid:
+            for f2 in grid:
+                f = dict(zip(DRIVE_CLASSES, (fd, f1, f2)))
+                err = sum((drive_minutes(cls, f) - t) ** 2 for cls, t in rows)
+                if best is None or err < best[0]:
+                    best = (err, f)
+    return best[1], math.sqrt(best[0] / len(rows))
+
+
+def drive_minutes(cls, factors):
+    return sum(v[1] * factors.get(c, 1.0) for c, v in cls.items())
+
+
+def build_places(drive=None, factors=None):
     places = load(rel('content', 'places.json'))
     osrm = load(os.path.join(RAW, 'osrm_car.json'), {})
+    tips = (drive or {}).get('tips', {})
     access = load(os.path.join(RAW, 'access.json'), {})
     commons = load(os.path.join(RAW, 'commons.json'), {})
     images = {i['id']: i['file'] for i in load(rel('tools', 'images.json'), [])}
@@ -112,6 +142,9 @@ def build_places():
             trustworthy = o['via'] != 'bod' or o['snap_m'] <= 250
             if trustworthy:
                 q['car'] = {'km': o['km'], 'min': o['min']}
+                t = tips.get(p['id'])
+                if t and factors:
+                    q['car'] = {'km': round(t['km'], 1), 'min': round(drive_minutes(t['cls'], factors))}
                 q['carTarget'] = o['target']
                 walk_m = hav(o['target'], (p['lat'], p['lon']))
                 if walk_m > 250:
@@ -380,7 +413,7 @@ def check_refs(program, places_by_id, routes_by_id, meta):
 CREDITS = (
     'Podklady: © přispěvatelé <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> (ODbL) · '
     'trasy spočítané v <a href="https://brouter.de/">BRouter</a> · časy jízdy autem '
-    '<a href="https://project-osrm.org/">OSRM</a> · fotografie z '
+    '<a href="https://project-osrm.org/">OSRM</a> (rychlosti srovnané s Google Mapami) · fotografie z '
     '<a href="https://commons.wikimedia.org/">Wikimedia Commons</a> (autor a licence u každé fotky) · '
     'gastro tipy mimo jiné z <a href="https://gastromapa.hejlik.cz/">Gastromapy Lukáše Hejlíka</a> a '
     '<a href="https://maureruv-vyber.cz/">Maurerova výběru</a> · '
@@ -394,7 +427,11 @@ CREDITS = (
 
 
 def main():
-    places = build_places()
+    drive = load(os.path.join(RAW, 'drive.json'), {})
+    factors, rmse = fit_drive_factors(drive)
+    if factors:
+        print(f'Časy jízdy: koeficienty {factors}, odchylka od Google Map {rmse:.1f} min')
+    places = build_places(drive, factors)
     by_id = {p['id']: p for p in places}
     print(f'Místa: {len(places)} ({sum(1 for p in places if p.get("img"))} s fotkou, '
           f'{sum(1 for p in places if p.get("car"))} s časem autem)')
@@ -403,10 +440,21 @@ def main():
     meta = load(rel('content', 'meta.json'))
     check_refs(program, by_id, {r['id']: r for r in routes}, meta)
     # cesta k mlýnu z míst, odkud se jede (tools/origins.json → data/raw/origins.json)
+    # cesta k mlýnu z míst, odkud se jede: nejrychlejší z alternativ OSRM po přepočtu rychlostí
     routes_home = load(os.path.join(RAW, 'origins.json'), {})
-    from_cities = [{'id': o['id'], 'name': o['name'], 'from': o['from'], 'q': o.get('q', o['name']),
-                    'lat': o['lat'], 'lon': o['lon'], 'km': routes_home[o['id']]['km'], 'min': routes_home[o['id']]['min']}
-                   for o in load(rel('tools', 'origins.json'), []) if o['id'] in routes_home]
+    from_cities = []
+    for o in load(rel('tools', 'origins.json'), []):
+        alts = drive.get('origins', {}).get(o['id'])
+        if alts and factors:
+            best = min(alts, key=lambda r: drive_minutes(r['cls'], factors))
+            km, mins = best['km'], drive_minutes(best['cls'], factors)
+        elif o['id'] in routes_home:
+            km, mins = routes_home[o['id']]['km'], routes_home[o['id']]['min']
+        else:
+            continue
+        from_cities.append({'id': o['id'], 'name': o['name'], 'from': o['from'], 'q': o.get('q', o['name']),
+                            'lat': o['lat'], 'lon': o['lon'], 'km': round(km), 'min': round(mins)})
+        print(f'  {o["from"]}: {round(km)} km, {round(mins)} min')
     data = {
         'generated': datetime.date.today().isoformat(),
         'mill': {'lat': MILL[0], 'lon': MILL[1]},

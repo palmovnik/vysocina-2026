@@ -46,6 +46,7 @@ mapa (vložený widget), která se načte až po kliknutí.
 | `tools/pages.json` | weby podniků k ověření otevírací doby (uloží se do `data/raw/pages/`) |
 | `tools/photo_candidates.json` | místa bez fotky: v okolí bodu se hledají kandidáti na Commons (`data/raw/photos/`) |
 | `tools/origins.json` | odkud se jede na chatu (Říčany, Holešov, Kroměříž): krok *origins* spočítá v OSRM čas, km a trasu k mlýnu (`data/raw/origins.json`) |
+| `tools/drive_check.json` | srovnávací trasy s časy z Google Map: krok *drive* rozloží trasy (k tipům, z míst odjezdu i srovnávací) podle tříd silnic do `data/raw/drive.json` a `build.py` podle nich přepočítá časy OSRM, které jsou jinak delší než v Google Mapách (hlavně na silnicích II. třídy) |
 | `tools/build.py` | spojí obsah a podklady do `docs/data/trip.js` a vygeneruje GPX do `docs/gpx/` |
 | `tools/weather.py` | záložní předpověď počasí pro web (běží v GitHub Actions každé 3 hodiny) |
 | `data/raw/` | stažené podklady (OSM, trasy, časy) |

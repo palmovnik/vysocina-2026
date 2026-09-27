@@ -1,13 +1,10 @@
 [
- {"id": "praha-zdar", "a": [50.0755, 14.4378], "b": [49.5627, 15.9393], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-zdar_nad_sazavou-cestovni_mapa_km-53.html"},
- {"id": "praha-hbrod", "a": [50.0755, 14.4378], "b": [49.6078, 15.5807], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-havlickuv_brod-cestovni_mapa_km-52.html"},
- {"id": "praha-brno", "a": [50.0755, 14.4378], "b": [49.1951, 16.6068], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-brno_stred-cestovni_mapa_km-85189.html"},
- {"id": "hbrod-zdar", "a": [49.6078, 15.5807], "b": [49.5627, 15.9393], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-havlickuv_brod-zdar_nad_sazavou-cestovni_mapa_km-5046.html"},
- {"id": "humpolec-hbrod", "a": [49.5415, 15.3593], "b": [49.6078, 15.5807], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-humpolec-havlickuv_brod-cestovni_mapa_km-14039.html"},
- {"id": "jihlava-zdar", "a": [49.3961, 15.5912], "b": [49.5627, 15.9393], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-jihlava-zdar_nad_sazavou-cestovni_mapa_km-2070.html"},
- {"id": "zdar-brno", "a": [49.5627, 15.9393], "b": [49.1951, 16.6068], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-brno-cestovni_mapa_km-5091.html"},
- {"id": "zdar-kromeriz", "a": [49.5627, 15.9393], "b": [49.2984, 17.3930], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-kromeriz-cestovni_mapa_km-5129.html"},
- {"id": "pardubice-zdar", "a": [50.0343, 15.7812], "b": [49.5627, 15.9393], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-pardubice-zdar_nad_sazavou-cestovni_mapa_km-917.html"},
- {"id": "hk-zdar", "a": [50.2104, 15.8252], "b": [49.5627, 15.9393], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-hradec_kralove-zdar_nad_sazavou-cestovni_mapa_km-725.html"},
- {"id": "tabor-zdar", "a": [49.4144, 14.6578], "b": [49.5627, 15.9393], "page": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-tabor-zdar_nad_sazavou-cestovni_mapa_km-2838.html"}
+ {"id": "praha-zdar", "a": [50.0755, 14.4378], "b": [49.5627, 15.9393], "google_km": 159, "google_min": 107},
+ {"id": "praha-hbrod", "a": [50.0755, 14.4378], "b": [49.6078, 15.5807], "google_km": 122, "google_min": 86},
+ {"id": "praha-brno", "a": [50.0755, 14.4378], "b": [49.1951, 16.6068], "google_km": 205, "google_min": 125},
+ {"id": "hbrod-zdar", "a": [49.6078, 15.5807], "b": [49.5627, 15.9393], "google_km": 31.4, "google_min": 37},
+ {"id": "humpolec-hbrod", "a": [49.5415, 15.3593], "b": [49.6078, 15.5807], "google_km": 18.8, "google_min": 21},
+ {"id": "jihlava-zdar", "a": [49.3961, 15.5912], "b": [49.5627, 15.9393], "google_km": 41, "google_min": 35},
+ {"id": "zdar-brno", "a": [49.5627, 15.9393], "b": [49.1951, 16.6068], "google_km": 83.6, "google_min": 60},
+ {"id": "zdar-kromeriz", "a": [49.5627, 15.9393], "b": [49.2984, 17.393], "google_km": 145, "google_min": 93}
 ]
