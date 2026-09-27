@@ -1,12 +1,47 @@
 [
  {
-  "id": "mapy-url-doc",
-  "url": "https://developer.mapy.com/further-uses-of-mapycz/mapy-cz-url/",
+  "id": "om-docs",
+  "url": "https://open-meteo.com/en/docs",
   "ext": "html"
  },
  {
-  "id": "mapy-url-doc-cs",
-  "url": "https://developer.mapy.com/cs/dalsi-moznosti-vyuziti/mapy-cz-url/",
+  "id": "om-docs-ecmwf",
+  "url": "https://open-meteo.com/en/docs/ecmwf-api",
   "ext": "html"
+ },
+ {
+  "id": "om-multi-16",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max&forecast_days=16&models=best_match,ecmwf_ifs,ecmwf_ifs025,ecmwf_aifs025_single,icon_seamless,icon_d2,icon_eu,gfs_seamless,meteofrance_seamless,ukmo_seamless",
+  "ext": "json"
+ },
+ {
+  "id": "om-multi-hourly",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&hourly=temperature_2m&forecast_days=16&models=best_match,ecmwf_ifs,ecmwf_ifs025,icon_seamless,icon_d2,icon_eu,gfs_seamless",
+  "ext": "json"
+ },
+ {
+  "id": "om-ecmwf-trip",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_gusts_10m_max,sunshine_duration&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_gusts_10m&start_date=2026-10-08&end_date=2026-10-11&models=ecmwf_ifs",
+  "ext": "json"
+ },
+ {
+  "id": "om-ecmwf025-trip",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_gusts_10m_max,sunshine_duration&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_gusts_10m&start_date=2026-10-08&end_date=2026-10-11&models=ecmwf_ifs025",
+  "ext": "json"
+ },
+ {
+  "id": "om-meta-ecmwf",
+  "url": "https://api.open-meteo.com/data/ecmwf_ifs025/static/meta.json",
+  "ext": "json"
+ },
+ {
+  "id": "om-meta-ecmwf9",
+  "url": "https://api.open-meteo.com/data/ecmwf_ifs/static/meta.json",
+  "ext": "json"
+ },
+ {
+  "id": "om-meta-icond2",
+  "url": "https://api.open-meteo.com/data/dwd_icon_d2/static/meta.json",
+  "ext": "json"
  }
 ]
