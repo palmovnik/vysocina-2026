@@ -1,47 +1,57 @@
 [
  {
-  "id": "rt-osrm-ricany",
-  "url": "https://router.project-osrm.org/route/v1/driving/14.6544,49.9911;15.96844,49.64427?overview=simplified&geometries=geojson&alternatives=3",
-  "ext": "json"
+  "id": "gm-praha-zdar",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-zdar_nad_sazavou-cestovni_mapa_km-53.html",
+  "ext": "html"
  },
  {
-  "id": "rt-fossgis-ricany",
-  "url": "https://routing.openstreetmap.de/routed-car/route/v1/driving/14.6544,49.9911;15.96844,49.64427?overview=simplified&geometries=geojson&alternatives=3",
-  "ext": "json"
+  "id": "gm-praha-hbrod",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-havlickuv_brod-cestovni_mapa_km-52.html",
+  "ext": "html"
  },
  {
-  "id": "rt-valhalla-ricany",
-  "url": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A49.9911%2C%22lon%22%3A14.6544%7D%2C%7B%22lat%22%3A49.64427%2C%22lon%22%3A15.96844%7D%5D%2C%22costing%22%3A%22auto%22%2C%22units%22%3A%22kilometers%22%2C%22alternates%22%3A2%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%2C%22language%22%3A%22cs-CZ%22%7D%7D",
-  "ext": "json"
+  "id": "gm-praha-brno",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-brno_stred-cestovni_mapa_km-85189.html",
+  "ext": "html"
  },
  {
-  "id": "rt-osrm-holesov",
-  "url": "https://router.project-osrm.org/route/v1/driving/17.5783,49.3333;15.96844,49.64427?overview=simplified&geometries=geojson&alternatives=3",
-  "ext": "json"
+  "id": "gm-hbrod-zdar",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-havlickuv_brod-zdar_nad_sazavou-cestovni_mapa_km-5046.html",
+  "ext": "html"
  },
  {
-  "id": "rt-fossgis-holesov",
-  "url": "https://routing.openstreetmap.de/routed-car/route/v1/driving/17.5783,49.3333;15.96844,49.64427?overview=simplified&geometries=geojson&alternatives=3",
-  "ext": "json"
+  "id": "gm-humpolec-hbrod",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-humpolec-havlickuv_brod-cestovni_mapa_km-14039.html",
+  "ext": "html"
  },
  {
-  "id": "rt-valhalla-holesov",
-  "url": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A49.3333%2C%22lon%22%3A17.5783%7D%2C%7B%22lat%22%3A49.64427%2C%22lon%22%3A15.96844%7D%5D%2C%22costing%22%3A%22auto%22%2C%22units%22%3A%22kilometers%22%2C%22alternates%22%3A2%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%2C%22language%22%3A%22cs-CZ%22%7D%7D",
-  "ext": "json"
+  "id": "gm-jihlava-zdar",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-jihlava-zdar_nad_sazavou-cestovni_mapa_km-2070.html",
+  "ext": "html"
  },
  {
-  "id": "rt-osrm-kromeriz",
-  "url": "https://router.project-osrm.org/route/v1/driving/17.3931,49.2975;15.96844,49.64427?overview=simplified&geometries=geojson&alternatives=3",
-  "ext": "json"
+  "id": "gm-zdar-brno",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-brno-cestovni_mapa_km-5091.html",
+  "ext": "html"
  },
  {
-  "id": "rt-fossgis-kromeriz",
-  "url": "https://routing.openstreetmap.de/routed-car/route/v1/driving/17.3931,49.2975;15.96844,49.64427?overview=simplified&geometries=geojson&alternatives=3",
-  "ext": "json"
+  "id": "gm-zdar-kromeriz",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-kromeriz-cestovni_mapa_km-5129.html",
+  "ext": "html"
  },
  {
-  "id": "rt-valhalla-kromeriz",
-  "url": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A49.2975%2C%22lon%22%3A17.3931%7D%2C%7B%22lat%22%3A49.64427%2C%22lon%22%3A15.96844%7D%5D%2C%22costing%22%3A%22auto%22%2C%22units%22%3A%22kilometers%22%2C%22alternates%22%3A2%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%2C%22language%22%3A%22cs-CZ%22%7D%7D",
-  "ext": "json"
+  "id": "gm-pardubice-zdar",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-pardubice-zdar_nad_sazavou-cestovni_mapa_km-917.html",
+  "ext": "html"
+ },
+ {
+  "id": "gm-hk-zdar",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-hradec_kralove-zdar_nad_sazavou-cestovni_mapa_km-725.html",
+  "ext": "html"
+ },
+ {
+  "id": "gm-tabor-zdar",
+  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-tabor-zdar_nad_sazavou-cestovni_mapa_km-2838.html",
+  "ext": "html"
  }
 ]

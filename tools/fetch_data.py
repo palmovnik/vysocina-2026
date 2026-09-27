@@ -11,6 +11,7 @@ Vstupy (vše v tools/):
   pages.json           – webové stránky k ověření údajů (otevírací doby, Gastromapa)
   photo_candidates.json – místa bez fotky: hledají se snímky z Commons v okolí bodu
   origins.json         – místa, odkud se jede na chatu (čas a km autem k mlýnu)
+  drive_check.json     – srovnávací trasy s časy z Googlu (kalibrace rychlostí, krok drive)
 """
 import hashlib
 import json
@@ -339,6 +340,67 @@ def run_origins():
     save('origins.json', out)
 
 
+def road_class(ref):
+    """Třída silnice podle českého značení v OSM: D1 → dálnice, 34 → I., 350 → II., 3505 → III., jinak místní."""
+    r = (ref or '').split(';')[0].strip().upper().replace('III/', '').replace('II/', '').replace('I/', '')
+    if r[:1] == 'D' and r[1:].isdigit():
+        return 'D'
+    if r.isdigit():
+        return {1: 'I', 2: 'I', 3: 'II'}.get(len(r), 'III')
+    return 'local'
+
+
+def osrm_classes(a, b, alternatives=False):
+    """Trasa OSRM z a do b (lat, lon) rozložená podle tříd silnic: km a čas OSRM na každé třídě."""
+    url = (f'https://router.project-osrm.org/route/v1/driving/{a[1]},{a[0]};{b[1]},{b[0]}'
+           '?overview=simplified&geometries=geojson&steps=true' + ('&alternatives=3' if alternatives else ''))
+    raw = http(url, timeout=60)
+    js = json.loads(raw) if raw else {}
+    if js.get('code') != 'Ok':
+        log(f'  ! {js.get("code")} {js.get("message")}')
+        return None
+    out = []
+    for r in js['routes']:
+        cls = {}
+        for leg in r['legs']:
+            for st in leg['steps']:
+                c = cls.setdefault(road_class(st.get('ref')), [0.0, 0.0])
+                c[0] += st['distance'] / 1000
+                c[1] += st['duration'] / 60
+        out.append({'km': round(r['distance'] / 1000, 2), 'min': round(r['duration'] / 60, 1),
+                    'cls': {k: [round(v[0], 2), round(v[1], 2)] for k, v in cls.items()},
+                    'geo': [[round(c[1], 5), round(c[0], 5)] for c in r['geometry']['coordinates']]})
+    return out
+
+
+def run_drive():
+    """Trasy autem rozložené podle tříd silnic (pro přepočet časů na reálné rychlosti v build.py):
+    z míst odjezdu k mlýnu (i s alternativami), od mlýna k tipům a srovnávací trasy s časy z Googlu."""
+    out = {'origins': {}, 'tips': {}, 'check': {}}
+    for o in load_input('origins.json', []):
+        log(f'Trasa {o["from"]}')
+        r = osrm_classes((o['lat'], o['lon']), MILL, alternatives=True)
+        if r:
+            out['origins'][o['id']] = r
+        time.sleep(1)
+    for c in load_input('drive_check.json', []):
+        log(f'Srovnání {c["id"]}')
+        r = osrm_classes(c['a'], c['b'])
+        if r:
+            out['check'][c['id']] = r[0]
+        time.sleep(1)
+    car = load_raw('osrm_car.json', {})
+    for pid, v in car.items():
+        if pid.startswith('_') or not v.get('target'):
+            continue
+        r = osrm_classes(MILL, v['target'])
+        if r:
+            out['tips'][pid] = {k: r[0][k] for k in ('km', 'min', 'cls')}
+        time.sleep(1)
+    log(f'  tipů: {len(out["tips"])}')
+    save('drive.json', out)
+
+
 # ---------------------------------------------------------------- Wikidata
 SPARQL = """
 SELECT ?item ?itemLabel ?itemDescription ?coord ?image ?article ?inst ?instLabel WHERE {
@@ -518,7 +580,7 @@ def run_missing():
 
 
 def main():
-    steps = sys.argv[1:] or ['missing', 'brouter', 'osrm', 'origins', 'commons']
+    steps = sys.argv[1:] or ['missing', 'brouter', 'osrm', 'origins', 'drive', 'commons']
     for s in steps:
         globals()['run_' + s]()
 

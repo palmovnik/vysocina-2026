@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       steps:
-        description: 'Kroky (missing overpass brouter osrm origins wikidata commons pages photos), prázdné = výchozí'
+        description: 'Kroky (missing overpass brouter osrm origins drive wikidata commons pages photos), prázdné = výchozí'
         required: false
         default: ''
   push:
@@ -18,6 +18,7 @@ on:
       - 'tools/pages.json'
       - 'tools/photo_candidates.json'
       - 'tools/origins.json'
+      - 'tools/drive_check.json'
 
 permissions:
   contents: write
@@ -55,6 +56,7 @@ jobs:
             if has pages.json; then STEPS="$STEPS pages"; fi
             if has photo_candidates.json; then STEPS="$STEPS photos"; fi
             if has origins.json; then STEPS="$STEPS origins"; fi
+            if has origins.json || has drive_check.json || has poi_candidates.json; then STEPS="$STEPS drive"; fi
           fi
           echo "Kroky: ${STEPS:-výchozí}"
           echo "steps=$STEPS" >> "$GITHUB_OUTPUT"
