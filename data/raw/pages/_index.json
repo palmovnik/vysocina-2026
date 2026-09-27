@@ -714,5 +714,50 @@
   "url": "https://developer.mapy.com/cs/dalsi-moznosti-vyuziti/mapy-cz-url/",
   "file": "mapy-url-doc-cs.html",
   "bytes": 89839
+ },
+ "om-docs": {
+  "url": "https://open-meteo.com/en/docs",
+  "file": "om-docs.html",
+  "bytes": 532533
+ },
+ "om-docs-ecmwf": {
+  "url": "https://open-meteo.com/en/docs/ecmwf-api",
+  "file": "om-docs-ecmwf.html",
+  "bytes": 287101
+ },
+ "om-multi-16": {
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max&forecast_days=16&models=best_match,ecmwf_ifs,ecmwf_ifs025,ecmwf_aifs025_single,icon_seamless,icon_d2,icon_eu,gfs_seamless,meteofrance_seamless,ukmo_seamless",
+  "file": "om-multi-16.json",
+  "bytes": 6596
+ },
+ "om-multi-hourly": {
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&hourly=temperature_2m&forecast_days=16&models=best_match,ecmwf_ifs,ecmwf_ifs025,icon_seamless,icon_d2,icon_eu,gfs_seamless",
+  "file": "om-multi-hourly.json",
+  "bytes": 20843
+ },
+ "om-ecmwf-trip": {
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_gusts_10m_max,sunshine_duration&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_gusts_10m&start_date=2026-10-08&end_date=2026-10-11&models=ecmwf_ifs",
+  "file": "om-ecmwf-trip.json",
+  "bytes": 4949
+ },
+ "om-ecmwf025-trip": {
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_gusts_10m_max,sunshine_duration&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_gusts_10m&start_date=2026-10-08&end_date=2026-10-11&models=ecmwf_ifs025",
+  "file": "om-ecmwf025-trip.json",
+  "bytes": 4747
+ },
+ "om-meta-ecmwf": {
+  "url": "https://api.open-meteo.com/data/ecmwf_ifs025/static/meta.json",
+  "file": "om-meta-ecmwf.json",
+  "bytes": 596
+ },
+ "om-meta-ecmwf9": {
+  "url": "https://api.open-meteo.com/data/ecmwf_ifs/static/meta.json",
+  "file": "om-meta-ecmwf9.json",
+  "bytes": 658
+ },
+ "om-meta-icond2": {
+  "url": "https://api.open-meteo.com/data/dwd_icon_d2/static/meta.json",
+  "file": "om-meta-icond2.json",
+  "bytes": 598
  }
 }
