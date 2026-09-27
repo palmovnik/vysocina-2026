@@ -1105,7 +1105,7 @@
       '<dt>Vybavení</dt><dd>' + esc(c.amenities) + '</dd>' +
       '<dt>Web</dt><dd><a href="https://mlyn-vikinek.cz/" target="_blank" rel="noopener">mlyn-vikinek.cz</a> · <a href="https://mlyn-vikinek.cz/galerie/" target="_blank" rel="noopener">fotky mlýna</a></dd></dl>';
     var cities = T.fromCities || [];
-    var right = '<p class="muted small">Orientační čas jízdy autem bez provozu (OSRM). Aktuální čas i s dopravou ukážou odkazy do map:</p><div class="drive">';
+    var right = '<p class="muted small">Čas jízdy autem bez provozu (trasa z OSRM, rychlosti srovnané s Google Mapami). Aktuální čas i s dopravou ukážou odkazy do map:</p><div class="drive">';
     cities.forEach(function (o) {
       right += '<div class="stat"><b>' + fmtMin(o.min) + '</b><span>' + esc(o.from) + ' · ' + o.km + ' km</span>' +
         '<span class="stat-links">' + extLink(homeRoute(o), 'Google Mapy', '') + ' · ' + extLink(homeRoute(o, true), 'Mapy.com', '') + '</span></div>';
