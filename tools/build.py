@@ -403,8 +403,11 @@ def main():
     program = load(rel('content', 'program.json'))
     meta = load(rel('content', 'meta.json'))
     check_refs(program, by_id, {r['id']: r for r in routes}, meta)
-    osrm = load(os.path.join(RAW, 'osrm_car.json'), {})
-    from_cities = {k[6:]: v for k, v in osrm.items() if k.startswith('_from_')}
+    # cesta k mlýnu z míst, odkud se jede (tools/origins.json → data/raw/origins.json)
+    routes_home = load(os.path.join(RAW, 'origins.json'), {})
+    from_cities = [{'id': o['id'], 'name': o['name'], 'from': o['from'], 'q': o.get('q', o['name']),
+                    'lat': o['lat'], 'lon': o['lon'], 'km': routes_home[o['id']]['km'], 'min': routes_home[o['id']]['min']}
+                   for o in load(rel('tools', 'origins.json'), []) if o['id'] in routes_home]
     data = {
         'generated': datetime.date.today().isoformat(),
         'mill': {'lat': MILL[0], 'lon': MILL[1]},

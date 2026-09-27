@@ -1,5 +1,5 @@
 [
- {"id": "ricany", "name": "Říčany", "from": "z Říčan", "q": "Říčany, Česko", "lat": 49.9911, "lon": 14.6544},
- {"id": "holesov", "name": "Holešov", "from": "z Holešova", "q": "Holešov, Česko", "lat": 49.3333, "lon": 17.5783},
- {"id": "kromeriz", "name": "Kroměříž", "from": "z Kroměříže", "q": "Kroměříž, Česko", "lat": 49.2975, "lon": 17.3931}
+ {"id": "ricany", "name": "Říčany", "from": "z Říčan", "q": "251 01 Říčany", "lat": 49.9911, "lon": 14.6544},
+ {"id": "holesov", "name": "Holešov", "from": "z Holešova", "q": "769 01 Holešov", "lat": 49.3333, "lon": 17.5783},
+ {"id": "kromeriz", "name": "Kroměříž", "from": "z Kroměříže", "q": "767 01 Kroměříž", "lat": 49.2975, "lon": 17.3931}
 ]

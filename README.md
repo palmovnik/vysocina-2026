@@ -45,6 +45,7 @@ mapa (vložený widget), která se načte až po kliknutí.
 | `tools/images.json` | vybrané fotky z Wikimedia Commons (stáhnou se do `docs/img/`) |
 | `tools/pages.json` | weby podniků k ověření otevírací doby (uloží se do `data/raw/pages/`) |
 | `tools/photo_candidates.json` | místa bez fotky: v okolí bodu se hledají kandidáti na Commons (`data/raw/photos/`) |
+| `tools/origins.json` | odkud se jede na chatu (Říčany, Holešov, Kroměříž): krok *origins* spočítá v OSRM čas, km a trasu k mlýnu (`data/raw/origins.json`) |
 | `tools/build.py` | spojí obsah a podklady do `docs/data/trip.js` a vygeneruje GPX do `docs/gpx/` |
 | `tools/weather.py` | záložní předpověď počasí pro web (běží v GitHub Actions každé 3 hodiny) |
 | `data/raw/` | stažené podklady (OSM, trasy, časy) |
