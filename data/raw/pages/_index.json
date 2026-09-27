@@ -774,5 +774,15 @@
   "url": "https://nominatim.openstreetmap.org/search?q=Krom%C4%9B%C5%99%C3%AD%C5%BE&countrycodes=cz&format=json&limit=3",
   "file": "geo-kromeriz.json",
   "bytes": 1438
+ },
+ "osrm-mill-zoo-ricany": {
+  "url": "https://router.project-osrm.org/route/v1/driving/15.96844,49.64427;15.59663,49.39715;14.6544,49.9911?overview=false",
+  "file": "osrm-mill-zoo-ricany.json",
+  "bytes": 865
+ },
+ "osrm-mill-ricany": {
+  "url": "https://router.project-osrm.org/route/v1/driving/15.96844,49.64427;14.6544,49.9911?overview=false",
+  "file": "osrm-mill-ricany.json",
+  "bytes": 595
  }
 }
