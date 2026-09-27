@@ -99,46 +99,6 @@
   "via": "parkoviště w1223446648  (1074 m)",
   "snap_m": 6
  },
- "balcarka": {
-  "km": 88.4,
-  "min": 94,
-  "target": [
-   49.3768,
-   16.75815
-  ],
-  "via": "bod",
-  "snap_m": 44
- },
- "punkevni": {
-  "km": 84.5,
-  "min": 92,
-  "target": [
-   49.36339,
-   16.70874
-  ],
-  "via": "ručně",
-  "snap_m": 5
- },
- "macocha": {
-  "km": 91.4,
-  "min": 97,
-  "target": [
-   49.37314,
-   16.72932
-  ],
-  "via": "bod",
-  "snap_m": 144
- },
- "katerinska": {
-  "km": 84.9,
-  "min": 93,
-  "target": [
-   49.36169,
-   16.70965
-  ],
-  "via": "ručně",
-  "snap_m": 13
- },
  "medlov": {
   "km": 21.1,
   "min": 29,
@@ -419,16 +379,6 @@
   "via": "parkoviště w719025979  (446 m)",
   "snap_m": 5
  },
- "rest-skalni-mlyn": {
-  "km": 84.5,
-  "min": 92,
-  "target": [
-   49.36373,
-   16.70822
-  ],
-  "via": "bod",
-  "snap_m": 22
- },
  "kiosek-kadov": {
   "km": 15.6,
   "min": 21,
@@ -698,17 +648,5 @@
   ],
   "via": "parkoviště w869014984  (192 m)",
   "snap_m": 5
- },
- "_from_Praha": {
-  "km": 168,
-  "min": 126
- },
- "_from_Brno": {
-  "km": 95,
-  "min": 78
- },
- "_from_Jihlava": {
-  "km": 49,
-  "min": 56
  }
 }

@@ -124,14 +124,5 @@
   "ascend_m": 206,
   "plain_ascend_m": 0,
   "time_s": 6449
- },
- {
-  "id": "h-macocha",
-  "profile": "hiking-mountain",
-  "key": "fea8cbc13f32",
-  "length_m": 5911,
-  "ascend_m": 186,
-  "plain_ascend_m": 0,
-  "time_s": 4755
  }
 ]

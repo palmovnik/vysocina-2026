@@ -784,5 +784,10 @@
   "url": "https://router.project-osrm.org/route/v1/driving/15.96844,49.64427;14.6544,49.9911?overview=false",
   "file": "osrm-mill-ricany.json",
   "bytes": 595
+ },
+ "osrm-eden-pernstejn": {
+  "url": "https://router.project-osrm.org/route/v1/driving/16.24641,49.51636;16.31837,49.45086?overview=false",
+  "file": "osrm-eden-pernstejn.json",
+  "bytes": 584
  }
 }

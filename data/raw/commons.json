@@ -1,13 +1,4 @@
 {
- "Bambusový lesík01(js).jpg": {
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Bambusov%C3%BD_les%C3%ADk01%28js%29.jpg/960px-Bambusov%C3%BD_les%C3%ADk01%28js%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Bambusov%C3%BD_les%C3%ADk01(js).jpg",
-  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Jerzystrzelecki\" title=\"User:Jerzystrzelecki\">Jerzy Strzelecki</a>",
-  "license": "CC BY-SA 3.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-  "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-  "local": "img/katerinska.jpg"
- },
  "BazénŽďárnadSázavou.jpg": {
   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Baz%C3%A9n%C5%BD%C4%8F%C3%A1rnadS%C3%A1zavou.jpg/960px-Baz%C3%A9n%C5%BD%C4%8F%C3%A1rnadS%C3%A1zavou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "page": "https://commons.wikimedia.org/wiki/File:Baz%C3%A9n%C5%BD%C4%8F%C3%A1rnadS%C3%A1zavou.jpg",
@@ -61,15 +52,6 @@
   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
   "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
   "local": "img/zoo-jihlava.jpg"
- },
- "Jeskyně Balcarka1.jpg": {
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Jeskyn%C4%9B_Balcarka1.jpg/960px-Jeskyn%C4%9B_Balcarka1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Jeskyn%C4%9B_Balcarka1.jpg",
-  "artist": "Prazak",
-  "license": "CC BY 2.5",
-  "license_url": "https://creativecommons.org/licenses/by/2.5",
-  "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-  "local": "img/balcarka.jpg"
  },
  "Klášterní hospoda Táferna z 18. století.JPG": {
   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Kl%C3%A1%C5%A1tern%C3%AD_hospoda_T%C3%A1ferna_z_18._stolet%C3%AD.JPG/960px-Kl%C3%A1%C5%A1tern%C3%AD_hospoda_T%C3%A1ferna_z_18._stolet%C3%AD.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -160,24 +142,6 @@
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
   "local": "img/pernstejn.jpg"
- },
- "Propast Macocha 01.jpg": {
-  "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Propast_Macocha_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "page": "https://commons.wikimedia.org/wiki/File:Propast_Macocha_01.jpg",
-  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Doronenko\" title=\"User:Doronenko\">Doronenko</a>",
-  "license": "CC BY-SA 3.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-  "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-  "local": "img/macocha.jpg"
- },
- "Punkevní jeskyně - přístaviště.jpg": {
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Punkevn%C3%AD_jeskyn%C4%9B_-_p%C5%99%C3%ADstavi%C5%A1t%C4%9B.jpg/960px-Punkevn%C3%AD_jeskyn%C4%9B_-_p%C5%99%C3%ADstavi%C5%A1t%C4%9B.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Punkevn%C3%AD_jeskyn%C4%9B_-_p%C5%99%C3%ADstavi%C5%A1t%C4%9B.jpg",
-  "artist": "Prazak",
-  "license": "CC BY 2.5",
-  "license_url": "https://creativecommons.org/licenses/by/2.5",
-  "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-  "local": "img/punkevni.jpg"
  },
  "Račín, Jordán-6.jpg": {
   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Ra%C4%8D%C3%ADn%2C_Jord%C3%A1n-6.jpg/960px-Ra%C4%8D%C3%ADn%2C_Jord%C3%A1n-6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
