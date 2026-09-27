@@ -3,18 +3,16 @@
   "id": "b-darko",
   "type": "bike",
   "level": "easy",
-  "name": "K Velkému Dářku a sklárně",
-  "teaser": "Rodinný okruh: lesem do Škrdlovic ke sklárně, po hrázi Velkého Dářka k rašeliništi a zpět kolem Tisůvky.",
-  "text": "Z mlýna lesem do Škrdlovic (sklárna U Hrocha), k hrázi Velkého Dářka a podél rybníka k loděnici a na rozcestí Padrtiny. Tady začíná naučná stezka Dářská rašeliniště, kola zamkněte a kus projděte pěšky. Zpátky po hrázi do Škrdlovic a lesem kolem Zubačky a Tisůvky domů. Rušné silnici I/37 u Karlova se trasa vyhýbá, ke sklárně Svoboda v Karlově radši autem.",
+  "name": "K Velkému Dářku a na rašeliniště",
+  "teaser": "Rodinný okruh: lesem do Škrdlovic, po hrázi Velkého Dářka k rašeliništi a zpět kolem Tisůvky.",
+  "text": "Z mlýna lesem do Škrdlovic (restaurace U Hrocha s dětským koutkem), k hrázi Velkého Dářka a podél rybníka k loděnici a na rozcestí Padrtiny. Tady začíná naučná stezka Dářská rašeliniště, kola zamkněte a kus projděte pěšky. Zpátky po hrázi do Škrdlovic a lesem kolem Zubačky a Tisůvky domů. Rušné silnici I/37 u Karlova se trasa vyhýbá, do sklárny Svoboda v Karlově (exkurze jen ve všední dny dopoledne) radši autem.",
   "stops": [
-   "sklarna-hroch",
    "velke-darko",
    "darska-raseliniste",
    "rest-hroch",
-   "rest-darko",
    "tisuvka"
   ],
-  "tip": "Po povalových chodnících se na kole nesmí. Ukázku foukání skla ve Škrdlovicích ve všední den dopoledne předem ohlaste (jsme skupina nad 10 lidí).",
+  "tip": "Po povalových chodnících se na kole nesmí. Sklářská huť U Hrocha má v našem termínu zavřeno, foukání skla uvidíte v sklárně Svoboda v Karlově.",
   "who": "školáci na kole, malí ve vozíku nebo sedačce",
   "fit": [
    "male",
@@ -31,7 +29,6 @@
   "text": "Lesní cestou k pramenu Svratky a Stříbrné studánce, kolem Žákovy hory, přes rozcestí U Snítku k pramenu Sázavy pod Šindelným vrchem a zpět přes Tisůvku. Po cestě dvakrát překročíte hlavní evropské rozvodí.",
   "stops": [
    "pramen-svratky",
-   "stribrna-studanka",
    "zakova-hora",
    "pramen-sazavy",
    "tisuvka"
@@ -53,12 +50,10 @@
   "stops": [
    "pramen-svratky",
    "medlov",
-   "sykovec",
-   "rest-tri-studne",
    "brozova",
-   "fryskop"
+   "rest-frysava"
   ],
-  "tip": "Oběd ve Fryšavě (Stanice lyžařů) nebo v Třech Studních.",
+  "tip": "Oběd ve Fryšavě (Stanice lyžařů) nebo v hotelu Medlov.",
   "who": "zdatnější školáci, malí ve vozíku",
   "fit": [
    "skolaci"
@@ -93,16 +88,17 @@
   "text": "Náročnější okruh hlavním hřebenem Žďárských vrchů. Lesem k pramenu Svratky a Stříbrné studánce, pod Devět skal (kola zamkněte a vyběhněte na vyhlídku), kolem Lisovské skály přes Blatky a Samotín do Blatin k Drátníku, do Milov k rybníku, přes Křižánky a zpátky lesem přes Brušovec kolem Žákovy hory.",
   "stops": [
    "pramen-svratky",
-   "stribrna-studanka",
    "devet-skal",
-   "lisovska",
    "dratenicka",
    "rest-kolousek",
    "rest-krizanky",
    "zakova-hora"
   ],
   "tip": "Počítejte s celým dnem a obědem v Blatinách nebo Křižánkách.",
-  "who": "jen zdatní cyklisté (dospělí, velcí školáci)"
+  "who": "jen zdatní cyklisté (dospělí, velcí školáci)",
+  "fit": [
+   "dospeli"
+  ]
  },
  {
   "id": "b-stezka-sazava",
@@ -110,10 +106,8 @@
   "level": "easy",
   "name": "Cyklostezka Sázava – Přibyslav (pro nejmenší)",
   "teaser": "Asfaltová stezka bez aut podél Sázavy. Kola se vezou autem.",
-  "text": "Rovinatá asfaltová cyklostezka podél Sázavy mezi obcí Sázava (u Žďáru) a Přibyslaví. Ideální pro nejmenší na odrážedlech a malých kolech. Tam a zpět, nebo jen kus. Kousek od startu je rozhledna Rosička.",
-  "stops": [
-   "rosicka"
-  ],
+  "text": "Rovinatá asfaltová cyklostezka podél Sázavy mezi obcí Sázava (u Žďáru) a Přibyslaví. Ideální pro nejmenší na odrážedlech a malých kolech. Tam a zpět, nebo jen kus.",
+  "stops": [],
   "tip": "Start: parkoviště v obci Sázava (15 min autem).",
   "start": "obec Sázava u Žďáru (začátek cyklostezky u Sázavy)",
   "who": "i malí na odrážedle nebo kole, asfalt bez aut",
@@ -151,8 +145,6 @@
   "text": "Lesní okruh přímo od chaty: pramen Svratky, Fryšavský kopec (památník a replika partyzánského bunkru), Stříbrná studánka a prales na Žákově hoře, zpět přes rozcestí U Snítku.",
   "stops": [
    "pramen-svratky",
-   "fryskop",
-   "stribrna-studanka",
    "zakova-hora"
   ],
   "tip": "Vezměte lodičky z kůry na pouštění po pramenech.",
@@ -192,7 +184,6 @@
   "stops": [
    "dratenicka",
    "malinska",
-   "lisovska",
    "devet-skal",
    "rest-kolousek"
   ],
@@ -200,7 +191,8 @@
   "start": "Blatiny, rozcestí „Blatiny – pod Drátníkem“ (parkování u restaurace U Kolouška)",
   "who": "zdatní školáci a dospělí",
   "fit": [
-   "skolaci"
+   "skolaci",
+   "dospeli"
   ]
  },
  {

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1" creator="Vysočina 2026 – Mlýn Vikinek" xmlns="http://www.topografix.com/GPX/1/1">
 <metadata><name>Cyklostezka Sázava – Přibyslav (pro nejmenší)</name><desc>Asfaltová stezka bez aut podél Sázavy. Kola se vezou autem.</desc></metadata>
-<wpt lat="49.538540" lon="15.842600"><name>Rozhledna Rosička</name><desc>42 m vysoká rozhledna: 140 schodů na plošinu ve 24 m, mimo léto zdarma.</desc></wpt>
 <trk><name>Cyklostezka Sázava – Přibyslav (pro nejmenší)</name><trkseg>
 <trkpt lat="49.552838" lon="15.848594"><ele>510</ele></trkpt>
 <trkpt lat="49.552740" lon="15.848426"><ele>507</ele></trkpt>

@@ -58,7 +58,7 @@
   "devet-skal",
   "balcarka",
   "tisuvka",
-  "medlov",
+  "racin",
   "malinska",
   "zookoutek",
   "punkevni",
@@ -87,6 +87,14 @@
   },
   {
    "cat": "jidlo",
+   "id": "pivo",
+   "name": "Pivovary",
+   "short": "Pivovary",
+   "emoji": "🍺",
+   "desc": "Čtyři pivovary do půl hodiny autem: nejblíž je Račín s dětskou hernou u restaurace, v Novém Městě hospoda u pivovaru Hejkal, v Hlinsku prohlídka s čepováním. Mlýn půjčuje výčep (500 Kč za pobyt), takže se dá objednat i sud."
+  },
+  {
+   "cat": "jidlo",
    "id": "kava",
    "name": "Kavárny a cukrárny",
    "short": "Kavárny",
@@ -98,7 +106,7 @@
    "id": "cesta",
    "name": "Hospody na výletech",
    "short": "Hospody",
-   "emoji": "🍺",
+   "emoji": "🍲",
    "desc": "Poctivé hospody u tras, kde se dá zastavit na oběd nebo polévku."
   },
   {
@@ -107,7 +115,7 @@
    "name": "Farmy a zvířátka",
    "short": "Zvířátka",
    "emoji": "🐐",
-   "desc": "Lamy a klokani zdarma, minifarma s poníkem nebo obora s jeleny. Menší děti to milují."
+   "desc": "Lamy a klokani zdarma, minifarma s poníkem a v sobotu velká farma Eden. Menší děti to milují."
   },
   {
    "cat": "farmy",
@@ -118,5 +126,5 @@
    "desc": "Maso na gril, uzeniny a bio sýry přímo od místních výrobců."
   }
  ],
- "kidsSummary": "děti od miminka po čtvrťáka"
+ "kidsSummary": "od miminka po čtvrťáka"
 }

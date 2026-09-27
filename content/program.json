@@ -12,6 +12,7 @@
     "rest-tisuvka"
    ],
    "rain": [
+    "hopik",
     "mng",
     "relax"
    ]
@@ -30,6 +31,7 @@
     "panmama"
    ],
    "rain": [
+    "hopik",
     "mng",
     "relax"
    ]
@@ -44,20 +46,24 @@
     "macocha",
     "punkevni",
     "katerinska",
-    "rest-skalni-mlyn"
+    "rest-skalni-mlyn",
+    "racin"
    ],
    "alt": [
-    "udoli-doubravy",
+    "eden",
+    "vesely-kopec",
+    "rychtar",
     "mastale",
+    "udoli-doubravy",
     "pernstejn"
    ],
-   "altLabel": "Nebo blíž"
+   "altLabel": "Nebo blíž, třeba když se rozdělíte"
   },
   {
    "id": "ne",
    "date": "2026-10-11",
    "label": "Neděle 11. 10.",
-   "title": "Skály na rozloučenou",
+   "title": "Skály a Blatiny",
    "tips": [
     "route:h-palice",
     "route:h-hreben-kratky",
@@ -68,46 +74,98 @@
    ],
    "rain": [
     "mng",
+    "hopik",
     "modelove",
     "slakhamr"
+   ]
+  },
+  {
+   "id": "po",
+   "date": "2026-10-12",
+   "label": "Pondělí 12. 10.",
+   "title": "Jen když prodloužíte: cestou domů",
+   "note": "Z mlýna se odjíždí do 10:00. V pondělí má zavřeno většina jeskyní, skanzen i řada hospod (Tisůvka, U Paňmámy, Táferna, Račín), tyhle tipy jsou otevřené.",
+   "tips": [
+    "sklarna-svoboda",
+    "mng",
+    "zamek-zdar",
+    "pilak",
+    "zookoutek",
+    "bistro4",
+    "zoo-jihlava"
+   ],
+   "rain": [
+    "hopik",
+    "relax"
    ]
   }
  ],
  "reservations": [
   {
+   "id": "res-mlyn",
+   "text": "Mlýn Vikinek: prodloužení do pondělí 12. 10. (noc z neděle na pondělí je teď v kalendáři volná, další noc stojí podle ceníku 6 000 Kč), nebo aspoň pozdější odjezd v neděli",
+   "how": "+420 602 768 375, info@mlyn-vikinek.cz",
+   "place": "mlyn"
+  },
+  {
    "id": "res-balcarka",
    "text": "Balcarka – Škola malých jeskyňářů (so 10. 10., od 5 let)",
-   "how": "516 444 330"
+   "how": "516 444 330",
+   "place": "balcarka"
   },
   {
    "id": "res-punkevni",
    "text": "Punkevní jeskyně (vstupenky se vyprodávají)",
-   "how": "+420 516 413 575, info@caves.cz"
+   "how": "+420 516 413 575, info@caves.cz",
+   "place": "punkevni"
   },
   {
    "id": "res-panmama",
    "text": "Restaurace U Paňmámy, Statek Blatiny",
-   "how": "+420 601 365 744 (čt–ne 9–15)"
+   "how": "+420 601 365 744 (čt–ne 9–15)",
+   "place": "panmama"
+  },
+  {
+   "id": "res-racin",
+   "text": "Hotel Leopold Račín: večeře u pivovaru s dětskou hernou (pá–ne, porce jsou omezené)",
+   "how": "+420 724 461 330, info@racin.cz",
+   "place": "racin"
   },
   {
    "id": "res-tisuvka",
    "text": "Restaurace Tisůvka v Cikháji",
-   "how": "566 659 007"
+   "how": "566 659 007",
+   "place": "rest-tisuvka"
   },
   {
    "id": "res-frysava",
    "text": "Stanice lyžařů Fryšava",
-   "how": "+420 734 536 304"
+   "how": "+420 734 536 304",
+   "place": "rest-frysava"
+  },
+  {
+   "id": "res-sklarna",
+   "text": "Sklárna Svoboda v Karlově: exkurze po–pá dopoledne, skupinu nad 8 lidí ohlásit",
+   "how": "566 659 152, 727 876 846",
+   "place": "sklarna-svoboda"
   },
   {
    "id": "res-falbgery",
    "text": "Minifarma Falbgery (návštěvu vždy předem zavolat)",
-   "how": "721 006 486"
+   "how": "721 006 486",
+   "place": "falbgery"
   },
   {
-   "id": "res-sklarna",
-   "text": "Sklárny pro skupinu nad 10 osob",
-   "how": "U Hrocha +420 603 742 629, Svoboda ags-svoboda.cz"
+   "id": "res-rychtar",
+   "text": "Pivovar Rychtář: prohlídka pro dospělé (so 9:30 online, jiný den aspoň týden předem)",
+   "how": "469 311 471, 724 471 159",
+   "place": "rychtar"
+  },
+  {
+   "id": "res-sud",
+   "text": "Sud piva do mlýna: mlýn půjčí výčep (500 Kč za pobyt, narážení bajonet jako na Plzeň), sud objednejte předem a ověřte, že má stejné narážení",
+   "how": "Hejkal +420 737 288 077 · Revolta +420 606 184 138 (5l soudky do úterního poledne)",
+   "place": "hejkal"
   }
  ],
  "packing": [
@@ -125,7 +183,7 @@
   "Hotovost: malé restaurace a dobrovolná vstupné",
   "Kapsle Dolce Gusto do kávovaru a tablety do myčky (v mlýně jich je jen pár)",
   "Dřevo na táborák (ohniště na zahradě) a něco na opékání",
-  "Cestovní postýlku navíc (mlýn má jednu dětskou postýlku 120×60 cm)"
+  "Cestovní postýlky pro nejmenší (mlýn má jen jednu dětskou postýlku 120×60 cm)"
  ],
  "quests": [
   "Pustit lodičku na pramenu Svratky (pluje do Černého moře!) a na pramenu Sázavy (do Severního moře)",
@@ -136,7 +194,7 @@
   "Získat v Balcarce osvědčení mladého jeskyňáře",
   "Vidět, jak sklář fouká sklenici",
   "Spočítat, kolikrát najdete na Zelené hoře číslo 5",
-  "Projít pohádkovou stezku skřítka Ostružinky a vyzvednout si odměnu",
+  "Postavit skřítkům domeček ve skřítčí vesničce u Medlova",
   "Najít u hřiště v Cikháji dva dřevěné čerty",
   "Přejít po povalovém chodníku přes rašeliniště u Velkého Dářka",
   "Nasbírat v lese 5 různých šišek nebo listů",

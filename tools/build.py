@@ -344,7 +344,7 @@ def sun_times_ephem(date):
 
 
 def build_sun():
-    days = ['čt 8. 10.', 'pá 9. 10.', 'so 10. 10.', 'ne 11. 10.']
+    days = ['čt 8. 10.', 'pá 9. 10.', 'so 10. 10.', 'ne 11. 10.', 'po 12. 10.']
     out = []
     for i, label in enumerate(days):
         d = datetime.date(2026, 10, 8 + i)
@@ -370,6 +370,7 @@ def check_refs(program, places_by_id, routes_by_id, meta):
                     bad.append(('místo', x))
     bad += [('služba', x) for x in meta['chata']['services'] if x not in places_by_id]
     bad += [('tip', x) for x in meta.get('highlights', []) if x not in places_by_id]
+    bad += [('rezervace', r['place']) for r in program.get('reservations', []) if r.get('place') and r['place'] not in places_by_id]
     subs = {(g['cat'], g['id']) for g in meta.get('gastro', [])}
     bad += [('podsekce', p['id']) for p in places_by_id.values()
             if p['cat'] in ('jidlo', 'farmy') and (p['cat'], p.get('sub', '')) not in subs]
@@ -385,7 +386,7 @@ CREDITS = (
     'gastro tipy mimo jiné z <a href="https://gastromapa.hejlik.cz/">Gastromapy Lukáše Hejlíka</a> a '
     '<a href="https://maureruv-vyber.cz/">Maurerova výběru</a> · '
     'mapa <a href="https://leafletjs.com/">Leaflet</a>, dlaždice OpenStreetMap, OpenTopoMap, CyclOSM a Waymarked Trails.'
-    '<br>Otevírací doby, vstupné a akce jsou převzaté z webů provozovatelů (stav k 26. 9. 2026). '
+    '<br>Otevírací doby, vstupné a akce jsou převzaté z webů provozovatelů (stav k 27. 9. 2026). '
     'Před výletem je prosím ověřte, v říjnu se často mění. '
     'Časy „s dětmi“ jsou hrubý odhad čisté chůze či jízdy bez zastávek.'
 )

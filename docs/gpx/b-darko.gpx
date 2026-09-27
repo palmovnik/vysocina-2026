@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1" creator="Vysočina 2026 – Mlýn Vikinek" xmlns="http://www.topografix.com/GPX/1/1">
-<metadata><name>K Velkému Dářku a sklárně</name><desc>Rodinný okruh: lesem do Škrdlovic ke sklárně, po hrázi Velkého Dářka k rašeliništi a zpět kolem Tisůvky.</desc></metadata>
-<wpt lat="49.634240" lon="15.929900"><name>Sklárna U Hrocha (Škrdlovice)</name><desc>Malá sklářská huť, kde vám před očima vznikne půllitr nebo džbán.</desc></wpt>
+<metadata><name>K Velkému Dářku a na rašeliniště</name><desc>Rodinný okruh: lesem do Škrdlovic, po hrázi Velkého Dářka k rašeliništi a zpět kolem Tisůvky.</desc></metadata>
 <wpt lat="49.631770" lon="15.909620"><name>Velké Dářko</name><desc>Moře Vysočiny: největší rybník Českomoravské vrchoviny (206 ha).</desc></wpt>
 <wpt lat="49.637880" lon="15.882830"><name>NS Dářská rašeliniště</name><desc>3 km dlouhá stezka po povalových chodnících přes rašeliniště, se dvěma vyhlídkami.</desc></wpt>
-<wpt lat="49.633850" lon="15.930070"><name>Hotel a restaurace U Hrocha</name><desc>Restaurace hned vedle sklářské huti. Oběd se dá spojit s ukázkou foukání skla.</desc></wpt>
-<wpt lat="49.637090" lon="15.925820"><name>Restaurace penzionu Velké Dářko</name><desc>Restaurace kousek od Velkého Dářka.</desc></wpt>
+<wpt lat="49.633850" lon="15.930070"><name>Hotel a restaurace U Hrocha</name><desc>Restaurace s dětským koutkem ve Škrdlovicích, 3 km od mlýna, kousek od Velkého Dářka.</desc></wpt>
 <wpt lat="49.651780" lon="15.949450"><name>Tisůvka (804 m)</name><desc>Nejbližší skály: 58 m dlouhá rulová hradba, až 15 m vysoká, skoro za humny.</desc></wpt>
-<trk><name>K Velkému Dářku a sklárně</name><trkseg>
+<trk><name>K Velkému Dářku a na rašeliniště</name><trkseg>
 <trkpt lat="49.643916" lon="15.968121"><ele>658</ele></trkpt>
 <trkpt lat="49.644152" lon="15.967435"><ele>660</ele></trkpt>
 <trkpt lat="49.644313" lon="15.966793"><ele>660</ele></trkpt>

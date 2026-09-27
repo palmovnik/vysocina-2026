@@ -1,9 +1,10 @@
 # Vysočina 2026 – Mlýn Vikinek, Cikháj
 
 Průvodce okolím chaty **Mlýn Vikinek** (Cikháj 57, Žďárské vrchy) pro čtyři rodiny
-na pobyt **čt 8. – ne 11. 10. 2026**: interaktivní mapa, skály, jeskyně, tipy pro děti,
-dobré jídlo a farmy, cyklotrasy a pěší okruhy s výškovým profilem a GPX, jednoduché nápady po dnech
-a praktické informace. Každý tip se otevírá v okně s popisem, cestou od mlýna a navigací.
+na pobyt **čt 8. – ne 11. 10. 2026** (možná do pondělí 12. 10.): interaktivní mapa, skály, jeskyně, tipy pro děti,
+dobré jídlo, pivovary a farmy, cyklotrasy a pěší okruhy s výškovým profilem a GPX, jednoduché nápady po dnech
+a praktické informace. Každý tip se otevírá v okně s popisem, cestou od mlýna a navigací a má odkazy
+na oficiální web, Google Mapy a Mapy.com.
 Na mapě jsou trasy samostatnou kategorií vedle míst (tlačítko *Vše* zapne nebo vypne všechno),
 sekce pod mapou jsou sbalené do skupin a fotky se načtou až po rozbalení.
 
