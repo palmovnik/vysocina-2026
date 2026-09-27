@@ -620,5 +620,60 @@
   "url": "https://www.pivovar-policka.cz/",
   "file": "w-policka.html",
   "bytes": 23007
+ },
+ "w2-echalupy": {
+  "url": "https://obsazenost.e-chalupy.cz/kalendar.php?id=14720&pocetMesicu=3&velikost=3&legenda=ano&naStred=ne&jazyk=cz&jednotky=ano&idJednotky=0&vypisJednotky=ne",
+  "file": "w2-echalupy.html",
+  "bytes": 16769
+ },
+ "w2-racin-pivovar": {
+  "url": "https://www.racin.cz/cs/pivovar/",
+  "file": "w2-racin-pivovar.html",
+  "bytes": 323959
+ },
+ "w2-racin": {
+  "url": "https://www.racin.cz/cs/",
+  "file": "w2-racin.html",
+  "bytes": 374724
+ },
+ "w2-richard": {
+  "url": "https://www.pivo-richard.cz/",
+  "file": "w2-richard.html",
+  "bytes": 32303
+ },
+ "w2-medlov": {
+  "url": "https://www.medlovhotel.cz/",
+  "file": "w2-medlov.html",
+  "bytes": 412969
+ },
+ "w2-ostruzinka": {
+  "url": "https://www.vysocina.eu/turisticke-cile/6067-pohadkova-stezka-skritka-ostruzinky",
+  "file": "w2-ostruzinka.html",
+  "bytes": 169591
+ },
+ "w2-pilak": {
+  "url": "https://www.sportiszdar.cz/rekreacni-areal-pilak",
+  "file": "w2-pilak.html",
+  "bytes": 114474
+ },
+ "w2-cukrarna": {
+  "url": "https://www.cukrarnasnezne.cz/",
+  "file": "w2-cukrarna.html",
+  "bytes": 315064
+ },
+ "w2-svoboda-vys": {
+  "url": "https://www.vysocina.eu/turisticke-cile/sklarna-jaroslav-svoboda",
+  "file": "w2-svoboda-vys.html",
+  "bytes": 172241
+ },
+ "w2-hejkal-vys": {
+  "url": "https://www.vysocina.eu/turisticke-cile/pivovar-hejkal",
+  "file": "w2-hejkal-vys.html",
+  "bytes": 171212
+ },
+ "w2-stanice": {
+  "url": "https://www.stanicelyzaru.cz/kontakt/",
+  "file": "w2-stanice.html",
+  "bytes": 61983
  }
 }
