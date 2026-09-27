@@ -1,46 +1,32 @@
 [
  {
-  "id": "w2-echalupy",
-  "url": "https://obsazenost.e-chalupy.cz/kalendar.php?id=14720&pocetMesicu=3&velikost=3&legenda=ano&naStred=ne&jazyk=cz&jednotky=ano&idJednotky=0&vypisJednotky=ne"
+  "id": "wx-om-trip",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m,precipitation,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m,is_day&start_date=2026-10-08&end_date=2026-10-11",
+  "ext": "json"
  },
  {
-  "id": "w2-racin-pivovar",
-  "url": "https://www.racin.cz/cs/pivovar/"
+  "id": "wx-om-near",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_gusts_10m,precipitation,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&hourly=temperature_2m,precipitation,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m,is_day&start_date=2026-09-28&end_date=2026-10-01",
+  "ext": "json"
  },
  {
-  "id": "w2-racin",
-  "url": "https://www.racin.cz/cs/"
+  "id": "wx-om-16",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&forecast_days=16",
+  "ext": "json"
  },
  {
-  "id": "w2-richard",
-  "url": "https://www.pivo-richard.cz/"
+  "id": "wx-om-toolate",
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=49.6443&longitude=15.9684&elevation=675&timezone=Europe%2FPrague&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,precipitation_hours,wind_gusts_10m_max,sunshine_duration,sunrise,sunset&start_date=2026-10-08&end_date=2026-10-20",
+  "ext": "json"
  },
  {
-  "id": "w2-medlov",
-  "url": "https://www.medlovhotel.cz/"
+  "id": "wx-windy-embed",
+  "url": "https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km%2Fh&zoom=9&overlay=rain&product=ecmwf&level=surface&lat=49.644&lon=15.968&detailLat=49.644&detailLon=15.968&detail=true&message=true&marker=true",
+  "ext": "html"
  },
  {
-  "id": "w2-ostruzinka",
-  "url": "https://www.vysocina.eu/turisticke-cile/6067-pohadkova-stezka-skritka-ostruzinky"
- },
- {
-  "id": "w2-pilak",
-  "url": "https://www.sportiszdar.cz/rekreacni-areal-pilak"
- },
- {
-  "id": "w2-cukrarna",
-  "url": "https://www.cukrarnasnezne.cz/"
- },
- {
-  "id": "w2-svoboda-vys",
-  "url": "https://www.vysocina.eu/turisticke-cile/sklarna-jaroslav-svoboda"
- },
- {
-  "id": "w2-hejkal-vys",
-  "url": "https://www.vysocina.eu/turisticke-cile/pivovar-hejkal"
- },
- {
-  "id": "w2-stanice",
-  "url": "https://www.stanicelyzaru.cz/kontakt/"
+  "id": "wx-windy-point",
+  "url": "https://www.windy.com/49.644/15.968?49.644,15.968,10",
+  "ext": "html"
  }
 ]
