@@ -12,7 +12,7 @@
   var ROUTES = {};
   T.routes.forEach(function (r) { ROUTES[r.id] = r; });
   var MILL = T.mill;
-  var TOUR_CATS = ['skaly', 'jeskyne', 'deti', 'pamatky', 'priroda'];   // sekce Výlety
+  var TOUR_CATS = ['skaly', 'deti', 'pamatky', 'priroda'];   // sekce Výlety
   var FOOD_CATS = ['jidlo', 'farmy'];                                     // sekce Jídlo
   var SUBS = {};
   (T.gastro || []).forEach(function (g) { SUBS[g.cat + ':' + g.id] = g; });
