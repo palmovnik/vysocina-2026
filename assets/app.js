@@ -146,9 +146,11 @@
     return '<span class="' + (cls || 'links') + '">' + extLink(r.mapy, 'Mapy.com') + extLink(routeGoogle(r), 'Google Mapy') +
       (r.start ? extLink(googleNav({ lat: r.geo[0][0], lon: r.geo[0][1] }), '🚗 Na start') : '') + '</span>';
   }
-  // „z Prahy“, „z Brna“ … (časy jízdy z měst)
-  var CITY_GEN = { Praha: 'Prahy', Brno: 'Brna', Jihlava: 'Jihlavy', Ostrava: 'Ostravy', Olomouc: 'Olomouce', Pardubice: 'Pardubic' };
-  function fromCity(k) { return 'z ' + (CITY_GEN[k] || k); }
+  // cesta z domova k mlýnu: Google Mapy i Mapy.com počítají s aktuální dopravou
+  function homeRoute(o, mapy) {
+    return mapy ? 'https://mapy.com/fnc/v1/route?mapset=traffic&start=' + o.lon + ',' + o.lat + '&end=' + MILL.lon + ',' + MILL.lat + '&routeType=car_fast_traffic'
+      : 'https://www.google.com/maps/dir/?api=1&origin=' + encodeURIComponent(o.q) + '&destination=' + MILL.lat + ',' + MILL.lon + '&travelmode=driving';
+  }
   function placeHref(id) { return '#misto/' + id; }
   function routeHref(id) { return '#trasa/' + id; }
   // krátký údaj „jak daleko“ pro dlaždice a seznam
@@ -719,9 +721,9 @@
   }
   function millModalHtml(p) {
     var c = T.chata, gps = p.lat.toFixed(5) + ', ' + p.lon.toFixed(5);
-    var drive = Object.keys(T.fromCities).map(function (k) {
-      return esc(fromCity(k)) + ' asi ' + fmtMin(T.fromCities[k].min) + ' (' + T.fromCities[k].km + ' km)';
-    }).join(', ');
+    var drive = (T.fromCities || []).map(function (o) {
+      return '<li>' + extLink(homeRoute(o), esc(o.from), '') + '<span class="num">' + fmtMin(o.min) + ' · ' + o.km + ' km</span></li>';
+    }).join('');
     var h = barHtml() + '<div class="m-rhead m-mill"><div class="m-cat">🏠 Naše chata</div>' +
       '<h3 id="modalTitle">' + esc(p.name) + '</h3><p class="m-lead">' + esc(p.teaser) + '</p></div><div class="m-body">';
     h += '<dl class="mill-kv">' +
@@ -732,7 +734,7 @@
       '<div><dt>🌐 Web</dt><dd>' + extLink(p.web, 'mlyn-vikinek.cz', '') + ' · ' + extLink('https://mlyn-vikinek.cz/galerie/', 'fotky mlýna', '') + '</dd></div>' +
       '</dl>';
     h += '<div class="navapps"><b>🧭 Navigovat autem</b>' + navAppsHtml(p) +
-      (drive ? '<p class="small muted">Cesta ' + drive + ', bez provozu.</p>' : '') + '</div>';
+      (drive ? '<p class="small muted drive-h">Cesta autem bez provozu, klik ukáže trasu s aktuální dopravou:</p><ul class="drive-list">' + drive + '</ul>' : '') + '</div>';
     h += '</div><div class="m-actions"><button type="button" class="btn primary" data-act="map">🗺️ Na mapě</button>' +
       '<a class="btn" href="#chata-info" data-act="day">ℹ️ Víc o mlýně</a></div>';
     return h;
@@ -1102,11 +1104,11 @@
       (c.checkin ? '<dt>Příjezd</dt><dd>' + esc(c.checkin) + '</dd>' : '') +
       '<dt>Vybavení</dt><dd>' + esc(c.amenities) + '</dd>' +
       '<dt>Web</dt><dd><a href="https://mlyn-vikinek.cz/" target="_blank" rel="noopener">mlyn-vikinek.cz</a> · <a href="https://mlyn-vikinek.cz/galerie/" target="_blank" rel="noopener">fotky mlýna</a></dd></dl>';
-    var right = '<p class="muted small">Orientační čas jízdy autem (OSRM, bez provozu):</p><div class="drive">';
-    var cities = Object.keys(T.fromCities);
-    cities.forEach(function (k) {
-      var f = T.fromCities[k];
-      right += '<div class="stat"><b>' + fmtMin(f.min) + '</b><span>' + esc(fromCity(k)) + ' · ' + f.km + ' km</span></div>';
+    var cities = T.fromCities || [];
+    var right = '<p class="muted small">Orientační čas jízdy autem bez provozu (OSRM). Aktuální čas i s dopravou ukážou odkazy do map:</p><div class="drive">';
+    cities.forEach(function (o) {
+      right += '<div class="stat"><b>' + fmtMin(o.min) + '</b><span>' + esc(o.from) + ' · ' + o.km + ' km</span>' +
+        '<span class="stat-links">' + extLink(homeRoute(o), 'Google Mapy', '') + ' · ' + extLink(homeRoute(o, true), 'Mapy.com', '') + '</span></div>';
     });
     right += '</div><h4 class="svc-h">🧭 Navigovat k mlýnu</h4>' + navAppsHtml(m) +
       '<div class="row"><a class="btn" href="gpx/vysocina-2026-mista.gpx" download>⬇ Všechna místa do navigace (GPX)</a></div>' +
@@ -1121,7 +1123,7 @@
     box.appendChild(makeAcc({ id: 'chata-info', emoji: '🏠', color: 'var(--c-chata)', title: m.name,
       preview: esc([c.address, '16 lůžek + dětská postýlka', 'sauna, krb, zahrada s ohništěm', c.checkin].filter(Boolean).join(' · ')), html: left }));
     box.appendChild(makeAcc({ emoji: '🚗', color: 'var(--c-sluzby)', title: 'Cesta a nejbližší služby',
-      preview: esc(cities.map(function (k) { return fromCity(k) + ' ' + fmtMin(T.fromCities[k].min); }).join(' · ') + ' · obchod, lékárna, benzinka, nemocnice'), html: right }));
+      preview: esc(cities.map(function (o) { return o.from + ' ' + fmtMin(o.min); }).join(' · ') + ' · obchod, lékárna, benzinka, nemocnice'), html: right }));
     $('#copyGps').addEventListener('click', function (e) {
       var t = MILL.lat.toFixed(5) + ', ' + MILL.lon.toFixed(5);
       if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { e.target.textContent = 'Zkopírováno ✓'; });
