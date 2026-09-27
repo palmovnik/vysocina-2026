@@ -704,5 +704,15 @@
   "url": "https://www.windy.com/49.644/15.968?49.644,15.968,10",
   "file": "wx-windy-point.html",
   "bytes": 8016
+ },
+ "mapy-url-doc": {
+  "url": "https://developer.mapy.com/further-uses-of-mapycz/mapy-cz-url/",
+  "file": "mapy-url-doc.html",
+  "bytes": 89839
+ },
+ "mapy-url-doc-cs": {
+  "url": "https://developer.mapy.com/cs/dalsi-moznosti-vyuziti/mapy-cz-url/",
+  "file": "mapy-url-doc-cs.html",
+  "bytes": 89839
  }
 }
