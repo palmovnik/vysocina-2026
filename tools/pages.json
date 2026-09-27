@@ -1,106 +1,46 @@
 [
  {
-  "id": "w-osm-new",
-  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%0A%28%0A%20%20nwr%5B%22craft%22%3D%22brewery%22%5D%2849.40%2C15.50%2C49.90%2C16.40%29%3B%0A%20%20nwr%5B%22microbrewery%22%3D%22yes%22%5D%2849.40%2C15.50%2C49.90%2C16.40%29%3B%0A%20%20nwr%5B%22name%22~%22Rycht%C3%A1%C5%99%7CEden%7CHop%C3%ADk%7CHopik%7CRevolta%7CSpor%C5%A5%C3%A1k%7CHejkal%22%2Ci%5D%2849.40%2C15.50%2C49.90%2C16.40%29%3B%0A%20%20nwr%5B%22tourism%22%3D%22zoo%22%5D%2849.38%2C15.55%2C49.42%2C15.62%29%3B%0A%20%20nwr%5B%22leisure%22%3D%22playground%22%5D%5B%22indoor%22%3D%22yes%22%5D%2849.54%2C15.90%2C49.59%2C15.97%29%3B%0A%29%3B%0Aout%20center%20tags%3B",
-  "ext": "json"
+  "id": "w2-echalupy",
+  "url": "https://obsazenost.e-chalupy.cz/kalendar.php?id=14720&pocetMesicu=3&velikost=3&legenda=ano&naStred=ne&jazyk=cz&jednotky=ano&idJednotky=0&vypisJednotky=ne"
  },
  {
-  "id": "w-nom-eden",
-  "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Centrum%20Eden%2C%20Byst%C5%99ice%20nad%20Pern%C5%A1tejnem",
-  "ext": "json"
+  "id": "w2-racin-pivovar",
+  "url": "https://www.racin.cz/cs/pivovar/"
  },
  {
-  "id": "w-nom-hopik",
-  "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=n%C3%A1m%C4%9Bst%C3%AD%20Republiky%20147%2C%20%C5%BD%C4%8F%C3%A1r%20nad%20S%C3%A1zavou",
-  "ext": "json"
+  "id": "w2-racin",
+  "url": "https://www.racin.cz/cs/"
  },
  {
-  "id": "w-nom-rychtar",
-  "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Pivovar%20Rycht%C3%A1%C5%99%2C%20Hlinsko",
-  "ext": "json"
+  "id": "w2-richard",
+  "url": "https://www.pivo-richard.cz/"
  },
  {
-  "id": "w-revolta",
-  "url": "https://www.revolta.beer/"
+  "id": "w2-medlov",
+  "url": "https://www.medlovhotel.cz/"
  },
  {
-  "id": "w-revolta-vys",
-  "url": "https://www.vysocina.eu/turisticke-cile/pivovar-revolta-zdar-nad-sazavou"
+  "id": "w2-ostruzinka",
+  "url": "https://www.vysocina.eu/turisticke-cile/6067-pohadkova-stezka-skritka-ostruzinky"
  },
  {
-  "id": "w-hejkal-koruna",
-  "url": "https://www.korunavysociny.cz/ubytovani-a-sluzby/2789-pivovar-hejkal"
+  "id": "w2-pilak",
+  "url": "https://www.sportiszdar.cz/rekreacni-areal-pilak"
  },
  {
-  "id": "w-rychtar-exkurze",
-  "url": "https://www.pivo-rychtar.cz/exkurze/"
+  "id": "w2-cukrarna",
+  "url": "https://www.cukrarnasnezne.cz/"
  },
  {
-  "id": "w-rychtar",
-  "url": "https://www.pivo-rychtar.cz/"
+  "id": "w2-svoboda-vys",
+  "url": "https://www.vysocina.eu/turisticke-cile/sklarna-jaroslav-svoboda"
  },
  {
-  "id": "w-eden",
-  "url": "https://www.edencentrum.cz/"
+  "id": "w2-hejkal-vys",
+  "url": "https://www.vysocina.eu/turisticke-cile/pivovar-hejkal"
  },
  {
-  "id": "w-eden-vys",
-  "url": "https://www.vysocina.eu/turisticke-cile/centrum-eden-bystrice-nad-pernstejnem"
- },
- {
-  "id": "w-eden-pivovar-vys",
-  "url": "https://www.vysocina.eu/turisticke-cile/pivovar-centrum-eden-bystrice-nad-pernstejnem"
- },
- {
-  "id": "w-hopik",
-  "url": "http://www.hopik-zdar.cz/"
- },
- {
-  "id": "w-hopik-kudy",
-  "url": "https://www.kudyznudy.cz/aktivity/herna-hopik"
- },
- {
-  "id": "w-zoo-jihlava",
-  "url": "https://zoojihlava.cz/dulezite-informace/"
- },
- {
-  "id": "w-vesely-kopec",
-  "url": "https://www.nmvp.cz/vysocina/pro-navstevniky/prohlidka-expozicnich-arealu/vesely-kopec"
- },
- {
-  "id": "w-zv-cile",
-  "url": "https://www.zdarskevrchy.cz/cz/turisticke-cile"
- },
- {
-  "id": "w-zv-cile-2",
-  "url": "https://www.zdarskevrchy.cz/cz/turisticke-cile?page=2"
- },
- {
-  "id": "w-mlyn-rezervace",
-  "url": "https://mlyn-vikinek.cz/rezervace/"
- },
- {
-  "id": "w-mlyn-kontakt",
-  "url": "https://mlyn-vikinek.cz/kontakt/"
- },
- {
-  "id": "w-black-cup",
-  "url": "https://europeancoffeetrip.com/cafe/theblackcup-novemestonamorave/"
- },
- {
-  "id": "w-kafe133",
-  "url": "https://www.vysocina.eu/stravovaci-zarizeni/kafe"
- },
- {
-  "id": "w-svoboda-exkurze",
-  "url": "https://ags-svoboda.cz/exkurze/"
- },
- {
-  "id": "w-relax-provoz",
-  "url": "https://www.sportiszdar.cz/relaxacni-centrum/provozni-doba"
- },
- {
-  "id": "w-policka",
-  "url": "https://www.pivovar-policka.cz/"
+  "id": "w2-stanice",
+  "url": "https://www.stanicelyzaru.cz/kontakt/"
  }
 ]
