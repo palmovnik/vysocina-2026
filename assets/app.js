@@ -12,6 +12,7 @@
   var ROUTES = {};
   T.routes.forEach(function (r) { ROUTES[r.id] = r; });
   var MILL = T.mill;
+  var MILL_TIPS = 'https://mlyn-vikinek.cz/tipy-na-vylet/';   // tipy na výlet z webu mlýna
   var TOUR_CATS = ['skaly', 'deti', 'pamatky', 'priroda'];   // sekce Výlety
   var FOOD_CATS = ['jidlo', 'farmy'];                                     // sekce Jídlo
   var SUBS = {};
@@ -44,7 +45,7 @@
     rain: ['☔', 'i za deště', 'hodí se, i když prší']
   };
   var FIT_KEYS = ['male', 'skolaci', 'kocarek', 'dospeli'];
-  var FLAGS = [['top', '⭐ Top tipy'], ['male', '🧸 Pro malé'], ['skolaci', '🎒 Pro školáky'], ['kocarek', '🚼 S kočárkem'],
+  var FLAGS = [['top', '⭐ Top tipy'], ['mill', '🌾 Tipy mlýna'], ['male', '🧸 Pro malé'], ['skolaci', '🎒 Pro školáky'], ['kocarek', '🚼 S kočárkem'],
     ['dospeli', '👫 Pro dospělé'], ['rain', '☔ Když prší']];
 
   // ------------------------------------------------------------ helpers
@@ -197,6 +198,7 @@
   // filtr „jen vhodné“ (top tip, pro malé, pro školáky, s kočárkem, když prší)
   function passFlags(p, f) {
     if (f.top && !p.top) return false;
+    if (f.mill && !p.mill) return false;
     if (f.rain && !p.rain) return false;
     var fit = p.fit || [];
     return FIT_KEYS.every(function (k) { return !f[k] || fit.indexOf(k) >= 0; });
@@ -664,6 +666,11 @@
       .map(function (x) { return x.q.id; });
   }
 
+  // co o místě píše web mlýna (stránka Tipy na výlet)
+  function millNote(p) {
+    return '<div class="m-note mill"><b>🌾 Doporučuje mlýn:</b> ' + esc(p.mill) + ' ' +
+      extLink(MILL_TIPS, 'mlyn-vikinek.cz', 'lk-inline') + '</div>';
+  }
   function placeModalHtml(p) {
     var c = CATS[p.cat];
     var h = barHtml();
@@ -677,6 +684,7 @@
       '<h3 id="modalTitle">' + esc(p.name) + '</h3>';
     var badges = '';
     if (p.top) badges += '<span class="badge top">⭐ top tip</span>';
+    if (p.mill) badges += '<span class="badge mill">🌾 tip mlýna</span>';
     (p.tags || []).forEach(function (t) { if (TAGS[t]) badges += '<span class="badge">' + TAGS[t][0] + ' ' + esc(TAGS[t][2]) + '</span>'; });
     if (badges) h += '<div class="badges">' + badges + '</div>';
     h += '<p class="m-lead">' + esc(p.teaser) + '</p>';
@@ -690,6 +698,7 @@
       }).join('') + '</dl>';
     }
     if (p.text) h += '<p>' + esc(p.text) + '</p>';
+    if (p.mill) h += millNote(p);
     if (p.kidsNote) h += '<div class="m-note kids">🧒 ' + esc(p.kidsNote) + '</div>';
     if (p.info) h += '<div class="m-note info">ℹ️ ' + esc(p.info) + '</div>';
     // souvislosti: program, trasy, okolí
@@ -931,16 +940,18 @@
     return '<div class="tile' + (big ? ' big' : '') + (p.top ? ' is-top' : '') + '" style="--c:' + catVar(p.cat) + '">' +
       '<a class="tile-main" href="' + placeHref(p.id) + '">' +
       '<span class="tile-ph">' + ph + (p.top && !big ? '<span class="star" title="top tip">★</span>' : '') + '</span>' +
-      '<span class="tile-body"><span class="tile-cat">' + CATS[p.cat].emoji + ' ' + esc(placeLabel(p)) + '</span>' +
+      '<span class="tile-body"><span class="tile-cat">' + CATS[p.cat].emoji + ' ' + esc(placeLabel(p)) +
+      (p.mill ? '<span class="tile-mill" title="Doporučuje i web mlýna">🌾 tip mlýna</span>' : '') + '</span>' +
       '<span class="tile-name">' + esc(p.name) + '</span>' +
       '<span class="tile-teaser">' + esc(p.teaser) + '</span>' +
       '<span class="tile-fits">' + fitChips(p) + '</span>' +
       '<span class="tile-meta">' + howFar(p) + '</span></span></a>' + linksHtml(p, 'links tile-links') + '</div>';
   }
   function gtileHtml(p) {
-    var tags = (p.tags || []).filter(function (t) { return TAGS[t]; }).map(function (t) {
-      return '<span class="tag" title="' + esc(TAGS[t][2]) + '">' + TAGS[t][0] + ' ' + esc(TAGS[t][1]) + '</span>';
-    }).join('');
+    var tags = (p.mill ? '<span class="tag mill" title="Doporučuje i web mlýna">🌾 tip mlýna</span>' : '') +
+      (p.tags || []).filter(function (t) { return TAGS[t]; }).map(function (t) {
+        return '<span class="tag" title="' + esc(TAGS[t][2]) + '">' + TAGS[t][0] + ' ' + esc(TAGS[t][1]) + '</span>';
+      }).join('');
     return '<div class="gtile" style="--c:' + catVar(p.cat) + '"><a class="g-main" href="' + placeHref(p.id) + '">' +
       '<span class="g-ico">' + (p.img ? '<img src="' + esc(p.img.thumb || p.img.src) + '" alt="" loading="lazy" decoding="async">' : placeIcon(p)) + '</span>' +
       '<span class="g-body"><span class="g-name">' + (p.top ? '<span class="star-s" title="top tip">★</span> ' : '') + esc(p.name) + '</span>' +
@@ -1124,6 +1135,34 @@
       preview: esc([c.address, '16 lůžek + dětská postýlka', 'sauna, krb, zahrada s ohništěm', c.checkin].filter(Boolean).join(' · ')), html: left }));
     box.appendChild(makeAcc({ emoji: '🚗', color: 'var(--c-sluzby)', title: 'Cesta a nejbližší služby',
       preview: esc(cities.map(function (o) { return o.from + ' ' + fmtMin(o.min); }).join(' · ') + ' · obchod, lékárna, benzinka, nemocnice'), html: right }));
+    // tipy z webu mlýna: místa se štítkem „tip mlýna“ po kategoriích a k tomu rady bez místa na mapě
+    var mt = c.millTips;
+    if (mt) {
+      var tipsHtml = '<p class="muted small">' + esc(mt.intro) + ' ' + extLink(MILL_TIPS, 'Tipy na výlet na webu mlýna', 'lk-inline') + '</p>';
+      var tipNames = [];
+      T.cats.forEach(function (cat) {
+        var items = T.places.filter(function (p) { return p.mill && p.cat === cat.id; })
+          .sort(function (a, b) { return a.dist - b.dist; });
+        if (!items.length) return;
+        tipsHtml += '<h4 class="svc-h">' + cat.emoji + ' ' + esc(cat.name) + '</h4><ul class="svc mill-tips">' + items.map(function (p) {
+          tipNames.push(p.name.replace(/\s*\(.*$/, '').split(':')[0]);
+          return '<li><a href="' + placeHref(p.id) + '"><span class="ico" style="--c:' + catVar(p.cat) + '">' + placeIcon(p) + '</span><span class="t">' + esc(p.name) +
+            '<span class="how">' + esc(p.mill) + '</span>' +
+            (p.warn ? '<span class="how warn">⚠️ ' + esc(p.warn) + '</span>' : '') + '</span><span class="dist">' + howFar(p) + '</span></a></li>';
+        }).join('') + '</ul>';
+      });
+      if ((mt.notes || []).length) {
+        tipsHtml += '<h4 class="svc-h">💡 Další rady z webu mlýna</h4><ul class="plain mill-notes">' + mt.notes.map(function (n) {
+          var p = n.place && PLACES[n.place];
+          return '<li><span class="t">' + n.icon + ' ' + esc(n.text) + '</span>' +
+            (p ? '<span class="how"><a href="' + placeHref(p.id) + '">' + esc(p.name) + '</a></span>' : '') +
+            (n.url ? '<span class="how">' + extLink(n.url, esc(n.label || '🌐 web'), 'lk-inline') + '</span>' : '') + '</li>';
+        }).join('') + '</ul>';
+      }
+      if (mt.skipped) tipsHtml += '<p class="small muted">' + esc(mt.skipped) + '</p>';
+      box.appendChild(makeAcc({ id: 'chata-tipy', emoji: '🌾', color: 'var(--c-priroda)', title: 'Tipy od majitelů mlýna',
+        preview: esc(tipNames.join(' · ')), html: tipsHtml }));
+    }
     $('#copyGps').addEventListener('click', function (e) {
       var t = MILL.lat.toFixed(5) + ', ' + MILL.lon.toFixed(5);
       if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { e.target.textContent = 'Zkopírováno ✓'; });

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1" creator="Vysočina 2026 – Mlýn Vikinek" xmlns="http://www.topografix.com/GPX/1/1">
 <metadata><name>Čtyři palice a Milovské perničky</name><desc>Krátký okruh z Milov ke skalním věžím a „perníkovým“ mísám.</desc></metadata>
+<wpt lat="49.666430" lon="16.090690"><name>Milovský rybník</name><desc>Rybník z roku 1610 v Milovské kotlině, odkud se chodí na Čtyři palice, Perničky i Devět skal.</desc></wpt>
 <wpt lat="49.686050" lon="16.093360"><name>Čtyři palice</name><desc>Rozeklané skalní věže nad Milovy s vyhlídkou a naučnou stezkou.</desc></wpt>
 <wpt lat="49.693600" lon="16.087940"><name>Milovské perničky</name><desc>Skály s „perníkovými formičkami“, skalními mísami vymletými vodou a mrazem.</desc></wpt>
 <trk><name>Čtyři palice a Milovské perničky</name><trkseg>
