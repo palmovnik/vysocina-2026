@@ -749,7 +749,7 @@ table.wx-table tr.dh th { padding-top: 10px; font-size: .86rem; }
 .svc .how.warn { color: #b3261e; font-weight: 550; }
 :root[data-theme="dark"] .svc .how.warn { color: #ff8a80; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .svc .how.warn { color: #ff8a80; } }
-.mill-notes .t { font-weight: 400; }
+ul.plain.mill-notes .t { font-weight: 400; }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; align-items: start; }
 .checklist { list-style: none; padding: 0; margin: 0; }
 .checklist li { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); align-items: start; }
