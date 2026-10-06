@@ -298,12 +298,6 @@
    49.61,
    15.9541
   ],
-  "walk": {
-   "length_m": 6210,
-   "ascend_m": 21,
-   "plain_ascend_m": -67,
-   "time_s": 4287
-  },
   "bike": {
    "length_m": 4419,
    "ascend_m": 28,
