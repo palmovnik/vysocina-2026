@@ -31,7 +31,7 @@
   {"id": "pramen-sazavy", "lat": 49.67156, "lon": 15.93786, "walk": true, "bike": true},
   {"id": "zakova-hora", "lat": 49.65699, "lon": 15.99183, "walk": true, "bike": true},
   {"id": "velke-darko", "lat": 49.63177, "lon": 15.90962, "bike": true},
-  {"id": "strz", "lat": 49.61, "lon": 15.9541, "car": [49.6201, 15.9544], "walk": true, "bike": true},
+  {"id": "strz", "lat": 49.61, "lon": 15.9541, "car": [49.6201, 15.9544], "bike": true},
   {"id": "sykovec", "lat": 49.60862, "lon": 16.03846, "bike": true},
   {"id": "milovsky-rybnik", "lat": 49.66643, "lon": 16.09069, "car": [49.66865, 16.09073], "bike": true},
   {"id": "darska-raseliniste", "lat": 49.63788, "lon": 15.88283, "car": [49.63193, 15.90859]},

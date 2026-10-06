@@ -68,7 +68,7 @@
    "date": "2026-10-11",
    "label": "Neděle 11. 10.",
    "title": "Skály na rozloučenou",
-   "note": "Z mlýna se odjíždí do 10:00. Skály v Blatinách a v Milovech jsou kousek, Zelená hora ve Žďáru leží všem cestou domů a k Zoo Jihlava je to z cesty do Říčan zajížďka asi 20 minut.",
+   "note": "Z mlýna se odjíždí do 10:00. Skály v Blatinách a v Milovech jsou kousek, Zelená hora ve Žďáru leží všem cestou domů a k Zoo Jihlava je to z cesty do Říčan zajížďka asi 20 minut. Odpoledne 14–16 h je na Piláku ve Žďáru drakiáda, vezměte draka.",
    "tips": [
     "route:h-palice",
     "route:h-hreben-kratky",
@@ -76,6 +76,7 @@
     "kiosek-kadov",
     "cukrarna-snezne",
     "zelena-hora",
+    "pilak",
     "zoo-jihlava"
    ],
    "rain": [
@@ -165,7 +166,8 @@
   "Dřevo na táborák (ohniště na zahradě) a něco na opékání",
   "Cestovní postýlky pro nejmenší (mlýn má jen jednu dětskou postýlku 120×60 cm)",
   "Košík a nožík na houby, lesy kolem mlýna jsou podle majitelů na podzim plné hub",
-  "Míč na volejbal nebo nohejbal (hřiště nad restaurací Tisůvka)"
+  "Míč na volejbal nebo nohejbal (hřiště nad restaurací Tisůvka)",
+  "Drak na nedělní drakiádu na Piláku ve Žďáru (14–16 h)"
  ],
  "quests": [
   "Pustit lodičku na pramenu Svratky (pluje do Černého moře!) a na pramenu Sázavy (do Severního moře)",

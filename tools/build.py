@@ -151,7 +151,7 @@ def build_places(drive=None, factors=None):
                     q['car']['walk'] = round(walk_m * 1.3 / 1000, 1)
         a = access.get(p['id'], {})
         for mode in ('walk', 'bike'):
-            if mode in a:
+            if mode in a and p.get(mode):   # jen způsoby, které má místo v content/ zapnuté
                 km = a[mode]['length_m'] / 1000
                 up = a[mode]['ascend_m']
                 q[mode] = {'km': round(km, 1), 'up': up,
