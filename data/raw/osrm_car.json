@@ -279,6 +279,16 @@
   "via": "bod",
   "snap_m": 1821
  },
+ "houby": {
+  "km": 0.6,
+  "min": 2,
+  "target": [
+   49.647433,
+   15.963643
+  ],
+  "via": "parkoviště w270441950  (811 m)",
+  "snap_m": 9
+ },
  "pramen-sazavy": {
   "km": 13.1,
   "min": 24,
@@ -308,6 +318,36 @@
   ],
   "via": "parkoviště n1137974445  (28 m)",
   "snap_m": 21
+ },
+ "strz": {
+  "km": 4.6,
+  "min": 10,
+  "target": [
+   49.61,
+   15.9541
+  ],
+  "via": "bod",
+  "snap_m": 393
+ },
+ "sykovec": {
+  "km": 20.5,
+  "min": 24,
+  "target": [
+   49.611278,
+   16.038822
+  ],
+  "via": "parkoviště w1309551000  (297 m)",
+  "snap_m": 5
+ },
+ "milovsky-rybnik": {
+  "km": 17.6,
+  "min": 20,
+  "target": [
+   49.66865,
+   16.09073
+  ],
+  "via": "ručně",
+  "snap_m": 27
  },
  "darska-raseliniste": {
   "km": 8.3,

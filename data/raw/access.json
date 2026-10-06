@@ -233,6 +233,18 @@
    "time_s": 1405
   }
  },
+ "houby": {
+  "at": [
+   49.6455,
+   15.9745
+  ],
+  "walk": {
+   "length_m": 1335,
+   "ascend_m": 26,
+   "plain_ascend_m": 21,
+   "time_s": 1013
+  }
+ },
  "pramen-sazavy": {
   "at": [
    49.67156,
@@ -279,6 +291,48 @@
    "ascend_m": 38,
    "plain_ascend_m": -38,
    "time_s": 1008
+  }
+ },
+ "strz": {
+  "at": [
+   49.61,
+   15.9541
+  ],
+  "walk": {
+   "length_m": 6210,
+   "ascend_m": 21,
+   "plain_ascend_m": -67,
+   "time_s": 4287
+  },
+  "bike": {
+   "length_m": 4419,
+   "ascend_m": 28,
+   "plain_ascend_m": -67,
+   "time_s": 729
+  }
+ },
+ "sykovec": {
+  "at": [
+   49.60862,
+   16.03846
+  ],
+  "bike": {
+   "length_m": 8682,
+   "ascend_m": 143,
+   "plain_ascend_m": 64,
+   "time_s": 2244
+  }
+ },
+ "milovsky-rybnik": {
+  "at": [
+   49.66643,
+   16.09069
+  ],
+  "bike": {
+   "length_m": 15227,
+   "ascend_m": 117,
+   "plain_ascend_m": -64,
+   "time_s": 2896
   }
  },
  "rest-tisuvka": {

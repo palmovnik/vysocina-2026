@@ -1,0 +1,275 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>  
+  <meta http-equiv='Content-language' content='cs'>
+  <meta name="description" content="Modelové království, Žďár nad Sázavou">
+  <meta name="keywords" content="modelové, kolejiště, model">
+  <meta name="copyright" content="Copyright (c) www.mkzdar.cz, 2010">
+  <meta name="author" content="Soulak Martin">
+  <meta name="robots" content="index, follow">
+  <meta name="URL" content="http://www.mkzdar.cz">
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"> 
+    <title>Modelové Království - Žďár nad Sázavou</title>
+    <link rel="stylesheet" type="text/css" href="/style.css?v=4">    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/background.js"></script>
+    <script src="/partneri.js?v=8"></script>
+    <script src="/slide.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script type="text/javascript" src="/google.js"></script>
+    <script type="text/javascript" src="/highslide/highslide-with-gallery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
+    <script type="text/javascript" src="slider.js"></script>
+    
+      <!--<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+-->
+
+  <link href="https://unpkg.com/video.js@7.10.2/dist/video-js.min.css" rel="stylesheet">
+<script src="https://unpkg.com/video.js@7.10.2/dist/video.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/highslide/highslide.css">
+    
+    <script>
+        $(document).ready(function() {
+            // partneri.js
+            setInterval('reloadPartneri()', 7000);
+            // slide.js
+            setInterval( "slideSwitch()", 4000 );
+            
+            $('#webcamsMenu .webcam1').on('click', function(){
+               $('#webcamsMenu .webcam').removeClass('active');
+               $(this).addClass('active');
+               $('#streamNMNM').hide();
+               $('#streamZR').show();
+            });
+            
+             $('#webcamsMenu .webcam2').on('click', function(){
+              $('#webcamsMenu .webcam').removeClass('active');
+               $(this).addClass('active');
+               $('#streamZR').hide();
+               $('#streamNMNM').show();
+            });    
+        });
+    </script>
+    <script type="text/javascript">
+        hs.graphicsDir = '/highslide/graphics/';
+        hs.align = 'center';
+        hs.transitions = ['expand', 'crossfade'];
+        hs.wrapperClassName = 'dark borderless floating-caption';
+        hs.fadeInOut = true;
+        hs.dimmingOpacity = .75;
+
+        // Add the controlbar
+        if (hs.addSlideshow) hs.addSlideshow({
+            //slideshowGroup: 'group1',
+            interval: 5000,
+            repeat: false,
+            useControls: true,
+            fixedControls: 'fit',
+            overlayOptions: {
+                opacity: .6,
+                position: 'bottom center',
+                hideOnMouseOut: true
+            }
+        });
+    </script> 
+</head>
+    <img src="/img/bg.jpg" id="bg" alt="">
+    <div id="header"></div>
+    <div id="content">
+        <div id="menu">
+            <ul class="menu_odrazky">
+                <p>Kolejiště</p>
+                <li><a href="/uvod">Úvodní stránka</a></li>
+                <li><a href="/o-projektu">O projektu</a></li>
+                <li><a href="/informace-o-navsteve">Informace o návštěvě</a></li>
+                <li><a href="/clenove">Členové</a></li>
+                <li><a href="/technicke-udaje">Technické údaje</a></li>
+                <li><a href="/upravy-prostor">Úpravy prostor</a></li>
+                <li><a href="/stavba-kolejiste">Stavba kolejiště</a></li>
+                <li><a href="/plany-kolejiste">Plány kolejiště</a></li>
+            </ul>
+            
+            <ul class="menu_odrazky">
+                <p>Pro Vás</p>
+                <li><a href="/fotogalerie">Fotogalerie</a></li>
+                <li><a href="/videogalerie">Videogalerie</a></li>
+                <li><a href="/webcams">Webkamera</a><font style="font-size: 11px; padding-left: 5px;" id="webcam_state"></font></li>
+                <li><a href="https://maps.app.goo.gl/V5VPniybcBF7dT2g9" target="_blank">Virtuální prohlídka ↗</a></li>
+                <li><a href="/navstevni-kniha">Návštěvní kniha</a></li>
+                
+            </ul>
+            
+            <ul class="menu_odrazky">
+                <p>Ostatní</p>
+                <li><a href="/sponzori">Sponzoři</a></li>
+                <li><a href="/podporte-nas">Podpořte nás</a></li>
+                <li><a href="/partnerske-stranky">Partnerské stránky</a></li>
+                <li><a href="/napsali-o-nas">Napsali o nás</a></li>
+                <li><a href="/suvenyry">Suvenýry</a></li>
+                <li><a href="/prodejna" target="_blank">Modelářská prodejna</a></li>
+            </ul>
+            <img src="/img/znamka.png" title="Turistické známkové místo">
+        </div>
+        <div id="page">
+                <div id="left_uvod">
+            <h1>Vítejte na stránkách obřího modelu kolejiště s námětem Vysočiny !</h1>
+            <p class="text">
+            Stránky zapsaného spolku "Modelové království Žďár" jsou věnované stavbě a provozu jednoho z největších kolejišť v republice a svým zaměřením a provedením budou zcela výjimečné, neboť jsme si zvolili modelovat reálné stanice, budovy a krajinné prvky. Budete tak moci sledovat postup stavby již od samého začátku a v pravidelných aktualizacích porovnávat jednotlivé postupy stavby a její přírůstky, včetně výroby vlastních stromků a budov.
+            </p>
+                       <br />
+            <!--
+            <div id="langs">
+                <table>
+                    <tr><th colspan="4">Welcome &bull; Willkommen &bull; Bienvenue &bull; добро пожаловать</th></tr>
+                    <tr>
+                        <td width="30"><img src="/img/vlajky/eng.jpg"></td><td><a href="/england">Basic information</a></td>
+                        <td width="30"><img src="/img/vlajky/fra.jpg"></td><td><a href="/france">Informations utiles</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/img/vlajky/ger.jpg"></td><td><a href="/germany">Hintergrundinformation</a></td>
+                        <td><img src="/img/vlajky/rus.jpg"></td><td><a href="/russia">Oсновная информация</a></td>
+                    </tr>
+                </table>
+            </div>
+            -->
+            <div id="slideshow">
+                <img src="/img/uvod/a1.jpg" class="active" />
+                <img src="/img/uvod/a2.jpg" />
+                <img src="/img/uvod/a3.jpg" />
+                <img src="/img/uvod/a4.jpg" />
+                <img src="/img/uvod/a5.jpg" />
+                <img src="/img/uvod/a6.jpg" />
+                <img src="/img/uvod/a7.jpg" />
+                <img src="/img/uvod/a8.jpg" />
+                <img src="/img/uvod/a9.jpg" />
+            </div>
+                                  
+            <div class="facebook">
+                <strong>Sledujte nás i na Facebooku !</strong>
+            <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FModelov%25C3%25A9-kr%25C3%25A1lovstv%25C3%25AD-%25C5%25BD%25C4%258F%25C3%25A1r-os%2F204737049588091&amp;width=300&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:62px;" allowTransparency="true"></iframe>
+            </div>
+            
+            <p class="text">
+            Veškeré prostředky na stavbu kolejiště včetně nájmu si hradíme ze společně vložených vkladů členů spolku, a proto budeme všem našim příznivcům velice vděční za jakoukoliv finanční či materiální pomoc. Firmám nabízíme na oplátku jejich finančních darů, možnost umístění reklamy nad kolejištěm a zviditelnění na našich stránkách.
+<br /><br />
+<strong>Bližší informace získáte u předsedy spolku Radislava Wimmera, tel: 603742409, email: wze(zavinac)seznam.cz nebo Petra Šípka, tel: 721850917. Číslo účtu: 2200675327/2010</strong>
+            </p>
+            <br /><br />
+        </div>
+        <div id="info_panel">
+            <div id="info_box">
+                <h3>Novinky</h3>
+                <div>
+                                        <strong>12.4.2026</strong><br />
+                    <span><a href="/stavba-kolejiste/stavba91">Modelaření v průběhu roku 2025, část I.</a></span>
+                    <br /><br />
+                                        <strong>5.3.2026</strong><br />
+                    <span><a href="/stavba-kolejiste/stavba90">Derniéra kolejiště na půdě</a></span>
+                    <br /><br />
+                                        <strong>9.1.2025</strong><br />
+                    <span><a href="/stavba-kolejiste/stavba89">Na Tři krále o krok dále.</a></span>
+                    <br /><br />
+                                        <img src="/img/sipka_info.png"> <a href="/stavba-kolejiste" class="info_box_link">Historie novinek</a>                  
+                </div>
+            </div>
+            <div id="info_box">
+                <h3>Kde nás najdete?</h3>
+                <div>
+                    Dům Kultury (boční vchod)<br />
+                    Dolní 183/30<br /> 
+                    Žďár nad Sázavou 1 <br /><br />
+                    <img src="/img/sipka_info.png"> <a href="/mapa">mapa</a>
+                    <br /><br />
+                    <strong>Kontakt</strong><br />
+                    Radislav Wimmer<br />
+                    tel: +420 603 742 409<br />
+                    wze(zav)seznam.cz<br /><br />
+
+                    Petr Šípek<br />
+                    tel: +420 721 850 917<br /><br />
+                
+                    <a href="/spolek">informace o spolku</a>                       
+                </div>
+            </div>
+            <div id="info_box">
+                <h3 style="line-height: 25px;">Otevírací doba</h3>
+                <div>
+                    <strong>sobota</strong> 10 - 17h<br />
+                    <strong>neděle</strong> 10 - 17h<br /><br />
+                    <img src="/img/sipka_info.png"> <a href="/informace-o-navsteve">více informací</a>
+                </div>
+            </div>
+        </div>
+            
+        </div>
+        <div id="bottom_panel">
+            <div class="sponzor_panel">
+            <p>Projekt podpořili:</p>
+            <table>
+                <tr>
+                    <td><a href="https://www.cd.cz" target="_blank"><img src="/img/podporili/cd.png" title="České dráhy a.s."></a></td>
+                    <td><a href="https://www.kr-vysocina.cz/" target="_blank"><img src="/img/podporili/kr_vys.png" title="Kraj Vysočina"></a></td>
+                    <td><a href="https://www.cdcargo.cz" target="_blank"><img src="/img/podporili/cargo.png" title="ČD Cargo a.s."></a></td>
+                    <td><a href="https://www.zdarns.cz" target="_blank"><img src="/img/podporili/zr2.png" title="Město Žďár nad Sázavou"></a></td>
+                    <td><a href="https://www.fscr.cz" target="_blank"><img src="/img/podporili/fscr.png" title="Federace strojvůdců ČR"></a></td>
+                    <td><a href="https://www.spravazeleznic.cz" target="_blank"><img src="/img/podporili/sz.png" title="Správa železnic"></a></td>
+                </tr>
+            </table>    
+        </div>
+        
+        <div class="counter_panel">       
+            <!-- toplist -->
+            <div class="netagent">
+            <div>
+           <a href="http://www.toplist.cz/stat/1571771"><script language="JavaScript" type="text/javascript">
+<!--
+document.write('<img src="http://toplist.cz/count.asp?id=1571771&logo=mc&http='+escape(document.referrer)+'&t='+escape(document.title)+
+'&start=431289&wi='+escape(window.screen.width)+'&he='+escape(window.screen.height)+'&cd='+escape(window.screen.colorDepth)+'" width="88" height="60" border=0 alt="TOPlist" />'); 
+//--></script><noscript><img src="http://toplist.cz/count.asp?id=1571771&logo=mc&start=431289" border="0"
+alt="TOPlist" width="88" height="60" /></noscript></a> 
+</div>
+            <!-- toplist konec -->
+            <p>&copy; 2010 | MK Žďár z.s. <br /> <a href="http://www.mkzdar.cz/admin" target="_blank">admin</a></p>
+        </div>
+        
+    </div>
+    </div>
+
+<div style="display:none;" id="webcam_script"></div>
+    
+<script>
+    // webkamera    
+    $(document).ready(function() {
+        reloadImages();
+        setInterval('reloadImages()', 5000); 
+   });
+   
+   function reloadImages(){
+      
+       $.post('/webcam_stream.php',function(data){
+           $("#webcam_script").html(data);
+       }); 
+   }
+</script>  
+<script type="text/javascript">
+    // GOOGLE ANALYTICS
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35166598-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  
+</body>
+
+</html>

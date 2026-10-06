@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+
+<title>Základní informace</title>
+<meta name="description" content=""  />
+<meta name="keywords" content=""  />
+<meta name="robots" content="index, follow" />
+
+
+		<link rel="StyleSheet" href="/templates/official/styles/default.css" type="text/css" />
+		
+
+
+<link rel="StyleSheet" href="/templates/official/styles/orange/css/custom_style.css" type="text/css" />
+
+<link rel="StyleSheet" href="/templates/official/styles/orange/css/mainPageBanner.css" type="text/css" />
+
+<!--[if gte IE 9]>
+<link rel="StyleSheet" href="/templates/official/styles/orange/css/ie9.css" type="text/css" />
+<![endif]-->
+
+
+<script type="text/javascript" src="/applications/jquery/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/applications/jquery/js/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="/functions/js/jqueryFunctions.js"></script>
+<link rel="StyleSheet" href="/applications/jquery/css/ui-lightness/jquery-ui-1.10.2.custom.css" type="text/css" />
+
+<link rel="StyleSheet" href="/applications/nouislider/css/nouislider.css" type="text/css" />
+<script type="text/javascript" src="/applications/nouislider/js/nouislider.js"></script>
+
+<script type="text/javascript" src="/functions/js/combobox.js"></script>
+
+<script type="text/javascript">
+var activeTransportID = "";
+var activeTransportName = "";
+</script>
+
+
+<!-- custom scripts -->
+
+<link rel="StyleSheet" href="/templates/official/styles/combobox.css" type="text/css" />
+
+<script type="text/javascript">
+        var GB_ROOT_DIR = "/modules/greybox/";
+</script>
+
+
+<script type="text/javascript" src="/modules/greybox/AJS.js"></script>
+<script type="text/javascript" src="/modules/greybox/AJS_fx.js"></script>
+<script type="text/javascript" src="/modules/greybox/gb_scripts.js"></script>
+<link href="/modules/greybox/gb_styles.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+</head>
+<body >
+
+    
+	<div id="body"><div id="header" onclick="window.location.href='/'">
+	
+		
+</div>
+
+
+
+
+<div id="search_box">
+	<script type="text/javascript">
+	
+	/*$.ajaxSetup({async:true});*/
+	
+	var delay_search = (function(){
+	var timer_search = 0;
+	  return function(callback, ms){
+		clearTimeout (timer_search);
+		timer_search = setTimeout(callback, ms);
+	  };
+	})();
+	
+	$(function(){
+		$('#search_input').stop().blur(function(){
+			delay_search(function(){
+				var string = $('#search_input').val();
+				if(string.length>2){
+						$.post("/ajax/search.php", {string:string},function(data) {
+						 if (data!="") {
+							 
+							$("#main_body").html(data);
+						}
+					});
+				}
+			},0);
+		});
+		
+	});
+  
+  $(function(){
+		$('#search_form').submit(function(e){
+        if($("#search_input").val().length < 3) {
+            e.preventDefault();
+            createDialog("", "Vyplňte alespoň 3 znaky");
+        }
+		});
+	});
+</script>
+
+<form action="/search" method="get" id="search_form">
+	  <input  type="text" id="search_input" autocomplete="off" name="search" placeholder="vyhledávání"  />
+
+	<div class="submit"><input type="submit" id="search_submit" value="" /></div>
+</form>
+ 
+ </div>
+
+<div class="clear"></div>
+
+<div id="main_menu">
+  <div class="body">
+  	
+					<ul>
+					
+										
+							<li><a class="menu_6 menu" href="/page/o-minifarme-falbgery/6" onclick="">O Minifarmě Falbgery</a></li>
+							
+							
+							
+							
+										
+							<li><a class="menu_41 menu" href="/page/kontakt/41" onclick="">Kontakt</a></li>
+							
+							
+							
+							
+										
+							<li><a class="menu_7 menu" href="/page/cenik-/7" onclick="">Ceník </a></li>
+							
+							
+							
+							
+										
+							<li><a class="menu_58 menu" href="/page/environmentalni-vychova_-zooterapie/58" onclick="">Environmentální výchova, zooterapie</a></li>
+							
+							
+							
+							
+										
+							<li><a class="menu_9 menu" href="/page/poptavame-_-podpora/9" onclick="">Poptáváme + podpora</a></li>
+							
+							
+							
+							
+										
+							<li><a class="menu_38 menu" href="/page/dekujeme_-/38" onclick="">Děkujeme! </a></li>
+							
+							
+							
+							
+										
+							<li><a class="menu_61 menu" href="/page/pronajem-mista-pro-stanare/61" onclick="">Pronájem místa pro stanaře</a></li>
+							
+							
+							
+							
+										
+				</ul>
+			  
+	 <div class="clear"></div>
+  </div>	
+</div>
+
+<div class="clear"></div>
+
+
+<div id="submenu_panel">
+
+<div id="language_panel">
+	
+
+</div>
+<div id="currency_panel">
+			
+</div>
+<div id="user_panel">
+	
+				<div class="user_menu">
+				<a class="login" href="http://www.minifarmafalbgery.cz/login">přihlásit se</a>
+				<a class="subscribe" href="http://www.minifarmafalbgery.cz/subscribe">zaregistrovat se</a>
+			</div>
+			
+				
+	<div class="clear"></div>
+
+</div>
+</div>
+<div class="clear"></div>
+
+	
+<div id="left_column">
+
+	
+
+<script type="text/javascript">
+	
+	function activateMenu(name){
+		
+	//	var active=$("#categories_menu .header .active").attr("id");
+		
+		//if (name!=active) {
+			
+			$.post("/ajax/get_"+name+".php", {},function(data) {
+			
+				 if (data!="") {
+					
+					$("#categories_tree").html(data);
+					$("#categories_menu .header .active").removeClass("active");
+					$("#"+name).addClass("active");
+					setCookie("menu",name,365);
+						
+				}
+			
+   			});
+		
+	//	}
+		
+		return false;
+		
+	}
+	
+</script>
+<div id="categories_menu">
+  
+  	<div class="header">
+  		<a id="menu_categories" href="#" onclick="return activateMenu('menu_categories');" class="active">kategorie</a>
+					<a href="#" id="menu_manufacturers" style="cursor:default;" onclick="return false;" ></a>
+			  	</div>
+  
+	 <div id="categories_tree">
+
+	
+<script type="text/javascript">
+	
+	function clickMenu(id, obj){
+	
+		if ($(obj).attr("data-rel")=="main"){
+			
+			/*poznamename si jakou znacku mela kategorie na kterou se kliklo */
+	
+			var znacka="+";
+			
+			if ($("#plusminus_"+id).hasClass("minus")) znacka="-";
+			
+			
+			/* pokud je kliknuto na kat level 1 zabalime vsechny rozbalene */
+			$(".opened").remove();
+			$(".plusminus").removeClass("minus");
+			$(".plusminus").addClass("plus");
+			
+			if (znacka=="-") {
+				/*$("#plusminus_"+id).html("+");*/
+				$("#parent_"+id).remove();
+			}
+		
+		}
+		
+		
+		if ($("#plusminus_"+id).hasClass("minus")) {
+		
+			$("#plusminus_"+id).addClass("plus");
+			$("#plusminus_"+id).removeClass("minus");
+			$("#parent_"+id).remove();
+			
+		}
+		else if (znacka!="-"){
+			
+			$("#plusminus_"+id).addClass("minus");
+			$("#plusminus_"+id).removeClass("plus");
+		
+			$.post("/ajax/get_menu_subcategories.php", {cat_id:id},function(data) {
+			
+			 	if (data!="") {
+				
+					$("#menu_"+id).append(data);
+					
+				}
+				
+
+   			});
+		}
+		
+	}
+	
+</script>
+
+
+<ul><li  id="menu_3"><a href="/category/ostatni/3"><span class="blank"> </span>Ostatní</a></li><li  id="menu_4"><a href="/category/zvirata-na-prodej/4"><span class="blank"> </span>Zvířata na prodej</a></li></ul>	
+	</div>
+	
+
+</div>
+	
+	
+	<div class="box static">
+		<div class="header">statické stránky</div>
+		
+		<div class="body">
+			
+							<div>
+                    <a href="/" class="menu_54">Základní informace</a>
+                  </div>
+								<div>
+                    <a href="/page/ponik-nela/2" class="menu_2">Poník Nela</a>
+                  </div>
+								<div>
+                    <a href="/page/pejsci/3" class="menu_3">Pejsci<span class="plus"></span></a>
+                      <div class="submenu submenu-3">
+                                        <a href="/page/nemecky-ovcak-jimmy/5" class="menu_5">Německý ovčák Jimmy</a>
+                                                      <a href="/page/nemecky-ovcak-bara/59" class="menu_59">Německý ovčák Bára</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/holandske-zakrsle-kozy/10" class="menu_10">Holandské zakrslé kozy<span class="plus"></span></a>
+                      <div class="submenu submenu-10">
+                                        <a href="/page/rozarka/11" class="menu_11">Rozárka</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/ovce-kamerunske/14" class="menu_14">Ovce kamerunské<span class="plus"></span></a>
+                      <div class="submenu submenu-14">
+                                        <a href="/page/ovecka-maya-_maja_/15" class="menu_15">Ovečka Maya (Mája)</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/minigottingenske-prase/16" class="menu_16">Minigöttingenské prase<span class="plus"></span></a>
+                      <div class="submenu submenu-16">
+                                        <a href="/page/zofka/17" class="menu_17">Žofka</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/nutrie-ricni/19" class="menu_19">Nutrie říční<span class="plus"></span></a>
+                      <div class="submenu submenu-19">
+                                        <a href="/page/nase-nutrie/20" class="menu_20">Naše nutrie</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/kralici/21" class="menu_21">Králíci<span class="plus"></span></a>
+                      <div class="submenu submenu-21">
+                                        <a href="/page/zakrsly-kralik-japonka/22" class="menu_22">Zakrslý králík Japonka</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/cuy-_obri_-morce/25" class="menu_25">Cuy (obří) morče</a>
+                  </div>
+								<div>
+                    <a href="/page/morce-domaci/26" class="menu_26">Morče domácí<span class="plus"></span></a>
+                      <div class="submenu submenu-26">
+                                        <a href="/page/nase-morcatka/27" class="menu_27">Naše morčátka</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/burunduk-paskovany---jiz-nechovame/28" class="menu_28">Burunduk páskovaný - již nechováme<span class="plus"></span></a>
+                      <div class="submenu submenu-28">
+                                        <a href="/page/nasi-burunduci/29" class="menu_29">Naši burunduci</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/bazant-zlaty/55" class="menu_55">Bažant zlatý</a>
+                  </div>
+								<div>
+                    <a href="/page/indicky-bezec/30" class="menu_30">Indický běžec<span class="plus"></span></a>
+                      <div class="submenu submenu-30">
+                                        <a href="/page/1_-max-i_-a-kacka-hneda/31" class="menu_31">1. Max I. a Kačka hnědá</a>
+                                                      <a href="/page/2_-max-ii_-a-kacka-hneda/32" class="menu_32">2. Max II. a Kačka hnědá</a>
+                                                      <a href="/page/3_-max-iii__-kacka-hneda_-kacka-pstruhov/33" class="menu_33">3. Max III., Kačka Hnědá, Kačka Pstruhová</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/kachny-pizmove/34" class="menu_34">Kachny pižmové</a>
+                  </div>
+								<div>
+                    <a href="/page/perlicky/36" class="menu_36">Perličky</a>
+                  </div>
+								<div>
+                    <a href="/page/hedvabnicky/37" class="menu_37">Hedvábničky</a>
+                  </div>
+								<div>
+                    <a href="/page/kocinky-kaderave/39" class="menu_39">Kočinky kadeřavé</a>
+                  </div>
+								<div>
+                    <a href="/page/hrdlicky-chechtave/40" class="menu_40">Hrdličky chechtavé</a>
+                  </div>
+								<div>
+                    <a href="/page/andulky-vlnkovane/42" class="menu_42">Andulky vlnkované</a>
+                  </div>
+								<div>
+                    <a href="/page/zebricky-pestre/43" class="menu_43">Zebřičky pestré</a>
+                  </div>
+								<div>
+                    <a href="/page/vzpominame/12" class="menu_12">Vzpomínáme<span class="plus"></span></a>
+                      <div class="submenu submenu-12">
+                                        <a href="/page/zorka---cesky-sportovni-pony/45" class="menu_45">Zorka - český sportovní pony</a>
+                                                      <a href="/page/holandsky-zakrsly-kozlik-jarda/13" class="menu_13">Holandský zakrslý kozlík Jarda</a>
+                                                      <a href="/page/holandska-zakrsla-koza-tereza/18" class="menu_18">Holandská zakrslá koza Tereza</a>
+                                                      <a href="/page/osmaci-degu/44" class="menu_44">Osmáci degu</a>
+                                                      <a href="/page/zoja_-ktera-odesla-do-noveho-domova/46" class="menu_46">Zoja, která odešla do nového domova</a>
+                                                      <a href="/page/anglonubijska-kozicka-emilka/47" class="menu_47">Anglonubijská kozička Emilka</a>
+                                                      <a href="/page/fretka-iris/48" class="menu_48">Fretka Iris</a>
+                                                      <a href="/page/kozlik-matej/49" class="menu_49">Kozlík Matěj</a>
+                                                      <a href="/page/huculka-sarka/50" class="menu_50">Huculka Šárka</a>
+                                                      <a href="/page/kralici-johny-a-laura/51" class="menu_51">Králíci Johny a Laura</a>
+                                                      <a href="/page/brusinka-bozenka---krizenka-ceskeho-stra/52" class="menu_52">Brusinka Boženka - kříženka českého strakáče</a>
+                                                      <a href="/page/uz-jsou-v-morcecim-raji___/53" class="menu_53">Už jsou v morčecím ráji...</a>
+                                                      <a href="/page/civava-tessinka/4" class="menu_4">Čivava Tessinka</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/kocicka-sara/8" class="menu_8">Kočička Sára</a>
+                  </div>
+								<div>
+                    <a href="/page/morce-divoke/23" class="menu_23">Morče divoké<span class="plus"></span></a>
+                      <div class="submenu submenu-23">
+                                        <a href="/page/nas-samecek/24" class="menu_24">Náš sameček</a>
+                                      </div>
+                  </div>
+								<div>
+                    <a href="/page/kur-bambusovy---jiz-nechovame/56" class="menu_56">Kur bambusový - již nechováme</a>
+                  </div>
+						</div>
+	
+	</div>
+	
+    
+  <script type="text/javascript">
+    $(".static.box .body a .plus").click(function(){
+      $(".static.box .submenu").removeClass('active');
+      if($(this).hasClass('minus')){
+        $(this).parent().parent().find('.submenu').removeClass('active');
+        $(this).removeClass('minus');  
+      }
+      else{
+        $(this).parent().parent().find('.submenu').addClass('active');
+        $(this).addClass('minus');
+      }
+      return false;
+    });
+  </script>
+	
+	
+	<script type="text/javascript">
+	
+	function generateContactForm(){
+		
+		$.post("/ajax/generate_contact_form.php", {"page": location.href},function(data) {
+			
+			 $("#contact_form_content").html(data);
+			 
+   		});
+		
+	}
+	
+</script>
+
+ <div id="contact_form" class="box">
+
+	<div class="header">kontaktní formulář</div>
+
+	<div class="body" id="contact_form_content">
+		
+		<div class="button" onclick="generateContactForm();">chci zaslat dotaz</div>
+		
+	</div>
+	
+
+</div>
+		
+		
+	<script type="text/javascript" src="/functions/js/survey.js"></script>
+
+<div id="survey"></div>	
+	<div class="box">
+	
+	<div class="header">počítadlo přístupů</div>
+	
+	
+	<div class="body">
+		
+		online: <span class="number">0</span><br/>dnes: <span class="number">32</span><br/>týden: <span class="number">70</span><br/>celkem: <span class="number">173916</span><br/>	</div>
+
+</div>	
+					<div class="static_page">
+							<div class="body">
+			
+					<p style="text-align:justify"><strong><span style="font-size:16px"><span style="color:#000000">Minifarma Falbgery je soukrom&yacute; rodinn&yacute; zookoutek s cca 30-ti druhy a plemeny zv&iacute;řat. Minifarmu mohou nav&scaron;t&iacute;vit jak turist&eacute;, tak &scaron;kolsk&aacute; a jin&aacute; zař&iacute;zen&iacute;. Při komentovan&eacute; prohl&iacute;dce se dozv&iacute;te o životě m&iacute;stn&iacute;ch zv&iacute;ř&aacute;tek, někter&eacute; si můžete hladit a pokud jim donesete nějakou mlsku, můžete je pod dozorem tak&eacute; nakrmit.<br />
+V m&iacute;stě je možnost svezen&iacute; na pon&iacute;kovi, povoděn&iacute; kozičky či pejska na vod&iacute;tku nebo koupě suven&yacute;rů včetně&nbsp;</span><u><a href="http://ad-borova.adante.systems/ckeditor/plugins/imageuploader/uploads/82e882d9.jpg"><span style="color:#2980b9">turistick&eacute; vizitky</span></a></u></span></strong></p>
+
+<p style="text-align:justify"><strong><span style="color:#000000"><span style="font-size:16px">Minifarma d&aacute;le nab&iacute;z&iacute;: zooterapii, ergoterapii, d&aacute;rkov&eacute; poukazy t&yacute;kaj&iacute;c&iacute; se minifarmy a možnost nav&scaron;t&iacute;ven&iacute; s někter&yacute;mi zv&iacute;ř&aacute;tky &scaron;koly, &scaron;kolky a různ&eacute; akce. V př&iacute;padě z&aacute;jmu v&iacute;ce dět&iacute; uspoř&aacute;d&aacute; minifarma chovatelsk&yacute; kroužek. Na farmičce vznik&aacute; tak&eacute; mal&eacute; zemědělsk&eacute; muzeum, kter&eacute; je v&scaron;ak zat&iacute;m v poč&aacute;tku. </span></span></strong></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>GPS souřadnice: 49.7511500N, 16.1520636E</strong></span></span></p>
+					
+				</div>
+					
+			</div>
+		
+			
+		
+
+</div>
+<div id="right_column">
+
+					
+		
+		
+
+</div><div id="main_body">
+	
+		
+<div id="static">
+	
+	<h1>Základní informace</h1>
+
+	<div class="body">
+	
+		 		
+		<p><span style="font-size:22px"><strong>Otev&iacute;rac&iacute; doba</strong></span><span style="font-size:18px"> je od 10 hodin do 17 hodin. Ohledně n&aacute;v&scaron;těv mi volejte na mobil <strong>721 006 486</strong>. B&yacute;v&aacute;m doma t&eacute;měř poř&aacute;d, ale občas mus&iacute;m odjet k l&eacute;kaři nebo můžu b&yacute;t nemocn&aacute;. Pokud byste k n&aacute;m nena&scaron;li cestu, nebojte se mi zavolat <span class="_47e3 _5mfr"><img alt="" class="img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ta5/1.5/16/1f642.png" style="height:16px; width:16px" /></span>. Pros&iacute;m, zkuste zaparkovat někde před n&aacute;mi a ne u sousedů <span class="_47e3 _5mfr"><img alt="" class="img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ta5/1.5/16/1f642.png" style="height:16px; width:16px" /></span>!</span></p>
+
+<h3><span style="font-size:18px"><strong>Vstupn&eacute;:</strong></span></h3>
+
+<h3><span style="font-size:18px"><strong>Dospěl&iacute; - 120 Kč.</strong></span></h3>
+
+<h3><span style="font-size:18px"><strong>Děti, senioři a lid&eacute; se ZTP - 100 Kč. </strong></span></h3>
+
+<h3><span style="font-size:18px"><strong>Děti do jednoho roku jsou zdarma. </strong></span></h3>
+
+<h3><span style="font-size:18px">Vstup na minifarmu je ve formě komentovan&eacute; prohl&iacute;dky! Samozřejmě v z&aacute;vislosti na věku a z&aacute;jmu dět&iacute;. Jde hlavně o to, aby zde nikdo zv&iacute;řata nehonil a nechoval se k nim &scaron;patně. Proto dohl&iacute;ž&iacute;m na n&aacute;v&scaron;těvn&iacute;ky a rad&iacute;m jim, co maj&iacute; na&scaron;e zv&iacute;řata r&aacute;da a na co jsou zvykl&aacute;. Nejedn&aacute; se o tradičn&iacute; komerčn&iacute; podnik. Jedn&aacute; se o soukrom&yacute; zvěřinec dělan&yacute; s l&aacute;skou ke zv&iacute;řatům a k lidem. </span></h3>
+
+<p><span style="font-size:18px"><strong>Jak se k n&aacute;m dostanete: </strong>GPS souřadnice: </span><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>49.7511500N, 16.1520636E</strong></span></span></p>
+
+<p><span style="font-size:18px">Směrem od Poličky na Hlinsko budete m&iacute;jet po lev&eacute; straně benzinovou pumpu. Vpravo pak uvid&iacute;te oranžovou budovu Plet&aacute;rny Miro. Za n&iacute; zahnete doprava na Proseč. Přejedete železničn&iacute; koleje a 1 m za kolejema vpravo je cesta pro jedno auto. Tou dojedete př&iacute;mo k n&aacute;m. Pros&iacute;m, zkuste zaparkovat někde před n&aacute;mi a ne u sousedů <span class="_47e3 _5mfr"><img alt="" class="img" src="https://static.xx.fbcdn.net/images/emoji.php/v9/ta5/1.5/16/1f642.png" style="height:16px; width:16px" /><span class="_7oe">:)</span></span>!</span></p>
+
+<div class="body">&nbsp;</div>
+
+<p><span style="font-family:georgia,serif"><span style="font-size:18px"><strong>V&iacute;ce fotek a aktu&aacute;ln&iacute; informace (zv&iacute;ř&aacute;tek m&aacute;me v&iacute;ce, než zde v nab&iacute;dce) naleznete na na&scaron;&iacute; Facebookov&eacute; str&aacute;nce:</strong></span></span></p>
+
+<p><span style="font-family:georgia,serif"><span style="font-size:18px"><strong>Minifarma Falbgery v Borov&eacute; u Poličky </strong></span></span></p>
+
+<h2>https://www.facebook.com/profile.php?id=100063732721121</h2>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:22px">DAL&Scaron;&Iacute; NAB&Iacute;DKA:</span></strong></p>
+
+<p><br />
+<strong><span style="font-size:20px">&Scaron;KOLN&Iacute; V&Yacute;LETY</span></strong><span style="font-size:18px"><strong> </strong>- jsme zvykl&iacute; na n&aacute;v&scaron;těvy &scaron;kol a &scaron;kolek. &Scaron;koln&iacute; doprovod je zdarma v počtu max. 2 učitel&eacute; na 20 dět&iacute;. </span></p>
+
+<p><br />
+<span style="font-size:20px"><strong>ENVIRONMENT&Aacute;LN&Iacute; V&Yacute;CHOVA A ZOOTERAPIE</strong></span><span style="font-size:18px"> - s někter&yacute;mi zv&iacute;ř&aacute;tky mohu nav&scaron;t&iacute;vit &scaron;koly, &scaron;kolky, domovy důchodců a jin&aacute; zař&iacute;zen&iacute;.</span></p>
+
+<p><span style="font-size:20px"><strong>MOŽNOST ST&Aacute;T SE MINIFARM&Aacute;ŘEM </strong></span><span style="font-size:18px">- Můžete si vyzkou&scaron;et, co to obn&aacute;&scaron;&iacute;, postarat se o zv&iacute;ř&aacute;tka. Řekněte si, o co byste měli z&aacute;jem: kyd&aacute;n&iacute; různ&yacute;ch ubikac&iacute;, krmen&iacute;, hřebelcov&aacute;n&iacute;? </span></p>
+
+<p><br />
+<strong><span style="font-size:20px">FILANTROPICK&Yacute; TEAMBUILDING</span></strong><span style="font-size:18px"> pro firmy a jejich zaměstnance.</span></p>
+
+<p><br />
+<span style="font-size:20px"><strong>AKCE A OSLAVY NAROZENIN</strong></span><span style="font-size:18px"> - s někter&yacute;mi zv&iacute;ř&aacute;tky mohu obohatit narozeninovou p&aacute;rty va&scaron;ich dět&iacute; nebo se z&uacute;častnit dětsk&eacute;ho dne či jin&eacute; akce. Jelikož děl&aacute;m v&scaron;e pro to, aby byla na&scaron;e zv&iacute;řata co nejv&iacute;ce v pohodě, nemůžeme se z&uacute;častnit hlasit&yacute;ch akc&iacute;, kde by byly rachejtle nebo v&yacute;razn&aacute; hudba.</span></p>
+
+<p><br />
+<strong><span style="font-size:20px">PRODEJ SUVEN&Yacute;RŮ </span></strong><span style="font-size:18px">- můžete si u n&aacute;s zakoupit na&scaron;e vlastn&iacute; turistick&eacute; magnetky a turistick&eacute; vizitky (n&aacute;lepky do turistick&yacute;ch den&iacute;čků, do kter&yacute;ch si můžete otisknout na&scaron;e raz&iacute;tko). </span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:20px"><strong>D&Aacute;RKOV&Eacute; POUKAZY</strong></span></p>
+
+<p><span style="font-size:18px"><span style="font-family:georgia,serif"><strong>V&Aacute;NOČN&Iacute; POUKAZY</strong></span></span></p>
+
+<p><span style="font-size:18px"><span style="font-family:georgia,serif">M&aacute;te v rodině zv&iacute;ř&aacute;tkomily a nev&iacute;te, co k V&aacute;nocům? Tyto poukazy obdarovan&yacute; může využ&iacute;t na vstupn&eacute;, krmen&iacute;, z&aacute;žitek, suven&yacute;r... Mohu vytvořit i poukazy na speci&aacute;ln&iacute; př&aacute;n&iacute;. Při on-line odesl&aacute;n&iacute; je cena poukazu uvedena na něm. Při barevn&eacute;m tisku a zalaminov&aacute;n&iacute; poukazu, je př&iacute;platek 10 Kč. Poukazy mohu odeslat klidně i o V&aacute;noc&iacute;ch na V&aacute;&scaron; e-mail. Platbu v tomto časov&eacute;m presu můžete prov&eacute;st i později, abyste měli V&aacute;nočn&iacute; d&aacute;rek včas. Pokud platba nedojde na &uacute;čet do 14 dn&iacute;, poukaz anuluji.</span></span></p>
+
+<p><span style="font-size:18px"><span style="font-family:georgia,serif">D&aacute;le mohu zhotovit <strong>POUKAZY DLE PŘ&Aacute;N&Iacute;</strong>. Jen pro inspiraci uv&aacute;d&iacute;m tyto: Poukaz na adopci zv&iacute;řete, Z&aacute;žitkov&yacute; poukaz Staň se minifarm&aacute;řem, Poukaz na voz&iacute;k hnoje (Va&scaron;e vlastn&iacute; nakl&aacute;dka a odvoz), Poukaz na n&aacute;v&scaron;těvu minifarmy, Poukaz na krmen&iacute; hada, Poukaz na j&iacute;zdu na pon&iacute;ku, apod. Fantazii se meze nekladou, bereme-li v potaz bezpečnost zv&iacute;řat i lid&iacute;. Poukazy se daj&iacute; využ&iacute;t jako d&aacute;rek pro radost pro zv&iacute;ř&aacute;tkomily, nebo jako dar - nedar kamar&aacute;dovi nebo &scaron;&eacute;fovi (z&aacute;žitkov&yacute; poukaz na vykyd&aacute;n&iacute; st&aacute;je nebo nutri&iacute;).</span></span></p>
+
+<p><span style="font-size:18px"><span style="font-family:georgia,serif"><strong>ADOPČN&Iacute; POUKAZY</strong> - Adopčn&iacute;mi poukazy u n&aacute;s přispějete na krmen&iacute; a veterin&aacute;rn&iacute; p&eacute;či dan&eacute;ho zv&iacute;ř&aacute;tka. Stač&iacute; si vybrat, kter&eacute; zv&iacute;ře chcete podpořit. Ceny sděl&iacute;m na dotaz. V ceně poukazu je zalaminovan&yacute; dekret, měs&iacute;čn&iacute; zpr&aacute;vy o zv&iacute;ř&aacute;tku s fotkou na e-mail, 1x za půl roku osobn&iacute; n&aacute;v&scaron;těva zv&iacute;ř&aacute;tka s krmen&iacute;m. Tyto poukazy se daj&iacute; využ&iacute;t např. pro děti, kter&eacute; doma nemohou chovat ž&aacute;dn&eacute; zv&iacute;ř&aacute;tko.</span></span></p>
+
+<p><span style="font-size:18px"><span style="font-family:georgia,serif">V př&iacute;padě z&aacute;jmu mne kontaktujte na e-mail <strong>minifarmafalbgery@seznam.cz</strong> nebo<strong> tel. 721 006 486</strong>.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>PRON&Aacute;JEM M&Iacute;STA NA STANOV&Aacute;N&Iacute;, PRON&Aacute;JEM MARINGOTKY</strong></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:20px"><span style="font-family:georgia,serif"><strong>PROVOZ STR&Aacute;NEK</strong></span></span></p>
+
+<p><span style="font-size:18px"><span style="font-family:georgia,serif"><strong>Bohužel nest&iacute;h&aacute;m a ani se moc nevyzn&aacute;m v provozu str&aacute;nek. Proto pokud by se na&scaron;la dobr&aacute; du&scaron;e, kter&aacute; by n&aacute;m chtěla s provozem str&aacute;nek pomoci, budu j&iacute; se zvěřincem neskonale vděčn&aacute; :)! Z&aacute;roveň se omlouv&aacute;m, že str&aacute;nky je&scaron;tě nevypadaj&iacute; tak, jak bych si přestavovala!</strong></span></span></p>
+
+<p>&nbsp;</p>
+		                    <div class="static_gallery">
+                    						<div class="image">
+							<a id="pic_" title="Dárkové poukazy" data-rel="gb_imageset[galerie]" href="/files/static_pages_files/photogallery/temp_big/foto-vanoce-100.jpg">
+								<img src="/files/static_pages_files/photogallery/temp/foto-vanoce-100.jpg" alt="Dárkové poukazy" />
+							</a>
+						</div>
+												<div class="image">
+							<a id="pic_" title="Dárkové poukazy" data-rel="gb_imageset[galerie]" href="/files/static_pages_files/photogallery/temp_big/foto-vanoce-250.jpg">
+								<img src="/files/static_pages_files/photogallery/temp/foto-vanoce-250.jpg" alt="Dárkové poukazy" />
+							</a>
+						</div>
+												<div class="image">
+							<a id="pic_" title="Dárkové poukazy" data-rel="gb_imageset[galerie]" href="/files/static_pages_files/photogallery/temp_big/foto-vanoce-500.jpg">
+								<img src="/files/static_pages_files/photogallery/temp/foto-vanoce-500.jpg" alt="Dárkové poukazy" />
+							</a>
+						</div>
+												<div class="image">
+							<a id="pic_" title="Dárkové poukazy" data-rel="gb_imageset[galerie]" href="/files/static_pages_files/photogallery/temp_big/foto-vanoce-750.jpg">
+								<img src="/files/static_pages_files/photogallery/temp/foto-vanoce-750.jpg" alt="Dárkové poukazy" />
+							</a>
+						</div>
+												<div class="image">
+							<a id="pic_" title="Dárkové poukazy" data-rel="gb_imageset[galerie]" href="/files/static_pages_files/photogallery/temp_big/foto-vanoce-1000.jpg">
+								<img src="/files/static_pages_files/photogallery/temp/foto-vanoce-1000.jpg" alt="Dárkové poukazy" />
+							</a>
+						</div>
+												<div class="image">
+							<a id="pic_" title="Poukaz na objednávku pro milovníky nutrií a miniprasátek. " data-rel="gb_imageset[galerie]" href="/files/static_pages_files/photogallery/temp_big/darkovy-poukaz-na-minifarmu.jpg">
+								<img src="/files/static_pages_files/photogallery/temp/darkovy-poukaz-na-minifarmu.jpg" alt="Poukaz na objednávku pro milovníky nutrií a miniprasátek. " />
+							</a>
+						</div>
+											<div class="clear"></div>
+                    </div>
+					
+                    	</div>
+
+</div>
+
+			<script type="text/javascript">$(".menu_54").addClass("active");</script>
+			
+</div>
+	<div class="clear"></div>
+<div id="footer">
+	<div class="body">
+		E-shop system: E-commerce PRO 4.0 &copy; 2026 <a href="http://www.webczech.cz">GlobeWeb Czech s.r.o.</a>
+                | <a href="/mapa-webu">Mapa webu</a>
+				
+					</div>
+	
+	<div class="clear"></div>
+</div>
+
+
+	
+				<div id="links">
+				
+				<div class="body">
+				
+					
+				
+				</div>
+				<div class="clear"></div>
+				
+			</div>
+			
+	</div> <!-- div body -->
+</body>
+</html>

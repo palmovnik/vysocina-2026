@@ -971,5 +971,157 @@
   "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%0A%28%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Cplayground%7Csports_centre%29%24%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Csports_centre%29%24%22%5D%28around%3A2000%2C49.60641%2C15.92006%29%3B%0A++nwr%5B%22sport%22~%22tennis%7Cfutnet%7Cvolleyball%7Cgolf%22%5D%28around%3A16000%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28golf_course%7Cminiature_golf%29%24%22%5D%28around%3A20000%2C49.64427%2C15.96844%29%3B%0A%29%3B%0Aout+center+tags%3B",
   "file": "osm-sport.json",
   "bytes": 15876
+ },
+ "osm-les": {
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%0A%28%0A++way%5B%22landuse%22%3D%22forest%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++way%5B%22natural%22%3D%22wood%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%5B%22landuse%22%3D%22forest%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%5B%22natural%22%3D%22wood%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%282212296%29%3B%0A++relation%282331870%29%3B%0A++relation%282331885%29%3B%0A%29%3B%0Aout+geom%3B",
+  "file": "osm-les.json",
+  "bytes": 312095
+ },
+ "gc-svratka-uzavirka": {
+  "url": "https://www.gcsvr1932.cz/pozor-uzavirka-silnice-ve-svratce/",
+  "file": "gc-svratka-uzavirka.html",
+  "bytes": 58439
+ },
+ "gc-svratka-cenik": {
+  "url": "https://www.gcsvr1932.cz/green_fee/",
+  "file": "gc-svratka-cenik.html",
+  "bytes": 56529
+ },
+ "gc-svratka-sluzby": {
+  "url": "https://www.gcsvr1932.cz/sluzby/",
+  "file": "gc-svratka-sluzby.html",
+  "bytes": 55435
+ },
+ "gc-svratka-kontakt": {
+  "url": "https://www.gcsvr1932.cz/kontakt/",
+  "file": "gc-svratka-kontakt.html",
+  "bytes": 56238
+ },
+ "gc-svratka-hriste": {
+  "url": "https://www.gcsvr1932.cz/hriste/",
+  "file": "gc-svratka-hriste.html",
+  "bytes": 56544
+ },
+ "chk-panmama": {
+  "url": "https://www.statek-blatiny.cz/jidlo-piti",
+  "error": true
+ },
+ "chk-blatiny": {
+  "url": "https://www.statek-blatiny.cz/",
+  "error": true
+ },
+ "chk-racin": {
+  "url": "https://www.racin.cz/cs/pivovar/",
+  "file": "chk-racin.html",
+  "bytes": 323959
+ },
+ "chk-kiosek": {
+  "url": "https://kiosekkadov.cz/",
+  "file": "chk-kiosek.html",
+  "bytes": 126063
+ },
+ "chk-cukrarna": {
+  "url": "https://www.cukrarnasnezne.cz/",
+  "file": "chk-cukrarna.html",
+  "bytes": 315070
+ },
+ "chk-frysava": {
+  "url": "https://www.stanicelyzaru.cz/",
+  "file": "chk-frysava.html",
+  "bytes": 147911
+ },
+ "chk-medlov": {
+  "url": "https://www.medlovhotel.cz/",
+  "file": "chk-medlov.html",
+  "bytes": 411300
+ },
+ "chk-svoboda": {
+  "url": "https://ags-svoboda.cz/",
+  "file": "chk-svoboda.html",
+  "bytes": 65759
+ },
+ "chk-eden": {
+  "url": "https://www.edencentrum.cz/",
+  "file": "chk-eden.html",
+  "bytes": 1145273
+ },
+ "chk-pernstejn": {
+  "url": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba",
+  "file": "chk-pernstejn.html",
+  "bytes": 53559
+ },
+ "chk-pernstejn-home": {
+  "url": "https://www.hrad-pernstejn.cz/",
+  "file": "chk-pernstejn-home.html",
+  "bytes": 79220
+ },
+ "chk-mng": {
+  "url": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/",
+  "file": "chk-mng.html",
+  "bytes": 91175
+ },
+ "chk-hopik": {
+  "url": "http://www.hopik-zdar.cz/",
+  "file": "chk-hopik.html",
+  "bytes": 59505
+ },
+ "chk-relax": {
+  "url": "https://www.sportiszdar.cz/relaxacni-centrum",
+  "file": "chk-relax.html",
+  "bytes": 85643
+ },
+ "chk-pilak": {
+  "url": "https://www.sportiszdar.cz/rekreacni-areal-pilak",
+  "file": "chk-pilak.html",
+  "bytes": 109935
+ },
+ "chk-zelena-hora": {
+  "url": "https://www.zelena-hora.cz/cs/",
+  "file": "chk-zelena-hora.html",
+  "bytes": 40780
+ },
+ "chk-modelove": {
+  "url": "https://www.mkzdar.cz/",
+  "file": "chk-modelove.html",
+  "bytes": 14026
+ },
+ "chk-slakhamr": {
+  "url": "https://www.technicalmuseum.cz/pamatky/slakhamr-v-hamrech-nad-sazavou/",
+  "file": "chk-slakhamr.html",
+  "bytes": 109156
+ },
+ "chk-peklo": {
+  "url": "https://www.peklocertovina.cz/",
+  "file": "chk-peklo.html",
+  "bytes": 149812
+ },
+ "chk-vesely-kopec": {
+  "url": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne",
+  "file": "chk-vesely-kopec.html",
+  "bytes": 78061
+ },
+ "chk-zoo-jihlava": {
+  "url": "https://zoojihlava.cz/dulezite-informace/",
+  "file": "chk-zoo-jihlava.html",
+  "bytes": 41727
+ },
+ "chk-falbgery": {
+  "url": "http://www.minifarmafalbgery.cz/",
+  "file": "chk-falbgery.html",
+  "bytes": 31273
+ },
+ "chk-hejkal": {
+  "url": "https://www.pivovarhejkal.cz/",
+  "file": "chk-hejkal.html",
+  "bytes": 363053
+ },
+ "chk-rychtar": {
+  "url": "https://www.pivo-rychtar.cz/exkurze/",
+  "file": "chk-rychtar.html",
+  "bytes": 74035
+ },
+ "chk-zookoutek": {
+  "url": "https://www.nmnm.cz/zookoutek",
+  "error": true
  }
 }
