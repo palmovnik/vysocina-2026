@@ -35,7 +35,33 @@
    "nemocnice"
   ],
   "checkin": "příjezd od 15:00, odjezd do 10:00",
-  "stay": "čt 8. 10. od 15:00 – ne 11. 10. do 10:00"
+  "stay": "čt 8. 10. od 15:00 – ne 11. 10. do 10:00",
+  "millTips": {
+   "intro": "Majitelé mlýna mají na webu stránku s tipy na výlet a k tomu pár rad ke kuchyni. Tady je všechno, co se hodí na říjen. Tahle místa mají v průvodci štítek 🌾 tip mlýna a dají se vyfiltrovat.",
+   "notes": [
+    {
+     "icon": "🎾",
+     "text": "Nejbližší tenisové kurty jsou podle mlýna v Polničce (5 km). Kurt je u fotbalového hřiště na kraji vsi.",
+     "url": "https://mapy.com/fnc/v1/showmap?mapset=outdoor&center=15.91367,49.60916&zoom=17&marker=true",
+     "label": "na mapě"
+    },
+    {
+     "icon": "⛳",
+     "text": "Golf ve Svratce (10 km): Golf Club Svratka 1932, 9 jamek, jedno z nejstarších hřišť v Česku.",
+     "url": "https://www.gcsvr1932.cz/",
+     "label": "🌐 web"
+    },
+    {
+     "icon": "🍺",
+     "text": "Mlýn půjčuje výčepní zařízení s narážením bajonet (jako na Plzeň) za 500 Kč za pobyt. Sud je potřeba objednat předem."
+    },
+    {
+     "icon": "🧂",
+     "text": "S sebou podle webu mlýna: tablety do myčky (v mlýně je jich jen omezené množství), kapsle do kávovaru Dolce Gusto a koření."
+    }
+   ],
+   "skipped": "Sjezdovky (Harusák, Svratka, Hlinsko, Jimramov) a běžky ve Vysočina Aréně jsou tipy na zimu. Vysočina Arénu v průvodci máme kvůli pumptracku a dětským trailům."
+  }
  },
  "weather": {
   "text": "Cikháj leží v 675 m n. m., takže je tu o pár stupňů chladněji než v nížině. Začátkem října bývá přes den zhruba 7–13 °C a v noci 0–5 °C, ráno často mlha a první mrazíky, občas prší. Na hřebenech nad 800 m fouká.",
@@ -63,6 +89,7 @@
   "devet-skal",
   "pernstejn",
   "tisuvka",
+  "houby",
   "racin",
   "malinska",
   "zookoutek",

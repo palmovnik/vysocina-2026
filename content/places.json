@@ -22,6 +22,7 @@
   "walk": true,
   "bike": true,
   "teaser": "Nejbližší skály: 58 m dlouhá rulová hradba, až 15 m vysoká, skoro za humny.",
+  "mill": "„Skalní útvar Tisůvka (2 km)“",
   "text": "Přírodní památka na zalesněném vrcholu západně od Cikháje. Skalní hradba vznikla mrazovým zvětráváním ruly v době ledové. Ideální první procházka hned po příjezdu, dá se spojit s rozcestím Zubačka a návratem lesem.",
   "kidsNote": "Děti si skály užijí zespodu i z bočních plošin. Lézt nahoru se smí jen s horolezeckým vybavením, proto držte nejmenší u sebe.",
   "info": "Volně přístupné, po značené cestě z Cikháje.",
@@ -44,6 +45,7 @@
   "top": true,
   "bike": true,
   "teaser": "Nejvyšší vrchol Žďárských vrchů: skalní labyrint a vyhlídka se zábradlím.",
+  "mill": "„Devět skal (6 km) je nejvyšším vrcholem Žďárských vrchů. Tento skalní labyrint tvoří tři dlouhé hřebeny s devíti věžemi a třemi malými věžičkami.“",
   "text": "Tři skalní hřebeny s devíti věžemi a třemi věžičkami, místy 12–20 m vysoké, jsou největším komplexem vrcholových skal na Českomoravské vrchovině. Po kamenných schůdcích se vystoupá na vyhlídku se zábradlím s pohledem na sever do údolí Svratky, tedy na hranici Čech a Moravy.",
   "kidsNote": "Pro školáky super dobrodružství. Na vyhlídku vedou schody a žebřík, s malými dětmi jen za ruku a nejmenší v nosítku.",
   "info": "Volně přístupné. Nejkratší přístup vede od rozcestí „Devět skal, rozc.“ (asi 500 m), značené cesty vedou z Křižánek, Svratky i Herálce. Po červené hřebenovce se dá pokračovat přes zalesněnou Lisovskou skálu k Malinské skále.",
@@ -110,6 +112,7 @@
   "top": true,
   "bike": true,
   "teaser": "Rozeklané skalní věže nad Milovy s vyhlídkou a naučnou stezkou.",
+  "mill": "„Skalní útvar Čtyři palice (14 km) je rulová skála připomínající 4 palice, vznikla mrazovým zvětráváním hornin.“",
   "text": "Přírodní rezervace u Českých Milov na pomezí Čech a Moravy. Rulové věže (Tvrz, Paličatá, Děvín a další) lákají horolezce, ale vyhlídka je přístupná každému. Kolem vede naučná stezka „Příběh krajiny pod Čtyřmi palicemi“ (4,7 km).",
   "info": "Volně přístupné; start z Milov (Hotel Devět skal / Milovský rybník).",
   "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/25-ctyri-palice",
@@ -375,7 +378,8 @@
   "lon": 15.93107,
   "bike": true,
   "teaser": "Rekreační areál u Pilské nádrže s lanovou pyramidou a hřišti pro malé děti.",
-  "text": "Areál u vodní nádrže Pilská na severním okraji Žďáru s lanovou pyramidou, hřištěm pro předškoláky i starší děti a občerstvením. Kousek od hráze stojí pískovcové sochy lva a orla od Michala Olšiaka, které označují historickou zemskou hranici: děti tu můžou stát jednou nohou v Čechách a druhou na Moravě. Leží přímo na cyklotrase do Žďáru.",
+  "mill": "Vodní nádrž Pilská je v seznamu rybníků a nádrží, které mlýn doporučuje na koupání a vodní sporty. V říjnu se sem hodí hlavně kvůli hřištím.",
+  "text": "Areál u vodní nádrže Pilská na severním okraji Žďáru s lanovou pyramidou, hřištěm pro předškoláky i starší děti a občerstvením. V půjčovně se půjčuje i minigolf, discgolf nebo síť na nohejbal. U nádrže stojí sousoší Hraniční kámen od Michala Olšiaka (pískovcový kámen, lev a orlice), které připomíná historickou zemskou hranici Čech a Moravy. Ta vede nádrží asi 100 m severně od sousoší. Areál leží přímo na cyklotrase do Žďáru.",
   "info": "Hřiště jsou volně přístupná. Půjčovna od září po–čt 11–18, pá–ne 10–19, občerstvení ve všední dny 14–19, o víkendu 11–19 (podle počasí).",
   "fit": [
    "male",
@@ -395,7 +399,7 @@
   "noCar": true,
   "walk": true,
   "teaser": "Hřiště se dvěma dřevěnými čerty, asi 500 m od mlýna.",
-  "text": "Obecní dětské hřiště v Cikháji, kousek od restaurace Tisůvka. U hřiště sedí na lavičce dva dřevění čerti.",
+  "text": "Obecní dětské hřiště v Cikháji, kousek od restaurace Tisůvka. U hřiště sedí na lavičce dva dřevění čerti. Podle webu mlýna je nad restaurací i hřiště na nohejbal a volejbal, takže se vyplatí vzít míč.",
   "info": "Volně přístupné.",
   "fit": [
    "male",
@@ -403,7 +407,8 @@
   ],
   "kidsNote": "Hřiště je kousek od mlýna, dojde se tam i s kočárkem.",
   "pin": true,
-  "web": "https://www.cikhaj.cz/"
+  "web": "https://www.cikhaj.cz/",
+  "mill": "„Kousek od chalupy je hřiště na nohejbal a volejbal (nad restaurací Tisůvka).“"
  },
  {
   "id": "hopik",
@@ -455,6 +460,7 @@
   "top": true,
   "bike": true,
   "teaser": "Santiniho hvězdicový kostel, památka UNESCO, kde se vše točí kolem čísla 5.",
+  "mill": "„Poutní kostel Jana Nepomuckého na Zelené hoře, zapsaný mezi kulturními památkami UNESCO.“",
   "text": "Poutní kostel sv. Jana Nepomuckého je vrcholem Santiniho barokní gotiky. Půdorys má tvar pěticípé hvězdy a číslo 5 se tu opakuje všude (hvězdy, kaple, brány) jako odkaz na pět hvězd ze svatojánské legendy.",
   "kidsNote": "Hra pro děti: kolikrát najdete číslo 5?",
   "info": "V říjnu je interiér otevřen jen so a ne 9–17, areál kolem je přístupný celoročně. Tel. +420 724 758 993.",
@@ -563,6 +569,27 @@
   "q": "Pramen Svratky"
  },
  {
+  "id": "houby",
+  "cat": "priroda",
+  "icon": "🍄",
+  "name": "Na houby do lesa u mlýna",
+  "lat": 49.6455,
+  "lon": 15.9745,
+  "noCar": true,
+  "walk": true,
+  "top": true,
+  "teaser": "Podle majitelů mlýna jsou okolní lesy na podzim plné hub. Les začíná hned u mlýna.",
+  "mill": "„Na podzim se stává toto místo rájem houbařů (a opravdu rostou).“",
+  "text": "Mlýn stojí samostatně a z jedné strany sousedí přímo s lesem. Říjen je v Žďárských vrších vrchol houbařské sezóny: ve smrkových lesích kolem Cikháje bývají hlavně hřiby a suchohřiby, na pařezech václavky. Na krátkou vycházku s košíkem stačí les hned za mlýnem, třeba po příjezdu ve čtvrtek odpoledne.",
+  "kidsNote": "Hledání hub je pro děti jako hon na poklad. Ať ale houby jen ukazují dospělým a nic neochutnávají.",
+  "info": "Sbírejte jen houby, které bezpečně znáte. V národní přírodní rezervaci Žákova hora se nesbírá a nechodí se mimo značené cesty. Při podezření na otravu volejte 155, Toxikologické informační středisko má nonstop linku 224 919 293.",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "web": "https://mlyn-vikinek.cz/tipy-na-vylet/"
+ },
+ {
   "id": "pramen-sazavy",
   "cat": "priroda",
   "icon": "💧",
@@ -592,6 +619,7 @@
   "walk": true,
   "bike": true,
   "teaser": "Národní přírodní rezervace se starým jedlo-bukovým lesem a naučnou stezkou.",
+  "mill": "„Žákova hora (2 km), kde podle pověsti zabloudili žáci – chovanci žďárského kláštera – a už se nevrátili.“",
   "text": "Jeden z nejcennějších lesů Vysočiny, s pralesovitým porostem bez zásahů člověka. Podle pověsti se tu kdysi ztratili žáci ze žďárského kláštera a už se nevrátili, odtud název. Kolem rezervace vede naučná stezka.",
   "info": "Chodí se jen po značených cestách, rezervace je přísně chráněná.",
   "fit": [
@@ -610,6 +638,7 @@
   "top": true,
   "bike": true,
   "teaser": "Moře Vysočiny: největší rybník Českomoravské vrchoviny (206 ha).",
+  "mill": "Je v seznamu rybníků a nádrží, které mlýn doporučuje na koupání a vodní sporty. V říjnu je to spíš na procházku kolem vody.",
   "text": "Rybník založený kolem roku 1480 na Sázavě. Hráz je dlouhá 457 m a vysoká až 12 m. Na hrázi a kolem ní jsou restaurace a penziony, parkoviště je zdarma. Na západní straně leží národní přírodní rezervace Dářko s největším rašeliništěm Vysočiny.",
   "info": "Parkoviště u rekreačního areálu u hráze (východní konec), odtud začíná i naučná stezka.",
   "fit": [
@@ -619,6 +648,66 @@
   ],
   "web": "https://www.zdarskevrchy.cz/cz/turisticke-cile/43-velke-darko",
   "q": "Velké Dářko"
+ },
+ {
+  "id": "strz",
+  "cat": "priroda",
+  "icon": "🌊",
+  "name": "Vodní nádrž Strž",
+  "lat": 49.61,
+  "lon": 15.9541,
+  "walk": true,
+  "bike": true,
+  "teaser": "Klidná nádrž na Stržském potoce, který teče kolem mlýna. Podél vody vede zelená značka ze Světnova na Stržanov.",
+  "mill": "Je v seznamu rybníků a nádrží, které mlýn doporučuje na koupání a vodní sporty. V říjnu je to spíš na procházku kolem vody.",
+  "text": "Nádrž vznikla v letech 1952–1954 zvýšením hráze původního rybníka Strž na okraji Světnova. Patří k vodárenské soustavě Želivka: nadlepšuje průtok potoka, slouží k rekreaci a rybaření a částečně i k ochraně před povodněmi. Kolem jsou chatové osady a podél břehu vede zelená turistická značka. Ve Světnově stojí kamenný dvouobloukový most přes Stržský potok z roku 1847, kulturní památka.",
+  "kidsNote": "Stržský potok teče od mlýna údolím přes Světnov až sem a dál do Sázavy, Vltavy a Labe, tedy do Severního moře.",
+  "info": "Volně přístupné. Pěšky nebo na kole po zelené značce ze Světnova (od kamenného mostu) nebo ze Stržanova.",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "web": "https://cs.wikipedia.org/wiki/Vodn%C3%AD_n%C3%A1dr%C5%BE_Str%C5%BE"
+ },
+ {
+  "id": "sykovec",
+  "cat": "priroda",
+  "icon": "🌊",
+  "name": "Rybník Sykovec (Tři Studně)",
+  "lat": 49.60862,
+  "lon": 16.03846,
+  "bike": true,
+  "teaser": "Rybník ve 724 m s travnatou pláží a písčitým dnem, kolem vede cesta lesem i podél vody.",
+  "mill": "Je v seznamu rybníků a nádrží, které mlýn doporučuje na koupání a vodní sporty. V říjnu je to spíš na procházku kolem vody.",
+  "text": "Rybník vznikl mezi lety 1587 a 1646, je tedy starší než samotná obec Tři Studně. Má 14 ha, travnatou pláž a písčitý vstup do vody, v létě je tu koupání s občerstvením a autokemp. Kolem se jde střídavě lesíkem a podél vody, asi 1,5 km odtud je Medlov s lanovým parkem a pohádkovou stezkou.",
+  "info": "Volně přístupné, u rybníka je autokemp Sykovec. Leží na cyklotrase Na Medlov za lanovým parkem.",
+  "fit": [
+   "male",
+   "skolaci"
+  ]
+ },
+ {
+  "id": "milovsky-rybnik",
+  "cat": "priroda",
+  "icon": "🌊",
+  "name": "Milovský rybník",
+  "lat": 49.66643,
+  "lon": 16.09069,
+  "car": [
+   49.66865,
+   16.09073
+  ],
+  "bike": true,
+  "teaser": "Rybník z roku 1610 v Milovské kotlině, odkud se chodí na Čtyři palice, Perničky i Devět skal.",
+  "mill": "Je v seznamu rybníků a nádrží, které mlýn doporučuje na koupání a vodní sporty. V říjnu je to spíš na procházku kolem vody.",
+  "text": "Rybník založil roku 1610 Vilém Dubský z Třebomyslic. Má 6,5 ha, hloubku až 4 m a travnaté břehy, napájí ho Černý potok, přítok Svratky. Na břehu stojí hotel Orea Resort Devět skal a kemp Milovy. Od rybníka vedou trasy na Dráteničky, Malinskou skálu, Devět skal, Čtyři palice a Milovské perničky.",
+  "kidsNote": "Voda odsud teče Černým potokem do Svratky a přes Dyji, Moravu a Dunaj až do Černého moře.",
+  "info": "Přístup k rybníku i parkování jsou zdarma.",
+  "fit": [
+   "male",
+   "skolaci"
+  ],
+  "web": "https://cs.wikipedia.org/wiki/Milovsk%C3%BD_rybn%C3%ADk"
  },
  {
   "id": "darska-raseliniste",
@@ -657,9 +746,11 @@
    "blizko",
    "koutek"
   ],
-  "teaser": "Nejbližší restaurace, 600 m od mlýna, s dětským koutkem. Ideální na první večer.",
-  "text": "Nekuřácká restaurace se 45 místy na kraji Cikháje, kousek od mlýna. Vaří poctivou českou kuchyni (na lístku bývá třeba srnčí svíčková), pro nejmenší má dětský koutek a hned vedle je hřiště. Na večeři pro 17 lidí určitě rezervujte.",
-  "info": "Čt 16–21, pá–so 11–22, ne 11–20 (kuchyně do 20 h, v neděli do 19 h; o víkendu 15:30–17 jen dezerty). Po–st zavřeno. Cikháj 51.",
+  "teaser": "Nejbližší restaurace, 600 m od mlýna, s dětským koutkem. Pozor: ve čtvrtek 8. a v pátek 9. 10. má zavřeno.",
+  "mill": "„Asi 400 metrů od mlýna najdete vyhlášenou a oceněnou restauraci Tisůvka. Je oblíbeným místem pro zastávku cyklistů, běžkařů, ale může být i příjemným zakončením procházky lesem. Kvůli velkému zájmu doporučujeme si dát rezervaci předem.“",
+  "warn": "Ve čtvrtek 8. a v pátek 9. 10. má zavřeno, na sobotu rezervujte.",
+  "text": "Nekuřácká restaurace se 45 místy na kraji Cikháje, kousek od mlýna. Vaří poctivou českou kuchyni (na lístku bývá třeba srnčí svíčková nebo dančí guláš), pro nejmenší má dětský koutek a hned vedle je hřiště. Ve čtvrtek 8. a v pátek 9. 10. má podle oznámení na webu zavřeno, takže vychází sobotní oběd nebo večeře. Pro 17 lidí určitě rezervujte.",
+  "info": "Čt 8. 10. a pá 9. 10. zavřeno. Jinak čt 16–21, pá–so 11–22, ne 11–20 (kuchyně do 20 h, v neděli do 19 h; o víkendu 15:30–17 jen dezerty), po–st zavřeno. Cikháj 51.",
   "phone": "+420 566 659 007",
   "web": "https://www.restauracetisuvka.cz/",
   "fit": [
@@ -740,11 +831,18 @@
   "lat": 49.60641,
   "lon": 15.92006,
   "bike": true,
-  "teaser": "Regionální kuchyně na cyklotrase do Žďáru.",
-  "text": "Restaurace se zahrádkou v Polničce, na cestě mezi Cikhájí a Žďárem.",
-  "info": "Po–čt 11–22, pá–so 11–23, ne 11–22. Tel. +420 566 629 374.",
+  "teaser": "Poctivá česká kuchyně se zvěřinou 5 km od mlýna, s dětským koutkem. Doporučuje ji i mlýn.",
+  "mill": "„Rozhodně také nebudete zklamaní, pokud vyzkoušíte restauraci Polnička, vzdálenou asi 5 km od mlýna.“",
+  "text": "Restaurace a penzion v Polničce, na cestě mezi Cikhájí a Žďárem. Vaří zvěřinové speciality, maso z grilu, domácí dezerty i české klasiky, má velký sál s dětským koutkem a letní terasu. Ve čtvrtek má otevřeno do 22 h, takže se hodí na první večer, kdy má Tisůvka zavřeno.",
+  "info": "Po–čt 11–22, pá–so 11–23, ne 11–22. Polnička 51. Stůl rezervujte na +420 566 629 374.",
   "phone": "+420 566 629 374",
-  "web": "https://www.restauracepolnicka.cz/"
+  "web": "https://www.restauracepolnicka.cz/",
+  "tags": [
+   "koutek"
+  ],
+  "fit": [
+   "male"
+  ]
  },
  {
   "id": "rest-krizanky",

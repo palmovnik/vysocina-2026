@@ -10,6 +10,10 @@ sekce pod mapou jsou sbalené do skupin a fotky se načtou až po rozbalení.
 Nahoře je souhrn předpovědi počasí pro mlýn, který se stahuje živě při každém otevření stránky
 (podrobně po hodinách v sekci *Praktické → Počasí a světlo*), a odkaz *Mlýn Vikinek* s adresou,
 navigací do Google Map, Mapy.com, Waze i Apple Map, kontaktem a webem mlýna.
+Tipy, které doporučují sami majitelé na [webu mlýna](https://mlyn-vikinek.cz/tipy-na-vylet/)
+(skály, rybníky, houby, sport, restaurace Tisůvka a Polnička), mají štítek *🌾 tip mlýna*
+s jejich slovy (pole `mill` v `content/places.json`), dají se vyfiltrovat a jsou pohromadě
+v sekci *Chata → Tipy od majitelů mlýna* (rady bez místa na mapě jsou v `meta.json`, `chata.millTips`).
 
 Web: **https://palmovnik.github.io/vysocina-2026/**
 

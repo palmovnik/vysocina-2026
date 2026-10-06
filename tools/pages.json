@@ -1,132 +1,157 @@
 [
  {
-  "id": "mlyn-tipy",
-  "url": "https://mlyn-vikinek.cz/tipy-na-vylet/",
-  "ext": "html"
- },
- {
-  "id": "mlyn-vikinek",
-  "url": "https://mlyn-vikinek.cz/",
-  "ext": "html"
- },
- {
-  "id": "mlyn-stravovani",
-  "url": "https://mlyn-vikinek.cz/stravovani/",
-  "ext": "html"
- },
- {
-  "id": "mlyn-pokoje",
-  "url": "https://mlyn-vikinek.cz/apartmany/",
-  "ext": "html"
- },
- {
-  "id": "mlyn-cenik",
-  "url": "https://mlyn-vikinek.cz/cenik/",
-  "ext": "html"
- },
- {
-  "id": "w-mlyn-kontakt",
-  "url": "https://mlyn-vikinek.cz/kontakt/",
-  "ext": "html"
- },
- {
-  "id": "mlyn-galerie",
-  "url": "https://mlyn-vikinek.cz/galerie/",
-  "ext": "html"
- },
- {
-  "id": "tisuvka",
-  "url": "https://www.restauracetisuvka.cz/",
-  "ext": "html"
- },
- {
-  "id": "polnicka-rest",
-  "url": "https://www.restauracepolnicka.cz/",
-  "ext": "html"
- },
- {
-  "id": "obec-polnicka",
-  "url": "https://www.polnicka.cz/",
-  "ext": "html"
- },
- {
-  "id": "obec-cikhaj",
-  "url": "https://www.cikhaj.cz/",
-  "ext": "html"
- },
- {
-  "id": "gc-svratka",
-  "url": "https://www.gcsvr1932.cz/",
-  "ext": "html"
- },
- {
-  "id": "svratka-golf",
-  "url": "https://www.svratka.cz/?p=2578",
-  "ext": "html"
- },
- {
-  "id": "mze-sykovec",
-  "url": "https://mze.gov.cz/public/portal/-q356939---9NL2NBA8/rybnik-sykovec",
-  "ext": "html"
- },
- {
-  "id": "wp-strz",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Vodn%C3%AD+n%C3%A1dr%C5%BE+Str%C5%BE",
+  "id": "osm-les",
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%0A%28%0A++way%5B%22landuse%22%3D%22forest%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++way%5B%22natural%22%3D%22wood%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%5B%22landuse%22%3D%22forest%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%5B%22natural%22%3D%22wood%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%282212296%29%3B%0A++relation%282331870%29%3B%0A++relation%282331885%29%3B%0A%29%3B%0Aout+geom%3B",
   "ext": "json"
  },
  {
-  "id": "wp-milovsky",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Milovsk%C3%BD+rybn%C3%ADk",
-  "ext": "json"
+  "id": "gc-svratka-uzavirka",
+  "url": "https://www.gcsvr1932.cz/pozor-uzavirka-silnice-ve-svratce/",
+  "ext": "html"
  },
  {
-  "id": "wp-pilska",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Vodn%C3%AD+n%C3%A1dr%C5%BE+Pilsk%C3%A1",
-  "ext": "json"
+  "id": "gc-svratka-cenik",
+  "url": "https://www.gcsvr1932.cz/green_fee/",
+  "ext": "html"
  },
  {
-  "id": "wp-svetnov-most",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Kamenn%C3%BD+most+ve+Sv%C4%9Btnov%C4%9B",
-  "ext": "json"
+  "id": "gc-svratka-sluzby",
+  "url": "https://www.gcsvr1932.cz/sluzby/",
+  "ext": "html"
  },
  {
-  "id": "wp-svetnov",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Sv%C4%9Btnov",
-  "ext": "json"
+  "id": "gc-svratka-kontakt",
+  "url": "https://www.gcsvr1932.cz/kontakt/",
+  "ext": "html"
  },
  {
-  "id": "wp-tri-studne",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=T%C5%99i+Studn%C4%9B",
-  "ext": "json"
+  "id": "gc-svratka-hriste",
+  "url": "https://www.gcsvr1932.cz/hriste/",
+  "ext": "html"
  },
  {
-  "id": "wp-cikhaj",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Cikh%C3%A1j",
-  "ext": "json"
+  "id": "chk-panmama",
+  "url": "https://www.statek-blatiny.cz/jidlo-piti",
+  "ext": "html"
  },
  {
-  "id": "wp-polnicka",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Polni%C4%8Dka",
-  "ext": "json"
+  "id": "chk-blatiny",
+  "url": "https://www.statek-blatiny.cz/",
+  "ext": "html"
  },
  {
-  "id": "wp-svratka",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Svratka+%28okres+%C5%BD%C4%8F%C3%A1r+nad+S%C3%A1zavou%29",
-  "ext": "json"
+  "id": "chk-racin",
+  "url": "https://www.racin.cz/cs/pivovar/",
+  "ext": "html"
  },
  {
-  "id": "wp-stezky-search",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&list=search&srsearch=Sykovec+rybn%C3%ADk+T%C5%99i+Studn%C4%9B&srlimit=10&format=json&formatversion=2",
-  "ext": "json"
+  "id": "chk-kiosek",
+  "url": "https://kiosekkadov.cz/",
+  "ext": "html"
  },
  {
-  "id": "wp-golf-search",
-  "url": "https://cs.wikipedia.org/w/api.php?action=query&list=search&srsearch=golf+Svratka+h%C5%99i%C5%A1t%C4%9B&srlimit=10&format=json&formatversion=2",
-  "ext": "json"
+  "id": "chk-cukrarna",
+  "url": "https://www.cukrarnasnezne.cz/",
+  "ext": "html"
  },
  {
-  "id": "osm-sport",
-  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%0A%28%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Cplayground%7Csports_centre%29%24%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Csports_centre%29%24%22%5D%28around%3A2000%2C49.60641%2C15.92006%29%3B%0A++nwr%5B%22sport%22~%22tennis%7Cfutnet%7Cvolleyball%7Cgolf%22%5D%28around%3A16000%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28golf_course%7Cminiature_golf%29%24%22%5D%28around%3A20000%2C49.64427%2C15.96844%29%3B%0A%29%3B%0Aout+center+tags%3B",
-  "ext": "json"
+  "id": "chk-frysava",
+  "url": "https://www.stanicelyzaru.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-medlov",
+  "url": "https://www.medlovhotel.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-svoboda",
+  "url": "https://ags-svoboda.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-eden",
+  "url": "https://www.edencentrum.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-pernstejn",
+  "url": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba",
+  "ext": "html"
+ },
+ {
+  "id": "chk-pernstejn-home",
+  "url": "https://www.hrad-pernstejn.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-mng",
+  "url": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-hopik",
+  "url": "http://www.hopik-zdar.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-relax",
+  "url": "https://www.sportiszdar.cz/relaxacni-centrum",
+  "ext": "html"
+ },
+ {
+  "id": "chk-pilak",
+  "url": "https://www.sportiszdar.cz/rekreacni-areal-pilak",
+  "ext": "html"
+ },
+ {
+  "id": "chk-zelena-hora",
+  "url": "https://www.zelena-hora.cz/cs/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-modelove",
+  "url": "https://www.mkzdar.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-slakhamr",
+  "url": "https://www.technicalmuseum.cz/pamatky/slakhamr-v-hamrech-nad-sazavou/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-peklo",
+  "url": "https://www.peklocertovina.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-vesely-kopec",
+  "url": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne",
+  "ext": "html"
+ },
+ {
+  "id": "chk-zoo-jihlava",
+  "url": "https://zoojihlava.cz/dulezite-informace/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-falbgery",
+  "url": "http://www.minifarmafalbgery.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-hejkal",
+  "url": "https://www.pivovarhejkal.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-rychtar",
+  "url": "https://www.pivo-rychtar.cz/exkurze/",
+  "ext": "html"
+ },
+ {
+  "id": "chk-zookoutek",
+  "url": "https://www.nmnm.cz/zookoutek",
+  "ext": "html"
  }
 ]

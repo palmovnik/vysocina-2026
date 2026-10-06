@@ -50,6 +50,7 @@
   "stops": [
    "pramen-svratky",
    "medlov",
+   "sykovec",
    "brozova",
    "rest-frysava"
   ],
@@ -90,6 +91,7 @@
    "pramen-svratky",
    "devet-skal",
    "dratenicka",
+   "milovsky-rybnik",
    "rest-kolousek",
    "rest-krizanky",
    "zakova-hora"
@@ -128,7 +130,7 @@
    "tisuvka",
    "rest-tisuvka"
   ],
-  "tip": "Na zpáteční cestě se dá zastavit v restauraci Tisůvka (čt–ne).",
+  "tip": "Na zpáteční cestě se dá zastavit v restauraci Tisůvka (so a ne, ve čtvrtek 8. a v pátek 9. 10. má zavřeno).",
   "who": "i malé děti, nejmenší v nosítku",
   "fit": [
    "male",
@@ -203,6 +205,7 @@
   "teaser": "Krátký okruh z Milov ke skalním věžím a „perníkovým“ mísám.",
   "text": "Od Milovského rybníka lesem ke skalám Čtyři palice s vyhlídkou, dál k Milovským perničkám (najděte všech 8 skalních mís) a zpět přes rozcestí Plaňkovka.",
   "stops": [
+   "milovsky-rybnik",
    "ctyri-palice",
    "pernicky"
   ],

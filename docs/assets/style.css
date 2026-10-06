@@ -331,6 +331,7 @@ section.block { padding: 42px 0 18px; }
 .badge.top { background: #fff3c8; border-color: #f0d67a; color: #6b4a00; }
 .badge.rain { background: #e3eefb; border-color: #b7cff0; color: #214a7a; }
 .badge.kids { background: #fde6e2; border-color: #f4bcb3; color: #8a2a1e; }
+.badge.mill, .tag.mill { background: color-mix(in srgb, var(--c-chata) 11%, var(--surface)); border-color: color-mix(in srgb, var(--c-chata) 32%, var(--line)); color: var(--c-chata); }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .badge.top { background: #3b3214; border-color: #6b5a1c; color: #ffe39a; }
   :root:not([data-theme="light"]) .badge.rain { background: #172a40; border-color: #2d4c70; color: #b9d6fb; }
@@ -407,6 +408,8 @@ a.chip { text-decoration: none; color: var(--ink); }
 }
 .tile-body { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px 12px; flex: 1; }
 .tile-cat { font-size: .7rem; text-transform: uppercase; letter-spacing: .07em; color: var(--c); font-weight: 700; }
+.tile-mill { color: var(--c-chata); white-space: nowrap; }
+.tile-mill::before { content: ' · '; color: var(--muted); }
 .tile-name { font-family: var(--font-display); font-weight: 650; font-size: 1.06rem; line-height: 1.2; }
 .tile-teaser {
   font-size: .88rem; color: var(--muted); line-height: 1.4;
@@ -541,6 +544,8 @@ html.modal-open { overflow: hidden; }
 .m-note { border-radius: 10px; padding: 9px 12px; font-size: .93rem; }
 .m-note.kids { background: color-mix(in srgb, var(--c-deti) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--c-deti) 25%, var(--line)); }
 .m-note.info { background: var(--surface-2); border: 1px solid var(--line); }
+.m-note.mill { background: color-mix(in srgb, var(--c-chata) 8%, var(--surface)); border: 1px solid color-mix(in srgb, var(--c-chata) 26%, var(--line)); }
+.m-note.mill b { color: var(--c-chata); }
 .m-rel { font-size: .92rem; }
 .m-rel b { font-weight: 650; }
 .chips-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
@@ -741,6 +746,10 @@ table.wx-table tr.dh th { padding-top: 10px; font-size: .86rem; }
 .svc .t { font-weight: 550; line-height: 1.25; }
 .svc .how { display: block; font-size: .82rem; color: var(--muted); font-weight: 400; }
 .svc .dist { font-size: .8rem; color: var(--muted); white-space: nowrap; }
+.svc .how.warn { color: #b3261e; font-weight: 550; }
+:root[data-theme="dark"] .svc .how.warn { color: #ff8a80; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .svc .how.warn { color: #ff8a80; } }
+.mill-notes .t { font-weight: 400; }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; align-items: start; }
 .checklist { list-style: none; padding: 0; margin: 0; }
 .checklist li { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); align-items: start; }

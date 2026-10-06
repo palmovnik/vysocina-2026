@@ -6,16 +6,18 @@
    "label": "Čtvrtek 8. 10.",
    "title": "Na rozkoukání kolem mlýna",
    "tips": [
+    "houby",
     "tisuvka",
     "pramen-svratky",
     "cikhaj-hriste",
-    "rest-tisuvka"
+    "rest-polnicka"
    ],
    "rain": [
     "hopik",
     "mng",
     "relax"
-   ]
+   ],
+   "note": "Restaurace Tisůvka má ve čtvrtek 8. a v pátek 9. 10. zavřeno, na první večer je proto nejlepší Polnička (5 km, do 22 h), kterou doporučuje i mlýn. Na Tisůvku se dá zajít v sobotu."
   },
   {
    "id": "pa",
@@ -41,11 +43,12 @@
    "date": "2026-10-10",
    "label": "Sobota 10. 10.",
    "title": "Pernštejn a farma Eden",
-   "note": "Pernštejn má v říjnu otevřeno jen o víkendu a Farma Eden jen v sobotu. Jsou od sebe asi čtvrt hodiny autem, takže se dá rozdělit: školáci na hrad, nejmenší na farmu.",
+   "note": "Pernštejn má v říjnu otevřeno jen o víkendu a Farma Eden jen v sobotu. Jsou od sebe asi čtvrt hodiny autem, takže se dá rozdělit: školáci na hrad, nejmenší na farmu. Večer je otevřená Tisůvka kousek od mlýna (v sobotu do 22 h, rezervujte).",
    "tips": [
     "pernstejn",
     "eden",
-    "racin"
+    "racin",
+    "rest-tisuvka"
    ],
    "rain": [
     "peklo",
@@ -103,8 +106,14 @@
    "place": "racin"
   },
   {
+   "id": "res-polnicka",
+   "text": "Restaurace Polnička na čtvrteční večeři, kdy má Tisůvka zavřeno",
+   "how": "+420 566 629 374",
+   "place": "rest-polnicka"
+  },
+  {
    "id": "res-tisuvka",
-   "text": "Restaurace Tisůvka v Cikháji",
+   "text": "Restaurace Tisůvka v Cikháji na sobotu (čt 8. a pá 9. 10. má zavřeno)",
    "how": "566 659 007",
    "place": "rest-tisuvka"
   },
@@ -152,13 +161,16 @@
   "Dalekohled, lupa, lodičky z kůry na pramen Svratky",
   "Offline mapy (aplikace Mapy.com) a GPX trasy z této stránky",
   "Hotovost: malé restaurace a dobrovolná vstupné",
-  "Kapsle Dolce Gusto do kávovaru a tablety do myčky (v mlýně jich je jen pár)",
+  "Kapsle Dolce Gusto do kávovaru, tablety do myčky a koření (podle webu mlýna si je máte přivézt, tablet je v mlýně jen pár)",
   "Dřevo na táborák (ohniště na zahradě) a něco na opékání",
-  "Cestovní postýlky pro nejmenší (mlýn má jen jednu dětskou postýlku 120×60 cm)"
+  "Cestovní postýlky pro nejmenší (mlýn má jen jednu dětskou postýlku 120×60 cm)",
+  "Košík a nožík na houby, lesy kolem mlýna jsou podle majitelů na podzim plné hub",
+  "Míč na volejbal nebo nohejbal (hřiště nad restaurací Tisůvka)"
  ],
  "quests": [
   "Pustit lodičku na pramenu Svratky (pluje do Černého moře!) a na pramenu Sázavy (do Severního moře)",
   "Najít v zookoutku klokana, lamu a nandu",
+  "Najít v lese u mlýna hřib a ukázat ho dospělému (nic neochutnávat!)",
   "Vylézt na vyhlídku na Devíti skalách, nejvyšší místo Žďárských vrchů (836 m)",
   "Najít na Milovských perničkách všech 8 skalních „perníčků“",
   "Nakouknout do jeskyňky na Malinské skále",
