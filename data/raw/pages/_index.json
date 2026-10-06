@@ -1123,5 +1123,20 @@
  "chk-zookoutek": {
   "url": "https://www.nmnm.cz/zookoutek",
   "error": true
+ },
+ "svratka-uzavirka": {
+  "url": "https://www.svratka.cz/?p=10540",
+  "file": "svratka-uzavirka.html",
+  "bytes": 118048
+ },
+ "osm-libusina": {
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0Away%5B%22name%22%3D%22Libu%C5%A1ina%22%5D%28around%3A3000%2C49.7108%2C16.0341%29%3B%0Aout+geom+tags%3B",
+  "file": "osm-libusina.json",
+  "bytes": 2746
+ },
+ "pilak-drakiada": {
+  "url": "https://www.sportiszdar.cz/novinky/drakiada-na-pilaku-uz-11-rijna",
+  "file": "pilak-drakiada.html",
+  "bytes": 47803
  }
 }

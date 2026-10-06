@@ -1,0 +1,118 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-06T20:20:04Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 4703259,
+  "bounds": {
+    "minlat": 49.7110041,
+    "minlon": 16.0353428,
+    "maxlat": 49.7117077,
+    "maxlon": 16.0382399
+  },
+  "geometry": [
+    { "lat": 49.7117077, "lon": 16.0353428 },
+    { "lat": 49.7116320, "lon": 16.0354649 },
+    { "lat": 49.7114527, "lon": 16.0357954 },
+    { "lat": 49.7114188, "lon": 16.0358675 },
+    { "lat": 49.7113937, "lon": 16.0359398 },
+    { "lat": 49.7113769, "lon": 16.0360143 },
+    { "lat": 49.7113657, "lon": 16.0360761 },
+    { "lat": 49.7113604, "lon": 16.0361461 },
+    { "lat": 49.7113558, "lon": 16.0362676 },
+    { "lat": 49.7113471, "lon": 16.0363761 },
+    { "lat": 49.7113377, "lon": 16.0365039 },
+    { "lat": 49.7113168, "lon": 16.0366489 },
+    { "lat": 49.7112894, "lon": 16.0367990 },
+    { "lat": 49.7111516, "lon": 16.0374879 },
+    { "lat": 49.7110041, "lon": 16.0382399 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Libušina",
+    "ref": "354",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1564527284,
+  "bounds": {
+    "minlat": 49.7106264,
+    "minlon": 16.0388421,
+    "maxlat": 49.7108943,
+    "maxlon": 16.0409278
+  },
+  "geometry": [
+    { "lat": 49.7108943, "lon": 16.0388421 },
+    { "lat": 49.7108438, "lon": 16.0391933 },
+    { "lat": 49.7106264, "lon": 16.0409278 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Libušina",
+    "ref": "354",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1564532018,
+  "bounds": {
+    "minlat": 49.7104365,
+    "minlon": 16.0409278,
+    "maxlat": 49.7106264,
+    "maxlon": 16.0424423
+  },
+  "geometry": [
+    { "lat": 49.7106264, "lon": 16.0409278 },
+    { "lat": 49.7104365, "lon": 16.0424423 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Libušina",
+    "ref": "354",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1564532019,
+  "bounds": {
+    "minlat": 49.7108943,
+    "minlon": 16.0382399,
+    "maxlat": 49.7110041,
+    "maxlon": 16.0388421
+  },
+  "geometry": [
+    { "lat": 49.7110041, "lon": 16.0382399 },
+    { "lat": 49.7108943, "lon": 16.0388421 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lane_markings": "no",
+    "lanes": "2",
+    "maxspeed": "50",
+    "name": "Libušina",
+    "ref": "354",
+    "surface": "asphalt"
+  }
+}
+
+  ]
+}

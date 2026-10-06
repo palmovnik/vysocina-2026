@@ -235,14 +235,14 @@
  },
  "houby": {
   "at": [
-   49.6455,
-   15.9745
+   49.64237,
+   15.96886
   ],
   "walk": {
-   "length_m": 1335,
-   "ascend_m": 26,
-   "plain_ascend_m": 21,
-   "time_s": 1013
+   "length_m": 662,
+   "ascend_m": 10,
+   "plain_ascend_m": 10,
+   "time_s": 488
   }
  },
  "pramen-sazavy": {
