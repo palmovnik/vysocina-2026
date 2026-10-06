@@ -1,0 +1,1033 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-06T20:03:52Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 7093940266,
+  "lat": 49.5647658,
+  "lon": 16.0684505,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 8912120186,
+  "lat": 49.5646938,
+  "lon": 16.0801686,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 12288564389,
+  "lat": 49.7137186,
+  "lon": 16.0521370,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 13094029674,
+  "lat": 49.7620913,
+  "lon": 15.9106252,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 13293405982,
+  "lat": 49.5691620,
+  "lon": 16.0774033,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 13293405983,
+  "lat": 49.5691272,
+  "lon": 16.0773798,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 13607848051,
+  "lat": 49.5733365,
+  "lon": 16.0805806,
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 13904372705,
+  "lat": 49.6685099,
+  "lon": 16.0874069,
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 25314639,
+  "center": {
+    "lat": 49.7157365,
+    "lon": 16.0475707
+  },
+  "tags": {
+    "addr:city": "Svratka",
+    "addr:country": "CZ",
+    "addr:housenumber": "20",
+    "addr:postcode": "592 02",
+    "addr:street": "Na Vyhlídce",
+    "description": "9 hole Par 34",
+    "email": "info@gcsvr1932.cz",
+    "leisure": "golf_course",
+    "name": "Golf Club Svratka 1932",
+    "phone": "+420 566 662 322",
+    "website": "https://www.gcsvr1932.cz/"
+  }
+},
+{
+  "type": "way",
+  "id": 98363383,
+  "center": {
+    "lat": 49.5734661,
+    "lon": 15.9404823
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 102896975,
+  "center": {
+    "lat": 49.6542483,
+    "lon": 16.1464925
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 102896995,
+  "center": {
+    "lat": 49.6541704,
+    "lon": 16.1461082
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 103674309,
+  "center": {
+    "lat": 49.6360533,
+    "lon": 16.1833841
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 208379157,
+  "center": {
+    "lat": 49.5780152,
+    "lon": 16.0752572
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "cuzk:km",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 229739126,
+  "center": {
+    "lat": 49.5772446,
+    "lon": 15.8411277
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 252554480,
+  "center": {
+    "lat": 49.7135550,
+    "lon": 16.0508770
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "survey",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 263923148,
+  "center": {
+    "lat": 49.5591250,
+    "lon": 15.9455662
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 265380197,
+  "center": {
+    "lat": 49.5795483,
+    "lon": 16.0525929
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 265380198,
+  "center": {
+    "lat": 49.5807607,
+    "lon": 16.0522469
+  },
+  "tags": {
+    "leisure": "miniature_golf"
+  }
+},
+{
+  "type": "way",
+  "id": 270441951,
+  "center": {
+    "lat": 49.6472726,
+    "lon": 15.9634731
+  },
+  "tags": {
+    "leisure": "playground"
+  }
+},
+{
+  "type": "way",
+  "id": 294664443,
+  "center": {
+    "lat": 49.5893159,
+    "lon": 15.9315117
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "miniature_golf"
+  }
+},
+{
+  "type": "way",
+  "id": 294664445,
+  "center": {
+    "lat": 49.5893043,
+    "lon": 15.9305353
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "name": "pískové hřiště",
+    "sport": "beachvolleyball",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 294664454,
+  "center": {
+    "lat": 49.5896174,
+    "lon": 15.9304026
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "name": "travnaté hřiště",
+    "sport": "soccer",
+    "surface": "artificial_turf"
+  }
+},
+{
+  "type": "way",
+  "id": 312970053,
+  "center": {
+    "lat": 49.6438976,
+    "lon": 16.1222561
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 345544726,
+  "center": {
+    "lat": 49.6275947,
+    "lon": 16.0372884
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 362535209,
+  "center": {
+    "lat": 49.6687785,
+    "lon": 16.0878509
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 384566036,
+  "center": {
+    "lat": 49.6386346,
+    "lon": 15.7782865
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 435287282,
+  "center": {
+    "lat": 49.5723946,
+    "lon": 15.9414627
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 492759875,
+  "center": {
+    "lat": 49.5600367,
+    "lon": 15.8551540
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "DigitalGlobe",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 499053718,
+  "center": {
+    "lat": 49.7676514,
+    "lon": 15.9149911
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 499082773,
+  "center": {
+    "lat": 49.7591819,
+    "lon": 15.9108200
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 499082924,
+  "center": {
+    "lat": 49.7588495,
+    "lon": 15.9106249
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 499082927,
+  "center": {
+    "lat": 49.7590148,
+    "lon": 15.9103653
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "futnet"
+  }
+},
+{
+  "type": "way",
+  "id": 499082946,
+  "center": {
+    "lat": 49.7589756,
+    "lon": 15.9098655
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "volleyball",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 501080722,
+  "center": {
+    "lat": 49.7227020,
+    "lon": 16.0522778
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 510879960,
+  "center": {
+    "lat": 49.5654179,
+    "lon": 15.9331612
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 510883461,
+  "center": {
+    "lat": 49.5672436,
+    "lon": 15.9365033
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 511211308,
+  "center": {
+    "lat": 49.5632246,
+    "lon": 15.9556630
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis;volleyball",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 511476270,
+  "center": {
+    "lat": 49.5747384,
+    "lon": 15.9385302
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 511525873,
+  "center": {
+    "lat": 49.5225788,
+    "lon": 15.9098023
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "beachvolleyball",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 636532632,
+  "center": {
+    "lat": 49.6527212,
+    "lon": 15.8799987
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 636532634,
+  "center": {
+    "lat": 49.6459996,
+    "lon": 15.9159533
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 636532637,
+  "center": {
+    "lat": 49.6091938,
+    "lon": 15.9127162
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 636532638,
+  "center": {
+    "lat": 49.6091586,
+    "lon": 15.9136673
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "tartan"
+  }
+},
+{
+  "type": "way",
+  "id": 666451339,
+  "center": {
+    "lat": 49.5988452,
+    "lon": 15.9384919
+  },
+  "tags": {
+    "leisure": "pitch"
+  }
+},
+{
+  "type": "way",
+  "id": 739817848,
+  "center": {
+    "lat": 49.5999265,
+    "lon": 15.7932750
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 788164570,
+  "center": {
+    "lat": 49.6680207,
+    "lon": 16.0878089
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis;volleyball",
+    "surface": "tartan"
+  }
+},
+{
+  "type": "way",
+  "id": 802139599,
+  "center": {
+    "lat": 49.7754887,
+    "lon": 16.0304852
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 926786987,
+  "center": {
+    "lat": 49.5596651,
+    "lon": 16.0627613
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 938051101,
+  "center": {
+    "lat": 49.7256044,
+    "lon": 16.0063154
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 941983276,
+  "center": {
+    "lat": 49.6953389,
+    "lon": 15.8059114
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 941983278,
+  "center": {
+    "lat": 49.6918984,
+    "lon": 15.8150744
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 966270028,
+  "center": {
+    "lat": 49.7104358,
+    "lon": 16.0349438
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "survey",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 1104878572,
+  "center": {
+    "lat": 49.7730990,
+    "lon": 15.8258429
+  },
+  "tags": {
+    "addr:city": "Hlinsko v Čechách",
+    "addr:country": "CZ",
+    "addr:postcode": "539 01",
+    "addr:street": "Svobodné Hamry",
+    "email": "info@gccsh.cz",
+    "golf:course": "9_hole",
+    "golf:par": "36",
+    "leisure": "golf_course",
+    "name": "Golf & Country Club Svobodné Hamry",
+    "operator": "Golf & Country Club Svobodné Hamry",
+    "phone": "+420 469 319 575",
+    "website": "https://www.gccsh.cz/"
+  }
+},
+{
+  "type": "way",
+  "id": 1228515956,
+  "center": {
+    "lat": 49.6814851,
+    "lon": 15.8316763
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1235001342,
+  "center": {
+    "lat": 49.5836077,
+    "lon": 16.0602379
+  },
+  "tags": {
+    "access": "customers",
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1235001343,
+  "center": {
+    "lat": 49.5833556,
+    "lon": 16.0603030
+  },
+  "tags": {
+    "access": "customers",
+    "leisure": "pitch",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 1245304206,
+  "center": {
+    "lat": 49.7584764,
+    "lon": 15.9112058
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 1288779444,
+  "center": {
+    "lat": 49.5823994,
+    "lon": 16.0597799
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "pitch",
+    "lit": "no",
+    "name": "Volejbal chata NMNM",
+    "sport": "volleyball",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 1291208520,
+  "center": {
+    "lat": 49.5701229,
+    "lon": 16.0717209
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1296017351,
+  "center": {
+    "lat": 49.5620243,
+    "lon": 15.9292487
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1301337890,
+  "center": {
+    "lat": 49.5723548,
+    "lon": 16.1212573
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1385724526,
+  "center": {
+    "lat": 49.6339381,
+    "lon": 15.9298451
+  },
+  "tags": {
+    "leisure": "miniature_golf"
+  }
+},
+{
+  "type": "way",
+  "id": 1426368119,
+  "center": {
+    "lat": 49.6155316,
+    "lon": 16.0553832
+  },
+  "tags": {
+    "leisure": "miniature_golf"
+  }
+},
+{
+  "type": "way",
+  "id": 1443242303,
+  "center": {
+    "lat": 49.6681382,
+    "lon": 16.0883494
+  },
+  "tags": {
+    "leisure": "miniature_golf",
+    "source": "cuzk:ortofoto"
+  }
+},
+{
+  "type": "way",
+  "id": 1452805820,
+  "center": {
+    "lat": 49.7702577,
+    "lon": 15.9071677
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "beachvolleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 1463082323,
+  "center": {
+    "lat": 49.7629085,
+    "lon": 15.9204980
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "lit": "no",
+    "material": "concrete",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1476213414,
+  "center": {
+    "lat": 49.6668154,
+    "lon": 15.7594139
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 1484083904,
+  "center": {
+    "lat": 49.5713214,
+    "lon": 16.0811396
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1486123901,
+  "center": {
+    "lat": 49.7620220,
+    "lon": 15.9195424
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer;handball;volleyball",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1491235894,
+  "center": {
+    "lat": 49.7651040,
+    "lon": 15.9148920
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1495273372,
+  "center": {
+    "lat": 49.7593011,
+    "lon": 15.9098290
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Sportovní areál Olšinky",
+    "sport": "ice_hockey;running;soccer;table_tennis;tennis;volleyball;handball"
+  }
+},
+{
+  "type": "way",
+  "id": 1501555050,
+  "center": {
+    "lat": 49.7676244,
+    "lon": 15.9140382
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "lit": "no",
+    "material": "concrete",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1501555051,
+  "center": {
+    "lat": 49.7676219,
+    "lon": 15.9141818
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "lit": "no",
+    "material": "concrete",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1525475327,
+  "center": {
+    "lat": 49.6076918,
+    "lon": 16.0735077
+  },
+  "tags": {
+    "access": "customers",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "volleyball;netball;badminton"
+  }
+},
+{
+  "type": "way",
+  "id": 1536480488,
+  "center": {
+    "lat": 49.7085283,
+    "lon": 16.0232641
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1538405488,
+  "center": {
+    "lat": 49.5723958,
+    "lon": 16.0674810
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1544607628,
+  "center": {
+    "lat": 49.7714870,
+    "lon": 15.8620382
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "sport": "minisoccer;soccer;tennis;volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 1544791108,
+  "center": {
+    "lat": 49.7494995,
+    "lon": 15.8415329
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 1550202459,
+  "center": {
+    "lat": 49.7619429,
+    "lon": 15.8902456
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis;volleyball"
+  }
+},
+{
+  "type": "way",
+  "id": 1552491565,
+  "center": {
+    "lat": 49.7629212,
+    "lon": 15.9179978
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "lit": "no",
+    "material": "concrete",
+    "sport": "table_tennis"
+  }
+}
+
+  ]
+}

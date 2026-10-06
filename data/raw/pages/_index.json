@@ -87,7 +87,7 @@
  "tisuvka": {
   "url": "https://www.restauracetisuvka.cz/",
   "file": "tisuvka.html",
-  "bytes": 27289
+  "bytes": 27230
  },
  "stanice-lyzaru": {
   "url": "https://www.stanicelyzaru.cz/",
@@ -224,7 +224,7 @@
  "mlyn-vikinek": {
   "url": "https://mlyn-vikinek.cz/",
   "file": "mlyn-vikinek.html",
-  "bytes": 66669
+  "bytes": 66678
  },
  "gm-vys-2": {
   "url": "https://www.vysocina.eu/stravovaci-zarizeni/gastromapa-lukase-hejlika?page=2",
@@ -324,22 +324,22 @@
  "mlyn-stravovani": {
   "url": "https://mlyn-vikinek.cz/stravovani/",
   "file": "mlyn-stravovani.html",
-  "bytes": 46211
+  "bytes": 46220
  },
  "mlyn-tipy": {
   "url": "https://mlyn-vikinek.cz/tipy-na-vylet/",
   "file": "mlyn-tipy.html",
-  "bytes": 47447
+  "bytes": 47456
  },
  "mlyn-pokoje": {
   "url": "https://mlyn-vikinek.cz/apartmany/",
   "file": "mlyn-pokoje.html",
-  "bytes": 54366
+  "bytes": 54375
  },
  "mlyn-cenik": {
   "url": "https://mlyn-vikinek.cz/cenik/",
   "file": "mlyn-cenik.html",
-  "bytes": 43222
+  "bytes": 43231
  },
  "kiosek-kadov-vys": {
   "url": "https://www.vysocina.eu/sluzby/stravovani/3501-kiosek-kadov-u-stare-skoly",
@@ -597,7 +597,7 @@
  "w-mlyn-kontakt": {
   "url": "https://mlyn-vikinek.cz/kontakt/",
   "file": "w-mlyn-kontakt.html",
-  "bytes": 46191
+  "bytes": 46200
  },
  "w-black-cup": {
   "url": "https://europeancoffeetrip.com/cafe/theblackcup-novemestonamorave/",
@@ -878,5 +878,98 @@
  "gm-tabor-zdar": {
   "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-tabor-zdar_nad_sazavou-cestovni_mapa_km-2838.html",
   "error": true
+ },
+ "mlyn-galerie": {
+  "url": "https://mlyn-vikinek.cz/galerie/",
+  "file": "mlyn-galerie.html",
+  "bytes": 104834
+ },
+ "polnicka-rest": {
+  "url": "https://www.restauracepolnicka.cz/",
+  "file": "polnicka-rest.html",
+  "bytes": 44504
+ },
+ "obec-polnicka": {
+  "url": "https://www.polnicka.cz/",
+  "error": true
+ },
+ "obec-cikhaj": {
+  "url": "https://www.cikhaj.cz/",
+  "error": true
+ },
+ "gc-svratka": {
+  "url": "https://www.gcsvr1932.cz/",
+  "file": "gc-svratka.html",
+  "bytes": 80947
+ },
+ "svratka-golf": {
+  "url": "https://www.svratka.cz/?p=2578",
+  "file": "svratka-golf.html",
+  "bytes": 107220
+ },
+ "mze-sykovec": {
+  "url": "https://mze.gov.cz/public/portal/-q356939---9NL2NBA8/rybnik-sykovec",
+  "file": "mze-sykovec.html",
+  "bytes": 442670
+ },
+ "wp-strz": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Vodn%C3%AD+n%C3%A1dr%C5%BE+Str%C5%BE",
+  "file": "wp-strz.json",
+  "bytes": 1201
+ },
+ "wp-milovsky": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Milovsk%C3%BD+rybn%C3%ADk",
+  "file": "wp-milovsky.json",
+  "bytes": 1615
+ },
+ "wp-pilska": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Vodn%C3%AD+n%C3%A1dr%C5%BE+Pilsk%C3%A1",
+  "file": "wp-pilska.json",
+  "bytes": 1487
+ },
+ "wp-svetnov-most": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Kamenn%C3%BD+most+ve+Sv%C4%9Btnov%C4%9B",
+  "file": "wp-svetnov-most.json",
+  "bytes": 1757
+ },
+ "wp-svetnov": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Sv%C4%9Btnov",
+  "file": "wp-svetnov.json",
+  "bytes": 2342
+ },
+ "wp-tri-studne": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=T%C5%99i+Studn%C4%9B",
+  "file": "wp-tri-studne.json",
+  "bytes": 5205
+ },
+ "wp-cikhaj": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Cikh%C3%A1j",
+  "file": "wp-cikhaj.json",
+  "bytes": 3082
+ },
+ "wp-polnicka": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Polni%C4%8Dka",
+  "file": "wp-polnicka.json",
+  "bytes": 8972
+ },
+ "wp-svratka": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Svratka+%28okres+%C5%BD%C4%8F%C3%A1r+nad+S%C3%A1zavou%29",
+  "file": "wp-svratka.json",
+  "bytes": 29535
+ },
+ "wp-stezky-search": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&list=search&srsearch=Sykovec+rybn%C3%ADk+T%C5%99i+Studn%C4%9B&srlimit=10&format=json&formatversion=2",
+  "file": "wp-stezky-search.json",
+  "bytes": 1688
+ },
+ "wp-golf-search": {
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&list=search&srsearch=golf+Svratka+h%C5%99i%C5%A1t%C4%9B&srlimit=10&format=json&formatversion=2",
+  "file": "wp-golf-search.json",
+  "bytes": 1846
+ },
+ "osm-sport": {
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%0A%28%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Cplayground%7Csports_centre%29%24%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Csports_centre%29%24%22%5D%28around%3A2000%2C49.60641%2C15.92006%29%3B%0A++nwr%5B%22sport%22~%22tennis%7Cfutnet%7Cvolleyball%7Cgolf%22%5D%28around%3A16000%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28golf_course%7Cminiature_golf%29%24%22%5D%28around%3A20000%2C49.64427%2C15.96844%29%3B%0A%29%3B%0Aout+center+tags%3B",
+  "file": "osm-sport.json",
+  "bytes": 15876
  }
 }
