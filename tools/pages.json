@@ -1,157 +1,17 @@
 [
  {
-  "id": "osm-les",
-  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%0A%28%0A++way%5B%22landuse%22%3D%22forest%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++way%5B%22natural%22%3D%22wood%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%5B%22landuse%22%3D%22forest%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%5B%22natural%22%3D%22wood%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++relation%282212296%29%3B%0A++relation%282331870%29%3B%0A++relation%282331885%29%3B%0A%29%3B%0Aout+geom%3B",
+  "id": "svratka-uzavirka",
+  "url": "https://www.svratka.cz/?p=10540",
+  "ext": "html"
+ },
+ {
+  "id": "osm-libusina",
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0Away%5B%22name%22%3D%22Libu%C5%A1ina%22%5D%28around%3A3000%2C49.7108%2C16.0341%29%3B%0Aout+geom+tags%3B",
   "ext": "json"
  },
  {
-  "id": "gc-svratka-uzavirka",
-  "url": "https://www.gcsvr1932.cz/pozor-uzavirka-silnice-ve-svratce/",
-  "ext": "html"
- },
- {
-  "id": "gc-svratka-cenik",
-  "url": "https://www.gcsvr1932.cz/green_fee/",
-  "ext": "html"
- },
- {
-  "id": "gc-svratka-sluzby",
-  "url": "https://www.gcsvr1932.cz/sluzby/",
-  "ext": "html"
- },
- {
-  "id": "gc-svratka-kontakt",
-  "url": "https://www.gcsvr1932.cz/kontakt/",
-  "ext": "html"
- },
- {
-  "id": "gc-svratka-hriste",
-  "url": "https://www.gcsvr1932.cz/hriste/",
-  "ext": "html"
- },
- {
-  "id": "chk-panmama",
-  "url": "https://www.statek-blatiny.cz/jidlo-piti",
-  "ext": "html"
- },
- {
-  "id": "chk-blatiny",
-  "url": "https://www.statek-blatiny.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-racin",
-  "url": "https://www.racin.cz/cs/pivovar/",
-  "ext": "html"
- },
- {
-  "id": "chk-kiosek",
-  "url": "https://kiosekkadov.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-cukrarna",
-  "url": "https://www.cukrarnasnezne.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-frysava",
-  "url": "https://www.stanicelyzaru.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-medlov",
-  "url": "https://www.medlovhotel.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-svoboda",
-  "url": "https://ags-svoboda.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-eden",
-  "url": "https://www.edencentrum.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-pernstejn",
-  "url": "https://www.hrad-pernstejn.cz/cs/informace-pro-navstevniky/navstevni-doba",
-  "ext": "html"
- },
- {
-  "id": "chk-pernstejn-home",
-  "url": "https://www.hrad-pernstejn.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-mng",
-  "url": "https://zamekzdar.cz/zazitky/muzeum-nove-generace/",
-  "ext": "html"
- },
- {
-  "id": "chk-hopik",
-  "url": "http://www.hopik-zdar.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-relax",
-  "url": "https://www.sportiszdar.cz/relaxacni-centrum",
-  "ext": "html"
- },
- {
-  "id": "chk-pilak",
-  "url": "https://www.sportiszdar.cz/rekreacni-areal-pilak",
-  "ext": "html"
- },
- {
-  "id": "chk-zelena-hora",
-  "url": "https://www.zelena-hora.cz/cs/",
-  "ext": "html"
- },
- {
-  "id": "chk-modelove",
-  "url": "https://www.mkzdar.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-slakhamr",
-  "url": "https://www.technicalmuseum.cz/pamatky/slakhamr-v-hamrech-nad-sazavou/",
-  "ext": "html"
- },
- {
-  "id": "chk-peklo",
-  "url": "https://www.peklocertovina.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-vesely-kopec",
-  "url": "https://www.nmvp.cz/vysocina/pro-navstevniky/oteviraci-doba-a-vstupne",
-  "ext": "html"
- },
- {
-  "id": "chk-zoo-jihlava",
-  "url": "https://zoojihlava.cz/dulezite-informace/",
-  "ext": "html"
- },
- {
-  "id": "chk-falbgery",
-  "url": "http://www.minifarmafalbgery.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-hejkal",
-  "url": "https://www.pivovarhejkal.cz/",
-  "ext": "html"
- },
- {
-  "id": "chk-rychtar",
-  "url": "https://www.pivo-rychtar.cz/exkurze/",
-  "ext": "html"
- },
- {
-  "id": "chk-zookoutek",
-  "url": "https://www.nmnm.cz/zookoutek",
+  "id": "pilak-drakiada",
+  "url": "https://www.sportiszdar.cz/novinky/drakiada-na-pilaku-uz-11-rijna",
   "ext": "html"
  }
 ]

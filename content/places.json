@@ -463,7 +463,7 @@
   "mill": "„Poutní kostel Jana Nepomuckého na Zelené hoře, zapsaný mezi kulturními památkami UNESCO.“",
   "text": "Poutní kostel sv. Jana Nepomuckého je vrcholem Santiniho barokní gotiky. Půdorys má tvar pěticípé hvězdy a číslo 5 se tu opakuje všude (hvězdy, kaple, brány) jako odkaz na pět hvězd ze svatojánské legendy.",
   "kidsNote": "Hra pro děti: kolikrát najdete číslo 5?",
-  "info": "V říjnu je interiér otevřen jen so a ne 9–17, areál kolem je přístupný celoročně. Tel. +420 724 758 993.",
+  "info": "V říjnu je interiér otevřen jen so a ne 9–17, v sobotu 10. 10. ale odpadají prohlídky v 11 a ve 12 h kvůli svatbě. Areál kolem je přístupný celoročně. Tel. +420 724 758 993.",
   "phone": "+420 724 758 993",
   "web": "https://www.zelena-hora.cz/cs/",
   "fit": [
@@ -573,14 +573,14 @@
   "cat": "priroda",
   "icon": "🍄",
   "name": "Na houby do lesa u mlýna",
-  "lat": 49.6455,
-  "lon": 15.9745,
+  "lat": 49.64237,
+  "lon": 15.96886,
   "noCar": true,
   "walk": true,
   "top": true,
-  "teaser": "Podle majitelů mlýna jsou okolní lesy na podzim plné hub. Les začíná hned u mlýna.",
+  "teaser": "Podle majitelů mlýna jsou okolní lesy na podzim plné hub. Les začíná hned na jižní straně mlýna.",
   "mill": "„Na podzim se stává toto místo rájem houbařů (a opravdu rostou).“",
-  "text": "Mlýn stojí samostatně a z jedné strany sousedí přímo s lesem. Říjen je v Žďárských vrších vrchol houbařské sezóny: ve smrkových lesích kolem Cikháje bývají hlavně hřiby a suchohřiby, na pařezech václavky. Na krátkou vycházku s košíkem stačí les hned za mlýnem, třeba po příjezdu ve čtvrtek odpoledne.",
+  "text": "Mlýn stojí samostatně a z jedné strany, na jih, sousedí přímo s lesem. Říjen bývá v Žďárských vrších vrcholem houbařské sezóny: ve smrkových lesích kolem Cikháje se nejčastěji najdou hřiby a suchohřiby, na pařezech václavky. Na krátkou vycházku s košíkem stačí les hned za mlýnem, třeba po příjezdu ve čtvrtek odpoledne.",
   "kidsNote": "Hledání hub je pro děti jako hon na poklad. Ať ale houby jen ukazují dospělým a nic neochutnávají.",
   "info": "Sbírejte jen houby, které bezpečně znáte. V národní přírodní rezervaci Žákova hora se nesbírá a nechodí se mimo značené cesty. Při podezření na otravu volejte 155, Toxikologické informační středisko má nonstop linku 224 919 293.",
   "fit": [
@@ -656,13 +656,17 @@
   "name": "Vodní nádrž Strž",
   "lat": 49.61,
   "lon": 15.9541,
+  "car": [
+   49.6201,
+   15.9544
+  ],
   "walk": true,
   "bike": true,
   "teaser": "Klidná nádrž na Stržském potoce, který teče kolem mlýna. Podél vody vede zelená značka ze Světnova na Stržanov.",
   "mill": "Je v seznamu rybníků a nádrží, které mlýn doporučuje na koupání a vodní sporty. V říjnu je to spíš na procházku kolem vody.",
-  "text": "Nádrž vznikla v letech 1952–1954 zvýšením hráze původního rybníka Strž na okraji Světnova. Patří k vodárenské soustavě Želivka: nadlepšuje průtok potoka, slouží k rekreaci a rybaření a částečně i k ochraně před povodněmi. Kolem jsou chatové osady a podél břehu vede zelená turistická značka. Ve Světnově stojí kamenný dvouobloukový most přes Stržský potok z roku 1847, kulturní památka.",
+  "text": "Nádrž vznikla v letech 1952–1954 zvýšením hráze původního rybníka Strž na okraji Světnova. Hlavně nadlepšuje průtok potoka, slouží ale i k rekreaci, rybaření a částečně k ochraně před povodněmi. Kolem jsou chatové osady a podél břehu vede zelená turistická značka. Ve Světnově stojí kamenný dvouobloukový most přes Stržský potok z roku 1847, kulturní památka.",
   "kidsNote": "Stržský potok teče od mlýna údolím přes Světnov až sem a dál do Sázavy, Vltavy a Labe, tedy do Severního moře.",
-  "info": "Volně přístupné. Pěšky nebo na kole po zelené značce ze Světnova (od kamenného mostu) nebo ze Stržanova.",
+  "info": "Volně přístupné. Na kole od mlýna asi 4,5 km, autem do Světnova (u prodejny Maso Žďársko) a odtud po zelené značce k vodě, nebo ze Stržanova.",
   "fit": [
    "male",
    "skolaci"
