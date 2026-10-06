@@ -1,57 +1,132 @@
 [
  {
-  "id": "gm-praha-zdar",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-zdar_nad_sazavou-cestovni_mapa_km-53.html",
+  "id": "mlyn-tipy",
+  "url": "https://mlyn-vikinek.cz/tipy-na-vylet/",
   "ext": "html"
  },
  {
-  "id": "gm-praha-hbrod",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-havlickuv_brod-cestovni_mapa_km-52.html",
+  "id": "mlyn-vikinek",
+  "url": "https://mlyn-vikinek.cz/",
   "ext": "html"
  },
  {
-  "id": "gm-praha-brno",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-praha-brno_stred-cestovni_mapa_km-85189.html",
+  "id": "mlyn-stravovani",
+  "url": "https://mlyn-vikinek.cz/stravovani/",
   "ext": "html"
  },
  {
-  "id": "gm-hbrod-zdar",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-havlickuv_brod-zdar_nad_sazavou-cestovni_mapa_km-5046.html",
+  "id": "mlyn-pokoje",
+  "url": "https://mlyn-vikinek.cz/apartmany/",
   "ext": "html"
  },
  {
-  "id": "gm-humpolec-hbrod",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-humpolec-havlickuv_brod-cestovni_mapa_km-14039.html",
+  "id": "mlyn-cenik",
+  "url": "https://mlyn-vikinek.cz/cenik/",
   "ext": "html"
  },
  {
-  "id": "gm-jihlava-zdar",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-jihlava-zdar_nad_sazavou-cestovni_mapa_km-2070.html",
+  "id": "w-mlyn-kontakt",
+  "url": "https://mlyn-vikinek.cz/kontakt/",
   "ext": "html"
  },
  {
-  "id": "gm-zdar-brno",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-brno-cestovni_mapa_km-5091.html",
+  "id": "mlyn-galerie",
+  "url": "https://mlyn-vikinek.cz/galerie/",
   "ext": "html"
  },
  {
-  "id": "gm-zdar-kromeriz",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-zdar_nad_sazavou-kromeriz-cestovni_mapa_km-5129.html",
+  "id": "tisuvka",
+  "url": "https://www.restauracetisuvka.cz/",
   "ext": "html"
  },
  {
-  "id": "gm-pardubice-zdar",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-pardubice-zdar_nad_sazavou-cestovni_mapa_km-917.html",
+  "id": "polnicka-rest",
+  "url": "https://www.restauracepolnicka.cz/",
   "ext": "html"
  },
  {
-  "id": "gm-hk-zdar",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-hradec_kralove-zdar_nad_sazavou-cestovni_mapa_km-725.html",
+  "id": "obec-polnicka",
+  "url": "https://www.polnicka.cz/",
   "ext": "html"
  },
  {
-  "id": "gm-tabor-zdar",
-  "url": "https://cz.vzdalenosti-mesty.himmera.com/silnicnich_vzdalenosti-tabor-zdar_nad_sazavou-cestovni_mapa_km-2838.html",
+  "id": "obec-cikhaj",
+  "url": "https://www.cikhaj.cz/",
   "ext": "html"
+ },
+ {
+  "id": "gc-svratka",
+  "url": "https://www.gcsvr1932.cz/",
+  "ext": "html"
+ },
+ {
+  "id": "svratka-golf",
+  "url": "https://www.svratka.cz/?p=2578",
+  "ext": "html"
+ },
+ {
+  "id": "mze-sykovec",
+  "url": "https://mze.gov.cz/public/portal/-q356939---9NL2NBA8/rybnik-sykovec",
+  "ext": "html"
+ },
+ {
+  "id": "wp-strz",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Vodn%C3%AD+n%C3%A1dr%C5%BE+Str%C5%BE",
+  "ext": "json"
+ },
+ {
+  "id": "wp-milovsky",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Milovsk%C3%BD+rybn%C3%ADk",
+  "ext": "json"
+ },
+ {
+  "id": "wp-pilska",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Vodn%C3%AD+n%C3%A1dr%C5%BE+Pilsk%C3%A1",
+  "ext": "json"
+ },
+ {
+  "id": "wp-svetnov-most",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Kamenn%C3%BD+most+ve+Sv%C4%9Btnov%C4%9B",
+  "ext": "json"
+ },
+ {
+  "id": "wp-svetnov",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Sv%C4%9Btnov",
+  "ext": "json"
+ },
+ {
+  "id": "wp-tri-studne",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=T%C5%99i+Studn%C4%9B",
+  "ext": "json"
+ },
+ {
+  "id": "wp-cikhaj",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Cikh%C3%A1j",
+  "ext": "json"
+ },
+ {
+  "id": "wp-polnicka",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Polni%C4%8Dka",
+  "ext": "json"
+ },
+ {
+  "id": "wp-svratka",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&format=json&formatversion=2&redirects=1&titles=Svratka+%28okres+%C5%BD%C4%8F%C3%A1r+nad+S%C3%A1zavou%29",
+  "ext": "json"
+ },
+ {
+  "id": "wp-stezky-search",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&list=search&srsearch=Sykovec+rybn%C3%ADk+T%C5%99i+Studn%C4%9B&srlimit=10&format=json&formatversion=2",
+  "ext": "json"
+ },
+ {
+  "id": "wp-golf-search",
+  "url": "https://cs.wikipedia.org/w/api.php?action=query&list=search&srsearch=golf+Svratka+h%C5%99i%C5%A1t%C4%9B&srlimit=10&format=json&formatversion=2",
+  "ext": "json"
+ },
+ {
+  "id": "osm-sport",
+  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%0A%28%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Cplayground%7Csports_centre%29%24%22%5D%28around%3A1500%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28pitch%7Csports_centre%29%24%22%5D%28around%3A2000%2C49.60641%2C15.92006%29%3B%0A++nwr%5B%22sport%22~%22tennis%7Cfutnet%7Cvolleyball%7Cgolf%22%5D%28around%3A16000%2C49.64427%2C15.96844%29%3B%0A++nwr%5B%22leisure%22~%22%5E%28golf_course%7Cminiature_golf%29%24%22%5D%28around%3A20000%2C49.64427%2C15.96844%29%3B%0A%29%3B%0Aout+center+tags%3B",
+  "ext": "json"
  }
 ]
