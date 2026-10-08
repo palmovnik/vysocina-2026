@@ -39,7 +39,7 @@
   // pro koho se tip hodí: [ikona, krátce, celý popis]
   var FIT = {
     male: ['🧸', 'malí', 'pro malé děti (do 4 let)'],
-    skolaci: ['🎒', 'školáci', 'pro školáky (6–10 let)'],
+    skolaci: ['🎒', 'školáci', 'pro školáky (6–9 let)'],
     kocarek: ['🚼', 'kočárek', 'dá se projet s kočárkem'],
     dospeli: ['👫', 'dospělí', 'spíš pro dospělé, když se rozdělíte'],
     rain: ['☔', 'i za deště', 'hodí se, i když prší']
