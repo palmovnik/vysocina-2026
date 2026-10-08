@@ -224,13 +224,31 @@
     });
     fam.appendChild(el('span', { 'class': 'family total' }, '= <b>' + (adults + kids) + ' lidí</b>: ' + adults + ' dospělých a ' + kids + ' dětí' +
       (T.kidsSummary ? ' (' + esc(T.kidsSummary) + ')' : '')));
-    var start = new Date('2026-10-08T15:00:00+02:00'), end = new Date('2026-10-11T18:00:00+02:00'), now = new Date();
+    // odjezd z domova kolem 13:00, na mlýně od 15:00; dny se počítají podle kalendáře v Česku
+    var depart = new Date('2026-10-08T13:00:00+02:00'), start = new Date('2026-10-08T15:00:00+02:00'),
+      end = new Date('2026-10-11T18:00:00+02:00'), departAt = 'kolem 13:00';
     var cd = $('#countdown');
-    if (now < start) {
-      var d = Math.ceil((start - now) / 86400000);
-      cd.textContent = '⏳ ' + (d === 1 ? 'zítra vyrážíme!' : 'za ' + d + (d < 5 ? ' dny' : ' dní') + ' vyrážíme');
-    } else if (now <= end) cd.textContent = '🎒 právě jsme na Vysočině!';
-    else cd.textContent = '📸 bylo to super';
+    function pragueDay(t) {
+      var p = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Prague', year: 'numeric', month: '2-digit', day: '2-digit' }).format(t).split('-');
+      return Date.UTC(+p[0], +p[1] - 1, +p[2]);
+    }
+    function countdown() {
+      var now = new Date();
+      if (now < depart) {
+        var d = Math.round((pragueDay(depart) - pragueDay(now)) / 86400000);
+        if (d >= 2) cd.textContent = '⏳ za ' + d + (d < 5 ? ' dny' : ' dní') + ' vyrážíme';
+        else if (d === 1) cd.textContent = '⏳ zítra ' + departAt + ' vyrážíme!';
+        else {
+          var m = Math.max(1, Math.round((depart - now) / 60000));
+          cd.textContent = '⏳ ' + (m >= 60 ? 'dnes ' + departAt : 'za ' + m + ' min') + ' vyrážíme!';
+        }
+      } else if (now < start) cd.textContent = '🚗 jsme na cestě, na mlýně od 15:00';
+      else if (now <= end) cd.textContent = '🎒 právě jsme na Vysočině!';
+      else cd.textContent = '📸 bylo to super';
+    }
+    countdown();
+    setInterval(countdown, 60000);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) countdown(); });
   })();
 
   // ------------------------------------------------------------ theme
