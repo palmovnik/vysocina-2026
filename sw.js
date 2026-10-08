@@ -1,7 +1,7 @@
 /* Offline záloha průvodce: stránka, data, fotky a GPX se po první návštěvě uloží do mezipaměti.
    Strategie „nejdřív síť“: online se vždy načte aktuální verze, bez signálu poslouží uložená.
    Mapové dlaždice se neukládají (načítají se z mapových serverů). */
-var CACHE = 'vysocina26-v2';
+var CACHE = 'vysocina26-v3';
 var CORE = ['./', 'index.html', 'assets/style.css', 'assets/app.js', 'data/trip.js',
   'vendor/leaflet/leaflet.css', 'vendor/leaflet/leaflet.js'];
 
@@ -17,7 +17,10 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (e) {
   var req = e.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  var url = new URL(req.url);
+  if (req.method !== 'GET' || url.origin !== self.location.origin) return;
+  // kontrola nové verze (version.json) jde vždy na server a neukládá se
+  if (/\/version\.json$/.test(url.pathname)) return;
   e.respondWith(fetch(req).then(function (res) {
     if (res && res.ok) {
       var copy = res.clone();
