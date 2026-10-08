@@ -4,6 +4,8 @@ name: Nasazení webu (gh-pages)
 # GitHub Pages zveřejňuje na https://palmovnik.github.io/vysocina-2026/
 # a přidá čerstvou předpověď počasí (data/weather.json, záloha pro případ,
 # že si ji web při otevření nestáhne sám). Kvůli počasí běží i každé 3 hodiny.
+# Web dostane verzi podle obsahu (tools/stamp.py), aby si otevřené stránky
+# po nasazení samy načetly novou verzi i přes 10minutovou cache GitHub Pages.
 on:
   push:
     branches:
@@ -12,6 +14,7 @@ on:
     paths:
       - 'docs/**'
       - 'tools/weather.py'
+      - 'tools/stamp.py'
       - '.github/workflows/pages.yml'
   schedule:
     - cron: '17 */3 * * *'
@@ -46,6 +49,8 @@ jobs:
           fi
           # data/weather.json v docs/ není, na gh-pages ho rsync nechá a jen se přepíše čerstvým
           rsync -a --delete --exclude '.git' --exclude '/data/weather.json' docs/ /tmp/site/
+          # verze webu do index.html a version.json: otevřené stránky se po nasazení samy obnoví
+          python3 tools/stamp.py /tmp/site
           if [ -s /tmp/weather.json ]; then mkdir -p /tmp/site/data && cp /tmp/weather.json /tmp/site/data/weather.json; fi
           touch /tmp/site/.nojekyll
           cd /tmp/site

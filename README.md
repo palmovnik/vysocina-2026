@@ -25,6 +25,13 @@ složku `docs/`, zkopíruje její obsah do větve `gh-pages` a GitHub Pages ho b
 minuty publikuje. V nastavení repozitáře (*Settings → Pages*) je zdroj
 *Deploy from a branch*, větev `gh-pages`, složka `/ (root)`.
 
+GitHub Pages posílá soubory s cache na 10 minut (hlavičky se změnit nedají), takže hlavně Safari
+mohlo chvíli po nasazení ukazovat starou verzi. Workflow proto při nasazení spustí
+`tools/stamp.py`: podle obsahu webu spočítá verzi, zapíše ji do `index.html` (`<meta name="build">`
+a `?v=…` za styly a skripty) a do `version.json`. Otevřená stránka si `version.json` stahuje bez
+cache (při otevření, při návratu do záložky a každých 15 minut) a když je na serveru novější verze,
+sama se načte znovu. Aktualizace počasí verzi nemění.
+
 ## Počasí
 
 Stránka si při každém otevření (a po návratu do ní po víc než půl hodině) stáhne předpověď
@@ -53,6 +60,7 @@ mapa (vložený widget), která se načte až po kliknutí.
 | `tools/drive_check.json` | srovnávací trasy s časy z Google Map: krok *drive* rozloží trasy (k tipům, z míst odjezdu i srovnávací) podle tříd silnic do `data/raw/drive.json` a `build.py` podle nich přepočítá časy OSRM, které jsou jinak delší než v Google Mapách (hlavně na silnicích II. třídy) |
 | `tools/build.py` | spojí obsah a podklady do `docs/data/trip.js` a vygeneruje GPX do `docs/gpx/` |
 | `tools/weather.py` | záložní předpověď počasí pro web (běží v GitHub Actions každé 3 hodiny) |
+| `tools/stamp.py` | při nasazení označí web verzí, aby se otevřené stránky samy obnovily |
 | `data/raw/` | stažené podklady (OSM, trasy, časy) |
 | `docs/` | hotový web (HTML, CSS, JS, Leaflet, fotky, GPX) |
 

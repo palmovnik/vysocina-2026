@@ -1807,4 +1807,36 @@
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('sw.js').catch(function () {});
   }
+
+  // ------------------------------------------------------------ nová verze webu
+  // GitHub Pages posílá soubory s cache na 10 minut a Safari navíc rád ukáže stránku z paměti.
+  // Při nasazení se do index.html zapíše verze (tools/stamp.py) a stejná do version.json, který
+  // se tu stahuje bez cache. Když se liší, stránka se sama načte znovu z adresy ?v=…, takže
+  // dostane čerstvé HTML i skripty; otevřené místo nebo trasa zůstane díky # v adrese.
+  (function autoUpdate() {
+    var meta = document.querySelector('meta[name="build"]');
+    var cur = meta && meta.getAttribute('content');
+    if (!cur || cur === 'dev' || !window.fetch) return;
+    var KEY = 'vy-update';
+    function triedRecently(v) {   // pojistka proti smyčce, kdyby server ještě chvíli vracel starou stránku
+      try {
+        var s = JSON.parse(sessionStorage.getItem(KEY) || 'null');
+        return !!s && s.v === v && Date.now() - s.t < 120000;
+      } catch (e) { return false; }
+    }
+    function check() {
+      fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d || !d.version || d.version === cur || triedRecently(d.version)) return;
+          try { sessionStorage.setItem(KEY, JSON.stringify({ v: d.version, t: Date.now() })); } catch (e) { /* bez úložiště */ }
+          location.replace(location.pathname + '?v=' + encodeURIComponent(d.version) + location.hash);
+        })
+        .catch(function () { /* offline: zůstane, co je */ });
+    }
+    setTimeout(check, 1500);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) check(); });
+    window.addEventListener('pageshow', function (e) { if (e.persisted) check(); });
+    setInterval(function () { if (!document.hidden) check(); }, 15 * 60 * 1000);
+  })();
 })();
